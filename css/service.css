@@ -1,0 +1,240 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    background-color: #121212;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #2c2c2c;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d62828;
+    margin: 0 24px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+.nav-list a:hover {
+    color: #d62828;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul a:hover {
+    color: #d62828;
+}
+
+
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.hero {
+    background-color: #2c2c2c;
+    padding: 2.5rem 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    color: #d62828;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    color: #cccccc;
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero button {
+    background-color: #d62828;
+    color: #ffffff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.hero button a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hero button:hover {
+    background-color: #a71d1d;
+}
+
+section {
+    margin-bottom: 2rem;
+}
+
+#serviços {
+    background-color: #2c2c2c;
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+}
+
+#serviços h3 {
+    color: #d62828;
+    margin-bottom: 1rem;
+}
+
+#serviços article p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+
+    text-align: center;
+}
+
+#serviços a {
+    color: #d62828;
+    font-weight: 500;
+    text-align: center;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#serviços a:hover {
+    color: #ffffff;
+    text-align: center;
+    text-decoration: none;
+}
+
+#conteudos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+#conteudos article {
+    background-color: #2c2c2c;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#conteudos article:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+#conteudos h4 {
+    color: #d62828;
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+#conteudos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 2px solid #d62828;
+}
+
+#conteudos p {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-align: center;
+}
+
+#conteudos img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border: 2px solid #d62828;
+}
+
+#conteudos p {
+    color: #cccccc;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: #cccccc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #d62828;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
