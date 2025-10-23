@@ -58,6 +58,45 @@ nav {
     color: #d62828;
 }
 
+/* --------------------------
+   SEÇÃO DE LINGUAGENS PADRONIZADA
+--------------------------- */
+
+.linguagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.linguagem-card {
+    width: 150px;
+    height: 150px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linguagem-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(214, 40, 40, 0.6);
+}
+
+.linguagem-card img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+
+
 code {
     background-color: #1e1e1e;
     padding: 8px;
@@ -182,204 +221,94 @@ footer a:hover {
     color: #ffffff;
 }
 
-/* --------------------------
-   IMAGENS DO FLUXOGRAMA
---------------------------- */
-.fluxograma-img {
+.info-html-css {
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.fluxograma-img img {
-    max-width: 400px;
-    width: 400px;
-    height: auto;
-    object-fit: cover;
-    border: 2px solid #d62828;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s ease;
-}
-
-.fluxograma-img img:hover {
-    transform: scale(1.05);
-}
-
-.fluxograma-img p {
-    flex-basis: 100%;
-    /* ocupa a linha toda */
-    margin-top: 1rem;
-    font-size: 0.95rem;
-    color: #cccccc;
-}
-
-
-/* --------------------------
-   IMAGENS DO PORTUGOL
---------------------------- */
-.portugol-img {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 2rem;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-    text-align: center;
-}
-
-.portugol-img img {
-    width: 400px;
-    height: 300px;
-    object-fit: cover;
-    border: 2px solid #d62828;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s ease;
-}
-
-
-.portugol-img img:hover {
-    transform: scale(1.05);
-}
-
-.portugol-img p {
-    flex-basis: 100%;
-    margin-top: 1rem;
-    font-size: 0.95rem;
-    color: #cccccc;
-}
-
-
-/* --------------------------
-   BLOCO VARIÁVEL X CONSTANTE
---------------------------- */
-
-.blocos {
-    display: flex;
-    justify-content: space-between;
-    gap: 2rem;
-    margin: 2rem 0;
+    gap: 20px;
+    padding: 40px;
     flex-wrap: wrap;
 }
 
 .bloco {
-    flex: 1;
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+    border-radius: 15px;
+    padding: 25px;
+    width: 45%;
     min-width: 280px;
-    background-color: #111111;
-    border: 2px solid #d62828;
-    border-radius: 10px;
-    padding: 1.5rem;
-    color: #ffffff;
-    text-align: center;
-    transition: transform 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .bloco:hover {
-    transform: scale(1.05);
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
 .bloco h2 {
-    color: #d62828;
-    margin-bottom: 1rem;
+    color: #00bcd4;
+    margin-bottom: 10px;
 }
 
+.html h2 {
+    color: #ff9800;
+}
 
-/* ------------------------------
-   Símbolos do Fluxograma
------------------------------- */
+.css h2 {
+    color: #2196f3;
+}
 
-.symbol {
+.info-ide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+.bloco-texto {
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+    border-radius: 15px;
+    padding: 25px;
+    width: 90%;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.bloco-texto h2 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.exemplos {
     display: flex;
     justify-content: center;
-    align-items: center;
-    margin: auto;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 100%;
 }
 
-.terminador {
-    width: 80px;
-    height: 40px;
-    background-color: #1d1b1b;
-    border: 2px solid #d62828;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #d62828;
-    font-size: 12px;
-    font-weight: bold;
+.bloco.exemplo {
+    background-color: #252525;
+    color: #f2f2f2;
+    border-radius: 15px;
+    padding: 25px;
+    width: 45%;
+    min-width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.processo {
-    width: 80px;
-    height: 40px;
-    background-color: #1d1b1b;
-    border: 2px solid #d62828;
-    border-radius: 4px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #d62828;
-    font-size: 12px;
-    font-weight: bold;
+.bloco.exemplo:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.decisao {
-    width: 45px;
-    height: 45px;
-    background-color: #1d1b1b;
-    border: 2px solid #d62828;
-    transform: rotate(45deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #d62828;
-    font-size: 12px;
-    font-weight: bold;
-    position: relative;
-}
-
-.decisao span {
-    transform: rotate(-45deg);
-    display: block;
-}
-
-.entrada-saida {
-    width: 80px;
-    height: 40px;
-    background-color: #1d1b1b;
-    border: 2px solid #d62828;
-    transform: skewX(-20deg);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #d62828;
-    font-size: 12px;
-    font-weight: bold;
-}
-
-.entrada-saida span {
-    transform: skewX(20deg);
-}
-
-.fluxo {
-    width: 80px;
-    height: 10px;
-    background-color: #d62828;
-    position: relative;
-    margin: auto;
-}
-
-.fluxo::after {
-    content: '';
-    position: absolute;
-    right: -6px;
-    top: -5px;
-    border-top: 10px solid transparent;
-    border-bottom: 10px solid transparent;
-    border-left: 10px solid #d62828;
+.bloco.exemplo h3 {
+    color: #ff9800;
+    margin-bottom: 10px;
+    text-align: center;
 }

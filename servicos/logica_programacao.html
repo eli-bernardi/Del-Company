@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -6,25 +6,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/logica_programacao.css">
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
+    <script src="https://cdn.tailwindcss.com"></script>
     <title>Del Company</title>
 </head>
 
-<body>
-    <header>
-        <nav>
-            <div class="logo">Del Company</div>
-            <ul class="nav-list">
-                <a href="../index.html">Início</a>
-                <a href="../service.html">Serviços</a>
-                <a href="../servicos/fundamentos_rede.html">Sistemas de Rede</a>
-                <a href="../servicos/logica_computacional.html">Lógica Computacional</a>
-                <a href="../servicos/logica_programacao.html">Lógica De Programação</a>
-                <a href="../servicos/fundamentos_eletronica.html">Computação Eletrônica</a>
-                <a href="../servicos/tecnologia_informacao.html">Tecnologia da Informação</a>
-            </ul>
+<body class="bg-[#111] text-white">
+
+    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#222] shadow-md">
+        <div class="logo text-xl font-bold text-[#d62828]">Del Company</div>
+
+        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
+            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+
+        <nav id="menu"
+            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#222] md:bg-transparent md:p-0 p-4 md:rounded-none rounded-b-lg border-b-2 border-[#d62828] md:border-none">
+
+            <a href="./index.html" class="block py-2 hover:text-[#d62828]">Início</a>
+
+            <div class="relative group">
+                <a href="../service.html" class="block py-2 hover:text-[#d62828]">Serviços</a>
+                <ul class="hidden group-hover:block absolute bg-[#2c2c2c] rounded min-w-[200px] py-2 shadow-lg z-50">
+                    <li><a href="../servicos/logica_programacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Banco de Dados</a></li>
+                    <li><a href="../servicos/fundamentos_rede.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Sistemas de Rede</a></li>
+                    <li><a href="../servicos/logica_computacional.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Lógica Computacional</a></li>
+                    <li><a href="../servicos/fundamentos_eletronica.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Fundamentos de Eletrônica</a></li>
+                    <li><a href="../servicos/tecnologia_informacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Tecnologia da Informação</a></li>
+                </ul>
+            </div>
+
+            <a href="./contato.html" class="block py-2 hover:text-[#d62828]">Contato</a>
         </nav>
     </header>
-
     <main>
         <section class="hero">
             <h2>Lógica de Programação</h2>
@@ -37,29 +57,32 @@
             <p>Além disso, a lógica computacional é fundamental para o pensamento computacional, ajudando programadores
                 e cientistas da computação a resolver problemas de forma estruturada.</p>
         </section>
-    </main>
-
-    <hr><br>
-
-    <main>
+        
         <section>
-            <div id="linguagens">
-                <h2>Diferentes Tipos de Linguagens</h2>
-                <h3>Exemplificação | Funcionalidade | Utilização</h3>
-            </div>
+            <h2>Diferentes Tipos de Linguagens</h2>
+            <h3>Exemplificação | Funcionalidade | Utilização</h3>
             <hr>
-            <div class="linguagens">
-                <div>
-                    <img src="../IMG/c++ - png.jpg" alt="linguagem-programa">
-                    <img src="../IMG/js-png.jpg" alt="linguagem-programa">
-                    <img src="../IMG/pyton-png.jpg" alt="linguagem-programa">
-                    <img src="../IMG/php-png.png" alt="linguagem-programa">
-                </div>
-                <p>1</p><br>
-                <p>2</p>
-            </div>
-        </section>
 
+            <div class="linguagens">
+                <div class="linguagem-card">
+                    <img src="../img/c++-png.png" alt="C++">
+                </div>
+                
+                <div class="linguagem-card">
+                    <img src="../img/js-png.png" alt="JavaScript">
+                </div>
+                <div class="linguagem-card">
+                    <img src="../img/pyton-png.png" alt="Python">
+                </div>
+                <div class="linguagem-card">
+                    <img src="../img/php-png.png" alt="PHP">
+                </div>
+            </div>
+            <br>
+
+            </div>
+
+        </section>
         <section>
             <div id="interpretada">
                 <h2>Linguagem de Programação Interpretada</h2>
@@ -180,8 +203,22 @@
             </div>
             <hr>
             <div>
-                <p>1</p><br>
-                <p>2</p>
+                <section class="info-html-css">
+                    <div class="bloco html">
+                        <h2>HTML</h2>
+                        <p>O HTML (HyperText Markup Language) é a base de toda página web. Ele é responsável por
+                            estruturar o conteúdo, como textos, imagens, links e botões. Com o HTML, criamos a
+                            "ossatura" do site, definindo o que vai aparecer na tela e a hierarquia dos elementos.</p>
+                    </div>
+
+                    <div class="bloco css">
+                        <h2>CSS</h2>
+                        <p>O CSS (Cascading Style Sheets) é o responsável pela aparência do site. Ele define cores,
+                            fontes, espaçamentos, tamanhos e até animações. Com o CSS, transformamos uma estrutura
+                            simples em uma interface bonita e moderna, deixando o site com estilo e personalidade.</p>
+                    </div>
+                </section>
+
             </div>
         </section>
 
@@ -192,8 +229,35 @@
             </div>
             <hr>
             <div>
-                <p>1</p><br>
-                <p>2</p>
+                <section class="info-ide">
+                    <div>
+                        <h2>O que é uma IDE?</h2>
+                        <p>Uma IDE (Integrated Development Environment), ou Ambiente de Desenvolvimento Integrado, é um
+                            software que reúne em um único lugar todas as ferramentas necessárias para programar. Ela
+                            permite escrever, testar e depurar códigos com mais praticidade, oferecendo recursos como
+                            autocompletar, destaque de sintaxe, controle de versões e visualização de erros em tempo
+                            real. Com isso, o desenvolvedor ganha produtividade e organização durante o processo de
+                            criação.</p>
+                    </div>
+
+                    <div class="exemplos">
+                        <div class="bloco exemplo">
+                            <h3>Visual Studio Code</h3>
+                            <p>O VS Code é uma das IDEs mais populares do mundo. Desenvolvido pela Microsoft, ele é
+                                leve, personalizável e compatível com diversas linguagens. Conta com milhares de
+                                extensões que ampliam suas funcionalidades e deixam o ambiente de desenvolvimento mais
+                                dinâmico.</p>
+                        </div>
+
+                        <div class="bloco exemplo">
+                            <h3>IntelliJ IDEA</h3>
+                            <p>O IntelliJ IDEA é uma IDE voltada especialmente para Java, mas também suporta várias
+                                outras linguagens. Conhecida por sua inteligência na sugestão de códigos e ferramentas
+                                avançadas de depuração, é muito usada por desenvolvedores profissionais que buscam
+                                produtividade e robustez.</p>
+                        </div>
+                    </div>
+                </section>
             </div>
         </section>
 
@@ -213,37 +277,113 @@
                 <tbody>
                     <tr>
                         <td>Variáveis</td>
-                        <td></td>
+                        <td>Servem para armazenar informações temporárias, como números, textos ou resultados de
+                            cálculos, que serão usadas no programa.</td>
                     </tr>
                     <tr>
                         <td>Condicionais</td>
-                        <td></td>
+                        <td>Permitem executar ações diferentes dependendo de uma condição (ex: if, else, switch).</td>
                     </tr>
                     <tr>
                         <td>Laços de Repetição</td>
-                        <td></td>
+                        <td>Repetem um trecho de código várias vezes, de acordo com uma condição (ex: for, while,
+                            do...while).</td>
                     </tr>
                     <tr>
                         <td>Funções</td>
-                        <td></td>
+                        <td>Agrupam um conjunto de comandos que podem ser reutilizados várias vezes ao longo do
+                            programa.</td>
                     </tr>
                     <tr>
                         <td>Operadores Lógicos</td>
-                        <td></td>
+                        <td>São usados para comparar valores e tomar decisões lógicas</td>
                     </tr>
                 </tbody>
             </table>
             <div>
-                <p>1</p><br>
-                <p>2</p>
+                <p>1</p>
             </div>
+        </section>
+
+        <section>
+            <div class="programas">
+                <h2> Programas Criados pela Nossa Equipe</h2>
+                <h3>Exemplificação | Funcionalidade | Utilização</h3>
+                <br>
+                <hr>
+                <div class="bloco">
+                    <div class="ordem-crescente-decresente">
+                        <p>Programa para ordenar números de forma <strong>crescente</strong> e
+                            <strong>decresente</strong>:
+                        </p>
+                        <button onclick="gerar-Aleatorio">Gerar Aleatórios</button><br>
+                        <button onclick="crescente">Ordem de Forma Crescente</button><br>
+                        <button onclick="decrescente">Ordem de Forma Decrescente</button>
+                    </div>
+                </div>
+
+                <br>
+                <div class="bloco">
+                    <div class="ordem-bubleSort">
+                        <p>Programa para ordenar 10 aleatórios de 1 a 20 com <strong>BubleSort</strong>: </p><br>
+                        <button onclick="gerar-Aleatorio">Gerar Aleatórios</button><br>
+                        <button onclick="ordenar-bubleSort">Ordem com BubleSort</button>
+                        <p id="resultados"></p>
+                    </div>
+                </div>
+                <br>
+
+                <div class="bloco">
+                    <div class="ordem-array">
+                        <p>Programa para ordenar 10 aleatórios de 1 a 220 com <strong>Array</strong>:</p><br>
+                        <button onclick="gerarAleatorio()">Gerar Aleatórios</button><br>
+                        <button onclick="ordenarArray()">Ordem com Array</button>
+                        <p id="resultado"></p>
+                    </div>
+                </div>
+                <!-- 
+                <script>
+                    let numeros = [];
+                    function gerarAleatorio() {
+                        numeros = [];
+                        for (let i = 0; i < 10; i++) {
+                            let aleatorio = Math.floor(Math.random() * 220) + 1;
+                            numeros.push(aleatorio);
+                        }
+                        document.getElementById("resultado").innerHTML =
+                            "Números gerados: " + numeros.join(", ");
+                    }
+
+                    function ordenarArray() {
+                        if (numeros.length === 0) {
+                            document.getElementById("resultado").innerHTML =
+                                "Primeiro gere os números!";
+                            return;
+                        }
+                        numeros.sort((a, b) => a - b); // ordena em ordem crescente
+                        document.getElementById("resultado").innerHTML =
+                            "Números ordenados: " + numeros.join(", ");
+                    }
+                </script> -->
+            </div>
+            <br>
+            <div class="bloco">
+                <div class="ordem-bubleSort">
+                    <p>Programa para gerar uma <strong>matriz 3x3</strong> com números aleatórios de 1 a 20: </p><br>
+                    <button onclick="gerar-Aleatorio">Gerar Aleatórios</button><br>
+                    <button onclick="ordenar-bubleSort">Ordem com BubleSort</button>
+                    <p id="resultados"></p>
+                </div>
+            </div>
+            <br>
         </section>
     </main>
 
     <footer>
         <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
         <p>
-            <a href="https://www.instagram.com/elielbrnrd/">Instagram</a>
+            <a href=" https://www.instagram.com/elielbrnrd/">Instagram</a>
+            <a href="https://wa.me/5548991013184">Whatsapp</a>
             <a href="https://github.com/eli-bernardi">GitHub</a>
         </p>
     </footer>
