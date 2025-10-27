@@ -251,6 +251,35 @@ footer a:hover {
     margin-bottom: 10px;
 }
 
+
+.bloco-programas {
+    background-color: #1e1e1e;
+    color: #f2f2f2;
+    border-radius: 15px;
+    padding: 25px;
+    width: 45%;
+    min-width: 280px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ea se, box-shadow 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+.bloco-programas:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bloco-programas h2 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
 .html h2 {
     color: #ff9800;
 }
