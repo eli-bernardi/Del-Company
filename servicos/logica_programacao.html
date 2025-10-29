@@ -10,10 +10,10 @@
     <title>Del Company</title>
 </head>
 
-<<body class="bg-[#111] text-white">
+<body class="bg-[#111] text-white">
 
     <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#222] shadow-md">
-        <div chttps://github.com/eli-bernardi/Del-Companylass="logo text-xl font-bold text-[#d62828]">Del Company</div>
+        <div chttps://github.com/eli-bernardi/Del-Company class="logo text-xl font-bold text-[#d62828]">Del Company</div>
 
         <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
             <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -124,7 +124,7 @@
                     </code>
                 </div>
 
-                <p>
+                <p class="centralizar">
                     Outras linguagens interpretadas incluem: <strong>Ruby, Perl e Lua</strong>.
                 </p>
             </div>
@@ -189,7 +189,7 @@
                     </code>
                 </div>
 
-                <p>
+                <p class="centralizar">
                     Outras linguagens compiladas incluem: <strong>Rust, Pascal, Swift e Fortran</strong>.
                 </p>
 
@@ -301,7 +301,7 @@
                 </tbody>
             </table>
             <div>
-                <p>1</p>
+                <p></p>
             </div>
         </section>
 
@@ -356,7 +356,7 @@
                             <label for="idade">Idade da Pessoa</label><br>
                             <input type="number" id="idade"><br>
                             <label for="peso">Peso da Pessoa</label><br>
-                            <input type="number" id="peso"><br>
+                            <input type="number" id="peso"><br><br>
                             <button onclick="calcular-imc">Calcular Imc</button>
                         </div>
                     </div>
@@ -364,15 +364,33 @@
                     <div class="bloco-programas">
                         <div class="converter-fc" id="converter-fc">
                             <p>Programa para converter <strong>Farenheit</strong> para Celsius: </p><br>
-                            <input type="number" id="Farenheit"><br>
+                            <input type="number" id="Farenheit"><br><br>
                             <button onclick="calcular-celsius">Calcular Celsius</button>
                         </div>
                     </div>
+                    
+                    <div>
+                        <hr><br>
+                        <h2>Busca Linear</h2>
+                        <p>
+                            A busca linear é um dos métodos mais simples de procurar um elemento dentro de uma lista
+                            (array). Ela percorre todos os itens um por um, do início ao fim, até encontrar o valor
+                            desejado — ou chegar ao final sem encontrá-lo. É como folhear um caderno página por página
+                            até achar a informação que você quer.
+                        </p>
+                        <p>
+                            A busca linear é um dos métodos mais simples de procurar um elemento dentro de uma lista
+                            (array). Ela percorre todos os itens um por um, do início ao fim, até encontrar o valor
+                            desejado — ou chegar ao final sem encontrá-lo. É como folhear um caderno página por página
+                            até achar a informação que você quer.
+                        </p><br>
 
+                    </div>
+                    <br>
                     <div class="bloco-programas">
                         <div class="busca-linear" id="busca-linear">
                             <p>Programa para <strong>busca linear</strong> no JavaScript </p><br>
-                            <button onclick="calcular-celsius">Calcular Celsius</button>
+                            <button onclick="busca-linear">Fazer <strong>Busca Linear</strong></button>
                         </div>
                     </div>
                 </div>
@@ -387,6 +405,6 @@
             <a href="https://github.com/eli-bernardi">GitHub</a>
         </p>
     </footer>
-    </body>
+</body>
 
 </html>
