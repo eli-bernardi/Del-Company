@@ -1,0 +1,320 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    background-color: #121212;
+    line-height: 1.6;
+    text-decoration: none;
+}
+
+header {
+    background-color: #2c2c2c;
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: #d62828;
+    margin: 0 24px;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #cccccc;
+    font-weight: 500;
+    transition: color 0.3s;
+
+}
+
+.nav-list a:hover {
+    text-decoration: none;
+    color: #d62828;
+}
+
+/* --------------------------
+   SEÇÃO DE LINGUAGENS PADRONIZADA
+--------------------------- */
+
+.linguagens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.linguagem-card {
+    width: 150px;
+    height: 150px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.linguagem-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(214, 40, 40, 0.6);
+}
+
+.linguagem-card img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.centralizar {
+    text-align: center;
+}   
+
+code {
+    background-color: #1e1e1e;
+    padding: 8px;
+    border-radius: 8px;
+    display: block;
+    margin: 10px 0;
+    color: #add9da;
+    text-align: center;
+}
+
+.exemplo {
+    background-color: #1c1c1c;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+main section {
+    background-color: #1d1b1b;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+main section h1,
+main section h2,
+main section h3 {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+main section h1 {
+    font-size: 2rem;
+    color: #111111;
+}
+
+main section h2 {
+    font-size: 1.6rem;
+    color: #d62828;
+}
+
+main section h3 {
+    font-size: 1.1rem;
+    color: #555555;
+    font-weight: 400;
+}
+
+main section p {
+    margin-top: 1rem;
+    font-size: 1.05rem;
+    text-align: justify;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 1.5rem 0;
+}
+
+/* --------------------------
+   ESTILO PARA TABELAS
+--------------------------- */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 2rem 0;
+    font-size: 1rem;
+    background-color: #111111;
+    color: #ffffff;
+    text-align: center;
+}
+
+thead {
+    background-color: #d62828;
+    color: #ffffff;
+}
+
+thead th {
+    padding: 0.8rem;
+    font-weight: bold;
+    border: 1px solid #333333;
+}
+
+tbody td {
+    padding: 0.8rem;
+    border: 1px solid #333333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tbody tr:hover {
+    background-color: #292929;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: #cccccc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #d62828;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.info-html-css {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 40px;
+    flex-wrap: wrap;
+}
+
+.bloco:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bloco h2 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+
+.bloco-programas {
+    background-color: #252525;
+    color: #f2f2f2;
+    border-radius: 15px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    text-align: center;
+}
+
+
+.bloco-programas:hover {
+    transform: scale(1.03);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.bloco-programas h2 {
+    color: #00bcd4;
+    margin-bottom: 10px;
+}
+
+.bloco-programas button {
+    display: block;
+    margin: 0 auto;
+}
+
+.html h2 {
+    color: #ff9800;
+}
+
+.css h2 {
+    color: #2196f3;
+}
+
+.info-ide {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+    gap: 30px;
+}
+
+.container-blocos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #d62828;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
+    cursor: pointer;
+    align-items: center;
+}
+
+input {
+    border-radius: 8px;
+    padding: 8px;
+    border: none;
+    margin-top: 10px;
+    color: #333333;
+    cursor: pointer;
+}
