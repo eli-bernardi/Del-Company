@@ -97,7 +97,7 @@ nav {
 
 .centralizar {
     text-align: center;
-}   
+}
 
 code {
     background-color: #1e1e1e;
@@ -297,7 +297,16 @@ footer a:hover {
 }
 
 
-button {
+input {
+    border-radius: 8px;
+    padding: 8px;
+    border: none;
+    margin-top: 10px;
+    color: #333333;
+    cursor: pointer;
+}
+
+.bloco-programas button {
     display: inline-block;
     padding: 10px 20px;
     background-color: #d62828;
@@ -307,14 +316,16 @@ button {
     transition: background-color 0.3s ease;
     margin-top: 15px;
     cursor: pointer;
-    align-items: center;
 }
 
-input {
-    border-radius: 8px;
-    padding: 8px;
-    border: none;
-    margin-top: 10px;
-    color: #333333;
+.bloco-programas-busca button {
+    padding: 10px 20px;
+    background-color: #d62828;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 12px;
+    transition: background-color 0.3s ease;
+    margin-top: 15px;
     cursor: pointer;
+    align-items: center;
 }
