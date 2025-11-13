@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e0e0e0;
+    background-color: #121212;
+    line-height: 1.6;
+}
+
+main {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: auto;
+}
+
+section {
+    background-color: #1d1b1b;
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+section h2 {
+    text-align: center;
+    font-size: 1.6rem;
+    color: #d62828;
+}
+
+section h3 {
+    text-align: center;
+    font-size: 1.1rem;
+    color: #777;
+    margin-bottom: 1rem;
+}
+
+section p {
+    text-align: justify;
+    margin-top: 1rem;
+}
+
+ul {
+    margin-left: 1.5rem;
+    list-style: square;
+}
+
+hr {
+    border: none;
+    border-top: 2px solid #e0e0e0;
+    margin: 1.5rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    font-size: 1rem;
+    background-color: #111;
+    text-align: center;
+}
+
+thead {
+    background-color: #d62828;
+    color: white;
+}
+
+th,
+td {
+    padding: 0.8rem;
+    border: 1px solid #333;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #1a1a1a;
+}
+
+tbody tr:hover {
+    background-color: #292929;
+}
+
+.imagem-exemplo {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+}
+
+.imagem-exemplo img {
+    max-width: 400px;
+    width: 100%;
+    border: 2px solid #d62828;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.2s ease;
+}
+
+.imagem-exemplo img:hover {
+    transform: scale(1.05);
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    color: #ccc;
+}
+
+input {
+    margin-top: 0.3rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    border: 1px solid #d62828;
+    background-color: #111;
+    color: white;
+}
+
+.botao {
+    background-color: #d62828;
+    color: white;
+    padding: 0.7rem;
+    border-radius: 8px;
+    cursor: pointer;
+    border: none;
+    transition: background 0.2s ease;
+}
+
+.botao:hover {
+    background-color: #a91f1f;
+}
+
+footer {
+    background-color: #2c2c2c;
+    color: #cccccc;
+    text-align: center;
+    padding: 1.5rem 1rem;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #d62828;
+    text-decoration: none;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+
+/* --------------------------
+   BANCO DE DADOS RELACIONAIS / NÃO RELACIONAIS
+--------------------------- */
+
+.bancos-relacionais {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.banco-card {
+    width: 150px;
+    height: 150px;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.banco-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(214, 40, 40, 0.6);
+}
+
+.banco-card img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.centralizar {
+    text-align: center;
+}
