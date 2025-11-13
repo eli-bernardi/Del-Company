@@ -298,6 +298,48 @@ footer a:hover {
 
 
 /* --------------------------
+   SEÇÃO DE LINGUAGENS PADRONIZADA
+--------------------------- */
+
+.portugol-programas {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.portugol-card {
+    width: 550px;
+    height: auto;
+    background-color: #1e1e1e;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portugol-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(214, 40, 40, 0.6);
+}
+
+.portugol-card img {
+    max-width: 80%;
+    max-height: 80%;
+    object-fit: contain;
+    border-radius: 8px;
+
+}
+
+.centralizar {
+    text-align: center;
+}
+
+/* --------------------------
    BLOCO VARIÁVEL X CONSTANTE
 --------------------------- */
 
