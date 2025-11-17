@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/logica_computacional.css">
+    <script src="../js/logica_computacional" defer></script>
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Del Company</title>
@@ -214,35 +215,28 @@
                     conhecimentos referente à programação.</p>
             </div>
             <h2>Funções em Portugol</h2>
-            <div class="portugol-programas">
-                <div class="portugol-card">
-                    <img src="../img/funcao1.png" alt="funcao1">
+
+
+            <div class="carrossel" id="carrossel1">
+                <div class="slides">
+                    <img src="../img/funcao1.png" class="slide">
+                    <img src="../img/funcao2.png" class="slide">
+                    <img src="../img/funcao3.png" class="slide">
                 </div>
-                <br>
-                <div class="portugol-card">
-                    <img src="../img/funcao2.png" alt="funcao2">
-                </div>
-                <br>
-                <div class="portugol-card">
-                    <img src="../img/funcao3.png" alt="funcao3">
-                </div>
-                <br>
-                <div class="portugol-exe">
-                    <h2>Vetores Funcionando em Portugol</h2>
-                    <div class="portugol-programas">
-                        <div class="portugol-card">
-                            <img src="../img/vetor1.png" alt="vetor1">
-                        </div>
-                        <div class="portugol-card">
-                            <img src="../img/vetor1.png" alt="vetor1">
-                        </div>
-                        <div class="portugol-card">
-                            <img src="../img/vetor1.png" alt="vetor1">
-                        </div>
-                    </div>
-                </div>
+                <button class="btn prev" onclick="mudarSlide('carrossel1', -1)">❮</button>
+                <button class="btn next" onclick="mudarSlide('carrossel1', 1)">❯</button>
             </div>
-            <br>
+            <br><br>
+            <div class="carrossel" id="carrossel2">
+                <div class="slides">
+                    <img src="../img/vetor1.png" class="slide">
+                    <img src="../img/vetor2.png" class="slide">
+                    <img src="../img/vetor3.png" class="slide">
+                </div>
+                <button class="btn prev" onclick="mudarSlide('carrossel2', -1)">❮</button>
+                <button class="btn next" onclick="mudarSlide('carrossel2', 1)">❯</button>
+            </div>
+
         </section>
     </main>
     <footer>
