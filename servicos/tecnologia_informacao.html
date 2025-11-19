@@ -55,9 +55,7 @@
         <p>Hoje, a TI está presente em praticamente tudo — desde o uso de um celular até os grandes servidores que
             mantêm a internet funcionando.</p>
     </section>
-</main>
-<hr><br>
-<main>
+
     <section>
         <div id="componentes">
             <h2>Componentes</h2>
@@ -97,8 +95,224 @@
         <div class="sistemas-operacionais">
             <h2>Sistemas Operacionais</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
-        <hr>
-        <div></div>
+            <hr>
+            <div class="linguagens">
+                <div class="linguagem-card">
+                    <img src="../img/windows_logo-removebg-preview.png" alt="Processador">
+                </div>
+                <div class="linguagem-card">
+                    <img src="../img/macOS-removebg-preview.png" alt="Memoria-Ram">
+                </div>
+                <div class="linguagem-card">
+                    <img src="../img/linux_logo-removebg-preview.png" alt="Memoria-Ram">
+                </div>
+
+                <div class="linguagem-card">
+                    <img src="../img/android_logo-removebg-preview.png" alt="Placa-Mae">
+                </div>
+            </div><br>
+            <div class="bloco-componentes">
+                <div class="placa-mae">
+                    <p>Um sistema operacional (SO) é o “cérebro” que faz o dispositivo funcionar. Ele gerencia tudo:
+                        desde a forma como os aplicativos rodam, até o uso da memória, arquivos, conexões e periféricos.
+                        Sem um SO, o computador ou celular até ligaria, mas não teria como executar programas nem
+                        permitir que o usuário interaja com ele.
+                        Em resumo: é o sistema que organiza, controla e facilita o uso do hardware — deixando tudo
+                        pronto pra você usar sem dor de cabeça</p><br>
+                </div>
+
+                <p><strong>Windows:</strong></p>
+                <p>O mais popular no mundo dos PCs. É conhecido pela facilidade de uso, compatibilidade com praticamente
+                    todos os tipos de programas e muito utilizado em empresas, escolas e escritórios. Perfeito para
+                    produtividade e jogos, já que tem grande suporte de softwares e drivers.</p>
+
+                <p><strong>MacOS:</strong></p>
+                <p>Sistema exclusivo dos computadores da Apple. Ele aposta em desempenho, simplicidade e integração com
+                    outros dispositivos da marca. O visual é limpo, fluido e muito voltado para quem trabalha com
+                    design, vídeo, música e ambientes criativos.</p>
+
+                <p><strong>Linux:</strong></p>
+                <p>Um sistema livre e altamente personalizável. Ele é muito usado por desenvolvedores, servidores e
+                    pessoas que gostam de mais controle sobre o computador. Existem várias “distros”, como Ubuntu, Mint
+                    e Fedora, cada uma com seu estilo e foco. Além disso, é famoso pela segurança e estabilidade.</p>
+
+                <p><strong>Android:</strong></p>
+                <p>O sistema do Google para smartphones e tablets. É o mais usado no mundo e se destaca pela
+                    flexibilidade, variedade de aparelhos e personalização. A Play Store oferece milhares de apps, e o
+                    sistema roda em marcas como Samsung, Xiaomi, Motorola e muitas outras.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="sistema-arquivo">
+            <h2>Sistemas De Arquivos (CMD)</h2>
+            <h3>Exemplificação | Funcionalidade | Utilização</h3>
+            <hr>
+
+            <div class="sistema-arquivo">
+                <p>Os sistemas de arquivos são estruturas que organizam e armazenam dados em dispositivos de
+                    armazenamento,
+                    como discos rígidos, SSDs e pendrives. Eles definem como os arquivos são nomeados, armazenados e
+                    acessados pelo sistema operacional.</p>
+
+                <p>Existem vários tipos de sistemas de arquivos, cada um com suas características e usos específicos.
+                    Alguns
+                    dos mais comuns incluem:</p>
+
+                <p>No Windows, <strong> CMD é a sigla para "Command Prompt"</strong> (Prompt de Comando). Como
+                    ferramenta
+                    nativa do sistema
+                    operacional, ele permite a interação com o computador através de comandos de texto.</p>
+
+                <p><strong>FAT32 (File Allocation Table 32):</strong> Um sistema de arquivos antigo, mas amplamente
+                    compatível com diversos dispositivos e sistemas operacionais. No entanto, tem limitações, como o
+                    tamanho
+                    máximo de arquivo de 4 GB.</p>
+
+                <p><strong>NTFS (New Technology File System):</strong> O sistema de arquivos padrão para o Windows.
+                    Oferece
+                    recursos avançados, como permissões de segurança, criptografia e suporte a arquivos maiores que 4
+                    GB.
+                </p>
+
+                <p><strong>exFAT (Extended File Allocation Table):</strong> Projetado para ser uma versão melhorada do
+                    FAT32,
+                    o exFAT é ideal para dispositivos de armazenamento removíveis, como pendrives e cartões SD,
+                    suportando
+                    arquivos maiores e sendo compatível com vários sistemas operacionais.</p>
+
+                <p><strong>ext4 (Fourth Extended File System):</strong> O sistema de arquivos mais comum em
+                    distribuições
+                    Linux. Oferece alta performance, suporte a grandes volumes e arquivos, além de recursos avançados
+                    como
+                    journaling.</p>
+
+                <p>Cada sistema de arquivos tem suas vantagens e desvantagens, e a escolha do mais adequado depende das
+                    necessidades específicas do usuário e do ambiente em que será utilizado.</p>
+            </div>
+            <br>
+            <hr>
+            <div class="sistema-arquivo"><br><br>
+                <h2>Modo Texto — Terminal / CMD</h2>
+                <p>No modo texto você usa comandos para navegar, criar, mover e apagar arquivos. É direto, rápido e
+                    ideal para automação (scripts) e tarefas avançadas.</p> <br>
+                <div class="example-cmd">
+                    <h3>Exemplos de Comandos Básicos:</h3>
+                    <pre class="cmd"><code>
+                        <strong># Windows (CMD)2 </strong>
+                    cd C:\Users\MeuUsuario\Documentos
+                    dir
+                    mkdir Projeto
+                    copy arquivo.txt C:\Backup\arquivo.txt
+                    move arquivo.txt ..\outro
+                    del arquivo.txt
+                    
+                    
+                  <strong>  # Linux / macOS (Terminal)</strong>
+                    cd /home/usuario/Documentos
+                    ls -la
+                    mkdir projeto
+                    cp arquivo.txt /backup/arquivo.txt
+                    mv arquivo.txt ../outro
+                    rm arquivo.txt</code></pre>
+                </div>
+            </div>
+
+            <div>
+                <div class="example-cmd">
+                    <h3>Vantagens: </h3>
+                    <ul>
+                        <li>Automatização com scripts (bash, PowerShell).</li>
+                        <li>Operações em lote e acesso remoto (SSH).</li>
+                        <li>Mais controle sobre permissões e atributos.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <section>
+                <h2>Modo Gráfico — Explorer / Gerenciador de Arquivos</h2>
+                <p>No modo gráfico você interage com arquivos por janelas, ícones e menus. Tudo é visual e pensado
+                    pra
+                    ser intuitivo: arrasta e solta, visualização em miniaturas e organização por colunas, datas ou
+                    tipos.</p>
+                <div class="example-cmd">
+                    <ul>
+                        <h3>O que você costuma fazer aqui</h3>
+                        <li>- Abrir pastas com duplo-clique</li>
+                        <li>- Arrastar arquivos entre pastas</li>
+                        <li>- Renomear com clique lento (ou F2)</li>
+                        <li>- Usar pesquisa para encontrar arquivos por nome </li>
+                        <li>- Ver pré-visualização de fotos e documentos </li>
+                    </ul>
+                </div>
+                <div>
+                    <br>
+                    <div class="example-cmd">
+                        <h3>Vantagens: </h3>
+                        <ul>
+                            <li>Intuitivo para a maioria dos usuários.</li>
+                            <li>Visualização rápida (miniaturas e previews).</li>
+                            <li>Operações seguras com desfazer/recuperação em muitos casos.</li>
+                        </ul>
+                    </div>
+                </div>
+        </div>
+    </section>
+    <section>
+        <div class="softwares-escritorio">
+            <h2>Softwares de Escritório</h2>
+            <h3>Exemplificação | Funcionalidade | Utilização</h3>
+            <hr>
+            <div class="linguagens">
+                <div class="linguagem-card">
+                    <img src="../img/word_logo.png" alt="Microsoft Word">
+                </div>
+                <div class="linguagem-card">
+                    <img src="../img/powerpoint_logo.png" alt="Microsoft Excel">
+                </div>
+                <div class="linguagem-card">
+                    <img src="../img/excel_logo.png" alt="Microsoft PowerPoint">
+                </div>
+            </div><br>
+            <div class="bloco-componentes">
+                <div class="placa-mae">
+                    <p>Os softwares de escritório são ferramentas essenciais para a criação, edição e gerenciamento de
+                        documentos, planilhas e apresentações. Eles facilitam o trabalho diário, seja em ambientes
+                        corporativos, educacionais ou pessoais.</p><br>
+                </div>
+
+                <p><strong>Microsoft Word:</strong></p>
+                <p>Um processador de texto amplamente utilizado para criar documentos escritos, como relatórios,
+                    cartas e currículos. Oferece recursos avançados de formatação, revisão ortográfica e colaboração
+                    em tempo real.</p>
+
+                <p><strong>Microsoft Excel:</strong></p>
+                <p>Uma poderosa ferramenta de planilhas que permite organizar dados, realizar cálculos complexos e
+                    criar gráficos. É amplamente usado para análise financeira, gerenciamento de projetos e
+                    acompanhamento de dados.</p>
+
+                <p><strong>Microsoft PowerPoint:</strong></p>
+                <p>Um software de apresentação que facilita a criação de slides visuais para reuniões, aulas e
+                    conferências. Oferece uma variedade de templates, animações e opções de design para tornar as
+                    apresentações mais envolventes.</p>
+            </div>
+        </div><br>
+        <h3 class="iframe-documentos">Dois softwares de escritório em uso prático, em atividades diferentes:</h3>
+
+        <h3 class="iframe-documentos">Microsoft Word - Textos</h3>
+        <div class="iframe-documentos">
+            <iframe src="../img/editor_de_texto_word.pdf" width="auto" height="100%"></iframe>
+            <iframe src="../img/direitos_humanos.docx.pdf" width="auto" height="100%"></iframe>
+        </div>
+        <h3 class="iframe-documentos">Microsoft PowerPoint - Apresentações</h3>
+        <div class="iframe-documentos">
+            <iframe src="../img/Softwares de Escritório.pptx.pdf" width="auto" height="100%"></iframe>
+            <iframe src="../img/Inserindo Elementos no Word - Estatísitic.pptx.pdf" width="auto" height="100%"></iframe>
+        </div>
+        <h3 class="iframe-documentos">Microsoft Excel - Planilhas</h3>
+        <div class="iframe-documentos">
+            <iframe src="../img/controle_gastos.pdf" width="auto" height="100%"></iframe>
+            <iframe src="../img/controle_vendas.pdf" width="auto" height="100%"></iframe>
         </div>
     </section>
 </main>

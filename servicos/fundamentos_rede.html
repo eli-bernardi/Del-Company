@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/fundamento_rede.css">
+    <link rel="stylesheet" href="../css/fundamento_eletronica.css">
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Del Company</title>
@@ -13,7 +13,8 @@
 <body class="bg-[#111] text-white">
 
     <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#222] shadow-md">
-        <div https://github.com/eli-bernardi/Del-Company class="logo text-xl font-bold text-[#d62828]">Del Company</div>
+        <div https://github.com/eli-bernardi/Del-Company class="logo text-xl font-bold text-[#d62828]">Del Company
+        </div>
 
         <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
             <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -41,16 +42,424 @@
                             class="block px-4 py-2 hover:bg-[#d62828] rounded">Tecnologia da Informação</a></li>
                 </ul>
             </div>
-
             <a href="../contato.html" class="block py-2 hover:text-[#d62828]">Contato</a>
         </nav>
     </header>
+    <br>
+    <main>
+        <section>
+            <h2>Fundamentos de Redes de Computadores</h2>
+            <h3>Conceitos | Protocolos | Arquitetura | Aplicações</h3>
+            <hr>
+            <div>
+                <p>
+                    As redes de computadores são a espinha dorsal da comunicação digital moderna, conectando
+                    dispositivos
+                    e pessoas em todo o mundo. Elas permitem o compartilhamento de recursos, troca de informações e
+                    acesso a serviços globais como internet, email e streaming.
+                </p>
+                <p>
+                    Este campo do conhecimento envolve conceitos como protocolos de comunicação, topologias de rede,
+                    hardware de conectividade e segurança digital, servindo como base para administradores de rede,
+                    desenvolvedores e profissionais de TI.
+                </p>
+            </div>
+        </section>
 
+        <section>
+            <hr><br>
+            <h2>O que são Redes de Computadores?</h2>
+            <p>
+                <strong>Redes de Computadores</strong> são conjuntos de dois ou mais dispositivos interconectados
+                que compartilham recursos e trocam informações. Esses dispositivos podem ser computadores, smartphones,
+                servidores, roteadores, switches e qualquer equipamento capaz de se comunicar digitalmente.
+            </p>
+            <p>
+                As redes permitem que usuários compartilhem arquivos, impressoras, acesso à internet e executem
+                aplicações colaborativas. Elas podem ser classificadas por tamanho (LAN, MAN, WAN), meio de transmissão
+                (cabeadas ou wireless) e topologia (estrela, anel, barramento).
+            </p>
+        </section>
 
+        <section>
+            <h2>O que é uma Rede Mínima?</h2>
+            <p>
+                Uma <strong>rede mínima</strong> é a configuração mais simples possível para conectar dispositivos.
+                Basicamente consiste em:
+            </p>
+            <ul>
+                <li><strong>Dois dispositivos</strong> (dois computadores ou um computador e uma impressora)</li>
+                <li><strong>Meio de conexão</strong> (cabo Ethernet ou conexão wireless)</li>
+                <li><strong>Protocolo de comunicação</strong> (TCP/IP básico)</li>
+            </ul>
+            <p>
+                Exemplo: Conexão ponto a ponto entre dois computadores usando um cabo crossover ou uma conexão
+                Wi-Fi direta (ad-hoc).
+            </p>
+        </section>
+
+        <section>
+            <h2>O que é a Internet? O que a compõe?</h2>
+            <p>
+                A <strong>Internet</strong> é uma rede global de redes interconectadas que utiliza o protocolo
+                TCP/IP para comunicação. É composta por:
+            </p>
+            <ul>
+                <li><strong>Backbone</strong> - Redes tronco de alta capacidade</li>
+                <li><strong>Provedores de Serviço Internet (ISPs)</strong></li>
+                <li><strong>Data Centers</strong> e servidores</li>
+                <li><strong>Roteadores</strong> e switches</li>
+                <li><strong>Cabos submarinos</strong> e links de satélite</li>
+                <li><strong>Dispositivos dos usuários</strong> finais</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>O que é a Web?</h2>
+            <p>
+                A <strong>Web (World Wide Web)</strong> é um sistema de informações que funciona sobre a Internet,
+                composto por documentos interligados (páginas web) acessíveis através de navegadores.
+                Diferente da Internet (a infraestrutura), a Web é o conteúdo e serviços acessados através dela.
+            </p>
+        </section>
+
+        <section>
+            <h2>Mapa Global de Fibra Óptica</h2>
+            <p>
+                O <strong>mapa de fibra óptica</strong> mostra a extensa rede de cabos submarinos e terrestres
+                que formam o backbone da Internet global. Estes cabos transmitem dados na velocidade da luz
+                através de pulsos luminosos.
+            </p>
+            <div style="text-align: center; margin: 20px 0;">
+                <img src="https://www.submarinecablemap.com/images/submarine_cable_map_2024.jpg"
+                    alt="Mapa Global de Cabos Submarinos"
+                    style="max-width: 100%; height: auto; border: 1px solid #444;">
+                <p><em>Mapa ilustrativo dos cabos submarinos que conectam continentes</em></p>
+            </div>
+        </section>
+
+        <section id="hardware-wifi">
+            <h2>Componentes de Hardware de uma Rede Wi-Fi</h2>
+            <h3>Exemplificação | Funcionalidade | Utilização</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Função</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Roteador Wireless</td>
+                        <td>Gerencia o tráfego de dados entre dispositivos e a internet, criando a rede Wi-Fi</td>
+                    </tr>
+                    <tr>
+                        <td>Access Point (Ponto de Acesso)</td>
+                        <td>Estende a cobertura da rede Wi-Fi em áreas maiores</td>
+                    </tr>
+                    <tr>
+                        <td>Adaptador Wi-Fi</td>
+                        <td>Permite que dispositivos sem capacidade wireless se conectem à rede</td>
+                    </tr>
+                    <tr>
+                        <td>Antenas</td>
+                        <td>Amplificam o sinal wireless para maior alcance e estabilidade</td>
+                    </tr>
+                    <tr>
+                        <td>Modem</td>
+                        <td>Converte sinais do provedor para formato utilizável pela rede local</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="hardware-cabeadas">
+            <h2>Componentes de Hardware de Rede Cabeadas</h2>
+            <h3>Exemplificação | Funcionalidade | Utilização</h3>
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Componente</th>
+                        <th>Função</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Switch</td>
+                        <td>Conecta múltiplos dispositivos em uma rede local, direcionando pacotes de dados</td>
+                    </tr>
+                    <tr>
+                        <td>Roteador</td>
+                        <td>Interconecta redes diferentes e gerencia o tráfego entre elas</td>
+                    </tr>
+                    <tr>
+                        <td>Cabos Ethernet (CAT5e/6/7)</td>
+                        <td>Meio físico para transmissão de dados entre dispositivos</td>
+                    </tr>
+                    <tr>
+                        <td>Patch Panel</td>
+                        <td>Organiza e centraliza as conexões de cabos em infraestruturas maiores</td>
+                    </tr>
+                    <tr>
+                        <td>Conectores RJ45</td>
+                        <td>Interface física para conexão de cabos Ethernet em dispositivos</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="protocolos">
+            <h2>Protocolos de Comunicação</h2>
+            <h3>Exemplificação | Funcionalidade | Utilização</h3>
+            <div class="container">
+                <p>
+                    Um <strong>protocolo de comunicação</strong> é um conjunto de regras e padrões que define
+                    como os dispositivos em uma rede trocam informações. É como uma "língua comum" que todos
+                    os dispositivos entendem para se comunicarem eficientemente.
+                </p>
+
+                <p>
+                    Os protocolos especificam formato dos dados, sequência de mensagens, detecção e correção
+                    de erros, controle de fluxo e métodos de endereçamento.
+                </p>
+            </div>
+        </section>
+
+        <section id="modelo-osi">
+            <h2>Modelo OSI</h2>
+            <div class="container">
+                <p>
+                    O <strong>Modelo OSI (Open Systems Interconnection)</strong> é um modelo de referência
+                    que divide a comunicação de rede em 7 camadas:
+                </p>
+                <ol>
+                    <li><strong>Física</strong> - Meio físico de transmissão</li>
+                    <li><strong>Enlace de Dados</strong> - Controle de erros no link</li>
+                    <li><strong>Rede</strong> - Roteamento e endereçamento lógico</li>
+                    <li><strong>Transporte</strong> - Controle de fluxo e confiabilidade</li>
+                    <li><strong>Sessão</strong> - Estabelecimento de sessões</li>
+                    <li><strong>Apresentação</strong> - Formatação e criptografia de dados</li>
+                    <li><strong>Aplicação</strong> - Interface com usuário final</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="modelo-tcpip">
+            <h2>Modelo TCP/IP</h2>
+            <div class="container">
+                <p>
+                    O <strong>Modelo TCP/IP</strong> é o modelo prático usado na Internet, com 4 camadas:
+                </p>
+                <ol>
+                    <li><strong>Aplicação</strong> - HTTP, FTP, SMTP, DNS</li>
+                    <li><strong>Transporte</strong> - TCP, UDP</li>
+                    <li><strong>Internet</strong> - IP, ICMP</li>
+                    <li><strong>Interface de Rede</strong> - Ethernet, Wi-Fi</li>
+                </ol>
+            </div>
+        </section>
+
+        <section id="protocolos-ip">
+            <h2>Protocolos IP V4 e IP V6</h2>
+            <div class="container">
+                <p><strong>IP V4 (Internet Protocol version 4):</strong></p>
+                <ul>
+                    <li>Endereços de 32 bits (ex: 192.168.1.1)</li>
+                    <li>≈ 4.3 bilhões de endereços possíveis</li>
+                    <li>Esgotado devido ao crescimento da Internet</li>
+                    <li>Usa NAT para extensão de endereços</li>
+                </ul>
+
+                <p><strong>IP V6 (Internet Protocol version 6):</strong></p>
+                <ul>
+                    <li>Endereços de 128 bits (ex: 2001:0db8:85a3:0000:0000:8a2e:0370:7334)</li>
+                    <li>≈ 3.4×10³⁸ endereços possíveis</li>
+                    <li>Segurança nativa (IPsec)</li>
+                    <li>Melhor eficiência no roteamento</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="configuracao-node">
+            <h2>Configuração IP/TCP em Node.js</h2>
+            <div class="container">
+                <p>
+                    No Node.js, a configuração de IP e TCP é feita através do módulo <strong>net</strong>
+                    para conexões raw ou <strong>http/https</strong> para aplicações web.
+                </p>
+
+                <div class="exemplo">
+                    <strong>Exemplo de servidor TCP em Node.js:</strong><br><br>
+                    const net = require('net');<br><br>
+
+                    const server = net.createServer((socket) => {<br>
+                    &nbsp;&nbsp;console.log('Cliente conectado: ' + socket.remoteAddress);<br>
+                    &nbsp;&nbsp;socket.write('Bem-vindo ao servidor TCP!\r\n');<br>
+                    &nbsp;&nbsp;socket.on('data', (data) => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Dados recebidos: ' + data);<br>
+                    &nbsp;&nbsp;});<br>
+                    });<br><br>
+
+                    server.listen(8080, '0.0.0.0', () => {<br>
+                    &nbsp;&nbsp;console.log('Servidor TCP ouvindo na porta 8080');<br>
+                    });
+                </div>
+            </div>
+        </section>
+
+        <section id="protocolo-http">
+            <h2>Protocolo HTTP</h2>
+            <div class="container">
+                <p>
+                    <strong>HTTP (HyperText Transfer Protocol)</strong> é o protocolo de aplicação para
+                    transferência de hipertexto na Web. Opera no modelo cliente-servidor usando requisições
+                    e respostas.
+                </p>
+                <p><strong>Características:</strong></p>
+                <ul>
+                    <li>Stateless (sem estado)</li>
+                    <li>Porta 80 padrão</li>
+                    <li>Métodos: GET, POST, PUT, DELETE</li>
+                    <li>Códigos de status: 200, 404, 500, etc.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="protocolo-https">
+            <h2>Protocolo HTTPS</h2>
+            <div class="container">
+                <p>
+                    <strong>HTTPS (HTTP Secure)</strong> é a versão segura do HTTP que utiliza criptografia
+                    TLS/SSL para proteger a comunicação.
+                </p>
+                <p><strong>Vantagens:</strong></p>
+                <ul>
+                    <li>Confidencialidade dos dados</li>
+                    <li>Integridade da informação</li>
+                    <li>Autenticação do servidor</li>
+                    <li>Porta 443 padrão</li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="frameworks-node">
+            <h2>Frameworks HTTP para Node.js</h2>
+            <div class="container">
+                <p><strong>Exemplos de frameworks populares:</strong></p>
+
+                <div class="exemplo">
+                    <strong>1. Express.js</strong> - Framework minimalista e flexível<br>
+                    <strong>2. Fastify</strong> - Focado em performance<br>
+                    <strong>3. Koa.js</strong> - Criado pelos mesmos autores do Express, mais moderno<br>
+                    <strong>4. Nest.js</strong> - Framework completo com arquitetura TypeScript<br>
+                    <strong>5. Hapi.js</strong> - Focado em configuração e enterprise
+                </div>
+            </div>
+        </section>
+
+        <section id="exemplos-codigo">
+            <h2>Exemplos de Código Backend</h2>
+            <h3>Troca de Mensagens Frontend/Backend</h3>
+            <div class="container">
+
+                <div class="exemplo">
+                    <strong>Exemplo 1: API REST com Express.js</strong><br><br>
+                    const express = require('express');<br>
+                    const app = express();<br><br>
+
+                    app.use(express.json());<br><br>
+
+                    app.get('/api/mensagem', (req, res) => {<br>
+                    &nbsp;&nbsp;res.json({ mensagem: 'Olá do backend!' });<br>
+                    });<br><br>
+
+                    app.post('/api/mensagem', (req, res) => {<br>
+                    &nbsp;&nbsp;const { texto } = req.body;<br>
+                    &nbsp;&nbsp;console.log('Mensagem recebida:', texto);<br>
+                    &nbsp;&nbsp;res.json({ status: 'Mensagem recebida!' });<br>
+                    });<br><br>
+
+                    app.listen(3000, () => {<br>
+                    &nbsp;&nbsp;console.log('Servidor rodando na porta 3000');<br>
+                    });
+                </div>
+
+                <div class="exemplo">
+                    <strong>Exemplo 2: WebSockets com Socket.io</strong><br><br>
+                    const express = require('express');<br>
+                    const http = require('http');<br>
+                    const socketIo = require('socket.io');<br><br>
+
+                    const app = express();<br>
+                    const server = http.createServer(app);<br>
+                    const io = socketIo(server);<br><br>
+
+                    io.on('connection', (socket) => {<br>
+                    &nbsp;&nbsp;console.log('Usuário conectado:', socket.id);<br><br>
+
+                    &nbsp;&nbsp;socket.on('mensagem', (data) => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Mensagem:', data);<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;io.emit('nova_mensagem', {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usuario: socket.id,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto: data,<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timestamp: new Date()<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;});<br>
+                    &nbsp;&nbsp;});<br><br>
+
+                    &nbsp;&nbsp;socket.on('disconnect', () => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Usuário desconectado:', socket.id);<br>
+                    &nbsp;&nbsp;});<br>
+                    });<br><br>
+
+                    server.listen(3000, () => {<br>
+                    &nbsp;&nbsp;console.log('Servidor Socket.io na porta 3000');<br>
+                    });
+                </div>
+
+                <div class="exemplo">
+                    <strong>Exemplo 3: API com Autenticação JWT</strong><br><br>
+                    const express = require('express');<br>
+                    const jwt = require('jsonwebtoken');<br>
+                    const app = express();<br><br>
+
+                    app.use(express.json());<br><br>
+
+                    const SECRET = 'chave-secreta';<br><br>
+
+                    // Login<br>
+                    app.post('/api/login', (req, res) => {<br>
+                    &nbsp;&nbsp;const { usuario, senha } = req.body;<br>
+                    &nbsp;&nbsp;if (usuario === 'admin' && senha === '1234') {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;const token = jwt.sign({ usuario }, SECRET, { expiresIn: '1h' });<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;res.json({ token });<br>
+                    &nbsp;&nbsp;} else {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;res.status(401).json({ erro: 'Credenciais inválidas' });<br>
+                    &nbsp;&nbsp;}<br>
+                    });<br><br>
+
+                    // Rota protegida<br>
+                    app.get('/api/protegido', (req, res) => {<br>
+                    &nbsp;&nbsp;const token = req.headers.authorization?.split(' ')[1];<br>
+                    &nbsp;&nbsp;if (!token) return res.status(401).json({ erro: 'Token necessário' });<br><br>
+
+                    &nbsp;&nbsp;jwt.verify(token, SECRET, (err, decoded) => {<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;if (err) return res.status(401).json({ erro: 'Token inválido' });<br>
+                    &nbsp;&nbsp;&nbsp;&nbsp;res.json({ mensagem: 'Acesso permitido!', usuario: decoded.usuario });<br>
+                    &nbsp;&nbsp;});<br>
+                    });<br><br>
+
+                    app.listen(3000, () => {<br>
+                    &nbsp;&nbsp;console.log('Servidor de autenticação na porta 3000');<br>
+                    });
+                </div>
+            </div>
+        </section>
+    </main>
     <footer>
-        <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
+        <p> &copy; 2025 - Del Company | Todos os direitos reservados</p>
         <p>
-            <a href="https://www.instagram.com/elielbrnrd/">Instagram</a>
+            <a href=" https://www.instagram.com/elielbrnrd/">Instagram</a>
+            <a href="https://wa.me/5548991013184">Whatsapp</a>
             <a href="https://github.com/eli-bernardi">GitHub</a>
         </p>
     </footer>

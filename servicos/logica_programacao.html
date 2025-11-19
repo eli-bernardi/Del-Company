@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/logica_programacao.css">
+    <script src="../js/logica_programacao.js" defer></script>
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Del Company</title>
@@ -314,24 +315,24 @@
                             <p>Programa para ordenar números de forma <strong>crescente</strong> e
                                 <strong>decrescente</strong>:
                             </p>
-                            <button onclick="gerar-Aleatorio">Gerar Aleatórios</button><br>
-                            <button onclick="crescente">Ordem de Forma Crescente</button><br>
-                            <button onclick="decrescente">Ordem de Forma Decrescente</button>
+                            <button onclick="gerarAleatorio1()">Gerar Aleatórios</button>
+                            <button onclick="crescente()">Ordem de Forma Crescente</button>
+                            <button onclick="decrescente()">Ordem de Forma Decrescente</button>
                         </div>
                     </div>
 
                     <div class="bloco-programas">
                         <div class="ordem-bubleSort" id="ordem-bubleSort">
                             <p>Programa para ordenar 10 aleatórios de 1 a 20 com <strong>BubleSort</strong>: </p><br>
-                            <button onclick="gerar-Aleatorio">Gerar Aleatórios</button><br>
-                            <button onclick="ordenar-bubleSort">Ordem com BubleSort</button>
+                            <button onclick="gerarAleatorio2()">Gerar Aleatórios</button>
+                            <button onclick="ordenarBubbleSort()">Ordem com BubleSort</button>
                         </div>
                     </div>
 
                     <div class="bloco-programas">
                         <div class="ordem-array" id="ordem-array">
                             <p>Programa para ordenar 10 aleatórios de 1 a 220 com <strong>Array</strong>:</p><br>
-                            <button onclick="gerarAleatorio()">Gerar Aleatórios</button><br>
+                            <button onclick="gerarAleatorio3()">Gerar Aleatórios</button>
                             <button onclick="ordenarArray()">Ordem com Array</button>
                         </div>
                     </div>
@@ -340,8 +341,7 @@
                         <div class="ordem-bubleSort" id="ordem-bubleSort">
                             <p>Programa para gerar uma <strong>matriz 3x3</strong> com números aleatórios de 1 a 20:
                             </p><br>
-                            <button onclick="gerar-Aleatorio">Gerar Aleatórios</button><br>
-                            <button onclick="ordenar-bubleSort">Ordem com BubleSort</button>
+                            <button onclick="gerarMatriz()">Gerar Matriz</button>
                         </div>
                     </div>
 
@@ -354,7 +354,7 @@
                             <input type="number" id="idade"><br>
                             <label for="peso">Peso da Pessoa</label><br>
                             <input type="number" id="peso"><br><br>
-                            <button onclick="calcular-imc">Calcular Imc</button>
+                            <button onclick="calcularIMC()">Calcular IMC</button>
                         </div>
                     </div>
 
@@ -362,7 +362,8 @@
                         <div class="converter-fc" id="converter-fc">
                             <p>Programa para converter <strong>Farenheit</strong> para Celsius: </p><br>
                             <input type="number" id="Farenheit"><br><br>
-                            <button onclick="calcular-celsius">Calcular Celsius</button>
+
+                            <button onclick="calcularCelsius()">Calcular Celsius</button>
                         </div>
                     </div>
 
@@ -381,38 +382,42 @@
                             desejado — ou chegar ao final sem encontrá-lo. É como folhear um caderno página por página
                             até achar a informação que você quer.
                         </p>
-                    <br>
-                    <div>
-                        <div class="bloco-programas-busca">
-                            <div class="busca-linear" id="busca-linear">
-                                <p>Programa para <strong>busca linear</strong> no JavaScript </p><br>
-                                <button onclick="busca-linear">Fazer <strong>Busca Linear</strong></button>
-                            </div>
-                        </div>
-                            <br>
+                        <br>
                         <div>
-                            <hr>
-                            <h2>Busca Binária</h2>
-                            <p>A busca binária é um método eficiente usado para encontrar um elemento em uma lista
-                                ordenada. Em vez de verificar cada item um por um, como na busca linear, ela divide a
-                                lista ao meio repetidamente. Primeiro, compara o valor do meio com o que está sendo
-                                procurado — se for igual, o processo termina; se for menor, a busca continua na metade
-                                direita; se for maior, na metade esquerda.
-                            </p>Esse processo é repetido até encontrar o valor desejado (ou até não restarem elementos),
-                            o que torna a busca binária muito mais rápida que outros métodos em listas grandes. Sua
-                            eficiência está no fato de reduzir o número de comparações a cada passo, funcionando em
-                            tempo logarítmico (O(log n)), desde que os dados estejam organizados.
-                            <p>
-                            </p>
-                        
-                        <div class="bloco-programas-busca">
-                            <div class="busca-linear" id="busca-linear">
-                                <p>Programa para <strong>busca binária</strong> no JavaScript </p><br>
-                                <button onclick="busca-binária">Fazer <strong>Busca Binária</strong></button>
+                            <div class="bloco-programas-busca">
+                                <div class="busca-linear" id="busca-linear">
+                                    <p>Programa para <strong>busca linear</strong> no JavaScript </p><br>
+
+                                    <button onclick="buscaLinear()">Fazer Busca Linear</button>
+                                </div>
+                            </div>
+                            <br>
+                            <div>
+                                <hr>
+                                <h2>Busca Binária</h2>
+                                <p>A busca binária é um método eficiente usado para encontrar um elemento em uma lista
+                                    ordenada. Em vez de verificar cada item um por um, como na busca linear, ela divide
+                                    a
+                                    lista ao meio repetidamente. Primeiro, compara o valor do meio com o que está sendo
+                                    procurado — se for igual, o processo termina; se for menor, a busca continua na
+                                    metade
+                                    direita; se for maior, na metade esquerda.
+                                </p>Esse processo é repetido até encontrar o valor desejado (ou até não restarem
+                                elementos),
+                                o que torna a busca binária muito mais rápida que outros métodos em listas grandes. Sua
+                                eficiência está no fato de reduzir o número de comparações a cada passo, funcionando em
+                                tempo logarítmico (O(log n)), desde que os dados estejam organizados.
+                                <p>
+                                </p>
+
+                                <div class="bloco-programas-busca">
+                                    <div class="busca-linear" id="busca-linear">
+                                        <p>Programa para <strong>busca binária</strong> no JavaScript </p><br>
+                                        <button onclick="buscaBinariaExecutar()">Fazer Busca Binária</button>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>
         </section>
     </main>
 
