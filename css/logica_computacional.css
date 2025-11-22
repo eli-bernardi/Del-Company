@@ -469,46 +469,135 @@ footer a:hover {
 }
 
 /* Carrossel */
-
 .carrossel {
     position: relative;
-    width: 350px;
-    /* ajuste o tamanho */
-    height: auto;
+    max-width: 800px;
+    margin: 2rem auto;
     overflow: hidden;
-    margin: auto;
     border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
 .slides {
     display: flex;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.4s ease-in-out;
+    transition: transform 0.5s ease;
 }
 
 .slide {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    min-width: 100%;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.slide:hover {
+    transform: scale(1.02);
 }
 
 .btn {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.4);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
-    padding: 10px;
+    padding: 0.75rem 1rem;
     cursor: pointer;
-    font-size: 20px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+    z-index: 10;
+}
+
+.btn:hover {
+    background-color: rgba(0, 0, 0, 0.8);
 }
 
 .prev {
-    left: 5px;
+    left: 0;
+    border-radius: 0 4px 4px 0;
 }
 
 .next {
-    right: 5px;
+    right: 0;
+    border-radius: 4px 0 0 4px;
+}
+
+/* Modal para zoom */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: color 0.3s;
+    z-index: 1001;
+}
+
+.close:hover {
+    color: #d62828;
+}
+
+.modal-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.5rem;
+    transition: background-color 0.3s;
+    z-index: 1001;
+}
+
+.modal-nav:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-prev {
+    left: 20px;
+}
+
+.modal-next {
+    right: 20px;
+}
+
+.slide-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 14px;
+    z-index: 1001;
 }

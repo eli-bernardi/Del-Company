@@ -5,7 +5,7 @@
 }
 
 html {
-    scroll-behavior: smooth;
+    scroll-behavior: smooth;W
 }
 
 body {
@@ -310,7 +310,7 @@ input {
     display: inline-block;
     padding: 10px 20px;
     background-color: #d62828;
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     border-radius: 12px;
     transition: background-color 0.3s ease;
@@ -321,11 +321,107 @@ input {
 .bloco-programas-busca button {
     padding: 10px 20px;
     background-color: #d62828;
-    color: #ffffff;
+    color: white;
     text-decoration: none;
     border-radius: 12px;
     transition: background-color 0.3s ease;
     margin-top: 15px;
     cursor: pointer;
     align-items: center;
+}
+
+.resultado-container {
+    background: #252525;
+    border: 1px solid #495057;
+    border-radius: 8px;
+    padding: 20px;
+    margin: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.resultado-container h3 {
+    color: white;
+    margin-top: 0;
+    border-bottom: 2px solid #000000;
+    padding-bottom: 10px;
+    font-weight: bold;
+}
+
+.resultado-conteudo {
+    line-height: 1.6;
+    color: white;
+}
+
+.resultado-conteudo p {
+    margin: 8px 0;
+    color: white;
+}
+
+.resultado-conteudo strong {
+    color: white;
+    font-weight: bold;
+}
+
+.matriz-table {
+    border-collapse: collapse;
+    margin: 10px 0;
+}
+
+.matriz-table td {
+    border: 2px solid #000000;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    background: #252525;
+    color: white;
+}
+
+.imc-resultado {
+    background: #252525;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+}
+
+.detalhes-busca {
+    margin-top: 15px;
+    padding: 10px;
+    background: #252525;
+    border-radius: 5px;
+    border-left: 3px solid #000000;
+    color: white;
+}
+
+.passo-detalhe {
+    font-family: monospace;
+    font-size: 0.9em;
+    padding: 2px 0;
+    border-bottom: 1px solid #495057;
+    color: white;
+}
+
+.passo-detalhe:last-child {
+    border-bottom: none;
+}
+
+.btn-limpar {
+    background: #d62828;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 12px;
+    cursor: pointer;
+    margin: 10px 0;
+}
+
+.btn-limpar:hover {
+    background: #d62828;
+}
+
+/* Cores específicas para a classificação do IMC */
+.imc-resultado [style*="color"] {
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 3px;
+    background: rgba(0, 0, 0, 0.1);
 }

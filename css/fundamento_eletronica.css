@@ -176,7 +176,7 @@ footer a:hover {
 
 img {
     display: block;
-    max-width: 400px;
+    max-width: 350px;
     margin: 25px auto;
     border-radius: 12px;
     box-shadow: 0 0 15px rgba(21, 71, 129, 0.411);
@@ -186,4 +186,24 @@ img {
 .entrada-dados,
 .aplicacoes {
     text-align: center;
+}
+
+pre {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 15px;
+    overflow-x: auto;
+    font-size: 12px;
+}
+
+.exemplo pre {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 10px;
+    margin-top: 24px;
+    overflow-x: auto;
+    font-size: 12px;
+    color: #e0e0e0;
+    text-align: left;
 }

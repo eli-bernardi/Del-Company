@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/fundamento_eletronica.css">
+    <link rel="stylesheet" href="../css/fundamento_rede.css">
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Del Company</title>
@@ -131,10 +131,10 @@
                 através de pulsos luminosos.
             </p>
             <div style="text-align: center; margin: 20px 0;">
-                <img src="https://www.submarinecablemap.com/images/submarine_cable_map_2024.jpg"
-                    alt="Mapa Global de Cabos Submarinos"
-                    style="max-width: 100%; height: auto; border: 1px solid #444;">
-                <p><em>Mapa ilustrativo dos cabos submarinos que conectam continentes</em></p>
+                <img src="../img/cabos_submarinos.jpg" alt="Mapa Global de Cabos Submarinos"
+                    style="max-width: 125%; height: auto; border: 1px solid #444;">
+                <img src="../img/cabos_submarinos(2).jpg" <p><em>Mapa ilustrativo dos cabos submarinos que conectam
+                    continentes</em></p>
             </div>
         </section>
 
@@ -290,19 +290,24 @@
 
                 <div class="exemplo">
                     <strong>Exemplo de servidor TCP em Node.js:</strong><br><br>
-                    const net = require('net');<br><br>
+                    <pre>
+                        <code>
+                            // Cria um servidor TCP simples
+                            const net = require('net');
+                            const server = net.createServer((socket) => {
+                                console.log('Cliente conectado: ' + socket.remoteAddress);
+                                socket.write('Bem-vindo ao servidor TCP!\r\n');
+                                socket.on('data', (data) => {
+                                    console.log('Dados recebidos: ' + data);
+                                });
+                            });
 
-                    const server = net.createServer((socket) => {<br>
-                    &nbsp;&nbsp;console.log('Cliente conectado: ' + socket.remoteAddress);<br>
-                    &nbsp;&nbsp;socket.write('Bem-vindo ao servidor TCP!\r\n');<br>
-                    &nbsp;&nbsp;socket.on('data', (data) => {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Dados recebidos: ' + data);<br>
-                    &nbsp;&nbsp;});<br>
-                    });<br><br>
 
-                    server.listen(8080, '0.0.0.0', () => {<br>
-                    &nbsp;&nbsp;console.log('Servidor TCP ouvindo na porta 8080');<br>
-                    });
+                            server.listen(8080, '0.0.0.0', () => {<br>
+                            console.log('Servidor TCP ouvindo na porta 8080');<br>
+                            });
+                        </code>
+                    </pre>
                 </div>
             </div>
         </section>
@@ -348,11 +353,11 @@
                 <p><strong>Exemplos de frameworks populares:</strong></p>
 
                 <div class="exemplo">
-                    <strong>1. Express.js</strong> - Framework minimalista e flexível<br>
-                    <strong>2. Fastify</strong> - Focado em performance<br>
-                    <strong>3. Koa.js</strong> - Criado pelos mesmos autores do Express, mais moderno<br>
-                    <strong>4. Nest.js</strong> - Framework completo com arquitetura TypeScript<br>
-                    <strong>5. Hapi.js</strong> - Focado em configuração e enterprise
+                    <p><strong>Express.js</strong> - Framework minimalista e flexível<br></p>
+                    <p><strong>Fastify</strong> - Focado em performance<br></p>
+                    <p><strong>Koa.js</strong> - Criado pelos mesmos autores do Express, mais moderno<br></p>
+                    <p><strong>Nest.js</strong> - Framework completo com arquitetura TypeScript<br></p>
+                    <p><strong>Hapi.js</strong> - Focado em configuração e enterprise</p>
                 </div>
             </div>
         </section>
@@ -364,93 +369,107 @@
 
                 <div class="exemplo">
                     <strong>Exemplo 1: API REST com Express.js</strong><br><br>
-                    const express = require('express');<br>
-                    const app = express();<br><br>
 
-                    app.use(express.json());<br><br>
-
-                    app.get('/api/mensagem', (req, res) => {<br>
-                    &nbsp;&nbsp;res.json({ mensagem: 'Olá do backend!' });<br>
-                    });<br><br>
-
-                    app.post('/api/mensagem', (req, res) => {<br>
-                    &nbsp;&nbsp;const { texto } = req.body;<br>
-                    &nbsp;&nbsp;console.log('Mensagem recebida:', texto);<br>
-                    &nbsp;&nbsp;res.json({ status: 'Mensagem recebida!' });<br>
-                    });<br><br>
-
-                    app.listen(3000, () => {<br>
-                    &nbsp;&nbsp;console.log('Servidor rodando na porta 3000');<br>
-                    });
+                    <pre>
+                        <code>
+                            const express = require('express');
+                            const app = express();
+                            
+                            app.use(express.json());
+                            
+                            app.get('/api/mensagem', (req, res) => {
+                            res.json({ mensagem: 'Olá do backend!' });
+                            });
+                            
+                            app.post('/api/mensagem', (req, res) => {
+                            const { texto } = req.body;
+                            console.log('Mensagem recebida:', texto);
+                            res.json({ status: 'Mensagem recebida!' });
+                            });
+                            
+                            app.listen(3000, () => {
+                            console.log('Servidor rodando na porta 3000');
+                            });
+                        </code>
+                    </pre>
                 </div>
 
                 <div class="exemplo">
                     <strong>Exemplo 2: WebSockets com Socket.io</strong><br><br>
-                    const express = require('express');<br>
-                    const http = require('http');<br>
-                    const socketIo = require('socket.io');<br><br>
 
-                    const app = express();<br>
-                    const server = http.createServer(app);<br>
-                    const io = socketIo(server);<br><br>
-
-                    io.on('connection', (socket) => {<br>
-                    &nbsp;&nbsp;console.log('Usuário conectado:', socket.id);<br><br>
-
-                    &nbsp;&nbsp;socket.on('mensagem', (data) => {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Mensagem:', data);<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;io.emit('nova_mensagem', {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;usuario: socket.id,<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;texto: data,<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timestamp: new Date()<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;});<br>
-                    &nbsp;&nbsp;});<br><br>
-
-                    &nbsp;&nbsp;socket.on('disconnect', () => {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;console.log('Usuário desconectado:', socket.id);<br>
-                    &nbsp;&nbsp;});<br>
-                    });<br><br>
-
-                    server.listen(3000, () => {<br>
-                    &nbsp;&nbsp;console.log('Servidor Socket.io na porta 3000');<br>
-                    });
+                    <pre>
+                        <code>
+                            const express = require('express');
+                            const http = require('http');
+                            const socketIo = require('socket.io');
+                            
+                            const app = express();
+                            const server = http.createServer(app);
+                            const io = socketIo(server);
+                            
+                            io.on('connection', (socket) => {
+                            console.log('Usuário conectado:', socket.id);
+                            
+                            socket.on('mensagem', (data) => {
+                            console.log('Mensagem:', data);
+                            io.emit('nova_mensagem', {
+                            usuario: socket.id,
+                            texto: data,
+                            timestamp: new Date()
+                            });
+                            });
+                            
+                            socket.on('disconnect', () => {
+                            console.log('Usuário desconectado:', socket.id);
+                            });
+                            });
+                            
+                            server.listen(3000, () => {
+                            console.log('Servidor Socket.io na porta 3000');
+                            });
+                        </code>
+                    </pre>
                 </div>
 
                 <div class="exemplo">
-                    <strong>Exemplo 3: API com Autenticação JWT</strong><br><br>
-                    const express = require('express');<br>
-                    const jwt = require('jsonwebtoken');<br>
-                    const app = express();<br><br>
-
-                    app.use(express.json());<br><br>
-
-                    const SECRET = 'chave-secreta';<br><br>
-
-                    // Login<br>
-                    app.post('/api/login', (req, res) => {<br>
-                    &nbsp;&nbsp;const { usuario, senha } = req.body;<br>
-                    &nbsp;&nbsp;if (usuario === 'admin' && senha === '1234') {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;const token = jwt.sign({ usuario }, SECRET, { expiresIn: '1h' });<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;res.json({ token });<br>
-                    &nbsp;&nbsp;} else {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;res.status(401).json({ erro: 'Credenciais inválidas' });<br>
-                    &nbsp;&nbsp;}<br>
-                    });<br><br>
-
-                    // Rota protegida<br>
-                    app.get('/api/protegido', (req, res) => {<br>
-                    &nbsp;&nbsp;const token = req.headers.authorization?.split(' ')[1];<br>
-                    &nbsp;&nbsp;if (!token) return res.status(401).json({ erro: 'Token necessário' });<br><br>
-
-                    &nbsp;&nbsp;jwt.verify(token, SECRET, (err, decoded) => {<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;if (err) return res.status(401).json({ erro: 'Token inválido' });<br>
-                    &nbsp;&nbsp;&nbsp;&nbsp;res.json({ mensagem: 'Acesso permitido!', usuario: decoded.usuario });<br>
-                    &nbsp;&nbsp;});<br>
-                    });<br><br>
-
-                    app.listen(3000, () => {<br>
-                    &nbsp;&nbsp;console.log('Servidor de autenticação na porta 3000');<br>
-                    });
+                    <strong>Exemplo 3: API com Autenticação JWT (JSON WEB TOKENS)</strong><br><br>
+                    <pre>
+                        <code>
+                            const express = require('express');
+                            const jwt = require('jsonwebtoken');
+                            const app = express();
+                            
+                            app.use(express.json());
+                            
+                            const SECRET = 'chave-secreta';
+                            
+                            // Login
+                            app.post('/api/login', (req, res) => {
+                            const { usuario, senha } = req.body;
+                            if (usuario === 'admin' && senha === '1234') {
+                            const token = jwt.sign({ usuario }, SECRET, { expiresIn: '1h' });
+                            res.json({ token });
+                            } else {
+                            res.status(401).json({ erro: 'Credenciais inválidas' });
+                            }
+                            });
+                            
+                            // Rota protegida
+                            app.get('/api/protegido', (req, res) => {
+                            const token = req.headers.authorization?.split(' ')[1];
+                            if (!token) return res.status(401).json({ erro: 'Token necessário' });
+                            
+                            jwt.verify(token, SECRET, (err, decoded) => {
+                            if (err) return res.status(401).json({ erro: 'Token inválido' });
+                            res.json({ mensagem: 'Acesso permitido!', usuario: decoded.usuario });
+                            });
+                            });
+                            
+                            app.listen(3000, () => {
+                            console.log('Servidor de autenticação na porta 3000');
+                            });
+                        </code>
+                    </pre>
                 </div>
             </div>
         </section>

@@ -159,10 +159,98 @@
                     Depois disso, o microcontrolador executa o programa e interage com o mundo físico,
                     por meio de sinais elétricos.
                 </p>
-
+                <img src="../img/arduinocod.png" alt="Exemplo de código Arduino">
+                <p>Exemplo de código de ligação do Arduino ao JavaScript:</p>
+                <pre>
+                 <code>
+                           const express = require('express')
+                            const app = express() //Instancia das funções do express
+                            const { SerialPort, ReadLineParser } = require('serialport')
+                            const Readline = require('readline')
+                            
+                            const cors = require('cors')
+                            const path = require('path')
+                            
+                            const PORT = 3000 //Port do protocolo TCP
+                            const hostname = 'localhost' //Nome do host e seu IP = 127.0.0.1
+                            
+                            const BAUD_RATE = 9600 //Velocidade da comunicação serial
+                            const SERIAL_PORT = 'COM3' //Porta serial do Arduino
+                            
+                            //---------Midlewares---------//
+                            
+                            app.use(express.urlencoded({ extended: true }))
+                            app.use(express.json())
+                            app.use(cors())
+                            
+                            //---------Inicialização Arduino---------//
+                            
+                            const arduino = new SerialPort({
+                            path: SERIAL_PORT,
+                            baudRate: BAUD_RATE
+                            })
+                            
+                            const parserDados = arduino.pipe(new ReadlineParser({ delimiter: '\r\n' }))
+                            
+                            arduino.on("open", () => {
+                            console.log(Conexão com Arduino em ${SERIAL_PORT})
+                            })
+                            
+                            arduino.on("error", () => {
+                            console.error(Erro na comunicação, err)
+                            })
+                            //Parser das linhas: Garantir a recepção completa dos dados
+                            
+                            parserDados.on('dados', (dados) => {
+                            const linha = dad.tostring().trim()
+                            
+                            if (linha > 0) {
+                            console.log(Arduino: ${linha})
+                            }
+                            })
+                            
+                            //Leitura do teclado para testes manuais
+                            
+                            const teclado = Readline.createInterface({
+                            input: process.stdin,
+                            output: process.stdout
+                            })
+                            teclado.on('line', (input) => {
+                            const comando2 = input.trim()
+                            
+                            if (comando2 === 's' || comando2 === 'd') {
+                            arduino.write(comando2, (err) => {
+                            if (err) {
+                            console.error('Erro ao enviar comando', err)
+                            } else {
+                            console.log(Comando ${comando2} enviado ao Arduino)
+                            }
+                            })
+                            } else {
+                            console.log('Comando inválido. Use "s" para ligar e "d" para desligar.')
+                            }
+                            })
+                            
+                            app.get('/ligar', (req, res) => {
+                            arduino.write('s', (err) => {
+                            if (err) {
+                            console.error('Erro ao enviar comando', err)
+                            return res.status(500).json({ led: "erro", detalhe: "Falha ao enviar a mensagem" })
+                            }
+                            })
+                            })
+                            
+                            
+                            app.listen(PORT, hostname, () => {
+                            console.log(Servidor rodando em http://${hostname}:${PORT})
+                            console.log('Pressione "s" para ligar e "d" para desligar o LED no Arduino.')
+                            console.log('-----------------------------------------------')
+                            })
+                </code>
+                </pre>
                 <p>
                     Existem vários modelos, como o <strong>Arduino Uno</strong>, <strong>Mega</strong>,
-                    <strong>Nano</strong> e <strong>Leonardo</strong>,
+                    <strong>Nano</strong> ,
                     cada um com características específicas de tamanho, capacidade e número de portas.
                 </p>
 
@@ -268,12 +356,15 @@
 
                 <div class="exemplo">
                     <strong>Exemplo em JavaScript:</strong><br>
-                    &lt;script&gt;<br>
-                    &nbsp;&nbsp;let n1 = 10;<br>
-                    &nbsp;&nbsp;let n2 = 5;<br>
-                    &nbsp;&nbsp;let soma = n1 + n2;<br>
-                    &nbsp;&nbsp;console.log("A soma é: " + soma);<br>
-                    &lt;/script&gt;
+                    <pre>
+                        <code>
+                            // Este script realiza a soma de dois números e exibe o resultado no console
+                            let n1 = 10 // Primeiro número
+                            let n2 = 5  // Segundo número
+                            let soma = n1 + n2 // Realiza a soma
+                            console.log("A soma é: " + soma) // Exibe o resultado
+                        </code>
+                    </pre>
                 </div>
                 <hr>
                 <h2>Aplicações comuns</h2>
@@ -287,12 +378,16 @@
 
                 <div class="exemplo">
                     <strong>Exemplo com entrada e saída no navegador:</strong><br><br>
-                    &lt;script&gt;<br>
-                    &nbsp;&nbsp;let num1 = prompt("Digite o primeiro número:");<br>
-                    &nbsp;&nbsp;let num2 = prompt("Digite o segundo número:");<br>
-                    &nbsp;&nbsp;let resultado = Number(num1) * Number(num2);<br>
-                    &nbsp;&nbsp;alert("O resultado da multiplicação é: " + resultado);<br>
-                    &lt;/script&gt;
+                    <pre>
+                        <code>
+                            // Script para multiplicar dois números fornecidos pelo usuário
+                            let num1 = prompt("Digite o primeiro número:")
+                            let num2 = prompt("Digite o segundo número:")
+                            let resultado = Number(num1) * Number(num2)
+                          console.log("O resultado da multiplicação é: " + resultado)
+                          
+                        </code>
+                    </pre>
                 </div>
 
                 <p>
@@ -335,21 +430,28 @@
 
                 <div class="exemplo">
                     <strong>Exemplo simples em Arduino:</strong><br><br>
-                    void setup() {<br>
-                    &nbsp;&nbsp;pinMode(13, OUTPUT); // Define o pino 13 como saída<br>
-                    }<br><br>
-                    void loop() {<br>
-                    &nbsp;&nbsp;digitalWrite(13, HIGH); // Acende o LED<br>
-                    &nbsp;&nbsp;delay(1000); // Espera 1 segundo<br>
-                    &nbsp;&nbsp;digitalWrite(13, LOW); // Apaga o LED<br>
-                    &nbsp;&nbsp;delay(1000); // Espera 1 segundo<br>
-                    }
-                </div>
+                    <pre>
+                        <code>
+                            // Código para piscar um LED conectado ao pino 13 do Arduino
+                            void setup() {
+                              pinMode(13, OUTPUT); // Define o pino 13 como saída
+                            }
 
+                            void loop() {
+                              digitalWrite(13, HIGH); // Acende o LED
+                              delay(1000); // Espera 1 segundo
+                              digitalWrite(13, LOW); // Apaga o LED
+                              delay(1000); // Espera 1 segundo
+                            }
+                        </code>
+                    </pre>
+                </div>
+                <br>
                 <p>
                     Nesse exemplo, o LED funciona como um **indicador visual** do que o código está executando,
                     sendo um ótimo recurso para testes e aprendizado de lógica de programação.
                 </p>
+                <br>w
                 <hr>
                 <h2>Aplicações e Importância</h2>
                 <ul class="aplicacoes">
