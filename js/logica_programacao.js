@@ -262,7 +262,7 @@ function calcularCelsius() {
 // FUNÇÕES DE BUSCA
 // =============================================
 
-// 7. Busca Linear
+//Busca Linear
 function buscaLinear() {
     let valor = prompt("Digite um número para buscar (0-50):");
 
@@ -307,7 +307,7 @@ function buscaLinear() {
     }
 }
 
-// 8. Busca Binária
+// Busca Binária
 function buscaBinaria(array, valor) {
     let inicio = 0;
     let fim = array.length - 1;
@@ -377,40 +377,6 @@ function buscaBinariaExecutar() {
         );
     }
 }
-
-// =============================================
-// FUNÇÃO DO MENU MOBILE
-// =============================================
-
-function toggleMenu() {
-    const menu = document.getElementById('menu');
-    menu.classList.toggle('hidden');
-}
-
-// =============================================
-// INICIALIZAÇÃO
-// =============================================
-
-document.addEventListener('DOMContentLoaded', function () {
-    // Menu mobile toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    if (menuToggle) {
-        menuToggle.addEventListener('click', toggleMenu);
-    }
-
-    // Fechar menu ao clicar em um link (mobile)
-    const menuLinks = document.querySelectorAll('#menu a');
-    menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-            const menu = document.getElementById('menu');
-            if (!menu.classList.contains('hidden')) {
-                menu.classList.add('hidden');
-            }
-        });
-    });
-
-    console.log('JavaScript carregado com sucesso!');
-});
 
 // =============================================
 // EXPORTAÇÕES PARA USO NO HTML
