@@ -1,80 +1,99 @@
-/* Reset suave */
+/* Reset moderno */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: 'Inter', 'Segoe UI', system-ui, -apple-system, sans-serif;
-    background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 50%, #0f0f0f 100%);
-    color: #e8e8e8;
-    line-height: 1.7;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #000000;
+    color: #ffffff;
+    line-height: 1.6;
     overflow-x: hidden;
 }
 
-/* Header orgânico */
+/* Header estilo B-Look */
 header {
-    backdrop-filter: blur(15px);
-    background: rgba(25, 25, 25, 0.85) !important;
-    border-bottom: 1px solid rgba(214, 40, 40, 0.3);
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-header:hover {
-    background: rgba(30, 30, 30, 0.95) !important;
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 0 !important;
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     font-weight: 700;
-    color: #d62828 !important;
     background: linear-gradient(135deg, #d62828 0%, #ff6b6b 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
 }
 
-/* Navegação fluida */
+/* Menu mobile */
+#menu-toggle {
+    transition: all 0.3s ease;
+}
+
+#menu-toggle:hover {
+    transform: scale(1.1);
+}
+
+#menu {
+    background: rgba(0, 0, 0, 0.95) !important;
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 #menu a {
     position: relative;
     transition: all 0.3s ease;
     font-weight: 500;
-    padding: 8px 16px;
-    border-radius: 6px;
 }
 
 #menu a:hover {
     color: #d62828;
-    background: rgba(214, 40, 40, 0.1);
 }
 
-/* Layout principal contínuo */
+
+/* Dropdown menu */
+.group:hover .group-hover\\:block {
+    display: block;
+    animation: fadeInUp 0.3s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Main content */
 main {
     margin-top: 80px;
-    padding: 0 5%;
 }
 
-/* Seções integradas */
-section {
-    padding: 100px 0;
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Remove a última borda */
-section:last-child {
-    border-bottom: none;
-}
-
-/* Hero da página de serviços */
+/* Hero Section estilo B-Look */
 .hero {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     text-align: center;
-    padding: 120px 0 100px;
-    background: radial-gradient(ellipse at 50% 0%, rgba(214, 40, 40, 0.15) 0%, transparent 60%);
+    padding: 4rem 2rem;
     position: relative;
+    overflow: hidden;
 }
 
 .hero::before {
@@ -83,201 +102,187 @@ section:last-child {
     top: 0;
     left: 0;
     right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(214, 40, 40, 0.5), transparent);
+    bottom: 0;
+    background:
+        radial-gradient(circle at 20% 80%, rgba(214, 40, 40, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(214, 40, 40, 0.05) 0%, transparent 50%);
+    z-index: -1;
 }
 
 .hero h2 {
-    font-size: 3.5rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
     background: linear-gradient(135deg, #ffffff 0%, #d62828 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    line-height: 1.2;
+    line-height: 1.1;
 }
 
 .hero p {
-    font-size: 1.4rem;
-    max-width: 700px;
-    margin: 0 auto 3.5rem;
-    color: #cccccc;
-    line-height: 1.8;
-    opacity: 0.9;
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    line-height: 1.6;
 }
 
-/* Botões naturais e convidativos */
+/* Botões estilo B-Look */
 button {
     background: linear-gradient(135deg, #d62828 0%, #c82323 100%);
     color: white;
     border: none;
-    padding: 16px 40px;
-    font-size: 1.1rem;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    box-shadow: 0 8px 25px rgba(214, 40, 40, 0.3);
+    transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+button:hover::before {
+    left: 100%;
+}
+
 button:hover {
-    transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 15px 35px rgba(214, 40, 40, 0.4);
-    background: linear-gradient(135deg, #e02d2d 0%, #d62828 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(214, 40, 40, 0.4);
 }
 
 button a {
     color: white;
     text-decoration: none;
-    display: block;
     position: relative;
-    z-index: 2;
+    z-index: 1;
 }
 
-/* Seção de serviços */
+/* Seções gerais */
+section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Seção de Serviços */
 #serviços {
     text-align: center;
-    background: linear-gradient(135deg, rgba(42, 42, 42, 0.4) 0%, rgba(30, 30, 30, 0.2) 100%);
-    padding: 100px 5%;
-    border-radius: 0;
 }
 
 #serviços h3 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     margin-bottom: 3rem;
     color: #ffffff;
-    position: relative;
-    display: inline-block;
-}
-
-#serviços h3::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: #d62828;
-    border-radius: 2px;
 }
 
 #serviços article {
-    background: rgba(50, 50, 50, 0.3);
-    padding: 3rem;
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 3rem 2rem;
     backdrop-filter: blur(10px);
     max-width: 600px;
     margin: 0 auto;
 }
 
 #serviços p {
-    font-size: 1.3rem;
-    line-height: 2.2;
+    font-size: 1.1rem;
+    line-height: 2;
     text-align: left;
 }
 
 #serviços a {
-    color: #e0e0e0;
+    color: #888;
     text-decoration: none;
     transition: all 0.3s ease;
-    padding: 8px 16px;
+    padding: 0.5rem 1rem;
     border-radius: 8px;
     display: inline-block;
-    margin: 4px 0;
     position: relative;
 }
 
 #serviços a:hover {
     color: #d62828;
     background: rgba(214, 40, 40, 0.1);
-    transform: translateX(10px);
+    transform: translateX(8px);
 }
 
-/* Seção de conteúdos/carrossel */
+/* Seção do Carrossel */
 #conteudos {
     text-align: center;
-    padding: 100px 0;
 }
 
 #conteudos h3 {
-    font-size: 2.8rem;
+    font-size: clamp(2rem, 4vw, 3rem);
     font-weight: 700;
     margin-bottom: 3rem;
     color: #ffffff;
-    position: relative;
-    display: inline-block;
 }
 
-#conteudos h3::after {
-    content: '';
-    position: absolute;
-    bottom: -15px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 80px;
-    height: 3px;
-    background: #d62828;
-    border-radius: 2px;
-}
-
-/* Carrossel moderno */
+/* Carrossel estilo B-Look */
 .carousel {
-    position: relative;
-    max-width: 1200px;
+    position: inline;
+    max-width: 1000px;
     margin: 0 auto;
     overflow: hidden;
     border-radius: 20px;
-    background: rgba(50, 50, 50, 0.3);
-    padding: 2rem;
-    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .carousel-track {
     display: flex;
     transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     gap: 2rem;
+    padding: 1rem;
 }
 
 .carousel-item {
     min-width: 300px;
-    background: linear-gradient(135deg, rgba(60, 60, 60, 0.6) 0%, rgba(40, 40, 40, 0.4) 100%);
-    border-radius: 15px;
-    padding: 2rem;
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s ease;
-    text-align: center;
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .carousel-item:hover {
-    transform: translateY(-10px);
+    transform: translateY(-8px);
     border-color: rgba(214, 40, 40, 0.3);
-    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.05);
 }
 
 .carousel-item img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 1.5rem;
-    border: 2px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    transition: all 0.3s ease;
 }
 
 .carousel-item:hover img {
     border-color: #d62828;
-    transform: scale(1.05);
+    transform: scale(1.02);
 }
 
 .carousel-item p {
-    font-size: 1.1rem;
-    color: #b8b8b8;
+    color: #888;
+    font-size: 1rem;
     line-height: 1.6;
 }
 
@@ -297,6 +302,9 @@ button a {
     transition: all 0.3s ease;
     backdrop-filter: blur(10px);
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .carousel-btn:hover {
@@ -312,158 +320,61 @@ button a {
     right: 1rem;
 }
 
-/* Footer orgânico */
+/* Footer estilo B-Look */
 footer {
-    background: linear-gradient(135deg, #222 0%, #1a1a1a 100%);
-    padding: 4rem 2rem;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
     text-align: center;
-    border-top: 1px solid rgba(214, 40, 40, 0.3);
-    margin-top: 2rem;
+    backdrop-filter: blur(20px);
 }
 
 footer p {
-    margin-bottom: 1.5rem;
-    color: #999;
-    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #b0b0b0;
+    color: #888;
     text-decoration: none;
-    margin: 0 1.5rem;
+    margin: 0 1rem;
     transition: all 0.3s ease;
-    padding: 8px 16px;
-    border-radius: 6px;
+    font-size: 0.9rem;
 }
 
 footer a:hover {
     color: #d62828;
-    background: rgba(214, 40, 40, 0.1);
 }
 
-/* Animações suaves e naturais */
+/* Animações suaves */
 .animate-fade-in {
     opacity: 0;
-    transform: translateY(40px);
-    animation: gentleFadeIn 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
-@keyframes gentleFadeIn {
+@keyframes fadeInUp {
     to {
         opacity: 1;
         transform: translateY(0);
     }
 }
 
-/* Delay natural para as seções */
-.animate-fade-in:nth-child(1) { animation-delay: 0.1s; }
-.animate-fade-in:nth-child(2) { animation-delay: 0.3s; }
-.animate-fade-in:nth-child(3) { animation-delay: 0.5s; }
-
-/* Scroll suave */
-html {
-    scroll-behavior: smooth;
-}
-
+/* Scrollbar personalizada */
 ::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 
 ::-webkit-scrollbar-track {
-    background: #1a1a1a;
+    background: #000000;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #d62828 0%, #c82323 100%);
-    border-radius: 5px;
+    background: #d62828;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #e02d2d 0%, #d62828 100%);
-}
-
-/* Responsividade natural */
-@media (max-width: 768px) {
-    .hero h2 {
-        font-size: 2.5rem;
-    }
-    
-    .hero p {
-        font-size: 1.2rem;
-    }
-    
-    #serviços h3,
-    #conteudos h3 {
-        font-size: 2.2rem;
-    }
-    
-    section {
-        padding: 80px 0;
-    }
-    
-    .carousel-item {
-        min-width: 280px;
-    }
-    
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-    
-    button {
-        padding: 14px 32px;
-        font-size: 1rem;
-    }
-    
-    #serviços article {
-        padding: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 2rem;
-    }
-    
-    .hero {
-        padding: 80px 0 60px;
-    }
-    
-    #serviços p,
-    .carousel-item p {
-        font-size: 1rem;
-    }
-    
-    .carousel {
-        padding: 1rem;
-    }
-    
-    footer a {
-        display: block;
-        margin: 0.5rem 0;
-    }
-}
-
-/* Efeitos de foco para acessibilidade */
-button:focus,
-a:focus {
-    outline: 2px solid #d62828;
-    outline-offset: 2px;
-}
-
-/* Loading suave para imagens */
-.carousel-item img {
-    background: linear-gradient(90deg, #2a2a2a 25%, #333 50%, #2a2a2a 75%);
-    background-size: 200% 100%;
-    animation: loading 1.5s infinite;
-}
-
-@keyframes loading {
-    0% {
-        background-position: 200% 0;
-    }
-    100% {
-        background-position: -200% 0;
-    }
+    background: #ff6b6b;
 }

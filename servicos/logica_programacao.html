@@ -143,7 +143,7 @@
                     precisa ser convertido (ou “compilado”) para código de máquina antes de ser executado.
                     Essa conversão é feita por um programa chamado <em>compilador</em>.
                 </p>
-
+                <br>
                 <h2>Como funciona?</h2>
                 <p>
                     O compilador analisa todo o código-fonte de uma vez e gera um arquivo executável,
@@ -151,7 +151,7 @@
                     Esse processo costuma deixar o programa mais rápido e eficiente, mas torna o ciclo
                     de testes e correções um pouco mais demorado.
                 </p>
-
+                <br>
                 <h2>Exemplos de Linguagens Compiladas</h2>
 
                 <div class="exemplo">
@@ -348,11 +348,11 @@
                     <div class="bloco-programas">
                         <div class="calculo-imc" id="calculo-imc">
                             <p>Programa para calcular o <strong>IMC</strong> de uma pessoa: </p><br>
-                            <label for="altura">Altura da Pessoa em <strong>centímetros</strong></label><br>
+                            <label for="altura">Altura da Pessoa em <strong>centímetros</strong></label>
                             <input type="number" id="altura"><br>
-                            <label for="idade">Idade da Pessoa</label><br>
+                            <label for="idade">Idade da Pessoa</label>
                             <input type="number" id="idade"><br>
-                            <label for="peso">Peso da Pessoa</label><br>
+                            <label for="peso">Peso da Pessoa</label>
                             <input type="number" id="peso"><br><br>
                             <button onclick="calcularIMC()">Calcular IMC</button>
                         </div>
@@ -375,52 +375,48 @@
                             (array). Ela percorre todos os itens um por um, do início ao fim, até encontrar o valor
                             desejado — ou chegar ao final sem encontrá-lo. É como folhear um caderno página por página
                             até achar a informação que você quer.
-                        </p>
-                        <p>
                             A busca linear é um dos métodos mais simples de procurar um elemento dentro de uma lista
                             (array). Ela percorre todos os itens um por um, do início ao fim, até encontrar o valor
                             desejado — ou chegar ao final sem encontrá-lo. É como folhear um caderno página por página
                             até achar a informação que você quer.
                         </p>
-                        <br>
-                        <div>
-                            <div class="bloco-programas-busca">
-                                <div class="busca-linear" id="busca-linear">
-                                    <p>Programa para <strong>busca linear</strong> no JavaScript </p><br>
 
-                                    <button onclick="buscaLinear()">Fazer Busca Linear</button>
-                                </div>
-                            </div>
-                            <br>
-                            <div>
-                                <hr>
-                                <h2>Busca Binária</h2>
-                                <p>A busca binária é um método eficiente usado para encontrar um elemento em uma lista
-                                    ordenada. Em vez de verificar cada item um por um, como na busca linear, ela divide
-                                    a
-                                    lista ao meio repetidamente. Primeiro, compara o valor do meio com o que está sendo
-                                    procurado — se for igual, o processo termina; se for menor, a busca continua na
-                                    metade
-                                    direita; se for maior, na metade esquerda.
-                                </p>Esse processo é repetido até encontrar o valor desejado (ou até não restarem
-                                elementos),
-                                o que torna a busca binária muito mais rápida que outros métodos em listas grandes. Sua
-                                eficiência está no fato de reduzir o número de comparações a cada passo, funcionando em
-                                tempo logarítmico (O(log n)), desde que os dados estejam organizados.
-                                <p>
-                                </p>
-
-                                <div class="bloco-programas-busca">
-                                    <div class="busca-linear" id="busca-linear">
-                                        <p>Programa para <strong>busca binária</strong> no JavaScript </p><br>
-                                        <button onclick="buscaBinariaExecutar()">Fazer Busca Binária</button>
-                                    </div>
-                                </div>
-
-                                <div id="resultado" style="display: none;"></div>
-                                <button onclick="limparResultado()" class="btn-limpar">Limpar Resultados</button>
+                        <div class="bloco-programas-busca">
+                            <div class="busca-linear" id="busca-linear">
+                                <p>Programa para <strong>busca linear</strong> no JavaScript </p><br>
+                                <button onclick="buscaLinear()">Fazer Busca Linear</button>
                             </div>
                         </div>
+                    </div>
+                    <br>
+                    <div>
+                        <hr>
+                        <h2>Busca Binária</h2>
+                        <p>A busca binária é um método eficiente usado para encontrar um elemento em uma lista
+                            ordenada. Em vez de verificar cada item um por um, como na busca linear, ela divide
+                            a
+                            lista ao meio repetidamente. Primeiro, compara o valor do meio com o que está sendo
+                            procurado — se for igual, o processo termina; se for menor, a busca continua na
+                            metade
+                            direita; se for maior, na metade esquerda.
+                            xEsse processo é repetido até encontrar o valor desejado (ou até não restarem
+                            elementos),
+                            o que torna a busca binária muito mais rápida que outros métodos em listas grandes.
+                            Sua
+                            eficiência está no fato de reduzir o número de comparações a cada passo, funcionando
+                            em
+                            tempo logarítmico (O(log n)), desde que os dados estejam organizados.
+                        </p>
+                        <div class="bloco-programas-busca">
+                            <div class="busca-linear" id="busca-linear">
+                                <p>Programa para <strong>busca binária</strong> no JavaScript </p><br>
+                                <button onclick="buscaBinariaExecutar()">Fazer Busca Binária</button>
+                            </div>
+                        </div>
+                        <div id="resultado" style="display: none;"></div>
+                        <button onclick="limparResultado()" class="btn-limpar">Limpar Resultados</button>
+                    </div>
+                </div>
         </section>
     </main>
 
