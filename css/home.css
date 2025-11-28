@@ -292,7 +292,7 @@ button a {
 
 .servicos a:hover {
     color: #d62828;
-    background: rgba(214, 40, 40, 0.1);
+    background: rgba(255, 0, 0, 0.1);
     transform: translateX(8px);
 }
 

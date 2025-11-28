@@ -75,155 +75,796 @@ section hr {
     margin: 2rem 0;
 }
 
-
-section p {
-    text-align: justify;
-    margin-top: 1rem;
-}
-
-ul {
-    margin-left: 1.5rem;
-    list-style: square;
-}
-
-hr {
-    border: none;
-    border-top: 2px solid #e0e0e0;
-    margin: 1.5rem 0;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 1rem;
-    font-size: 1rem;
-    background-color: #111;
+/* Hero Section */
+.hero {
     text-align: center;
+    padding: 8rem 2rem;
+    background: radial-gradient(ellipse at 50% 0%, rgba(214, 40, 40, 0.1) 0%, transparent 60%);
+    position: relative;
 }
 
-thead {
-    background-color: #d62828;
-    color: white;
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(214, 40, 40, 0.5), transparent);
 }
 
-th,
-td {
-    padding: 0.8rem;
-    border: 1px solid #333;
+.hero h2 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 700;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ffffff 0%, #d62828 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
 }
 
-tbody tr:nth-child(even) {
-    background-color: #1a1a1a;
+.hero h3 {
+    font-size: clamp(1.1rem, 2vw, 1.3rem);
+    color: #888;
+    margin-bottom: 2rem;
+    font-weight: 400;
 }
 
-tbody tr:hover {
-    background-color: #292929;
-}
-
-.imagem-exemplo {
-    display: flex;
-    justify-content: center;
+.hero p {
+    font-size: 1.1rem;
+    color: #888;
     margin: 1rem 0;
+    line-height: 1.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.imagem-exemplo img {
-    max-width: 400px;
-    width: 100%;
-    border: 2px solid #d62828;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
-    transition: transform 0.2s ease;
+/* Parágrafos e texto */
+p {
+    font-size: 1.1rem;
+    color: #888;
+    margin: 1rem 0;
+    line-height: 1.8;
 }
 
-.imagem-exemplo img:hover {
-    transform: scale(1.05);
+strong {
+    color: #d62828;
+    font-weight: 600;
 }
 
-form label {
-    display: flex;
-    flex-direction: column;
-    color: #ccc;
+/* Listas estilizadas */
+ul,
+ol {
+    margin: 1.5rem 0;
+    padding-left: 2rem;
 }
 
-input {
-    margin-top: 0.3rem;
-    padding: 0.5rem;
-    border-radius: 8px;
-    border: 1px solid #d62828;
-    background-color: #111;
-    color: white;
+li {
+    margin: 0.8rem 0;
+    color: #888;
+    line-height: 1.6;
 }
 
-.botao {
-    background-color: #d62828;
-    color: white;
-    padding: 0.7rem;
-    border-radius: 8px;
-    cursor: pointer;
-    border: none;
-    transition: background 0.2s ease;
-}
-
-.botao:hover {
-    background-color: #a91f1f;
-}
-
+/* Footer */
 footer {
-    background-color: #2c2c2c;
-    color: #cccccc;
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 3rem 2rem;
     text-align: center;
-    padding: 1.5rem 1rem;
-    margin-top: 2rem;
+    backdrop-filter: blur(20px);
+}
+
+footer p {
+    color: #666;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
 }
 
 footer a {
-    color: #d62828;
+    color: #888;
     text-decoration: none;
-    margin: 0 0.5rem;
+    margin: 0 1rem;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
 }
 
 footer a:hover {
-    color: #fff;
+    color: #d62828;
 }
 
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
 
-/* --------------------------
-   BANCO DE DADOS RELACIONAIS / NÃO RELACIONAIS
---------------------------- */
+::-webkit-scrollbar-track {
+    background: #000000;
+}
 
-.bancos-relacionais {
+::-webkit-scrollbar-thumb {
+    background: #d62828;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #ff6b6b;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    section {
+        padding: 4rem 1rem;
+    }
+
+    .hero {
+        padding: 6rem 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+}
+
+/* Animações suaves */
+section {
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Delay para as seções */
+section:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+section:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+section:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+section:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+section:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+section:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+section:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+/* === ESTILOS ESPECÍFICOS PARA BANCO DE DADOS === */
+
+/* Containers */
+.container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.container:hover {
+    border-color: rgba(214, 40, 40, 0.2);
+}
+
+/* Grid SGBD */
+.sgbd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.sgbd-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.sgbd-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 40, 40, 0.3);
+}
+
+.sgbd-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.sgbd-exemplos {
     display: flex;
+    gap: 0.5rem;
     justify-content: center;
-    align-items: center;
-    gap: 35px;
+    margin-top: 1rem;
     flex-wrap: wrap;
-    margin-top: 40px;
+}
+
+.exemplo-tag {
+    background: rgba(214, 40, 40, 0.1);
+    color: #d62828;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Aplicações */
+.aplicacoes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1rem;
+    margin: 2rem 0;
+}
+
+.aplicacao-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.aplicacao-item:hover {
+    border-color: rgba(214, 40, 40, 0.3);
+    transform: translateX(5px);
+}
+
+/* Bancos de Dados */
+.bancos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
 }
 
 .banco-card {
-    width: 150px;
-    height: 150px;
-    background-color: #1e1e1e;
-    border-radius: 12px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
 }
 
 .banco-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 20px rgba(214, 40, 40, 0.6);
+    transform: translateY(-8px);
+    border-color: rgba(214, 40, 40, 0.3);
 }
 
 .banco-card img {
-    max-width: 80%;
-    max-height: 80%;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
-    border-radius: 8px;
+    margin-bottom: 1rem;
+    filter: grayscale(0.3);
+    transition: all 0.3s ease;
 }
 
-.centralizar {
+.banco-card:hover img {
+    filter: grayscale(0);
+    transform: scale(1.1);
+}
+
+.banco-tags {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    background: rgba(214, 40, 40, 0.1);
+    color: #d62828;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* Tabela Comparativa */
+.tabela-comparativa {
+    margin: 3rem 0;
+}
+
+.tabela-comparativa table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.tabela-comparativa th {
+    background: rgba(214, 40, 40, 0.1);
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: #d62828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabela-comparativa td {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #888;
+}
+
+.tabela-comparativa tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Exemplo Dicionário */
+.exemplo-dicionario {
+    margin: 2rem 0;
+}
+
+.exemplo-dicionario table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.exemplo-dicionario th {
+    background: rgba(214, 40, 40, 0.1);
+    padding: 1.2rem;
+    text-align: left;
+    font-weight: 600;
+    color: #d62828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 0.9rem;
+}
+
+.exemplo-dicionario td {
+    padding: 1.2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.exemplo-dicionario tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Tipos de Dados */
+.tipos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.tipo-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 1.5rem;
+    transition: all 0.3s ease;
+}
+
+.tipo-card:hover {
+    border-color: rgba(214, 40, 40, 0.3);
+    transform: translateY(-3px);
+}
+
+.tipo-card h4 {
+    color: #d62828;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+}
+
+.tipo-card ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.tipo-card li {
+    margin: 0.5rem 0;
+    padding-left: 1rem;
+    position: relative;
+}
+
+.tipo-card li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: #d62828;
+}
+
+/* Modelagem */
+.modelagem-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.modelo-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.modelo-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 40, 40, 0.3);
+}
+
+.modelo-card h4 {
+    color: #d62828;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.modelo-elementos {
+    margin-top: 1.5rem;
+}
+
+.elemento-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 1rem 0;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.elemento-icon {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #d62828;
+}
+
+/* Diagramas */
+.diagrama-container {
     text-align: center;
+    margin: 2rem 0;
+}
+
+.diagrama {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.diagrama:hover {
+    border-color: #d62828;
+    transform: scale(1.02);
+}
+
+/* Explicações DER/MER */
+.explicacao-der,
+.explicacao-mer {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-left: 4px solid #d62828;
+}
+
+.entidades-grid,
+.cardinalidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.entidade-item,
+.cardinalidade-item {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.entidade-item:hover,
+.cardinalidade-item:hover {
+    border-color: rgba(214, 40, 40, 0.3);
+    transform: translateY(-2px);
+}
+
+.entidade-atributos {
+    display: block;
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #666;
+    font-family: 'Fira Code', monospace;
+}
+
+/* Formulário */
+.formulario-container {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.form-cadastro {
+    margin-bottom: 3rem;
+}
+
+.form-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group.full-width {
+    grid-column: 1 / -1;
+}
+
+.form-group label {
+    color: #cccccc;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    outline: none;
+    border-color: #d62828;
+    box-shadow: 0 0 0 2px rgba(214, 40, 40, 0.2);
+}
+
+.form-group input::placeholder {
+    color: #666;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #d62828 0%, #c82323 100%);
+    color: white;
+    border: none;
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(214, 40, 40, 0.3);
+}
+
+.btn-secondary {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 12px 30px;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.btn-secondary:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    font-size: 1.1rem;
+}
+
+/* Tabela de Dados */
+.dados-cadastrados {
+    margin-top: 3rem;
+}
+
+.tabela-dados {
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.tabela-dados table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+}
+
+.tabela-dados th {
+    background: rgba(214, 40, 40, 0.1);
+    padding: 1rem;
+    text-align: left;
+    font-weight: 600;
+    color: #d62828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabela-dados td {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #888;
+}
+
+.tabela-dados tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+.empty-state {
+    text-align: center;
+    color: #666;
+    font-style: italic;
+}
+
+/* SQL Exemplo */
+.sql-exemplo {
+    margin-top: 2rem;
+}
+
+.code-block {
+    background: #1a1a1a;
+    border-radius: 8px;
+    margin: 1.5rem 0;
+    overflow-x: auto;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-header {
+    background: rgba(214, 40, 40, 0.1);
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px 8px 0 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    color: #ff6b6b;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.code-block pre {
+    padding: 1.5rem;
+    margin: 0;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+.code-block code {
+    color: #ff6b6b;
+    background: transparent;
+}
+
+/* Media Queries Específicas */
+@media (max-width: 768px) {
+
+    .sgbd-grid,
+    .bancos-grid,
+    .modelagem-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .form-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .tabela-dados {
+        font-size: 0.9rem;
+    }
+
+    .entidades-grid,
+    .cardinalidades-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .exemplo-dicionario {
+        overflow-x: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .formulario-container {
+        padding: 1.5rem;
+    }
+
+    .banco-card {
+        padding: 1.5rem;
+    }
+
+    .modelo-card {
+        padding: 1.5rem;
+    }
+
+    .container {
+        padding: 1.5rem;
+    }
+
+    .sgbd-card {
+        padding: 1.5rem;
+    }
 }
