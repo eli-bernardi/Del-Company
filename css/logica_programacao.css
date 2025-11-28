@@ -38,69 +38,6 @@ main {
     margin-top: 80px;
 }
 
-/* Hero Section */
-.hero {
-    min-height: 70vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 4rem 2rem;
-    position: relative;
-    overflow: hidden;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background:
-        radial-gradient(circle at 20% 80%, rgba(214, 40, 40, 0.1) 0%, transparent 50%),
-        radial-gradient(circle at 80% 20%, rgba(214, 40, 40, 0.05) 0%, transparent 50%);
-    z-index: -1;
-}
-
-.hero h2 {
-    font-size: clamp(2.5rem, 5vw, 4rem);
-    font-weight: 700;
-    margin-bottom: 1rem;
-    background: linear-gradient(135deg, #ffffff 0%, #d62828 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    line-height: 1.1;
-    text-align: center;
-}
-
-.hero h3 {
-    font-size: clamp(1.1rem, 2vw, 1.3rem);
-    color: #888;
-    margin-bottom: 2rem;
-    font-weight: 400;
-    text-align: center;
-}
-
-.hero hr {
-    width: 300px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #d62828, transparent);
-    border: none;
-    margin: 2rem 0;
-}
-
-.hero p {
-    font-size: 1.1rem;
-    color: #888;
-    max-width: 800px;
-    margin: 0.5rem auto;
-    line-height: 1.8;
-    text-align: justify;
-}
-
 /* Seções gerais */
 section {
     padding: 6rem 2rem;
@@ -112,25 +49,26 @@ section {
 section:last-child {
     border-bottom: none;
 }
+
 /* Títulos das seções */
 h2 {
-    font-size: 32px;
+    font-size: 32px !important;
     margin-bottom: 1rem;
     color: #ffffff;
     position: relative;
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 h3 {
-    font-size: 20px;
+    font-size: 20px !important;
     color: #888;
     text-align: center;
-    font-weight: bold;
+    font-weight: 700;
 }
 
 section hr {
-    width: 1200px;
+    width: 1140px;
     height: 2px;
     background: linear-gradient(90deg, transparent, #d62828, transparent);
     border: none;

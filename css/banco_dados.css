@@ -1,3 +1,4 @@
+/* Reset moderno */
 * {
     margin: 0;
     padding: 0;
@@ -9,39 +10,71 @@ html {
 }
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #e0e0e0;
-    background-color: #121212;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background: #000000;
+    color: #ffffff;
     line-height: 1.6;
+    overflow-x: hidden;
 }
 
+header {
+    background: rgba(0, 0, 0, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 10rem !important;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #d62828 0%, #ff6b6b 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* Main content */
 main {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: auto;
+    margin-top: 80px;
 }
 
+/* Seções gerais */
 section {
-    background-color: #1d1b1b;
-    padding: 2rem;
-    margin: 2rem auto;
-    max-width: 900px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-section h2 {
-    text-align: center;
-    font-size: 1.6rem;
-    color: #d62828;
+section:last-child {
+    border-bottom: none;
 }
 
-section h3 {
-    text-align: center;
-    font-size: 1.1rem;
-    color: #777;
+/* Títulos das seções */
+h2 {
+    font-size: 32px !important;
     margin-bottom: 1rem;
+    color: #ffffff;
+    position: relative;
+    text-align: center;
+    font-weight: 700;
 }
+
+h3 {
+    font-size: 20px !important;
+    color: #888;
+    text-align: center;
+    font-weight: 700;
+}
+
+section hr {
+    width: 1140px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #d62828, transparent);
+    border: none;
+    margin: 2rem 0;
+}
+
 
 section p {
     text-align: justify;
