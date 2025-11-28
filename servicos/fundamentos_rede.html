@@ -68,16 +68,16 @@
         <section class="infraestrutura-rede">
             <h2>Infraestrutura de Rede</h2>
             <div class="image-grid">
-                <div class="image-card">
+                <div class="image-card-infraestrutura">
                     <img src="../img/data_center.png" alt="Rack de Servidores" class="network-image">
                     <p>Rack de servidores em data center</p>
                 </div>
-                <div class="image-card">
+                <div class="image-card-infraestrutura">
                     <img src="../img/switch_rede.png" alt="Switch de Rede" class="network-image">
                     <p>Switch de rede empresarial</p>
                 </div>
-                <div class="image-card">
-                    <img src="../img/cabos_trancados_coxiais.png" alt="Cabos de Rede" class="network-image">
+                <div class="image-card-infraestrutura">
+                    <img src="../img/cabo_coaxiais.png" alt="Cabos de Rede" class="network-image">
                     <p>Organização de cabos de rede</p>
                 </div>
             </div>
@@ -147,24 +147,27 @@
                 que formam o backbone da Internet global. Estes cabos transmitem dados na velocidade da luz
                 através de pulsos luminosos.
             </p>
-            <div style="text-align: center; margin: 20px 0;">
-                <img src="../img/cabos_submarinos.jpg" alt="Mapa Global de Cabos Submarinos"
-                    style="max-width: 125%; height: auto; border: 1px solid #444;">
-                <br>
-                <img src="../img/cabos_submarinos(2).jpg" <p><em>Mapa ilustrativo dos cabos submarinos que conectam
-                    continentes</em></p>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="../img/cabos_submarinos.jpg" alt="Mapa Global de Cabos Submarinos">
+                </div>
+                <div class="image-card">
+                    <img src="../img/cabos_submarinos(2).jpg" alt="Mapa Global de Cabos Submarinos">
+                </div>
             </div>
+            <p><em>Mapa ilustrativo dos cabos submarinos que conectam
+                    continentes</em></p>
         </section>
 
         <section id="hardware-wifi">
             <h2>Componentes de Hardware de uma Rede Wi-Fi</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
             <div class="image-grid">
-                <div class="roteador-image">
+                <div class="image-card1">
                     <img src="../img/roteador.png" alt="Roteador Wi-Fi" class="network-image">
                     <p>Roteador Wi-Fi moderno</p>
                 </div>
-                <div class="roteador-image">
+                <div class="image-card2">
                     <img src="../img/acess_point.png" alt="Access Point" class="network-image">
                     <p>Access Point empresarial</p>
                 </div>
@@ -204,6 +207,16 @@
         <section id="hardware-cabeadas">
             <h2>Componentes de Hardware de Rede Cabeadas</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
+            <div class="image-grid">
+                <div class="image-card">
+                    <img src="../img/switch_rede.png" alt="Switch de Rede" class="network-image">
+                    <p>Switch de rede gerenciável</p>
+                </div>
+                <div class="image-card">
+                    <img src="../img/patch_panel.png" alt="Patch Panel" class="network-image">
+                    <p>Patch Panel organizado</p>
+                </div>
+            </div>
             <table border="1">
                 <thead>
                     <tr>
@@ -252,40 +265,34 @@
                 </p>
             </div>
         </section>
-
-        <section id="modelo-osi">
-            <h2>Modelo OSI</h2>
-            <div class="container">
-                <p>
-                    O <strong>Modelo OSI (Open Systems Interconnection)</strong> é um modelo de referência
-                    que divide a comunicação de rede em 7 camadas:
-                </p>
-                <ol>
-                    <li><strong>Física</strong> - Meio físico de transmissão</li>
-                    <li><strong>Enlace de Dados</strong> - Controle de erros no link</li>
-                    <li><strong>Rede</strong> - Roteamento e endereçamento lógico</li>
-                    <li><strong>Transporte</strong> - Controle de fluxo e confiabilidade</li>
-                    <li><strong>Sessão</strong> - Estabelecimento de sessões</li>
-                    <li><strong>Apresentação</strong> - Formatação e criptografia de dados</li>
-                    <li><strong>Aplicação</strong> - Interface com usuário final</li>
-                </ol>
+        <!-- Na seção de modelos OSI/TCP-IP -->
+        <section>
+            <h2>Comparação de Modelos</h2>
+            <div class="models-comparison">
+                <div class="model-card">
+                    <h3>📊 Modelo OSI</h3>
+                    <ol>
+                        <li><strong>7. Aplicação</strong> - Interface com usuário</li>
+                        <li><strong>6. Apresentação</strong> - Formatação de dados</li>
+                        <li><strong>5. Sessão</strong> - Controle de sessões</li>
+                        <li><strong>4. Transporte</strong> - Confiabilidade</li>
+                        <li><strong>3. Rede</strong> - Roteamento</li>
+                        <li><strong>2. Enlace</strong> - Controle de erros</li>
+                        <li><strong>1. Física</strong> - Meio físico</li>
+                    </ol>
+                </div>
+                <div class="model-card">
+                    <h3>🌐 Modelo TCP/IP</h3>
+                    <ol>
+                        <li><strong>Aplicação</strong> - HTTP, FTP, SMTP</li>
+                        <li><strong>Transporte</strong> - TCP, UDP</li>
+                        <li><strong>Internet</strong> - IP, ICMP</li>
+                        <li><strong>Interface</strong> - Ethernet, Wi-Fi</li>
+                    </ol>
+                </div>
             </div>
         </section>
 
-        <section id="modelo-tcpip">
-            <h2>Modelo TCP/IP</h2>
-            <div class="container">
-                <p>
-                    O <strong>Modelo TCP/IP</strong> é o modelo prático usado na Internet, com 4 camadas:
-                </p>
-                <ol>
-                    <li><strong>Aplicação</strong> - HTTP, FTP, SMTP, DNS</li>
-                    <li><strong>Transporte</strong> - TCP, UDP</li>
-                    <li><strong>Internet</strong> - IP, ICMP</li>
-                    <li><strong>Interface de Rede</strong> - Ethernet, Wi-Fi</li>
-                </ol>
-            </div>
-        </section>
 
         <section id="protocolos-ip">
             <h2>Protocolos IP V4 e IP V6</h2>
@@ -391,113 +398,116 @@
         </section>
 
         <section id="exemplos-codigo">
-            <h2>Exemplos de Código Backend</h2>
+            <h2>Exemplo de Código Backend</h2>
             <h3>Troca de Mensagens Frontend/Backend</h3>
             <div class="container">
 
                 <div class="exemplo">
-                    <strong>Exemplo 1: API REST com Express.js</strong><br><br>
-
+                    <strong>Exemplo: API REST com Express.js</strong><br><br>
                     <pre>
                         <code>
-                            const express = require('express');
-                            const app = express();
-                            
-                            app.use(express.json());
-                            
-                            app.get('/api/mensagem', (req, res) => {
-                            res.json({ mensagem: 'Olá do backend!' });
-                            });
-                            
-                            app.post('/api/mensagem', (req, res) => {
-                            const { texto } = req.body;
-                            console.log('Mensagem recebida:', texto);
-                            res.json({ status: 'Mensagem recebida!' });
-                            });
-                            
-                            app.listen(3000, () => {
-                            console.log('Servidor rodando na porta 3000');
-                            });
+                     const express = require('express')
+const app = express()
+const { SerialPort, ReadlineParser } = require('serialport')
+const readline = require('readline')
+
+const cors = require('cors')
+
+const PORT = 3000   // PORT do protocolo TCP
+const hostname = 'localhost'    // nome do Computador e seu IP = 127.0.0.1 (IP de teste)
+
+const BAUD_RATE = 9600
+const SERIAL_PORT = "COM9"
+
+// ------ config de Middleware ----------
+app.use(express.urlencoded({extended: true}))
+app.use(express.json())
+app.use(cors())
+
+// -------- INICIALIZAÇÃO ARDUINO -------------
+const arduino = new SerialPort({
+    path: SERIAL_PORT,
+    baudRate: BAUD_RATE,
+})
+
+const parserDados = arduino.pipe(new ReadlineParser({delimiter: "\r\n"}))
+
+arduino.on("open", ()=>{
+    console.log(`Conectado ao Arduino em ${SERIAL_PORT}`)
+})
+
+arduino.on("error", (err)=>{
+    console.error('Erro na comunicação serial', err)
+})
+
+// --- parser das linhas: garantir a recepção completa dos dados
+parserDados.on("dados", (dad)=>{
+    const linha = dad.toString().trim()
+
+    if(linha > 0){
+        console.log('Arduino: ',linha)
+    }
+})
+
+// -------- leitura do teclado para testes / troca de dados manuais -----------
+
+const teclado = readline.createInterface({
+    input: process.stdin,
+    output: process.stdout,
+})
+
+teclado.on("line", (input)=>{
+    const comando2 = input.trim()
+
+    if(comando2 === 's' || comando2 === 'd'){
+        arduino.write(comando2, (err)=>{
+            if(err){
+                console.error("Erro ao enviar ocomando pelo teclado: ", err)
+            }else{
+                console.log(`Comando: ${comando2} enviado ao arduino via teclado`)
+            }
+        })
+    }else{
+        console.log("Digite 's' (ligar) ou 'd' (desligar) ")
+    }
+})
+// ------- programando as rotas http => endpoints -----
+
+app.get('/ligar', (req,res)=>{
+    arduino.write("s", (err)=>{
+        if(err){
+            console.error("Erro ao escrever no arduino: ", err)
+            return res.status(500).json({ led: "erro", detalhe: "falha ao enviar o comando"})
+        }
+    })
+    res.status(200).json({ led: "ligado"})
+})
+app.get('/desligar', (req,res)=>{
+    arduino.write("d", (err)=>{
+        if(err){
+            console.error("Erro ao escrever no arduino: ", err)
+            return res.status(500).json({ led: "erro", detalhe: "falha ao enviar o comando"})
+        }
+    })
+    res.status(200).json({ led: "desligado"})
+})
+app.listen(PORT, hostname, ()=>{
+    console.log(`Servidor rodando em ${hostname}:${PORT}`)
+    console.log("Digite 's' para ligar e 'd' para desligar")
+    console.log('-------------------------------------------')
+})
+
                         </code>
                     </pre>
-                </div>
 
-                <div class="exemplo">
-                    <strong>Exemplo 2: WebSockets com Socket.io</strong><br><br>
-
-                    <pre>
-                        <code>
-                            const express = require('express');
-                            const http = require('http');
-                            const socketIo = require('socket.io');
-                            
-                            const app = express();
-                            const server = http.createServer(app);
-                            const io = socketIo(server);
-                            
-                            io.on('connection', (socket) => {
-                            console.log('Usuário conectado:', socket.id);
-                            
-                            socket.on('mensagem', (data) => {
-                            console.log('Mensagem:', data);
-                            io.emit('nova_mensagem', {
-                            usuario: socket.id,
-                            texto: data,
-                            timestamp: new Date()
-                            });
-                            });
-                            
-                            socket.on('disconnect', () => {
-                            console.log('Usuário desconectado:', socket.id);
-                            });
-                            });
-                            
-                            server.listen(3000, () => {
-                            console.log('Servidor Socket.io na porta 3000');
-                            });
-                        </code>
-                    </pre>
-                </div>
-
-                <div class="exemplo">
-                    <strong>Exemplo 3: API com Autenticação JWT (JSON WEB TOKENS)</strong><br><br>
-                    <pre>
-                        <code>
-                            const express = require('express');
-                            const jwt = require('jsonwebtoken');
-                            const app = express();
-                            
-                            app.use(express.json());
-                            
-                            const SECRET = 'chave-secreta';
-                            
-                            // Login
-                            app.post('/api/login', (req, res) => {
-                            const { usuario, senha } = req.body;
-                            if (usuario === 'admin' && senha === '1234') {
-                            const token = jwt.sign({ usuario }, SECRET, { expiresIn: '1h' });
-                            res.json({ token });
-                            } else {
-                            res.status(401).json({ erro: 'Credenciais inválidas' });
-                            }
-                            });
-                            
-                            // Rota protegida
-                            app.get('/api/protegido', (req, res) => {
-                            const token = req.headers.authorization?.split(' ')[1];
-                            if (!token) return res.status(401).json({ erro: 'Token necessário' });
-                            
-                            jwt.verify(token, SECRET, (err, decoded) => {
-                            if (err) return res.status(401).json({ erro: 'Token inválido' });
-                            res.json({ mensagem: 'Acesso permitido!', usuario: decoded.usuario });
-                            });
-                            });
-                            
-                            app.listen(3000, () => {
-                            console.log('Servidor de autenticação na porta 3000');
-                            });
-                        </code>
-                    </pre>
+                    <h3 style="text-align: center;">Resultado Final na Prática:</h3>
+                    <br>
+                    <div class="video"
+                        style="display: flex; justify-content: center; width: auto; height: 600px; border-radius: 12px; border: 1px solid #d62828; box-shadow: 0 0 10px rgba(214, 40, 40, 0.5);">
+                        <video controls width="auto" height="600" style="border-radius: 12px;">
+                            <source src="../img/ligando_arduino_com_teclado.mp4" type="video/mp4">
+                        </video>
+                    </div>
                 </div>
             </div>
         </section>

@@ -17,12 +17,11 @@ body {
     overflow-x: hidden;
 }
 
-/* Header estilo B-Look */
 header {
     background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(20px);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 1rem 0 !important;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    padding: 1rem 10rem !important;
 }
 
 .logo {
@@ -32,31 +31,6 @@ header {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-}
-
-/* Menu mobile */
-#menu-toggle {
-    transition: all 0.3s ease;
-}
-
-#menu-toggle:hover {
-    transform: scale(1.1);
-}
-
-#menu {
-    background: rgba(0, 0, 0, 0.95) !important;
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-#menu a {
-    position: relative;
-    transition: all 0.3s ease;
-    font-weight: 500;
-}
-
-#menu a:hover {
-    color: #d62828;
 }
 
 /* Main content */
@@ -138,27 +112,25 @@ section {
 section:last-child {
     border-bottom: none;
 }
-
 /* Títulos das seções */
 h2 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
+    font-size: 32px;
     margin-bottom: 1rem;
     color: #ffffff;
     position: relative;
     text-align: center;
+    font-weight: bold;
 }
 
 h3 {
-    font-size: 1.2rem;
+    font-size: 20px;
     color: #888;
-    margin-bottom: 2rem;
-    font-weight: 400;
     text-align: center;
+    font-weight: bold;
 }
 
 section hr {
-    width: 300px;
+    width: 1200px;
     height: 2px;
     background: linear-gradient(90deg, transparent, #d62828, transparent);
     border: none;

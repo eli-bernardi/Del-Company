@@ -67,7 +67,6 @@
         </section>
 
         <section>
-            <hr><br>
             <h2>Contexto Histórico</h2>
             <p>
                 A história da eletrônica começa ligada ao estudo da eletricidade no século XVIII. Pesquisadores como
@@ -88,13 +87,73 @@
                 informática e da eletrônica digital.
             </p>
             <p>
+                Os anos 80 e 90 testemunharam a popularização dos computadores pessoais e dispositivos móveis,
+                enquanto a revolução digital transformava a sociedade. Em 2005, um marco importante: o lançamento
+                do Arduino, uma plataforma de prototipagem que democratizou o acesso à eletrônica criativa,
+                permitindo que estudantes, artistas e inventores criassem projetos interativos com facilidade.
+            </p>
+            <p>
                 Hoje, vivemos em um mundo em que a eletrônica está presente em praticamente tudo: celulares, carros,
                 eletrodomésticos, satélites, equipamentos médicos e até mesmo em objetos simples do dia a dia, como
                 lâmpadas e relógios. Essa evolução mostra como a eletrônica foi essencial para o avanço da
                 tecnologia e para a transformação da sociedade em uma era digital e conectada.
             </p>
+            <hr>
         </section>
-
+        <section id="historia">
+            <h2>Linha do Tempo da Eletrônica</h2>
+            <div class="historia-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-year">Século XVIII</div>
+                    <p>Benjamin Franklin e Alessandro Volta dão os primeiros passos no estudo da eletricidade, criando a
+                        pilha
+                        elétrica.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1827</div>
+                    <p>Georg Ohm estabelece a Lei de Ohm, fundamental para entender a relação entre tensão, corrente e
+                        resistência.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1904</div>
+                    <p>John Ambrose Fleming inventa a válvula termiônica, marcando o nascimento da eletrônica moderna.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1947</div>
+                    <p>Invenção do transistor nos Laboratórios Bell, revolucionando a eletrônica e tornando possível a
+                        computação moderna.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1958</div>
+                    <p>Jack Kilby cria o primeiro circuito integrado, abrindo caminho para a miniaturização dos
+                        dispositivos
+                        eletrônicos.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1971</div>
+                    <p>Intel lança o primeiro microprocessador (Intel 4004), iniciando a era dos computadores pessoais.
+                    </p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1980s</div>
+                    <p>Popularização dos computadores pessoais e surgimento dos primeiros telefones celulares
+                        comerciais.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1990s</div>
+                    <p>Revolução digital com a internet, dispositivos móveis e a miniaturização extrema de componentes
+                        eletrônicos.</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2005</div>
+                    <p>Lançamento do Arduino - plataforma de prototipagem eletrônica que democratizou o acesso à
+                        eletrônica
+                        criativa e IoT.</p>
+                </div>
+            </div>
+            <hr>
+        </section>
         <section id="componentes">
             <h2>Componentes Eletrônicos</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
@@ -133,7 +192,60 @@
                     </tr>
                 </tbody>
             </table>
+            <hr>
         </section>
+<!-- 
+.exemplo-arduino img {
+width: 50%;
+margin: auto;
+display: flex;
+margin-top: auto;
+margin-left: auto;
+margin-right: auto;
+justify-content: center !important;
+height: auto;
+border-radius: 12px;
+border: 1px solid rgba(255, 255, 255, 0.1);
+} -->
+
+        <section class="componentes-visuais">
+            <h2>Componentes em Destaque</h2>
+            <div class="componentes-grid">
+                <div class="componente-card">
+                    <div class="componente-icon"> <img src="../img/led_arduino.png" alt="Led para Arduino"></div>
+                    <div class="componente-nome">LED</div>
+                    <div class="explicando-componente">
+                        <details>Led em cores variáveis</details>
+                    </div>
+                    <div class="componente-desc">
+                        Diodo emissor de luz que transforma energia elétrica em luz visível com alta eficiência.
+                    </div>
+                </div>
+                <div class="componente-card">
+                    <div class="componente-icon"> <img src="../img/resistor_arduino.png" alt="Resistores para Arduino">
+                    </div>
+                    <div class="componente-nome">Resistores</div>
+                    <div class="explicando-componente">
+                        <details>Resistores com 220 Ω</details>
+                    </div>
+                    <div class="componente-desc">
+                        Controlam o fluxo de corrente elétrica, protegendo componentes sensíveis em circuitos.
+                    </div>
+                </div>
+                <div class="componente-card">
+                    <div class="componente-icon"> <img src="../img/multimetro.png" alt="Multimetro"> </div>
+                    <div class="componente-nome">Multímetro</div>
+                    <div class="explicando-componente">
+                        <details>Multimetro Digital </details>
+                    </div>
+                    <div class="componente-desc">
+                        Ferramenta essencial para medir tensão, corrente e resistência em circuitos eletrônicos.
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </section>
+
         <section id="arduino">
             <h2>Arduíno</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
@@ -160,7 +272,9 @@
                     <strong>Exemplo prático:</strong> acender um LED quando um botão é pressionado.
                     <br>
                     <img src="../img/liga_apaga_led_ligado.jpg" alt="Exemplo de código Arduino">
+                    <br>
                     <img src="../img/liga_desliga_ligado.jpg" alt="Exemplo de código Arduino">
+                    <br>
                     <img src="../img/liga_desliga_apagado.jpg" alt="Exemplo de código Arduino">
                 </div>
                 <p>Exemplo de código de ligação do Arduino ao JavaScript:</p>
@@ -270,6 +384,7 @@
                     para quem quer aprender sobre eletrônica e programação.
                 </p>
             </div>
+            <hr>
         </section>
 
         <section id="entra-sai">
@@ -404,6 +519,7 @@
                         dados</strong>.
                 </p>
             </div>
+            <hr>
         </section>
 
         <section id="diodo">
@@ -425,7 +541,7 @@
                     comando
                     vindo do código.
                 </p>
-                <br> 
+                <br>
                 <hr>
                 <h2>Relação com Scripts e Programação</h2>
                 <p>
@@ -476,6 +592,7 @@
                     sistema.
                 </p>
             </div>
+            <hr>
         </section>
     </main>
     <footer>

@@ -1,22 +1,41 @@
-let indices = {};
+// JavaScript para o carrossel
+function mudarSlide(carrosselId, direction) {
+  const carrossel = document.getElementById(carrosselId);
+  const slides = carrossel.querySelector('.slides');
+  const slideCount = slides.children.length;
+  const slideWidth = slides.children[0].offsetWidth;
 
-// inicia índice de cada carrossel
-function iniciarCarrossel(id) {
-  indices[id] = 0;
+  let currentPosition = parseInt(slides.style.transform?.split('(')[1]?.split('px')[0]) || 0;
+  let newPosition = currentPosition - (direction * slideWidth);
+
+  // Limitar o movimento
+  const maxPosition = 0;
+  const minPosition = -(slideWidth * (slideCount - 1));
+
+  if (newPosition > maxPosition) {
+    newPosition = minPosition;
+  } else if (newPosition < minPosition) {
+    newPosition = maxPosition;
+  }
+
+  slides.style.transform = `translateX(${newPosition}px)`;
 }
 
-iniciarCarrossel("carrossel1");
-iniciarCarrossel("carrossel2");
+// Inicializar carrosséis
+document.addEventListener('DOMContentLoaded', function () {
+  const carrosseis = document.querySelectorAll('.carrossel');
+  carrosseis.forEach(carrossel => {
+    const slides = carrossel.querySelector('.slides');
+    slides.style.transform = 'translateX(0px)';
+  });
 
-function mudarSlide(id, direcao) {
-  const carrossel = document.getElementById(id);
-  const slides = carrossel.querySelector(".slides");
-  const total = carrossel.querySelectorAll(".slide").length;
+  // Menu mobile
+  const menuToggle = document.getElementById('menu-toggle');
+  const menu = document.getElementById('menu');
 
-  indices[id] += direcao;
-
-  if (indices[id] < 0) indices[id] = total - 1;
-  if (indices[id] >= total) indices[id] = 0;
-
-  slides.style.transform = `translateX(${-indices[id] * 100}%)`;
-}
+  if (menuToggle && menu) {
+    menuToggle.addEventListener('click', function () {
+      menu.classList.toggle('hidden');
+    });
+  }
+});
