@@ -1,4 +1,3 @@
-/* Reset moderno */
 * {
     margin: 0;
     padding: 0;
@@ -33,12 +32,10 @@ header {
     background-clip: text;
 }
 
-/* Main content */
 main {
     margin-top: 80px;
 }
 
-/* Seções gerais */
 section {
     padding: 6rem 2rem;
     max-width: 1200px;
@@ -50,7 +47,6 @@ section:last-child {
     border-bottom: none;
 }
 
-/* Títulos das seções */
 h2 {
     font-size: 32px !important;
     margin-bottom: 1rem;
@@ -75,7 +71,6 @@ section hr {
     margin: 2rem 0;
 }
 
-/* Seção de Linguagens */
 .linguagens {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -113,7 +108,6 @@ section hr {
     transform: scale(1.1);
 }
 
-/* Seções de exemplos */
 .exemplo {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -148,7 +142,6 @@ section hr {
     overflow-x: auto;
 }
 
-/* Seção HTML/CSS */
 .info-html-css {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -189,7 +182,6 @@ section hr {
     line-height: 1.7;
 }
 
-/* Seção IDE */
 .info-ide {
     margin: 3rem 0;
 }
@@ -201,7 +193,6 @@ section hr {
     margin-top: 2rem;
 }
 
-/* Tabela estilizada */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -235,7 +226,6 @@ tr:hover {
     background: rgba(255, 255, 255, 0.02);
 }
 
-/* Seção de Programas */
 .container-blocos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -267,7 +257,6 @@ tr:hover {
     backdrop-filter: blur(10px);
 }
 
-/* Botões */
 button {
     background: linear-gradient(135deg, #d62828 0%, #c82323 100%);
     color: white;
@@ -298,7 +287,6 @@ button:hover {
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
-/* Inputs */
 input {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -326,7 +314,6 @@ label {
     display: block;
 }
 
-/* Resultados */
 #resultado {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -336,14 +323,12 @@ label {
     backdrop-filter: blur(10px);
 }
 
-/* Texto centralizado */
 .centralizar {
     text-align: center;
     margin: 2rem 0;
     color: #888;
 }
 
-/* Footer */
 footer {
     background: rgba(0, 0, 0, 0.9);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -370,7 +355,6 @@ footer a:hover {
     color: #d62828;
 }
 
-/* Scrollbar */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -388,76 +372,6 @@ footer a:hover {
     background: #ff6b6b;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    section {
-        padding: 4rem 1rem;
-    }
-
-    .hero {
-        min-height: 60vh;
-        padding: 2rem 1rem;
-    }
-
-    .linguagens {
-        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        gap: 1rem;
-    }
-
-    .container-blocos {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .info-html-css {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .exemplos {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    table {
-        font-size: 0.9rem;
-    }
-
-    th,
-    td {
-        padding: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero h3 {
-        font-size: 1rem;
-    }
-
-    .bloco-programas {
-        padding: 1.5rem;
-    }
-
-    button {
-        padding: 0.75rem 1rem;
-        font-size: 0.8rem;
-        margin: 0.25rem;
-    }
-
-    .linguagem-card {
-        padding: 1.5rem;
-    }
-
-    .linguagem-card img {
-        max-width: 80px;
-    }
-}
-
-/* Animações suaves */
 section {
     opacity: 0;
     transform: translateY(30px);
@@ -471,7 +385,6 @@ section {
     }
 }
 
-/* Delay para as seções */
 section:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -500,7 +413,6 @@ section:nth-child(7) {
     animation-delay: 0.7s;
 }
 
-/* Efeitos de código */
 code {
     position: relative;
 }
@@ -516,7 +428,6 @@ code::before {
     border-radius: 2px;
 }
 
-/* Highlight para textos importantes */
 strong {
     color: #d62828;
     font-weight: 600;
