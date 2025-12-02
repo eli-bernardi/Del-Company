@@ -1,4 +1,4 @@
-/* Reset moderno */
+/* Configurações gerais da página */
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +17,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Cabeçalho */
 header {
     background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(20px);
@@ -33,7 +34,7 @@ header {
     background-clip: text;
 }
 
-/* Main content */
+/* Conteúdo principal */
 main {
     margin-top: 80px;
 }
@@ -50,7 +51,7 @@ section:last-child {
     border-bottom: none;
 }
 
-/* Títulos das seções */
+/* Títulos */
 h2 {
     font-size: 32px !important;
     margin-bottom: 1rem;
@@ -60,22 +61,7 @@ h2 {
     font-weight: 700;
 }
 
-h3 {
-    font-size: 20px !important;
-    color: #888;
-    text-align: center;
-    font-weight: 700;
-}
-
-section hr {
-    width: 1140px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #d62828, transparent);
-    border: none;
-    margin: 2rem 0;
-}
-
-/* Parágrafos e texto */
+/* Texto geral */
 p {
     font-size: 1.1rem;
     color: #888;
@@ -88,20 +74,7 @@ strong {
     font-weight: 600;
 }
 
-/* Listas estilizadas */
-ul,
-ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
-}
-
-li {
-    margin: 0.8rem 0;
-    color: #888;
-    line-height: 1.6;
-}
-
-/* Footer */
+/* Rodapé */
 footer {
     background: rgba(0, 0, 0, 0.9);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -128,7 +101,7 @@ footer a:hover {
     color: #d62828;
 }
 
-/* Scrollbar */
+/* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -160,9 +133,7 @@ footer a:hover {
     }
 }
 
-/* === ESTILOS ESPECÍFICOS PARA SERVIÇOS === */
-
-/* Hero Section */
+/* Seção principal */
 .hero {
     text-align: center;
     padding: 8rem 2rem;
@@ -235,17 +206,10 @@ button a {
     z-index: 2;
 }
 
-/* Seção de Serviços Listados */
+/* Seção de serviços listados */
 #serviços {
     text-align: center;
     background: linear-gradient(135deg, rgba(42, 42, 42, 0.4) 0%, rgba(30, 30, 30, 0.2) 100%);
-}
-
-#serviços h3 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    margin-bottom: 3rem;
-    color: #ffffff;
 }
 
 #serviços article {
@@ -281,18 +245,7 @@ button a {
     transform: translateX(10px);
 }
 
-/* Carrossel de Serviços */
-#conteudos {
-    text-align: center;
-}
-
-#conteudos h3 {
-    font-size: clamp(2rem, 4vw, 3rem);
-    font-weight: 700;
-    margin-bottom: 3rem;
-    color: #ffffff;
-}
-
+/* Carrossel de serviços */
 .carousel {
     position: relative;
     max-width: 1200px;
@@ -383,7 +336,7 @@ button a {
     right: 1rem;
 }
 
-/* Grid de Serviços Adicional */
+/* Grid de serviços detalhados */
 .servicos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -484,75 +437,7 @@ button a {
     color: #d62828;
 }
 
-/* CTA Section */
-.cta-section {
-    text-align: center;
-    background: linear-gradient(135deg, rgba(214, 40, 40, 0.1) 0%, transparent 50%);
-    border-radius: 20px;
-    padding: 4rem 2rem;
-    margin: 4rem 0;
-}
-
-.cta-section h3 {
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-}
-
-/* Media Queries Específicas */
-@media (max-width: 768px) {
-    .hero {
-        padding: 6rem 1rem;
-        min-height: 50vh;
-    }
-
-    .carousel-item {
-        min-width: 280px;
-    }
-
-    .carousel-btn {
-        width: 40px;
-        height: 40px;
-        font-size: 1rem;
-    }
-
-    .servicos-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .beneficios-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 1rem;
-    }
-
-    #serviços article {
-        padding: 2rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .carousel {
-        padding: 1rem;
-    }
-
-    .carousel-item {
-        min-width: 260px;
-        padding: 1.5rem;
-    }
-
-    .beneficios-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .servico-card {
-        padding: 1.5rem;
-    }
-}
+/* Seção Meus Sites */
 .meus-sites {
     padding: 6rem 2rem;
     max-width: 1200px;

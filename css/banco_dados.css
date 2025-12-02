@@ -1,4 +1,4 @@
-/* Reset moderno */
+/* Configurações básicas */
 * {
     margin: 0;
     padding: 0;
@@ -14,9 +14,9 @@ body {
     background: #000000;
     color: #ffffff;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
+/* Cabeçalho */
 header {
     background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(20px);
@@ -33,7 +33,7 @@ header {
     background-clip: text;
 }
 
-/* Main content */
+/* Conteúdo principal */
 main {
     margin-top: 80px;
 }
@@ -50,7 +50,7 @@ section:last-child {
     border-bottom: none;
 }
 
-/* Títulos das seções */
+/* Títulos */
 h2 {
     font-size: 32px !important;
     margin-bottom: 1rem;
@@ -67,6 +67,7 @@ h3 {
     font-weight: 700;
 }
 
+/* Linha divisória */
 section hr {
     width: 1140px;
     height: 2px;
@@ -75,7 +76,7 @@ section hr {
     margin: 2rem 0;
 }
 
-/* Hero Section */
+/* Seção principal */
 .hero {
     text-align: center;
     padding: 8rem 2rem;
@@ -121,7 +122,7 @@ section hr {
     margin-right: auto;
 }
 
-/* Parágrafos e texto */
+/* Texto geral */
 p {
     font-size: 1.1rem;
     color: #888;
@@ -134,20 +135,7 @@ strong {
     font-weight: 600;
 }
 
-/* Listas estilizadas */
-ul,
-ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
-}
-
-li {
-    margin: 0.8rem 0;
-    color: #888;
-    line-height: 1.6;
-}
-
-/* Footer */
+/* Rodapé */
 footer {
     background: rgba(0, 0, 0, 0.9);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -174,7 +162,7 @@ footer a:hover {
     color: #d62828;
 }
 
-/* Scrollbar */
+/* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -192,27 +180,6 @@ footer a:hover {
     background: #ff6b6b;
 }
 
-/* Responsividade */
-@media (max-width: 768px) {
-    section {
-        padding: 4rem 1rem;
-    }
-
-    .hero {
-        padding: 6rem 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 1.8rem;
-    }
-
-    h3 {
-        font-size: 1rem;
-    }
-}
-
 /* Animações suaves */
 section {
     opacity: 0;
@@ -227,7 +194,7 @@ section {
     }
 }
 
-/* Delay para as seções */
+/* Delay para animações das seções */
 section:nth-child(1) {
     animation-delay: 0.1s;
 }
@@ -256,9 +223,7 @@ section:nth-child(7) {
     animation-delay: 0.7s;
 }
 
-/* === ESTILOS ESPECÍFICOS PARA BANCO DE DADOS === */
-
-/* Containers */
+/* Container para conteúdo */
 .container {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -318,7 +283,7 @@ section:nth-child(7) {
     font-weight: 600;
 }
 
-/* Aplicações */
+/* Aplicações práticas */
 .aplicacoes-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -339,7 +304,7 @@ section:nth-child(7) {
     transform: translateX(5px);
 }
 
-/* Bancos de Dados */
+/* Grid de bancos de dados */
 .bancos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -393,7 +358,7 @@ section:nth-child(7) {
     font-weight: 600;
 }
 
-/* Tabela Comparativa */
+/* Tabela comparativa */
 .tabela-comparativa {
     margin: 3rem 0;
 }
@@ -427,7 +392,7 @@ section:nth-child(7) {
     background: rgba(255, 255, 255, 0.02);
 }
 
-/* Exemplo Dicionário */
+/* Exemplo de dicionário */
 .exemplo-dicionario {
     margin: 2rem 0;
 }
@@ -463,7 +428,7 @@ section:nth-child(7) {
     background: rgba(255, 255, 255, 0.02);
 }
 
-/* Tipos de Dados */
+/* Tipos de dados */
 .tipos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -508,7 +473,7 @@ section:nth-child(7) {
     color: #d62828;
 }
 
-/* Modelagem */
+/* Modelagem DER/MER */
 .modelagem-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -620,7 +585,7 @@ section:nth-child(7) {
     font-family: 'Fira Code', monospace;
 }
 
-/* Formulário */
+/* Formulário de cadastro */
 .formulario-container {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -646,18 +611,13 @@ section:nth-child(7) {
     flex-direction: column;
 }
 
-.form-group.full-width {
-    grid-column: 1 / -1;
-}
-
 .form-group label {
     color: #cccccc;
     margin-bottom: 0.5rem;
     font-weight: 500;
 }
 
-.form-group input,
-.form-group select {
+.form-group input {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
@@ -667,8 +627,7 @@ section:nth-child(7) {
     transition: all 0.3s ease;
 }
 
-.form-group input:focus,
-.form-group select:focus {
+.form-group input:focus {
     outline: none;
     border-color: #d62828;
     box-shadow: 0 0 0 2px rgba(214, 40, 40, 0.2);
@@ -729,13 +688,12 @@ section:nth-child(7) {
     font-size: 1.1rem;
 }
 
-/* Tabela de Dados */
+/* Tabela de dados cadastrados */
 .dados-cadastrados {
     margin-top: 3rem;
 }
 
 .tabela-dados {
-    overflow-x: auto;
     margin-top: 1rem;
 }
 
@@ -773,7 +731,7 @@ section:nth-child(7) {
     font-style: italic;
 }
 
-/* SQL Exemplo */
+/* Exemplo SQL */
 .sql-exemplo {
     margin-top: 2rem;
 }
@@ -782,7 +740,6 @@ section:nth-child(7) {
     background: #1a1a1a;
     border-radius: 8px;
     margin: 1.5rem 0;
-    overflow-x: auto;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -807,64 +764,4 @@ section:nth-child(7) {
 .code-block code {
     color: #ff6b6b;
     background: transparent;
-}
-
-/* Media Queries Específicas */
-@media (max-width: 768px) {
-
-    .sgbd-grid,
-    .bancos-grid,
-    .modelagem-grid {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
-    }
-
-    .form-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .form-actions {
-        flex-direction: column;
-    }
-
-    .btn-primary,
-    .btn-secondary {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .tabela-dados {
-        font-size: 0.9rem;
-    }
-
-    .entidades-grid,
-    .cardinalidades-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .exemplo-dicionario {
-        overflow-x: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .formulario-container {
-        padding: 1.5rem;
-    }
-
-    .banco-card {
-        padding: 1.5rem;
-    }
-
-    .modelo-card {
-        padding: 1.5rem;
-    }
-
-    .container {
-        padding: 1.5rem;
-    }
-
-    .sgbd-card {
-        padding: 1.5rem;
-    }
 }

@@ -1,3 +1,4 @@
+/* Reset básico */
 * {
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ body {
     overflow-x: hidden;
 }
 
+/* Header */
 header {
     background: rgba(0, 0, 0, 0.9) !important;
     backdrop-filter: blur(20px);
@@ -32,6 +34,7 @@ header {
     background-clip: text;
 }
 
+/* Layout principal */
 main {
     margin-top: 80px;
 }
@@ -47,6 +50,7 @@ section:last-child {
     border-bottom: none;
 }
 
+/* Tipografia */
 h2 {
     font-size: 32px !important;
     margin-bottom: 1rem;
@@ -71,6 +75,7 @@ section hr {
     margin: 2rem 0;
 }
 
+/* Grid de linguagens */
 .linguagens {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -108,6 +113,7 @@ section hr {
     transform: scale(1.1);
 }
 
+/* Exemplos de código */
 .exemplo {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -140,8 +146,21 @@ section hr {
     font-size: 0.9rem;
     line-height: 1.6;
     overflow-x: auto;
+    position: relative;
 }
 
+.exemplo code::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 3px;
+    height: 100%;
+    background: #d62828;
+    border-radius: 2px;
+}
+
+/* HTML e CSS */
 .info-html-css {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -182,6 +201,7 @@ section hr {
     line-height: 1.7;
 }
 
+/* IDEs */
 .info-ide {
     margin: 3rem 0;
 }
@@ -193,6 +213,7 @@ section hr {
     margin-top: 2rem;
 }
 
+/* Tabelas */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -226,6 +247,7 @@ tr:hover {
     background: rgba(255, 255, 255, 0.02);
 }
 
+/* Programas interativos */
 .container-blocos {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -257,6 +279,7 @@ tr:hover {
     backdrop-filter: blur(10px);
 }
 
+/* Botões */
 button {
     background: linear-gradient(135deg, #d62828 0%, #c82323 100%);
     color: white;
@@ -287,6 +310,7 @@ button:hover {
     box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
+/* Inputs */
 input {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -314,6 +338,7 @@ label {
     display: block;
 }
 
+/* Resultados */
 #resultado {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -329,6 +354,12 @@ label {
     color: #888;
 }
 
+strong {
+    color: #d62828;
+    font-weight: 600;
+}
+
+/* Footer */
 footer {
     background: rgba(0, 0, 0, 0.9);
     border-top: 1px solid rgba(255, 255, 255, 0.1);
@@ -355,6 +386,7 @@ footer a:hover {
     color: #d62828;
 }
 
+/* Scrollbar personalizada */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -372,6 +404,7 @@ footer a:hover {
     background: #ff6b6b;
 }
 
+/* Animações de entrada */
 section {
     opacity: 0;
     transform: translateY(30px);
@@ -411,24 +444,4 @@ section:nth-child(6) {
 
 section:nth-child(7) {
     animation-delay: 0.7s;
-}
-
-code {
-    position: relative;
-}
-
-code::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 3px;
-    height: 100%;
-    background: #d62828;
-    border-radius: 2px;
-}
-
-strong {
-    color: #d62828;
-    font-weight: 600;
 }

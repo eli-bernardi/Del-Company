@@ -51,7 +51,6 @@ h2 {
     font-size: 32px !important;
     margin-bottom: 1rem;
     color: #ffffff;
-    position: relative;
     text-align: center;
     font-weight: 700;
 }
@@ -70,7 +69,6 @@ section hr {
     border: none;
     margin: 2rem 0;
 }
-
 
 section:first-child {
     text-align: center;
