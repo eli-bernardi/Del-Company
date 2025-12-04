@@ -134,7 +134,7 @@ strong {
 
 /* Botões */
 button {
-    background: linear-gradient(135deg, #d62828 0%, #c82323 100%);
+    background: linear-gradient(135deg, #d62828 0%, #c82323 100%) !important;
     color: white;
     border: none;
     padding: 16px 40px;
