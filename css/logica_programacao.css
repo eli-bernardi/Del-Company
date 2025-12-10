@@ -77,8 +77,202 @@ section hr {
     background: linear-gradient(135deg, #ff6b6b 100%);
 }
 
+<<<<<<< HEAD
 p {
     font-size: 20px;
+=======
+/* HTML e CSS */
+.info-html-css {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.bloco {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2.5rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.bloco:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 40, 40, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.bloco.html h2 {
+    color: #e34c26;
+}
+
+.bloco.css h2 {
+    color: #264de4;
+}
+
+.bloco h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.bloco p {
+    color: #888;
+    line-height: 1.7;
+}
+
+/* IDEs */
+.info-ide {
+    margin: 3rem 0;
+}
+
+.exemplos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Tabelas */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    margin: 2rem 0;
+}
+
+thead {
+    background: rgba(214, 40, 40, 0.1);
+}
+
+th {
+    padding: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    color: #d62828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+td {
+    padding: 1.5rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    color: #888;
+}
+
+tr:hover {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* Programas interativos */
+.container-blocos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.bloco-programas {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.bloco-programas:hover {
+    transform: translateY(-5px);
+    border-color: rgba(214, 40, 40, 0.3);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.bloco-programas-busca {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+}
+
+/* Botões */
+button {
+    background: linear-gradient(135deg, #d62828 0%, #c82323 100%) !important;
+    color: white;
+    border: none;
+    padding: 0.875rem 1.5rem;
+    font-size: 0.9rem;
+    font-weight: 600;   
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin: 0.5rem;
+    backdrop-filter: blur(10px);
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(214, 40, 40, 0.4);
+    background: linear-gradient(135deg, #e02d2d 0%, #d62828 100%);
+}
+
+.btn-limpar {
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.btn-limpar:hover {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
+}
+
+/* Inputs */
+input {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    color: white;
+    font-size: 1rem;
+    margin: 0.5rem 0;
+    width: 100%;
+    max-width: 300px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+input:focus {
+    outline: none;
+    border-color: #d62828;
+    box-shadow: 0 0 0 2px rgba(214, 40, 40, 0.2);
+}
+
+label {
+    color: #888;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+/* Resultados */
+#resultado {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.centralizar {
+    text-align: center;
+    margin: 2rem 0;
+>>>>>>> cb661610c131294c258a3125149169143c02072f
     color: #888;
     margin: 16px;
     line-height: 1.8;
