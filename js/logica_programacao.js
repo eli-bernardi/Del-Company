@@ -147,16 +147,15 @@ function buscaBinariaExecutar() {
 }
 
 // EXPORTAR FUNÇÕES
-
-window.gerarAleatorio1 = gerarAleatorio1;window.crescente = crescente;
-window.decrescente = decrescente;
-window.gerarAleatorio2 = gerarAleatorio2;
-window.ordenarBubbleSort = ordenarBubbleSort;
-window.gerarAleatorio3 = gerarAleatorio3;
-window.ordenarArray = ordenarArray;
-window.gerarMatriz = gerarMatriz;
-window.calcularIMC = calcularIMC;
-window.calcularCelsius = calcularCelsius;
-window.buscaLinear = buscaLinear;
-window.buscaBinariaExecutar = buscaBinariaExecutar;
-window.limparResultado = limparResultado;
+gerarAleatorio1()
+gerarAleatorio2()
+gerarAleatorio3()
+decrescente()
+ordenarBubbleSort()
+ordenarArray()
+gerarMatriz()
+calcularIMC()
+calcularCelsius()
+buscaLinear()
+buscaBinariaExecutar()
+limparResultado()
