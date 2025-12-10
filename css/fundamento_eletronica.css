@@ -371,3 +371,150 @@ footer a {
 footer a:hover {
     color: #d62828;
 }
+
+.calculos-circuitos-section {
+    margin-bottom: 32px;
+}
+
+.calculos-container {
+    background-color: #222;
+    padding: 24px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 24px;
+}
+
+.calculos-grid {
+    display: grid;
+    gap: 1.5rem;
+    margin-bottom: 24px;
+}
+
+
+.circuito-diagrama {
+    background-color: #2c2c2c;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+.diagrama-box {
+    text-align: center;
+}
+
+.diagrama-texto {
+    display: inline-block;
+    background-color: #333;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.diagrama-descricao {
+    font-size: 16px;
+    color: #999;
+}
+.parametros-form {
+    background-color: #2c2c2c;
+    padding: 1rem;
+    border-radius: 0.375rem;
+}
+
+.form-calculo {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 4px;
+    color: #fff;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 8px 12px;
+    background-color: #333;
+    border: 1px solid #666;
+    border-radius: 4px;
+    color: #fff;
+    font-size: 16px;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #d62828;
+}
+
+.input-group input::placeholder {
+    color: #888;
+}
+
+.btn-calcular {
+    width: 100%;
+    background-color: #d62828;
+    color: white;
+    font-weight: bold;
+    padding: 12px 16px;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+.btn-calcular:hover {
+    background-color: #b51f1f;
+}
+.resultados-container {
+    margin-top:24px;
+}
+
+.resultados-box {
+    background-color: #2c2c2c;
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    min-height: 100px;
+}
+
+.resultados-placeholder {
+    color: #999;
+}
+
+.formulas-container {
+    background-color: #1a1a1a;
+    padding: 16px;
+     border-radius: 4px;
+    margin-top: 24px;
+}
+
+.formulas-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.formulas-list li {
+    display: flex;
+    align-items: flex-start;
+}
+
+.formula-simbolo {
+    color: #999;
+    margin-right: 8px;
+    font-size: 16px;
+}
+
+.formula-texto {
+    font-size: 0.875rem;
+    color: #ccc;
+    line-height: 1.4;
+}
