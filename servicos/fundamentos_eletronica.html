@@ -203,7 +203,94 @@
             </div>
             <hr>
         </section>
-
+<section id="calculos-circuitos" class="calculos-circuitos-section">
+    <h2>Cálculos de Circuitos Elétricos</h2>
+    <h3>Calcular Corrente, Tensão e Potência em Circuitos Misto</h3>
+    
+    <div class="calculos-container">
+        <div class="calculos-grid">
+            <!-- Diagrama do Circuito -->
+            <div class="circuito-diagrama">
+                <h4>Diagrama do Circuito</h4>
+                <div class="diagrama-box">
+                    <div class="diagrama-texto">
+                        <p>Voltagem (V) ─── R1 ───┬─── R2 ───┐</p>
+                        <p>                    │          │</p>
+                        <p>                    └─── R3 ───┘</p>
+                    </div>
+                    <p class="diagrama-descricao">
+                        Circuito misto: R1 em série com o paralelo de R2 e R3
+                    </p>
+                </div>
+            </div>
+            <div class="parametros-form">
+                <h4>Parâmetros do Circuito</h4>
+                <form id="form-calculo" class="form-calculo">
+                    <div class="input-group">
+                        <label for="voltagem">Voltagem (V)</label>
+                        <input type="number" id="voltagem" step="0.1" 
+                               placeholder="Digite a voltagem em Volts">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="resistenciaA">Resistor A - R1 (Ω)</label>
+                        <input type="number" id="resistenciaA" step="0.1" 
+                               placeholder="Resistência em Ohms">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="resistenciaB">Resistor B - R2 (Ω)</label>
+                        <input type="number" id="resistenciaB" step="0.1" 
+                               placeholder="Resistência em Ohms">
+                    </div>
+                    
+                    <div class="input-group">
+                        <label for="resistenciaC">Resistor C - R3 (Ω)</label>
+                        <input type="number" id="resistenciaC" step="0.1" 
+                               placeholder="Resistência em Ohms">
+                    </div>
+                    
+                    <button type="button" onclick="iniciarCalculo()" class="btn-calcular">
+                        Calcular Circuito
+                    </button>
+                </form>
+            </div>
+        </div>
+        <div class="resultados-container">
+            <h4>Resultados</h4>
+            <div id="resultado" class="resultados-box">
+                <p class="resultados-placeholder">Os resultados aparecerão aqui após o cálculo...</p>
+            </div>
+        </div>
+        
+        <div class="formulas-container">
+            <h4>Fórmulas Utilizadas</h4>
+            <ul class="formulas-list">
+                <li>
+                    <span class="formula-simbolo">•</span>
+                    <span class="formula-texto">Resistência equivalente em paralelo: R<sub>paralelo</sub> = (R₂ × R₃) ÷ (R₂ + R₃)</span>
+                </li>
+                <li>
+                    <span class="formula-simbolo">•</span>
+                    <span class="formula-texto">Resistência total: R<sub>total</sub> = R₁ + R<sub>paralelo</sub></span>
+                </li>
+                <li>
+                    <span class="formula-simbolo">•</span>
+                    <span class="formula-texto">Lei de Ohm: I = V ÷ R</span>
+                </li>
+                <li>
+                    <span class="formula-simbolo">•</span>
+                    <span class="formula-texto">Potência dissipada: P = R × I²</span>
+                </li>
+                <li>
+                    <span class="formula-simbolo">•</span>
+                    <span class="formula-texto">Tensão no resistor: V = R × I</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+</section>
         <section id="arduino">
             <h2>Arduíno</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
