@@ -1,9 +1,8 @@
-// ------------------ Função base para aleatórios ------------------
+
 function gerarAleatorio(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
-// QUESTÃO 5 — Ordenar Crescente e Decrescente
 
 let res4 = document.getElementById('res4');
 let res5 = document.getElementById('res5');
@@ -42,8 +41,6 @@ function decrescente5() {
     res5.innerHTML = `Ordem Decrescente: <br> ${num5}`;
 }
 
-// QUESTÃO 6 — BubbleSort com números aleatórios
-
 let res6 = document.getElementById('res6');
 let arr6 = [];
 
@@ -73,8 +70,6 @@ function principal6() {
     ordenar6(10);
 }
 
-// QUESTÃO 7 — Somar 10 números aleatórios
-
 let res7 = document.getElementById('res7');
 let arr7 = [];
 
@@ -99,8 +94,6 @@ function principal7() {
     somarArr7();
 }
 
-// QUESTÃO 8 — Matriz 3x3
-
 let res8 = document.getElementById('res8');
 let mat8 = [];
 
@@ -123,8 +116,6 @@ function matriz8() {
     res8.innerHTML = texto;
 }
 
-// QUESTÃO 9 — IMC
-
 let res9 = document.getElementById('res9');
 
 function principal9() {
@@ -141,7 +132,6 @@ function principal9() {
     res9.innerHTML = `IMC calculado: ${imc.toFixed(2)}`;
 }
 
-// QUESTÃO 10 — Conversão Celsius → Fahrenheit
 
 let res10 = document.getElementById('res10');
 
@@ -158,8 +148,6 @@ function principal10() {
     res10.innerHTML = `${celsius}°C equivale a ${f.toFixed(2)}°F`;
 }
 
-// QUESTÃO 11 — Busca Linear
-
 let res11 = document.getElementById('res11');
 
 function encontrarMenorValor(array) {
@@ -169,8 +157,6 @@ function encontrarMenorValor(array) {
     }
     return menor;
 }
-
-// QUESTÃO 12 — Outro IMC (reutiliza função 9)
 
 let res12 = document.getElementById('res12');
 
