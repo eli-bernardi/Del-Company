@@ -47,7 +47,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="mt-16">
         <br>
 
         <section class="hero">
@@ -302,128 +302,114 @@
 
         <section>
             <div class="programas">
-                <h2> Programas Criados pela Nossa Equipe</h2>
+                <h2>Programas Criados pela Nossa Equipe</h2>
                 <h3>Exemplificação | Funcionalidade | Utilização</h3>
                 <hr>
-                <div class="container-blocos">
-                    <div class="bloco-programas">
-                        <div class="ordem-crescente-decresente" id="ordem-crescente-decresente">
-                            <p>Programa para ordenar números de forma <strong>crescente</strong> e
-                                <strong>decrescente</strong>:
-                            </p>
-                            <button onclick="gerarAleatorio1()">Gerar Aleatórios</button>
-                            <button onclick="crescente()">Ordem de Forma Crescente</button>
-                            <button onclick="decrescente()">Ordem de Forma Decrescente</button>
-                        </div>
+                
+                <!-- QUESTÃO 5 - Ordenação Crescente/Decrescente -->
+                <div class="bloco-programas">
+                    <div class="ordem-crescente-decresente">
+                        <h3>Questão 5: Ordenação com Bubble Sort</h3>
+                        <p>Ordenar 20 números de forma <strong>crescente</strong> e <strong>decrescente</strong> usando Bubble Sort</p>
+                        <button onclick="gerarAleatorio1()">Gerar Aleatórios (1-100)</button>
+                        <button onclick="crescente()">Ordem Crescente</button>
+                        <button onclick="decrescente()">Ordem Decrescente</button>
+                        <div id="res4" class="resultado"></div>
+                        <div id="res5" class="resultado"></div>
                     </div>
-
-                    <div class="bloco-programas">
-                        <div class="ordem-bubleSort" id="ordem-bubleSort">
-                            <p>Programa para ordenar 10 aleatórios de 1 a 20 com <strong>BubleSort</strong>: </p><br>
-                            <button onclick="gerarAleatorio2()">Gerar Aleatórios</button>
-                            <button onclick="ordenarBubbleSort()">Ordem com BubleSort</button>
-                        </div>
-                    </div>
-
-                    <div class="bloco-programas">
-                        <div class="ordem-array" id="ordem-array">
-                            <p>Programa para ordenar 10 aleatórios de 1 a 220 com <strong>Array</strong>:</p><br>
-                            <button onclick="gerarAleatorio3()">Gerar Aleatórios</button>
-                            <button onclick="ordenarArray()">Ordem com Array</button>
-                        </div>
-                    </div>
-
-                    <div class="bloco-programas">
-                        <div class="ordem-bubleSort" id="ordem-bubleSort">
-                            <p>Programa para gerar uma <strong>matriz 3x3</strong> com números aleatórios de 1 a 20:
-                            </p><br>
-                            <button onclick="gerarMatriz()">Gerar Matriz</button>
-                        </div>
-                    </div>
-
-                    <div class="bloco-programas">
-                        <div class="calculo-imc" id="calculo-imc">
-                            <p>Programa para calcular o <strong>IMC</strong> de uma pessoa: </p><br>
-                            <label for="altura">Altura da Pessoa em <strong>centímetros</strong></label>
-                            <input type="number" id="altura"><br>
-                            <label for="idade">Idade da Pessoa</label>
-                            <input type="number" id="idade"><br>
-                            <label for="peso">Peso da Pessoa</label>
-                            <input type="number" id="peso"><br><br>
-                            <button onclick="calcularIMC()">Calcular IMC</button>
-                        </div>
-                    </div>
-
-                    <div class="bloco-programas">
-                        <div class="converter-fc" id="converter-fc">
-                            <p>Programa para converter <strong>Farenheit</strong> para Celsius: </p><br>
-                            <input type="number" id="Farenheit"><br><br>
-                            <button onclick="calcularCelsius()">Calcular Celsius</button>
-                        </div>
-                    </div>
-
-                    <div>
-                        <hr><br>
-                        <h2>Busca Linear</h2>
-                        <p>
-                            A busca linear é um dos métodos mais simples de procurar um elemento dentro de uma lista
-                            (array). Ela percorre todos os itens um por um, do início ao fim, até encontrar o valor
-                            desejado — ou chegar ao final sem encontrá-lo. É como folhear um caderno página por página
-                            até achar a informação que você quer.
-                        </p>
-
-                        <div class="bloco-programas-busca">
-                            <div class="busca-linear" id="busca-linear">
-                                <p>Programa para <strong>busca linear</strong> no JavaScript </p><br>
-                                <button onclick="buscaLinear()">Fazer Busca Linear</button>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-
-                    <div>
-                        <hr>
-                        <h2>Busca Binária</h2>
-                        <p>A busca binária é um método eficiente usado para encontrar um elemento em uma lista
-                            ordenada. Em vez de verificar cada item um por um, como na busca linear, ela divide
-                            a lista ao meio repetidamente. Primeiro, compara o valor do meio com o que está sendo
-                            procurado — se for igual, o processo termina; se for menor, a busca continua na
-                            metade direita; se for maior, na metade esquerda.
-                            Esse processo é repetido até encontrar o valor desejado (ou até não restarem elementos),
-                            o que torna a busca binária muito mais rápida que outros métodos em listas grandes.
-                            Sua eficiência está no fato de reduzir o número de comparações a cada passo, funcionando
-                            em tempo logarítmico (O(log n)), desde que os dados estejam organizados.
-                        </p>
-                        <div class="bloco-programas-busca">
-                            <div class="busca-linear" id="busca-linear">
-                                <p>Programa para <strong>busca binária</strong> no JavaScript </p><br>
-                                <button onclick="buscaBinariaExecutar()">Fazer Busca Binária</button>
-                            </div>
-                        </div>
-                        <button onclick="limparResultado()" class="btn-limpar">Limpar Resultados</button>
-                    </div>
-                </div> 
-                <div id="resultado" style="
-                    background: rgba(255, 255, 255, 0.02);
-                    border: 1px solid rgba(255, 255, 255, 0.1);
-                    border-radius: 16px;
-                    padding: 2rem;
-                    margin: 2rem 0;
-                    backdrop-filter: blur(10px);
-                    display: none;">
                 </div>
+
+                <!-- QUESTÃO 6 - BubbleSort Aleatório -->
+                <div class="bloco-programas">
+                    <div class="ordem-bubleSort">
+                        <h3>Questão 6: Bubble Sort com Aleatórios</h3>
+                        <p>Ordenar 10 números aleatórios (1-20) com <strong>BubbleSort</strong></p>
+                        <button onclick="principal6()">Gerar e Ordenar</button>
+                        <div id="res6" class="resultado"></div>
+                    </div>
+                </div>
+
+                <!-- QUESTÃO 7 - Soma de Array -->
+                <div class="bloco-programas">
+                    <div class="ordem-array">
+                        <h3>Questão 7: Soma de Array</h3>
+                        <p>Somar 10 números aleatórios (1-220)</p>
+                        <button onclick="principal7()">Gerar e Somar</button>
+                        <div id="res7" class="resultado"></div>
+                    </div>
+                </div>
+
+                <!-- QUESTÃO 8 - Matriz 3x3 -->
+                <div class="bloco-programas">
+                    <div class="matriz-3x3">
+                        <h3>Questão 8: Matriz 3x3 Aleatória</h3>
+                        <p>Gerar uma <strong>matriz 3x3</strong> com números aleatórios (1-20)</p>
+                        <button onclick="matriz8()">Gerar Matriz</button>
+                        <div id="res8" class="resultado"></div>
+                    </div>
+                </div>
+
+                <!-- QUESTÃO 9 - Cálculo de IMC -->
+                <div class="bloco-programas">
+                    <div class="calculo-imc">
+                        <h3>Questão 9: Cálculo de IMC</h3>
+                        <p>Calcular o <strong>IMC</strong> (Índice de Massa Corporal)</p>
+                        <label for="peso">Peso (kg):</label>
+                        <input type="number" id="peso" step="0.1" placeholder="Ex: 70.5"><br>
+                        <label for="altura">Altura (m):</label>
+                        <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75"><br><br>
+                        <button onclick="principal9()">Calcular IMC</button>
+                        <div id="res9" class="resultado"></div>
+                    </div>
+                </div>
+
+                <!-- QUESTÃO 10 - Conversão Celsius/Fahrenheit -->
+                <div class="bloco-programas">
+                    <div class="conversao-temperatura">
+                        <h3>Questão 10: Conversão de Temperatura</h3>
+                        <p>Converter <strong>Celsius</strong> para <strong>Fahrenheit</strong></p>
+                        <label for="celsius">Temperatura em Celsius (°C):</label>
+                        <input type="number" id="celsius" placeholder="Ex: 25"><br><br>
+                        <button onclick="principal10()">Converter para Fahrenheit</button>
+                        <div id="res10" class="resultado"></div>
+                    </div>
+                </div>
+
+                <!-- QUESTÃO 11 - Busca Linear -->
+                <div class="bloco-programas">
+                    <div class="busca-linear">
+                        <h3>Questão 11: Busca Linear</h3>
+                        <p>Encontrar o <strong>menor valor</strong> em um array aleatório</p>
+                        <button onclick="buscaLinear11()">Executar Busca Linear</button>
+                        <div id="res11" class="resultado"></div>
+                    </div>
+                </div>
+
+                <!-- QUESTÃO 12 - Outro IMC -->
+                <div class="bloco-programas">
+                    <div class="calculo-imc2">
+                        <h3>Questão 12: Outro Cálculo de IMC</h3>
+                        <p>Segunda versão do cálculo de <strong>IMC</strong></p>
+                        <label for="peso2">Peso (kg):</label>
+                        <input type="number" id="peso2" step="0.1" placeholder="Ex: 70.5"><br>
+                        <label for="altura2">Altura (m):</label>
+                        <input type="number" id="altura2" step="0.01" placeholder="Ex: 1.75"><br><br>
+                        <button onclick="principal12()">Calcular IMC (v2)</button>
+                        <div id="res12" class="resultado"></div>
+                    </div>
+                </div>
+
+                <hr>
+                <button onclick="limparResultados()" class="btn-limpar">Limpar Todos os Resultados</button>
             </div>
         </section>
     </main>
 
     <footer>
-        <p> &copy; 2025 - Del Company | Todos os direitos reservados</p>
+        <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
         <p>
-            <a href=" https://www.instagram.com/elielbrnrd/">Instagram</a>
+            <a href="https://www.instagram.com/elielbrnrd/">Instagram</a>
             <a href="https://wa.me/5548991013184">Whatsapp</a>
             <a href="https://github.com/eli-bernardi">GitHub</a>
         </p>
     </footer>
-</body>
-
-</html>
