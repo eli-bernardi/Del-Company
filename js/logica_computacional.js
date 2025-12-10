@@ -28,14 +28,3 @@ document.addEventListener('DOMContentLoaded', function () {
     const slides = carrossel.querySelector('.slides');
     slides.style.transform = 'translateX(0px)';
   });
-
-  // Menu mobile
-  const menuToggle = document.getElementById('menu-toggle');
-  const menu = document.getElementById('menu');
-
-  if (menuToggle && menu) {
-    menuToggle.addEventListener('click', function () {
-      menu.classList.toggle('hidden');
-    });
-  }
-});
