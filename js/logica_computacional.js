@@ -23,7 +23,7 @@ function mudarSlide(carrosselId, direction) {
 
 // Inicializar carrosséis
 document.addEventListener('DOMContentLoaded', function () {
-  const carrosseis = document.querySelectorAll('.carrossel');
+  const caarrosseis = document.querySelectorAll('.carrossel');
   carrosseis.forEach(carrossel => {
     const slides = carrossel.querySelector('.slides');
     slides.style.transform = 'translateX(0px)';

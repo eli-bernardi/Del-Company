@@ -1,261 +1,157 @@
-/* =========================================================
-   RESET E CONFIGURAÇÕES GERAIS
-   ========================================================= */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background: #000;
-    color: #fff;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: #000000;
+    color: #ffffff;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
-/* =========================================================
-   CABEÇALHO
-   ========================================================= */
 header {
     background: rgba(0, 0, 0, 0.9) !important;
-    backdrop-filter: blur(20px);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     padding: 1rem 10rem !important;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 100;
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    background: linear-gradient(135deg, #d62828 0%, #ff6b6b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-size: 24px !important;
+    font-weight: bold;
+    background: linear-gradient(135deg, #ff6b6b 100%);
+    background-clip: text;
+    text-align: center !important;
 }
 
-/* =========================================================
-   SEÇÕES PRINCIPAIS
-   ========================================================= */
 main {
     margin-top: 80px;
 }
 
 section {
-    padding: 6rem 2rem;
+    padding: 96px 32px;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-
-    /* animação padrão */
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-section:last-child {
-    border-bottom: none;
-}
-
-/* Primeira seção — destaque */
-section:first-child {
-    text-align: center;
-    padding: 8rem 2rem;
-    background: radial-gradient(ellipse at 50% 0%, rgba(214, 40, 40, 0.1) 0%, transparent 60%);
-    position: relative;
-}
-
-section:first-child::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(214, 40, 40, 0.5), transparent);
-}
-
-/* =========================================================
-   TIPOGRAFIA
-   ========================================================= */
 h2 {
     font-size: 32px !important;
-    font-weight: 700;
+    margin-bottom: 16px;
+    color: #ffffff;
+    position: relative;
     text-align: center;
-    margin-bottom: 1rem;
+    font-weight: bold;
 }
 
 h3 {
-    font-size: 20px !important;
+    font-size: 20px;
     color: #888;
+    margin: 16px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
+}
+
+section hr {
+    width: 1140px;
+    height: 2px;
+    background: linear-gradient(135deg, #ff6b6b 100%);
+    border: none;
+    margin: 32px auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 128px 32px;
+    position: relative;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 1140px;
+    height: 2px;
+    background: linear-gradient(135deg, #ff6b6b 100%);
 }
 
 p {
-    font-size: 1.1rem;
+    font-size: 20px;
     color: #888;
-    margin: 1rem 0;
+    margin: 16px;
     line-height: 1.8;
 }
 
 strong {
     color: #d62828;
+    font-weight: 600;
 }
 
 ul,
 ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
+    margin: 24px 32px;
+    padding-left: 24px;
 }
 
 li {
-    margin: 0.8rem 0;
     color: #888;
+    font-size: 18px;
+    margin: 12px 0;
+    line-height: 1.6;
 }
 
-/* Linha decorativa dentro das seções */
-section hr {
+table {
     width: 100%;
-    max-width: 1140px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #d62828, transparent);
-    border: none;
-    margin: 2rem auto;
-}
-
-/* =========================================================
-   GALERIA DE IMAGENS
-   ========================================================= */
-.image-section {
-    text-align: center;
-    margin: 3rem 0;
-}
-
-.image-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.image-card,
-.image-card1 img,
-.image-card2 img,
-.image-card-infraestrutura img {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
-}
-
-.image-card {
-    padding: 2rem;
-}
-
-.image-card-infraestrutura img {
-    height: 350px;
-    width: auto;
-    padding: 2rem;
-}
-
-.image-card1 img,
-.image-card2 img {
-    width: 100%;
-    height: auto;
-    padding: 2rem;
-}
-
-.image-card:hover {
-    transform: translateY(-5px);
-    border-color: rgba(214, 40, 40, 0.3);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-/* Imagens de rede */
-.network-image {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: 0.3s ease;
-}
-
-.image-card:hover .network-image {
-    transform: scale(1.02);
-    border-color: #d62828;
-}
-
-.image-caption {
-    margin-top: 1rem;
-    color: #666;
-    font-size: 0.9rem;
-    font-style: italic;
-}
-
-/* =========================================================
-   TABELAS
-   ========================================================= */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 2rem 0;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
+    margin: 32px 0;
 }
 
 thead {
     background: rgba(214, 40, 40, 0.1);
 }
 
-th,
-td {
-    padding: 1.5rem;
+th {
+    padding: 20px;
+    text-align: left;
+    font-size: 20px;
+    font-weight: 600;
+    color: #d62828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-th {
-    color: #d62828;
-    font-weight: 600;
+td {
+    padding: 20px;
+    font-size: 18px;
+    color: #888;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 tr:hover {
     background: rgba(255, 255, 255, 0.02);
 }
 
-/* =========================================================
-   CONTAINERS E BLOCOS
-   ========================================================= */
 .container {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2.5rem;
-    transition: 0.3s;
-    backdrop-filter: blur(10px);
+    padding: 40px;
+    margin: 32px 0;
 }
 
 .container:hover {
-    border-color: rgba(214, 40, 40, 0.2);
+    border-color: rgba(214, 40, 40, 0.3);
 }
 
 .exemplo {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
-    overflow-x: auto;
+    padding: 32px;
+    margin: 32px 0;
     position: relative;
 }
 
@@ -264,176 +160,171 @@ tr:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 3px;
+    width: 4px;
     height: 100%;
     background: #d62828;
 }
 
 .exemplo strong {
-    color: #ff6b6b;
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
+    color: #d62828;
     display: block;
+    margin-bottom: 16px;
+    font-size: 20px;
 }
 
-pre {
-    font-family: 'Fira Code', monospace;
-    font-size: .9rem;
+.image-section {
+    text-align: center;
+    margin: 48px 0;
 }
 
-code {
-    color: #ff6b6b;
+.image-grid {
+    display: grid;
+    gap: 32px;
 }
 
-/* =========================================================
-   MODELOS OSI / TCP
-   ========================================================= */
+.image-card {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    padding: 32px;
+    transition: all 0.4s ease;
+}
+
+.image-card:hover {
+    border-color: rgba(214, 40, 40, 0.3);
+}
+
+.image-card1 img,
+.image-card2 img,
+.image-card-infraestrutura img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 16px;
+}
+
+.image-card-infraestrutura img {
+    height: 350px;
+    object-fit: contain;
+}
+
+.network-image {
+    width: 100%;
+    height: 200px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+}
+
+.image-card:hover .network-image {
+    border-color: rgba(214, 40, 40, 0.3);
+}
+
+.image-caption {
+    margin-top: 16px;
+    color: #888;
+    font-size: 18px;
+}
+
 .models-comparison {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
+    gap: 32px;
+    margin: 32px 0;
 }
 
 .model-card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2rem;
-    transition: 0.3s;
+    padding: 32px;
 }
 
 .model-card:hover {
-    transform: translateY(-5px);
     border-color: rgba(214, 40, 40, 0.3);
 }
 
 .model-card h3 {
     color: #d62828;
-    margin-bottom: 1.5rem;
+    margin-bottom: 24px;
+    text-align: left;
 }
 
 .model-card li {
     background: rgba(255, 255, 255, 0.02);
-    margin: 1rem 0;
-    padding: .5rem;
-    border-radius: 6px;
+    margin: 16px 0;
+    padding: 12px;
+    border-radius: 8px;
     border-left: 3px solid #d62828;
 }
 
-/* =========================================================
-   PROTOCOLOS
-   ========================================================= */
 .protocols-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 1.5rem;
+    gap: 24px;
+    margin: 32px 0;
 }
 
 .protocol-item {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 1.5rem;
+    padding: 24px;
     text-align: center;
-    transition: 0.3s;
+    transition: all 0.4s ease;
 }
 
 .protocol-item:hover {
-    transform: translateY(-3px);
     border-color: rgba(214, 40, 40, 0.3);
 }
 
 .protocol-item strong {
     color: #d62828;
+    font-size: 20px;
 }
 
-/* =========================================================
-   RODAPÉ
-   ========================================================= */
-footer {
-    background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 3rem 2rem;
-    text-align: center;
-    backdrop-filter: blur(20px);
-}
-
-footer p {
-    color: #666;
-}
-
-footer a {
-    color: #888;
-    text-decoration: none;
-    margin: 0 1rem;
-    transition: .3s;
-}
-
-footer a:hover {
-    color: #d62828;
-}
-
-/* =========================================================
-   SCROLLBAR
-   ========================================================= */
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #000;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #d62828;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #ff6b6b;
-}
-
-/* =========================================================
-   ANIMAÇÕES
-   ========================================================= */
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section:nth-child(n) {
-    animation-delay: calc(0.1s * var(--order, 1));
-}
-
-/* =========================================================
-   ELEMENTOS DECORATIVOS
-   ========================================================= */
 .network-icon {
     width: 60px;
     height: 60px;
-    margin: 0 auto 1rem;
+    margin: 0 auto 16px;
     background: rgba(214, 40, 40, 0.1);
     border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 24px;
+    color: #d62828;
 }
 
 .protocol-badge {
     display: inline-block;
     background: rgba(214, 40, 40, 0.1);
     color: #d62828;
-    padding: .3rem .8rem;
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: .8rem;
+    font-size: 14px;
     font-weight: 600;
 }
 
-.gradient-text {
-    background: linear-gradient(135deg, #d62828, #ff6b6b);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+footer {
+    background: rgba(0, 0, 0, 0.9);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 48px 32px;
+    text-align: center;
+}
+
+footer p {
+    color: #666;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 16px;
+}
+
+footer a:hover {
+    color: #d62828;
 }

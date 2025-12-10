@@ -1,14 +1,10 @@
-// =============================================
 // VARIÁVEIS GLOBAIS
-// =============================================
 
 let arrayOrdenacao = [];
 let arrayBubble = [];
 let arrayNormal = [];
 
-// =============================================
 // FUNÇÕES DE EXIBIÇÃO
-// =============================================
 
 function exibirResultado(titulo, conteudo, elementoId = 'resultado') {
     const resultadoDiv = document.getElementById(elementoId);
@@ -20,9 +16,7 @@ function limparResultado(elementoId = 'resultado') {
     document.getElementById(elementoId).style.display = 'none';
 }
 
-// =============================================
 // FUNÇÕES DE ORDENAÇÃO
-// =============================================
 
 function gerarAleatorio1() {
     arrayOrdenacao = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100) + 1);
@@ -93,9 +87,7 @@ function gerarMatriz() {
     exibirResultado('Matriz 3x3', `<table style="margin:auto">${html}</table>`);
 }
 
-// =============================================
 // FUNÇÕES DE CÁLCULO
-// =============================================
 
 function calcularIMC() {
     let altura = document.getElementById('altura').value;
@@ -122,9 +114,7 @@ function calcularCelsius() {
     exibirResultado('Conversão', `${f}°F = ${c}°C`);
 }
 
-// =============================================
 // FUNÇÕES DE BUSCA
-// =============================================
 
 function buscaLinear() {
     let valor = prompt("Digite um número para buscar (0-50):");
@@ -156,12 +146,9 @@ function buscaBinariaExecutar() {
     exibirResultado('Busca Binária', `Array: [${arr.join(", ")}]<br>Buscando: ${valor}<br>Não encontrado<br>Passos: ${passos}`);
 }
 
-// =============================================
 // EXPORTAR FUNÇÕES
-// =============================================
 
-window.gerarAleatorio1 = gerarAleatorio1;
-window.crescente = crescente;
+window.gerarAleatorio1 = gerarAleatorio1;window.crescente = crescente;
 window.decrescente = decrescente;
 window.gerarAleatorio2 = gerarAleatorio2;
 window.ordenarBubbleSort = ordenarBubbleSort;

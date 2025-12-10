@@ -4,32 +4,25 @@
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-family: 'Inter', 'Segoe UI', sans-serif;
     background: #000000;
     color: #ffffff;
     line-height: 1.6;
-    overflow-x: hidden;
 }
 
 header {
     background: rgba(0, 0, 0, 0.9) !important;
-    backdrop-filter: blur(20px);
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
     padding: 1rem 10rem !important;
 }
 
 .logo {
-    font-size: 1.5rem;
+    font-size: 24px !important;
     font-weight: 700;
-    background: linear-gradient(135deg, #d62828 0%, #ff6b6b 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    background: linear-gradient(135deg, #ff6b6b 100%);
     background-clip: text;
+    text-align: center !important;
 }
 
 main {
@@ -37,60 +30,57 @@ main {
 }
 
 section {
-    padding: 6rem 2rem;
+    padding: 96px 32px;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-section:last-child {
-    border-bottom: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 h2 {
     font-size: 32px !important;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     color: #ffffff;
+    position: relative;
     text-align: center;
-    font-weight: 700;
+    font-weight: bold;
 }
 
 h3 {
-    font-size: 20px !important;
+    font-size: 20px;
     color: #888;
+    margin: 16px;
     text-align: center;
-    font-weight: 700;
+    font-weight: 600;
 }
 
 section hr {
     width: 1140px;
     height: 2px;
-    background: linear-gradient(90deg, transparent, #d62828, transparent);
+    background: linear-gradient(135deg, #ff6b6b 100%);
     border: none;
-    margin: 2rem 0;
+    margin: 32px auto;
 }
 
-section:first-child {
+.hero {
     text-align: center;
-    padding: 8rem 2rem;
-    background: radial-gradient(ellipse at 50% 0%, rgba(214, 40, 40, 0.1) 0%, transparent 60%);
+    padding: 128px 32px;
     position: relative;
 }
 
-section:first-child::before {
+.hero::before {
     content: '';
     position: absolute;
     top: 0;
-    left: 0;
-    right: 0;
-    height: 1px;
-    background: linear-gradient(90deg, transparent, rgba(214, 40, 40, 0.5), transparent);
+    left: 50%;
+    width: 1140px;
+    height: 2px;
+    background: linear-gradient(135deg, #ff6b6b 100%);
 }
 
 p {
-    font-size: 1.1rem;
+    font-size: 20px;
     color: #888;
-    margin: 1rem 0;
+    margin: 16px;
     line-height: 1.8;
 }
 
@@ -101,70 +91,36 @@ strong {
 
 ul,
 ol {
-    margin: 1.5rem 0;
-    padding-left: 2rem;
+    margin: 24px 32px;
+    padding-left: 24px;
 }
 
 li {
-    margin: 0.8rem 0;
     color: #888;
+    font-size: 18px;
+    margin: 12px 0;
     line-height: 1.6;
-}
-
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    margin: 2rem 0;
-}
-
-thead {
-    background: rgba(214, 40, 40, 0.1);
-}
-
-th {
-    padding: 1.5rem;
-    text-align: left;
-    font-weight: 600;
-    color: #d62828;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-td {
-    padding: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    color: #888;
-}
-
-tr:hover {
-    background: rgba(255, 255, 255, 0.02);
 }
 
 .container {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2.5rem;
-    margin: 2rem 0;
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+    padding: 40px;
+    margin: 32px 0;
+    transition: all 0.4s ease;
 }
 
 .container:hover {
-    border-color: rgba(214, 40, 40, 0.2);
+    border-color: rgba(214, 40, 40, 0.3);
 }
 
 .exemplo {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
-    overflow-x: auto;
+    padding: 32px;
+    margin: 32px 0;
     position: relative;
 }
 
@@ -173,199 +129,89 @@ tr:hover {
     position: absolute;
     top: 0;
     left: 0;
-    width: 3px;
+    width: 4px;
     height: 100%;
     background: #d62828;
-    border-radius: 2px;
 }
 
 .exemplo strong {
-    color: #ff6b6b;
-    display: block;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-}
-
-pre {
-    margin: 0;
-    font-family: 'Fira Code', 'Courier New', monospace;
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-
-code {
-    color: #ff6b6b;
-    background: transparent;
-}
-
-footer {
-    background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 3rem 2rem;
-    text-align: center;
-    backdrop-filter: blur(20px);
-}
-
-footer p {
-    color: #666;
-    margin-bottom: 1rem;
-    font-size: 0.9rem;
-}
-
-footer a {
-    color: #888;
-    text-decoration: none;
-    margin: 0 1rem;
-    transition: all 0.3s ease;
-    font-size: 0.9rem;
-}
-
-footer a:hover {
     color: #d62828;
-}
-
-::-webkit-scrollbar {
-    width: 8px;
-}
-
-::-webkit-scrollbar-track {
-    background: #000000;
-}
-
-::-webkit-scrollbar-thumb {
-    background: #d62828;
-    border-radius: 4px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: #ff6b6b;
-}
-
-section {
-    opacity: 0;
-    transform: translateY(30px);
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-section:nth-child(1) {
-    animation-delay: 0.1s;
-}
-
-section:nth-child(2) {
-    animation-delay: 0.2s;
-}
-
-section:nth-child(3) {
-    animation-delay: 0.3s;
-}
-
-section:nth-child(4) {
-    animation-delay: 0.4s;
-}
-
-section:nth-child(5) {
-    animation-delay: 0.5s;
-}
-
-section:nth-child(6) {
-    animation-delay: 0.6s;
-}
-
-section:nth-child(7) {
-    animation-delay: 0.7s;
+    display: block;
+    margin-bottom: 16px;
+    font-size: 20px;
 }
 
 .componentes-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
+    gap: 32px;
+    margin: 48px 0;
 }
 
 .componente-card {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2rem;
+    padding: 32px;
     text-align: center;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
+    transition: all 0.4s ease;
 }
 
 .componente-card:hover {
-    transform: translateY(-8px);
     border-color: rgba(214, 40, 40, 0.3);
-    background: rgba(255, 255, 255, 0.05);
 }
 
 .componente-icon {
-    font-size: 3rem;
-    margin-bottom: 1rem;
+    font-size: 48px;
+    margin-bottom: 16px;
     color: #d62828;
 }
 
 .componente-nome {
-    font-size: 1.3rem;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
     color: #ffffff;
 }
 
 .componente-desc {
     color: #888;
     line-height: 1.6;
+    font-size: 18px;
 }
 
 .arduino-images {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 1rem;
-    margin: 2rem 0;
+    gap: 16px;
+    margin: 32px 0;
 }
 
 .arduino-image {
     width: 100%;
     height: 150px;
-    object-fit: cover;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
 }
 
 .arduino-image:hover {
-    border-color: #d62828;
-    transform: scale(1.05);
+    border-color: rgba(214, 40, 40, 0.3);
 }
 
 .exemplo-arduino {
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
-    overflow-x: auto;
-    position: relative;
-    text-align: center !important;
+    padding: 32px;
+    margin: 32px 0;
+    text-align: center;
 }
 
 .exemplo-arduino img {
     width: 50%;
-    margin: auto;
-    display: flex;
-    margin-top: auto;
-    margin-left: auto;
-    margin-right: auto;
-    justify-content: center !important;
     height: auto;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
+    margin: 0 auto;
+    display: block;
 }
 
 .entrada-dados,
@@ -374,39 +220,40 @@ section:nth-child(7) {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 12px;
-    padding: 2rem;
-    margin: 1.5rem 0;
+    padding: 32px;
+    margin: 24px 0;
     border-left: 4px solid #d62828;
 }
 
 .entrada-dados strong,
 .saida-dados strong,
 .aplicacoes strong {
-    color: #ff6b6b;
+    color: #d62828;
     display: block;
-    margin-bottom: 0.5rem;
+    margin-bottom: 8px;
+    font-size: 20px;
 }
 
 .historia-timeline {
     position: relative;
-    padding-left: 3rem;
-    margin: 3rem 0;
+    padding-left: 48px;
+    margin: 48px 0;
 }
 
 .historia-timeline::before {
     content: '';
     position: absolute;
-    left: 1rem;
+    left: 16px;
     top: 0;
     bottom: 0;
     width: 2px;
-    background: linear-gradient(to bottom, #d62828, transparent);
+    background: #d62828;
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 3rem;
-    padding: 1.5rem;
+    margin-bottom: 48px;
+    padding: 24px;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
@@ -415,75 +262,72 @@ section:nth-child(7) {
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -2.8rem;
-    top: 2rem;
+    left: -40px;
+    top: 32px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: #d62828;
-    border: 3px solid #000000;
 }
 
 .timeline-year {
     color: #d62828;
     font-weight: 700;
-    font-size: 1.1rem;
-    margin-bottom: 0.5rem;
+    font-size: 20px;
+    margin-bottom: 8px;
 }
 
 .code-block {
-    position: relative;
-    background: #1a1a1a;
-    border-radius: 8px;
-    margin: 1.5rem 0;
-    overflow-x: auto;
+    background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin: 24px 0;
 }
 
 .code-header {
     background: rgba(214, 40, 40, 0.1);
-    padding: 0.8rem 1.5rem;
-    border-radius: 8px 8px 0 0;
-    font-family: 'Fira Code', monospace;
-    font-size: 0.9rem;
-    color: #ff6b6b;
+    padding: 16px 24px;
+    font-size: 18px;
+    color: #d62828;
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .code-block pre {
-    padding: 1.5rem;
+    padding: 24px;
     margin: 0;
+    font-size: 18px;
+    line-height: 1.6;
 }
 
 .conceito-box {
     background: rgba(214, 40, 40, 0.05);
     border: 1px solid rgba(214, 40, 40, 0.2);
     border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
+    padding: 32px;
+    margin: 32px 0;
     border-left: 4px solid #d62828;
 }
 
 .conceito-titulo {
     color: #d62828;
-    font-size: 1.3rem;
+    font-size: 24px;
     font-weight: 600;
-    margin-bottom: 1rem;
+    margin-bottom: 16px;
 }
 
 .diagrama-container {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    padding: 2rem;
-    margin: 2rem 0;
+    padding: 32px;
+    margin: 32px 0;
     text-align: center;
 }
 
 .diagrama {
     max-width: 100%;
     height: auto;
-    border-radius: 8px;
+    border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
@@ -491,11 +335,11 @@ section:nth-child(7) {
     display: inline-block;
     background: rgba(214, 40, 40, 0.1);
     color: #d62828;
-    padding: 0.3rem 0.8rem;
+    padding: 4px 12px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 14px;
     font-weight: 600;
-    margin-left: 1rem;
+    margin-left: 16px;
 }
 
 .termo-tecnico {
@@ -504,18 +348,26 @@ section:nth-child(7) {
     position: relative;
 }
 
-.termo-tecnico:hover::after {
-    content: attr(data-tooltip);
-    position: absolute;
-    bottom: 100%;
-    left: 50%;
-    transform: translateX(-50%);
+footer {
     background: rgba(0, 0, 0, 0.9);
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 6px;
-    font-size: 0.8rem;
-    white-space: nowrap;
-    border: 1px solid #d62828;
-    z-index: 1000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 48px 32px;
+    text-align: center;
+}
+
+footer p {
+    color: #666;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 16px;
+}
+
+footer a:hover {
+    color: #d62828;
 }
