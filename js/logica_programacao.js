@@ -1,161 +1,189 @@
-// VARIÁVEIS GLOBAIS
-
-let arrayOrdenacao = [];
-let arrayBubble = [];
-let arrayNormal = [];
-
-// FUNÇÕES DE EXIBIÇÃO
-
-function exibirResultado(titulo, conteudo, elementoId = 'resultado') {
-    const resultadoDiv = document.getElementById(elementoId);
-    resultadoDiv.innerHTML = `<h3>${titulo}</h3><div>${conteudo}</div>`;
-    resultadoDiv.style.display = 'block';
+// ------------------ Função base para aleatórios ------------------
+function gerarAleatorio(min, max) {
+    return Math.floor(Math.random() * (max - min) + min);
 }
 
-function limparResultado(elementoId = 'resultado') {
-    document.getElementById(elementoId).style.display = 'none';
-}
+// QUESTÃO 5 — Ordenar Crescente e Decrescente
 
-// FUNÇÕES DE ORDENAÇÃO
+let res4 = document.getElementById('res4');
+let res5 = document.getElementById('res5');
 
-function gerarAleatorio1() {
-    arrayOrdenacao = Array.from({ length: 10 }, () => Math.floor(Math.random() * 100) + 1);
-    exibirResultado('Números Gerados', `Array: [${arrayOrdenacao.join(", ")}]`);
-}
+function ordenar5() {
+    let num5 = [16, 13, 17, 10, 6, 19, 20, 5, 9, 15, 3, 18, 1, 12, 8, 2, 4, 14, 7, 11];
+    let n = num5.length;
 
-function crescente() {
-    if (!arrayOrdenacao.length) {
-        alert('Gere números primeiro!');
-        return;
-    }
-    let arr = [...arrayOrdenacao].sort((a, b) => a - b);
-    exibirResultado('Ordem Crescente', `Original: [${arrayOrdenacao.join(", ")}]<br>Ordenado: [${arr.join(", ")}]`);
-}
-
-function decrescente() {
-    if (!arrayOrdenacao.length) {
-        alert('Gere números primeiro!');
-        return;
-    }
-    let arr = [...arrayOrdenacao].sort((a, b) => b - a);
-    exibirResultado('Ordem Decrescente', `Original: [${arrayOrdenacao.join(", ")}]<br>Ordenado: [${arr.join(", ")}]`);
-}
-
-function gerarAleatorio2() {
-    arrayBubble = Array.from({ length: 10 }, () => Math.floor(Math.random() * 20) + 1);
-    exibirResultado('Números BubbleSort', `Array: [${arrayBubble.join(", ")}]`);
-}
-
-function ordenarBubbleSort() {
-    if (!arrayBubble.length) {
-        alert('Gere números primeiro!');
-        return;
-    }
-    let arr = [...arrayBubble];
-    let passos = 0;
-    for (let i = 0; i < arr.length; i++) {
-        for (let j = 0; j < arr.length - 1; j++) {
-            passos++;
-            if (arr[j] > arr[j + 1]) {
-                [arr[j], arr[j + 1]] = [arr[j + 1], arr[j]];
+    for (let j = 0; j < n - 1; j++) {
+        for (let i = 0; i < n - j - 1; i++) {
+            if (num5[i] > num5[i + 1]) {
+                let temp = num5[i];
+                num5[i] = num5[i + 1];
+                num5[i + 1] = temp;
             }
         }
     }
-    exibirResultado('Bubble Sort', `Original: [${arrayBubble.join(", ")}]<br>Ordenado: [${arr.join(", ")}]<br>Passos: ${passos}`);
+
+    res4.innerHTML = `Ordem Crescente: <br> ${num5}`;
 }
 
-function gerarAleatorio3() {
-    arrayNormal = Array.from({ length: 10 }, () => Math.floor(Math.random() * 220) + 1);
-    exibirResultado('Números Array', `Array: [${arrayNormal.join(", ")}]`);
-}
+function decrescente5() {
+    let num5 = [16, 13, 17, 10, 6, 19, 20, 5, 9, 15, 3, 18, 1, 12, 8, 2, 4, 14, 7, 11];
+    let n = num5.length;
 
-function ordenarArray() {
-    if (!arrayNormal.length) {
-        alert('Gere números primeiro!');
-        return;
-    }
-    let arr = [...arrayNormal].sort((a, b) => a - b);
-    let soma = arr.reduce((a, b) => a + b, 0);
-    exibirResultado('Array Sort', `Original: [${arrayNormal.join(", ")}]<br>Ordenado: [${arr.join(", ")}]<br>Soma: ${soma}<br>Média: ${(soma / arr.length).toFixed(2)}`);
-}
-
-function gerarMatriz() {
-    let matriz = Array.from({ length: 3 }, () =>
-        Array.from({ length: 3 }, () => Math.floor(Math.random() * 20) + 1)
-    );
-    let html = matriz.map(linha => `<tr>${linha.map(n => `<td>${n}</td>`).join('')}</tr>`).join('');
-    exibirResultado('Matriz 3x3', `<table style="margin:auto">${html}</table>`);
-}
-
-// FUNÇÕES DE CÁLCULO
-
-function calcularIMC() {
-    let altura = document.getElementById('altura').value;
-    let peso = document.getElementById('peso').value;
-
-    if (!altura || !peso || altura <= 0 || peso <= 0) {
-        alert('Preencha altura e peso corretamente!');
-        return;
-    }
-
-    let imc = (peso / ((altura / 100) ** 2)).toFixed(2);
-    let classificacao = imc < 18.5 ? "Abaixo" : imc < 25 ? "Normal" : imc < 30 ? "Sobrepeso" : "Obesidade";
-
-    exibirResultado('IMC Calculado', `Altura: ${altura}cm<br>Peso: ${peso}kg<br>IMC: ${imc}<br>Classificação: ${classificacao}`);
-}
-
-function calcularCelsius() {
-    let f = document.getElementById('Farenheit').value;
-    if (!f || isNaN(f)) {
-        alert('Digite um número válido!');
-        return;
-    }
-    let c = ((f - 32) * 5 / 9).toFixed(2);
-    exibirResultado('Conversão', `${f}°F = ${c}°C`);
-}
-
-// FUNÇÕES DE BUSCA
-
-function buscaLinear() {
-    let valor = prompt("Digite um número para buscar (0-50):");
-    if (valor === null || isNaN(valor)) return;
-
-    let arr = Array.from({ length: 15 }, () => Math.floor(Math.random() * 50));
-    let encontrado = arr.findIndex(n => n == valor);
-
-    exibirResultado('Busca Linear', `Array: [${arr.join(", ")}]<br>Buscando: ${valor}<br>Resultado: ${encontrado >= 0 ? `Encontrado na posição ${encontrado}` : 'Não encontrado'}`);
-}
-
-function buscaBinariaExecutar() {
-    let valor = prompt("Digite um número (0-100):");
-    if (valor === null || isNaN(valor)) return;
-
-    let arr = Array.from({ length: 20 }, () => Math.floor(Math.random() * 100)).sort((a, b) => a - b);
-
-    let inicio = 0, fim = arr.length - 1, passos = 0;
-    while (inicio <= fim) {
-        passos++;
-        let meio = Math.floor((inicio + fim) / 2);
-        if (arr[meio] == valor) {
-            exibirResultado('Busca Binária', `Array: [${arr.join(", ")}]<br>Buscando: ${valor}<br>Encontrado na posição ${meio}<br>Passos: ${passos}`);
-            return;
+    for (let j = 0; j < n - 1; j++) {
+        for (let i = 0; i < n - j - 1; i++) {
+            if (num5[i] < num5[i + 1]) {
+                let temp = num5[i];
+                num5[i] = num5[i + 1];
+                num5[i + 1] = temp;
+            }
         }
-        arr[meio] < valor ? inicio = meio + 1 : fim = meio - 1;
     }
 
-    exibirResultado('Busca Binária', `Array: [${arr.join(", ")}]<br>Buscando: ${valor}<br>Não encontrado<br>Passos: ${passos}`);
+    res5.innerHTML = `Ordem Decrescente: <br> ${num5}`;
 }
 
-// EXPORTAR FUNÇÕES
-gerarAleatorio1()
-gerarAleatorio2()
-gerarAleatorio3()
-decrescente()
-ordenarBubbleSort()
-ordenarArray()
-gerarMatriz()
-calcularIMC()
-calcularCelsius()
-buscaLinear()
-buscaBinariaExecutar()
-limparResultado()
+// QUESTÃO 6 — BubbleSort com números aleatórios
+
+let res6 = document.getElementById('res6');
+let arr6 = [];
+
+function gerarArr(min, max, qtde) {
+    arr6 = [];
+    for (let i = 0; i < qtde; i++) {
+        arr6[i] = gerarAleatorio(min, max);
+    }
+    res6.innerHTML = `Números Sorteados: ${arr6}`;
+}
+
+function ordenar6(qtde) {
+    for (let j = 0; j < qtde - 1; j++) {
+        for (let i = 0; i < qtde - j - 1; i++) {
+            if (arr6[i] > arr6[i + 1]) {
+                let temp = arr6[i];
+                arr6[i] = arr6[i + 1];
+                arr6[i + 1] = temp;
+            }
+        }
+    }
+    res6.innerHTML += `<br>Ordenados: ${arr6}`;
+}
+
+function principal6() {
+    gerarArr(1, 20, 10);
+    ordenar6(10);
+}
+
+// QUESTÃO 7 — Somar 10 números aleatórios
+
+let res7 = document.getElementById('res7');
+let arr7 = [];
+
+function gerarArr7(min, max, qtde) {
+    arr7 = [];
+    for (let i = 0; i < qtde; i++) {
+        arr7[i] = gerarAleatorio(min, max);
+    }
+}
+
+function somarArr7() {
+    let soma = arr7.reduce((a, b) => a + b, 0);
+
+    res7.innerHTML = `
+        Números Gerados: ${arr7}<br>
+        Soma Total: ${soma}
+    `;
+}
+
+function principal7() {
+    gerarArr7(1, 220, 10);
+    somarArr7();
+}
+
+// QUESTÃO 8 — Matriz 3x3
+
+let res8 = document.getElementById('res8');
+let mat8 = [];
+
+function matriz8() {
+    let n = 3;
+
+    mat8 = [];
+    for (let i = 0; i < n; i++) {
+        mat8[i] = [];
+        for (let j = 0; j < n; j++) {
+            mat8[i][j] = gerarAleatorio(1, 20);
+        }
+    }
+
+    let texto = "Matriz Gerada:<br><br>";
+    for (let i = 0; i < n; i++) {
+        texto += `[ ${mat8[i].join(", ")} ]<br>`;
+    }
+
+    res8.innerHTML = texto;
+}
+
+// QUESTÃO 9 — IMC
+
+let res9 = document.getElementById('res9');
+
+function principal9() {
+    let peso = Number(document.getElementById('peso').value);
+    let altura = Number(document.getElementById('altura').value);
+
+    if (!peso || !altura) {
+        res9.innerHTML = "Digite os valores corretamente.";
+        return;
+    }
+
+    let imc = peso / (altura * altura);
+
+    res9.innerHTML = `IMC calculado: ${imc.toFixed(2)}`;
+}
+
+// QUESTÃO 10 — Conversão Celsius → Fahrenheit
+
+let res10 = document.getElementById('res10');
+
+function principal10() {
+    let celsius = Number(document.getElementById('celsius').value);
+
+    if (isNaN(celsius)) {
+        res10.innerHTML = "Digite um número válido.";
+        return;
+    }
+
+    let f = (celsius * 9 / 5) + 32;
+
+    res10.innerHTML = `${celsius}°C equivale a ${f.toFixed(2)}°F`;
+}
+
+// QUESTÃO 11 — Busca Linear
+
+let res11 = document.getElementById('res11');
+
+function encontrarMenorValor(array) {
+    let menor = array[0];
+    for (let i = 1; i < array.length; i++) {
+        if (array[i] < menor) menor = array[i];
+    }
+    return menor;
+}
+
+// QUESTÃO 12 — Outro IMC (reutiliza função 9)
+
+let res12 = document.getElementById('res12');
+
+function principal12() {
+    let peso = Number(document.getElementById('peso').value);
+    let altura = Number(document.getElementById('altura').value);
+
+    if (!peso || !altura) {
+        res12.innerHTML = "Digite peso e altura.";
+        return;
+    }
+
+    let imc = peso / (altura * altura);
+
+    res12.innerHTML = `IMC calculado (2ª versão): ${imc.toFixed(2)}`;
+}
