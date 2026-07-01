@@ -6,25 +6,32 @@
 
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: #000000;
+    background: #0a0a0a;
     color: #ffffff;
     line-height: 1.6;
 }
 
+/* ========== HEADER ========== */
 header {
-    background: rgba(0, 0, 0, 0.9) !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 1rem 10rem !important;
+    transition: padding 0.3s ease;
 }
 
 .logo {
     font-size: 24px !important;
     font-weight: 700;
-    background: linear-gradient(135deg, #ff6b6b 100%);
+    background: linear-gradient(135deg, #ff6b6b, #d62828);
+    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center !important;
+    letter-spacing: 1px;
 }
 
+/* ========== MAIN ========== */
 main {
     margin-top: 80px;
 }
@@ -33,9 +40,10 @@ section {
     padding: 96px 32px;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* ========== TYPOGRAPHY ========== */
 h2 {
     font-size: 32px !important;
     margin-bottom: 16px;
@@ -43,6 +51,7 @@ h2 {
     position: relative;
     text-align: center;
     font-weight: bold;
+    letter-spacing: -0.5px;
 }
 
 h3 {
@@ -54,27 +63,19 @@ h3 {
 }
 
 section hr {
-    width: 1140px;
-    height: 2px;
-    background: linear-gradient(135deg, #ff6b6b 100%);
+    width: 100%;
+    max-width: 300px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d62828, transparent);
     border: none;
     margin: 32px auto;
+    opacity: 0.6;
+    transition: all 0.3s ease;
 }
 
-.hero {
-    text-align: center;
-    padding: 128px 32px;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1140px;
-    height: 2px;
-    background: linear-gradient(135deg, #ff6b6b 100%);
+section:hover hr {
+    opacity: 1;
+    max-width: 400px;
 }
 
 p {
@@ -82,6 +83,7 @@ p {
     color: #888;
     margin: 16px;
     line-height: 1.8;
+    text-align: center;
 }
 
 strong {
@@ -89,22 +91,10 @@ strong {
     font-weight: 600;
 }
 
-ul,
-ol {
-    margin: 24px 32px;
-    padding-left: 24px;
-}
-
-li {
-    color: #888;
-    font-size: 18px;
-    margin: 12px 0;
-    line-height: 1.6;
-}
-
+/* ========== CONTAINER ========== */
 .container {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 40px;
     margin: 32px 0;
@@ -115,286 +105,221 @@ li {
     border-color: rgba(214, 40, 40, 0.3);
 }
 
-.exemplo {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 32px;
-    margin: 32px 0;
-    position: relative;
-}
-
-.exemplo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 4px;
-    height: 100%;
-    background: #d62828;
-}
-
-.exemplo strong {
-    color: #d62828;
-    display: block;
-    margin-bottom: 16px;
-    font-size: 20px;
-}
-
-.componentes-grid {
-    display: grid;
-    gap: 32px;
-    margin: 48px 0;
-}
-
-.componente-card {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+/* ========== TABELA ========== */
+.table-wrapper {
+    overflow-x: auto;
     border-radius: 16px;
-    padding: 32px;
-    text-align: center;
-    transition: all 0.4s ease;
-}
-
-.componente-card:hover {
-    border-color: rgba(214, 40, 40, 0.3);
-}
-
-.componente-icon {
-    font-size: 48px;
-    margin-bottom: 16px;
-    color: #d62828;
-}
-
-.componente-nome {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 16px;
-    color: #ffffff;
-}
-
-.componente-desc {
-    color: #888;
-    line-height: 1.6;
-    font-size: 18px;
-}
-
-.arduino-images {
-    display: grid;
-    gap: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     margin: 32px 0;
 }
 
-.arduino-image {
+table {
     width: 100%;
-    height: 150px;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.arduino-image:hover {
-    border-color: rgba(214, 40, 40, 0.3);
-}
-
-.exemplo-arduino {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 32px;
-    margin: 32px 0;
-    text-align: center;
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
 }
 
-.exemplo-arduino img {
-    width: 50%;
-    height: auto;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0 auto;
-    display: block;
-}
-
-.entrada-dados,
-.saida-dados,
-.aplicacoes {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 32px;
-    margin: 24px 0;
-    border-left: 4px solid #d62828;
-}
-
-.entrada-dados strong,
-.saida-dados strong,
-.aplicacoes strong {
-    color: #d62828;
-    display: block;
-    margin-bottom: 8px;
+th {
+    background: rgba(214, 40, 40, 0.15);
+    padding: 20px;
+    text-align: left;
     font-size: 20px;
+    font-weight: 600;
+    color: #d62828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+td {
+    padding: 20px;
+    font-size: 18px;
+    color: #888;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background 0.3s;
+}
+
+tr:hover td {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+/* ========== TIMELINE ========== */
 .historia-timeline {
     position: relative;
-    padding-left: 48px;
+    padding-left: 60px;
     margin: 48px 0;
 }
 
 .historia-timeline::before {
     content: '';
     position: absolute;
-    left: 16px;
+    left: 24px;
     top: 0;
     bottom: 0;
-    width: 2px;
-    background: #d62828;
+    width: 3px;
+    background: linear-gradient(180deg, #d62828, transparent);
 }
 
 .timeline-item {
     position: relative;
-    margin-bottom: 48px;
+    margin-bottom: 40px;
     padding: 24px;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateX(8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: -40px;
+    left: -44px;
     top: 32px;
     width: 16px;
     height: 16px;
     border-radius: 50%;
     background: #d62828;
+    box-shadow: 0 0 10px rgba(214, 40, 40, 0.5);
+    transition: all 0.3s;
+}
+
+.timeline-item:hover::before {
+    transform: scale(1.3);
+    box-shadow: 0 0 20px rgba(214, 40, 40, 0.8);
 }
 
 .timeline-year {
     color: #d62828;
     font-weight: 700;
-    font-size: 20px;
+    font-size: 22px;
     margin-bottom: 8px;
 }
 
-.code-block {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    margin: 24px 0;
-}
-
-.code-header {
-    background: rgba(214, 40, 40, 0.1);
-    padding: 16px 24px;
-    font-size: 18px;
-    color: #d62828;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.code-block pre {
-    padding: 24px;
+.timeline-item p {
+    text-align: left;
     margin: 0;
     font-size: 18px;
-    line-height: 1.6;
 }
 
-.conceito-box {
-    background: rgba(214, 40, 40, 0.05);
-    border: 1px solid rgba(214, 40, 40, 0.2);
-    border-radius: 12px;
-    padding: 32px;
-    margin: 32px 0;
-    border-left: 4px solid #d62828;
+/* ========== COMPONENTES ========== */
+.componentes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 32px;
+    margin: 48px 0;
 }
 
-.conceito-titulo {
-    color: #d62828;
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 16px;
-}
-
-.diagrama-container {
+.componente-card {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 32px;
-    margin: 32px 0;
     text-align: center;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
 }
 
-.diagrama {
-    max-width: 100%;
-    height: auto;
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.componente-card:hover {
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-.dificuldade-badge {
-    display: inline-block;
-    background: rgba(214, 40, 40, 0.1);
-    color: #d62828;
-    padding: 4px 12px;
-    border-radius: 20px;
-    font-size: 14px;
-    font-weight: 600;
-    margin-left: 16px;
-}
-
-.termo-tecnico {
-    border-bottom: 1px dashed #d62828;
-    cursor: help;
-    position: relative;
-}
-
-footer {
-    background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 48px 32px;
-    text-align: center;
-}
-
-footer p {
-    color: #666;
+.componente-icon {
     margin-bottom: 16px;
-    font-size: 18px;
+    transition: transform 0.3s;
 }
 
-footer a {
+.componente-icon img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+}
+
+.componente-card:hover .componente-icon {
+    transform: scale(1.1);
+}
+
+.componente-nome {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.explicando-componente {
+    margin: 12px 0;
+}
+
+.explicando-componente details {
     color: #888;
-    text-decoration: none;
-    margin: 0 16px;
     font-size: 16px;
+    cursor: pointer;
 }
 
-footer a:hover {
+.explicando-componente summary {
     color: #d62828;
+    font-weight: 600;
+    transition: color 0.3s;
 }
 
+.explicando-componente summary:hover {
+    color: #ff6b6b;
+}
+
+.explicando-componente details p {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #999;
+}
+
+.componente-desc {
+    color: #888;
+    line-height: 1.6;
+    font-size: 18px;
+    margin-top: 8px;
+}
+
+/* ========== CÁLCULOS ========== */
 .calculos-circuitos-section {
     margin-bottom: 32px;
 }
 
 .calculos-container {
-    background-color: #222;
-    padding: 24px;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 32px;
+    border-radius: 16px;
     margin-bottom: 24px;
 }
 
 .calculos-grid {
     display: grid;
-    gap: 1.5rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
     margin-bottom: 24px;
 }
 
-
 .circuito-diagrama {
-    background-color: #2c2c2c;
-    padding: 1rem;
-    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.circuito-diagrama h4,
+.parametros-form h4,
+.resultados-container h4,
+.formulas-container h4 {
+    color: #d62828;
+    margin-bottom: 16px;
+    font-size: 20px;
+    text-align: left;
 }
 
 .diagrama-box {
@@ -403,28 +328,32 @@ footer a:hover {
 
 .diagrama-texto {
     display: inline-block;
-    background-color: #333;
+    background: rgba(0, 0, 0, 0.3);
     padding: 16px;
-    border-radius: 4px;
-    margin-bottom: 24px;
-    font-family: monospace;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-family: 'Courier New', monospace;
     font-size: 16px;
+    color: #e0e0e0;
+    text-align: left;
 }
 
 .diagrama-descricao {
     font-size: 16px;
     color: #999;
 }
+
 .parametros-form {
-    background-color: #2c2c2c;
-    padding: 1rem;
-    border-radius: 0.375rem;
+    background: rgba(255, 255, 255, 0.02);
+    padding: 24px;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .form-calculo {
     display: flex;
     flex-direction: column;
-    gap: 1rem;
+    gap: 16px;
 }
 
 .input-group {
@@ -435,86 +364,322 @@ footer a:hover {
 .input-group label {
     font-size: 16px;
     font-weight: 600;
-    margin-bottom: 4px;
-    color: #fff;
+    margin-bottom: 6px;
+    color: #e0e0e0;
 }
 
 .input-group input {
     width: 100%;
-    padding: 8px 12px;
-    background-color: #333;
-    border: 1px solid #666;
-    border-radius: 4px;
+    padding: 10px 14px;
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
     color: #fff;
     font-size: 16px;
+    transition: all 0.3s;
 }
 
 .input-group input:focus {
     outline: none;
     border-color: #d62828;
+    box-shadow: 0 0 15px rgba(214, 40, 40, 0.2);
 }
 
 .input-group input::placeholder {
-    color: #888;
+    color: #666;
 }
 
 .btn-calcular {
     width: 100%;
-    background-color: #d62828;
+    background: linear-gradient(135deg, #d62828, #c82323);
     color: white;
     font-weight: bold;
-    padding: 12px 16px;
+    padding: 14px 20px;
     border: none;
     border-radius: 12px;
     cursor: pointer;
-    margin-top: 0.5rem;
+    margin-top: 8px;
+    font-size: 18px;
+    transition: all 0.3s ease;
 }
 
 .btn-calcular:hover {
-    background-color: #b51f1f;
+    background: linear-gradient(135deg, #e02d2d, #d62828);
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(214, 40, 40, 0.3);
 }
+
 .resultados-container {
-    margin-top:24px;
+    margin-top: 24px;
 }
 
 .resultados-box {
-    background-color: #2c2c2c;
-    padding: 16px;
-    border-radius: 4px;
-    font-size: 12px;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+    border-radius: 12px;
+    font-size: 16px;
     min-height: 100px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .resultados-placeholder {
-    color: #999;
+    color: #666;
+    text-align: center;
 }
 
 .formulas-container {
-    background-color: #1a1a1a;
-    padding: 16px;
-     border-radius: 4px;
+    background: rgba(214, 40, 40, 0.03);
+    border: 1px solid rgba(214, 40, 40, 0.1);
+    padding: 20px;
+    border-radius: 12px;
     margin-top: 24px;
 }
 
 .formulas-list {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 10px;
+    list-style: none;
 }
 
 .formulas-list li {
     display: flex;
     align-items: flex-start;
+    gap: 8px;
 }
 
 .formula-simbolo {
-    color: #999;
-    margin-right: 8px;
+    color: #d62828;
     font-size: 16px;
+    min-width: 16px;
 }
 
 .formula-texto {
-    font-size: 0.875rem;
+    font-size: 16px;
     color: #ccc;
-    line-height: 1.4;
+    line-height: 1.5;
+}
+
+/* ========== CÓDIGO ========== */
+.code-block {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin: 24px 0;
+    overflow: hidden;
+}
+
+.code-header {
+    background: rgba(214, 40, 40, 0.15);
+    padding: 14px 20px;
+    font-size: 16px;
+    color: #d62828;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+}
+
+.code-block pre {
+    padding: 20px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    overflow-x: auto;
+    color: #ccc;
+    font-family: 'Courier New', monospace;
+}
+
+/* ========== EXEMPLO ========== */
+.exemplo {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    position: relative;
+    border-left: 4px solid #d62828;
+}
+
+.exemplo strong {
+    color: #d62828;
+    display: block;
+    margin-bottom: 12px;
+    font-size: 18px;
+}
+
+/* ========== CONCEITO BOX ========== */
+.conceito-box {
+    background: rgba(214, 40, 40, 0.03);
+    border: 1px solid rgba(214, 40, 40, 0.1);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    border-left: 4px solid #d62828;
+}
+
+.conceito-titulo {
+    color: #d62828;
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+/* ========== ENTRADA/SAÍDA ========== */
+.entrada-dados,
+.saida-dados {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 20px;
+    margin: 16px 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+}
+
+.entrada-dados strong,
+.saida-dados strong {
+    background: rgba(214, 40, 40, 0.1);
+    color: #d62828;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    border: 1px solid rgba(214, 40, 40, 0.2);
+}
+
+/* ========== APLICAÇÕES ========== */
+.aplicacoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.aplicacoes span {
+    background: rgba(214, 40, 40, 0.1);
+    color: #d62828;
+    padding: 8px 16px;
+    border-radius: 20px;
+    font-size: 16px;
+    border: 1px solid rgba(214, 40, 40, 0.2);
+}
+
+/* ========== ARDUINO ========== */
+.exemplo-arduino {
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 24px;
+    margin: 24px 0;
+    text-align: center;
+}
+
+.arduino-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 16px;
+    margin-top: 16px;
+}
+
+.arduino-images img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.3s;
+}
+
+.arduino-images img:hover {
+    border-color: rgba(214, 40, 40, 0.3);
+    transform: scale(1.03);
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 48px 32px;
+    text-align: center;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer p {
+    color: #666;
+    margin-bottom: 24px;
+    font-size: 18px;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.footer-links a:hover {
+    color: #d62828;
+    background: rgba(214, 40, 40, 0.1);
+}
+
+/* ========== ANIMAÇÕES ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2rem !important;
+    }
+
+    section {
+        padding: 64px 20px;
+    }
+
+    h2 {
+        font-size: 28px !important;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .historia-timeline {
+        padding-left: 40px;
+    }
+
+    .timeline-item::before {
+        left: -32px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .calculos-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .componentes-grid {
+        grid-template-columns: 1fr;
+    }
 }

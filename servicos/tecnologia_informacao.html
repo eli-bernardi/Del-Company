@@ -6,326 +6,310 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/tecnologia_informacao.css">
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
+    <script src="../js/tecnologia_informacao.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Del Company</title>
+    <title>Del Company - Tecnologia da Informação</title>
 </head>
 
-<body class="bg-[#111] text-white">
+<body class="bg-[#0a0a0a] text-white">
 
-    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#222] shadow-md">
-        <div https://github.com/eli-bernardi/Del-Company class="logo" text-xl font-bold text-[#d62828]>Del Company</div>
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
+        <div class="logo text-xl font-bold text-[#d62828]">Del Company</div>
 
         <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
             <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
+
         <nav id="menu"
-            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#222] md:bg-transparent md:p-0 p-4 md:rounded-none rounded-b-lg border-b-2 border-[#d62828] md:border-none">
-            <a href="../index.html" class="block py-2 hover:text-[#d62828]">Início</a>
+            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#0a0a0a]/95 md:bg-transparent p-4 md:p-0 rounded-b-lg border-b-2 border-[#d62828] md:border-none">
+            <a href="../index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
             <div class="relative group">
-                <a href="../service.html" class="block py-2 hover:text-[#d62828]">Serviços</a>
-                <ul class="hidden group-hover:block absolute bg-[#2c2c2c] rounded min-w-[200px] py-2 shadow-lg z-50">
+                <a href="../service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
+                <ul
+                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
                     <li><a href="../servicos/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Lógica de Programação</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
+                            Programação</a></li>
                     <li><a href="../servicos/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Sistemas de Rede</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
+                    </li>
                     <li><a href="../servicos/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Lógica Computacional</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
+                            Computacional</a></li>
                     <li><a href="../servicos/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Fundamentos de Eletrônica</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
+                            Eletrônica</a></li>
                     <li><a href="../servicos/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Tecnologia da Informação</a></li>
-                    <li><a href="../servicos/banco_dados.html" class="block px-4 py-2 hover:bg-[#d62828] rounded">Banco
-                            de Dados</a></li>
+                            class="block px-4 py-2 text-[#d62828] transition-colors">Tecnologia da Informação</a></li>
+                    <li><a href="../servicos/banco_dados.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
                 </ul>
             </div>
-            <a href="../contato.html" class="block py-2 hover:text-[#d62828]">Contato</a>
+            <a href="../contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
         </nav>
     </header>
-</body>
-<br>
-<main>
-    <section class="hero">
-        <h2>Tecnologia da Informação</h2>
-        <h3>Segmentos | Utilidades | aplicações</h3>
-        <hr>
-        <p>A Tecnologia da Informação, ou simplesmente TI, é a área responsável por estudar, desenvolver e aplicar
-            tecnologias que ajudam no processamento, armazenamento e transmissão de dados.</p>
-        <p>Em outras palavras, ela conecta <strong>computadores, sistemas e pessoas,</strong> garantindo que a
-            informação chegue onde precisa, de forma rápida e segura.</p>
-        <p>Hoje, a TI está presente em praticamente tudo — desde o uso de um celular até os grandes servidores que
-            mantêm a internet funcionando.</p>
-    </section>
 
-    <section>
-        <div id="componentes">
-            <h2>Componentes</h2>
-            <h3>Exemplificação | Funcionalidade | Utilização</h3>
-        </div>
-        <hr>
-        <div class="linguagens">
-            <div class="linguagem-card">
-                <img src="../img/placa-mae.png" alt="Placa-Mae">
+    <main class="pt-20">
+        <section class="hero reveal">
+            <h2>Tecnologia da Informação</h2>
+            <h3>Segmentos | Utilidades | Aplicações</h3>
+            <hr>
+            <p>A Tecnologia da Informação, ou simplesmente TI, é a área responsável por estudar, desenvolver e aplicar
+                tecnologias que ajudam no processamento, armazenamento e transmissão de dados.</p>
+            <p>Em outras palavras, ela conecta <strong>computadores, sistemas e pessoas,</strong> garantindo que a
+                informação chegue onde precisa, de forma rápida e segura.</p>
+            <p>Hoje, a TI está presente em praticamente tudo — desde o uso de um celular até os grandes servidores que
+                mantêm a internet funcionando.</p>
+        </section>
+
+        <section class="reveal">
+            <div id="componentes">
+                <h2>Componentes</h2>
+                <h3>Exemplificação | Funcionalidade | Utilização</h3>
             </div>
-            <div class="linguagem-card">
-                <img src="../img/processador.png" alt="Processador">
-            </div>
-            <div class="linguagem-card">
-                <img src="../img/memoria-ram.png" alt="Memoria-Ram">
-            </div>
-        </div>
-        <div class="bloco-componentes">
-            <div class="placa-mae">
-                <p>Os principais componentes de um sistema de Tecnologia da Informação incluem: <strong>Placa Mãe,
-                        Processador, Memória Ram.</strong> </p>
-            </div>
-            <p>A placa-mãe é a <strong>base</strong> do computador: conecta e faz a comunicação entre todos os
-                componentes — CPU, memória, armazenamento, GPU e periféricos.</p>
-            </p>
-            <p>O Processador funciona como o <strong>“cérebro” </strong>da máquina. Ele realiza cálculos e executa as
-                instruções dos programas.</p>
-            <p>A <strong>Memória Ram</strong> é a <strong>memória temporária</strong>, usada enquanto o computador está
-                ligado.
-                Quanto mais RAM, mais programas o PC consegue rodar ao mesmo tempo.</p>
-            <p>Entre eles estão outro componentes: <strong>Armazenamento, Fonte de Alimentação, Placa de Vídeo, Cooler
-                    ou Sistema de Refrigeração outros Periféricos</strong></p>
-        </div>
-        <br>
-    </section>
-    <section>
-        <div class="sistemas-operacionais">
-            <h2>Sistemas Operacionais</h2>
-            <h3>Exemplificação | Funcionalidade | Utilização</h3>
             <hr>
             <div class="linguagens">
                 <div class="linguagem-card">
-                    <img src="../img/windows_logo-removebg-preview.png" alt="Processador">
+                    <img src="../img/placa-mae.png" alt="Placa-Mãe" loading="lazy">
+                    <span>Placa-Mãe</span>
                 </div>
                 <div class="linguagem-card">
-                    <img src="../img/macOS-removebg-preview.png" alt="Memoria-Ram">
+                    <img src="../img/processador.png" alt="Processador" loading="lazy">
+                    <span>Processador</span>
                 </div>
                 <div class="linguagem-card">
-                    <img src="../img/linux_logo-removebg-preview.png" alt="Memoria-Ram">
+                    <img src="../img/memoria-ram.png" alt="Memória RAM" loading="lazy">
+                    <span>Memória RAM</span>
                 </div>
-
-                <div class="linguagem-card">
-                    <img src="../img/android_logo-removebg-preview.png" alt="Placa-Mae">
-                </div>
-            </div><br>
+            </div>
             <div class="bloco-componentes">
-                <div class="placa-mae">
-                    <p>Um sistema operacional (SO) é o “cérebro” que faz o dispositivo funcionar. Ele gerencia tudo:
-                        desde a forma como os aplicativos rodam, até o uso da memória, arquivos, conexões e periféricos.
-                        Sem um SO, o computador ou celular até ligaria, mas não teria como executar programas nem
-                        permitir que o usuário interaja com ele.
-                        Em resumo: é o sistema que organiza, controla e facilita o uso do hardware — deixando tudo
-                        pronto pra você usar sem dor de cabeça</p><br>
+                <div class="destaque">
+                    <p>Os principais componentes de um sistema de Tecnologia da Informação incluem: <strong>Placa Mãe,
+                            Processador, Memória Ram.</strong></p>
                 </div>
-
-                <p><strong>Windows:</strong></p>
-                <p>O mais popular no mundo dos PCs. É conhecido pela facilidade de uso, compatibilidade com praticamente
-                    todos os tipos de programas e muito utilizado em empresas, escolas e escritórios. Perfeito para
-                    produtividade e jogos, já que tem grande suporte de softwares e drivers.</p>
-
-                <p><strong>MacOS:</strong></p>
-                <p>Sistema exclusivo dos computadores da Apple. Ele aposta em desempenho, simplicidade e integração com
-                    outros dispositivos da marca. O visual é limpo, fluido e muito voltado para quem trabalha com
-                    design, vídeo, música e ambientes criativos.</p>
-
-                <p><strong>Linux:</strong></p>
-                <p>Um sistema livre e altamente personalizável. Ele é muito usado por desenvolvedores, servidores e
-                    pessoas que gostam de mais controle sobre o computador. Existem várias “distros”, como Ubuntu, Mint
-                    e Fedora, cada uma com seu estilo e foco. Além disso, é famoso pela segurança e estabilidade.</p>
-
-                <p><strong>Android:</strong></p>
-                <p>O sistema do Google para smartphones e tablets. É o mais usado no mundo e se destaca pela
-                    flexibilidade, variedade de aparelhos e personalização. A Play Store oferece milhares de apps, e o
-                    sistema roda em marcas como Samsung, Xiaomi, Motorola e muitas outras.</p>
+                <p>A placa-mãe é a <strong>base</strong> do computador: conecta e faz a comunicação entre todos os
+                    componentes — CPU, memória, armazenamento, GPU e periféricos.</p>
+                <p>O Processador funciona como o <strong>"cérebro"</strong> da máquina. Ele realiza cálculos e executa
+                    as instruções dos programas.</p>
+                <p>A <strong>Memória Ram</strong> é a <strong>memória temporária</strong>, usada enquanto o computador
+                    está ligado. Quanto mais RAM, mais programas o PC consegue rodar ao mesmo tempo.</p>
+                <p>Entre eles estão outros componentes: <strong>Armazenamento, Fonte de Alimentação, Placa de Vídeo,
+                        Cooler ou Sistema de Refrigeração e outros Periféricos</strong></p>
             </div>
-        </div>
-    </section>
-    <section>
-        <div class="sistema-arquivo">
-            <h2>Sistemas De Arquivos (CMD)</h2>
-            <h3>Exemplificação | Funcionalidade | Utilização</h3>
-            <hr>
+        </section>
 
-            <div class="sistema-arquivo">
-                <p>Os sistemas de arquivos são estruturas que organizam e armazenam dados em dispositivos de
-                    armazenamento,
-                    como discos rígidos, SSDs e pendrives. Eles definem como os arquivos são nomeados, armazenados e
-                    acessados pelo sistema operacional.</p>
-
-                <p>Existem vários tipos de sistemas de arquivos, cada um com suas características e usos específicos.
-                    Alguns
-                    dos mais comuns incluem:</p>
-
-                <p>No Windows, <strong> CMD é a sigla para "Command Prompt"</strong> (Prompt de Comando). Como
-                    ferramenta
-                    nativa do sistema
-                    operacional, ele permite a interação com o computador através de comandos de texto.</p>
-
-                <p><strong>FAT32 (File Allocation Table 32):</strong> Um sistema de arquivos antigo, mas amplamente
-                    compatível com diversos dispositivos e sistemas operacionais. No entanto, tem limitações, como o
-                    tamanho
-                    máximo de arquivo de 4 GB.</p>
-
-                <p><strong>NTFS (New Technology File System):</strong> O sistema de arquivos padrão para o Windows.
-                    Oferece
-                    recursos avançados, como permissões de segurança, criptografia e suporte a arquivos maiores que 4
-                    GB.
-                </p>
-
-                <p><strong>exFAT (Extended File Allocation Table):</strong> Projetado para ser uma versão melhorada do
-                    FAT32,
-                    o exFAT é ideal para dispositivos de armazenamento removíveis, como pendrives e cartões SD,
-                    suportando
-                    arquivos maiores e sendo compatível com vários sistemas operacionais.</p>
-
-                <p><strong>ext4 (Fourth Extended File System):</strong> O sistema de arquivos mais comum em
-                    distribuições
-                    Linux. Oferece alta performance, suporte a grandes volumes e arquivos, além de recursos avançados
-                    como
-                    journaling.</p>
-
-                <p>Cada sistema de arquivos tem suas vantagens e desvantagens, e a escolha do mais adequado depende das
-                    necessidades específicas do usuário e do ambiente em que será utilizado.</p>
-            </div>
-            <br>
-            <hr>
-            <div class="sistema-arquivo"><br><br>
-                <h2>Modo Texto — Terminal / CMD</h2>
-                <p>No modo texto você usa comandos para navegar, criar, mover e apagar arquivos. É direto, rápido e
-                    ideal para automação (scripts) e tarefas avançadas.</p> <br>
-                <div class="example-cmd">
-                    <h3>Exemplos de Comandos Básicos:</h3>
-                    <pre class="cmd"><code>
-                        <strong># Windows (CMD)2 </strong>
-                    cd C:\Users\MeuUsuario\Documentos
-                    dir
-                    mkdir Projeto
-                    copy arquivo.txt C:\Backup\arquivo.txt
-                    move arquivo.txt ..\outro
-                    del arquivo.txt
-                    
-                    
-                  <strong>  # Linux / macOS (Terminal)</strong>
-                    cd /home/usuario/Documentos
-                    ls -la
-                    mkdir projeto
-                    cp arquivo.txt /backup/arquivo.txt
-                    mv arquivo.txt ../outro
-                    rm arquivo.txt</code></pre>
-                </div>
-            </div>
-
-            <div>
-                <div class="example-cmd">
-                    <h3>Vantagens: </h3>
-                    <ul>
-                        <li>Automatização com scripts (bash, PowerShell).</li>
-                        <li>Operações em lote e acesso remoto (SSH).</li>
-                        <li>Mais controle sobre permissões e atributos.</li>
-                    </ul>
-                </div>
-            </div>
-
-            <section>
-                <h2>Modo Gráfico — Explorer / Gerenciador de Arquivos</h2>
-                <p>No modo gráfico você interage com arquivos por janelas, ícones e menus. Tudo é visual e pensado
-                    pra
-                    ser intuitivo: arrasta e solta, visualização em miniaturas e organização por colunas, datas ou
-                    tipos.</p>
-                <div class="example-cmd">
-                    <ul>
-                        <h3>O que você costuma fazer aqui</h3>
-                        <li>- Abrir pastas com duplo-clique</li>
-                        <li>- Arrastar arquivos entre pastas</li>
-                        <li>- Renomear com clique lento (ou F2)</li>
-                        <li>- Usar pesquisa para encontrar arquivos por nome </li>
-                        <li>- Ver pré-visualização de fotos e documentos </li>
-                    </ul>
-                </div>
-                <div>
-                    <br>
-                    <div class="example-cmd">
-                        <h3>Vantagens: </h3>
-                        <ul>
-                            <li>Intuitivo para a maioria dos usuários.</li>
-                            <li>Visualização rápida (miniaturas e previews).</li>
-                            <li>Operações seguras com desfazer/recuperação em muitos casos.</li>
-                        </ul>
+        <section class="reveal">
+            <div class="sistemas-operacionais">
+                <h2>Sistemas Operacionais</h2>
+                <h3>Exemplificação | Funcionalidade | Utilização</h3>
+                <hr>
+                <div class="linguagens">
+                    <div class="linguagem-card">
+                        <img src="../img/windows_logo-removebg-preview.png" alt="Windows" loading="lazy">
+                        <span>Windows</span>
+                    </div>
+                    <div class="linguagem-card">
+                        <img src="../img/macOS-removebg-preview.png" alt="macOS" loading="lazy">
+                        <span>macOS</span>
+                    </div>
+                    <div class="linguagem-card">
+                        <img src="../img/linux_logo-removebg-preview.png" alt="Linux" loading="lazy">
+                        <span>Linux</span>
+                    </div>
+                    <div class="linguagem-card">
+                        <img src="../img/android_logo-removebg-preview.png" alt="Android" loading="lazy">
+                        <span>Android</span>
                     </div>
                 </div>
-        </div>
-    </section>
-    <section>
-        <div class="softwares-escritorio">
-            <h2>Softwares de Escritório</h2>
-            <h3>Exemplificação | Funcionalidade | Utilização</h3>
-            <hr>
-            <div class="linguagens">
-                <div class="linguagem-card">
-                    <img src="../img/word_logo.png" alt="Microsoft Word">
-                </div>
-                <div class="linguagem-card">
-                    <img src="../img/powerpoint_logo.png" alt="Microsoft Excel">
-                </div>
-                <div class="linguagem-card">
-                    <img src="../img/excel_logo.png" alt="Microsoft PowerPoint">
-                </div>
-            </div><br>
-            <div class="bloco-componentes">
-                <div class="placa-mae">
-                    <p>Os softwares de escritório são ferramentas essenciais para a criação, edição e gerenciamento de
-                        documentos, planilhas e apresentações. Eles facilitam o trabalho diário, seja em ambientes
-                        corporativos, educacionais ou pessoais.</p><br>
-                </div>
+                <div class="bloco-componentes">
+                    <div class="destaque">
+                        <p>Um sistema operacional (SO) é o "cérebro" que faz o dispositivo funcionar. Ele gerencia tudo:
+                            desde a forma como os aplicativos rodam, até o uso da memória, arquivos, conexões e
+                            periféricos. Sem um SO, o computador ou celular até ligaria, mas não teria como executar
+                            programas nem permitir que o usuário interaja com ele.</p>
+                    </div>
 
-                <p><strong>Microsoft Word:</strong></p>
-                <p>Um processador de texto amplamente utilizado para criar documentos escritos, como relatórios,
-                    cartas e currículos. Oferece recursos avançados de formatação, revisão ortográfica e colaboração
-                    em tempo real.</p>
+                    <p><strong>Windows:</strong> O mais popular no mundo dos PCs. É conhecido pela facilidade de uso,
+                        compatibilidade com praticamente todos os tipos de programas e muito utilizado em empresas,
+                        escolas e escritórios.</p>
 
-                <p><strong>Microsoft Excel:</strong></p>
-                <p>Uma poderosa ferramenta de planilhas que permite organizar dados, realizar cálculos complexos e
-                    criar gráficos. É amplamente usado para análise financeira, gerenciamento de projetos e
-                    acompanhamento de dados.</p>
+                    <p><strong>MacOS:</strong> Sistema exclusivo dos computadores da Apple. Ele aposta em desempenho,
+                        simplicidade e integração com outros dispositivos da marca.</p>
 
-                <p><strong>Microsoft PowerPoint:</strong></p>
-                <p>Um software de apresentação que facilita a criação de slides visuais para reuniões, aulas e
-                    conferências. Oferece uma variedade de templates, animações e opções de design para tornar as
-                    apresentações mais envolventes.</p>
+                    <p><strong>Linux:</strong> Um sistema livre e altamente personalizável. Muito usado por
+                        desenvolvedores, servidores e pessoas que gostam de mais controle sobre o computador.</p>
+
+                    <p><strong>Android:</strong> O sistema do Google para smartphones e tablets. É o mais usado no mundo
+                        e se destaca pela flexibilidade, variedade de aparelhos e personalização.</p>
+                </div>
             </div>
-        </div><br>
-        <h3 class="iframe-documentos">Três softwares de escritório em uso prático, em atividades diferentes:</h3>
+        </section>
 
-        <h3 class="iframe-documentos">Microsoft Word - Textos</h3>
-        <div class="iframe-documentos">
-            <iframe src="../img/editor_de_texto_word.pdf" width="auto" height="100%"></iframe>
-            <iframe src="../img/direitos_humanos.docx.pdf" width="auto" height="100%"></iframe>
+        <section class="reveal">
+            <div class="sistema-arquivo">
+                <h2>Sistemas De Arquivos (CMD)</h2>
+                <h3>Exemplificação | Funcionalidade | Utilização</h3>
+                <hr>
+
+                <p>Os sistemas de arquivos são estruturas que organizam e armazenam dados em dispositivos de
+                    armazenamento, como discos rígidos, SSDs e pendrives. Eles definem como os arquivos são nomeados,
+                    armazenados e acessados pelo sistema operacional.</p>
+
+                <p>No Windows, <strong>CMD é a sigla para "Command Prompt"</strong> (Prompt de Comando). Como ferramenta
+                    nativa do sistema operacional, ele permite a interação com o computador através de comandos de
+                    texto.</p>
+
+                <div class="tags-sistema">
+                    <span><strong>FAT32</strong> - Compatível, mas limitado a 4GB</span>
+                    <span><strong>NTFS</strong> - Padrão Windows, seguro</span>
+                    <span><strong>exFAT</strong> - Ideal para pendrives</span>
+                    <span><strong>ext4</strong> - Padrão Linux</span>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header">💻 Modo Texto — Terminal / CMD</div>
+                <p style="text-align: left; margin: 0 0 16px 0;">No modo texto você usa comandos para navegar, criar,
+                    mover e apagar arquivos. É direto, rápido e ideal para automação (scripts) e tarefas avançadas.</p>
+                <pre><code><strong># Windows (CMD)</strong>
+cd C:\Users\MeuUsuario\Documentos
+dir
+mkdir Projeto
+copy arquivo.txt C:\Backup\arquivo.txt
+move arquivo.txt ..\outro
+del arquivo.txt
+
+<strong># Linux / macOS (Terminal)</strong>
+cd /home/usuario/Documentos
+ls -la
+mkdir projeto
+cp arquivo.txt /backup/arquivo.txt
+mv arquivo.txt ../outro
+rm arquivo.txt</code></pre>
+            </div>
+
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <span class="beneficio-icon">⚡</span>
+                    <strong>Automação</strong>
+                    <p>Scripts em bash ou PowerShell</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="beneficio-icon">🔗</span>
+                    <strong>Acesso Remoto</strong>
+                    <p>Conexão via SSH</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="beneficio-icon">🔐</span>
+                    <strong>Controle Total</strong>
+                    <p>Permissões e atributos</p>
+                </div>
+            </div>
+
+            <div class="code-block">
+                <div class="code-header">🖥️ Modo Gráfico — Explorer / Gerenciador de Arquivos</div>
+                <p style="text-align: left; margin: 0 0 16px 0;">No modo gráfico você interage com arquivos por janelas,
+                    ícones e menus. Tudo é visual e intuitivo: arrasta e solta, visualização em miniaturas e organização
+                    por colunas.</p>
+                <ul class="lista-vantagens">
+                    <li>Abrir pastas com duplo-clique</li>
+                    <li>Arrastar arquivos entre pastas</li>
+                    <li>Renomear com clique lento (ou F2)</li>
+                    <li>Usar pesquisa para encontrar arquivos por nome</li>
+                    <li>Ver pré-visualização de fotos e documentos</li>
+                </ul>
+            </div>
+
+            <div class="beneficios-grid">
+                <div class="beneficio-item">
+                    <span class="beneficio-icon">👆</span>
+                    <strong>Intuitivo</strong>
+                    <p>Para a maioria dos usuários</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="beneficio-icon">🖼️</span>
+                    <strong>Visualização</strong>
+                    <p>Miniaturas e previews</p>
+                </div>
+                <div class="beneficio-item">
+                    <span class="beneficio-icon">↩️</span>
+                    <strong>Seguro</strong>
+                    <p>Desfazer/recuperar</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <div class="softwares-escritorio">
+                <h2>Softwares de Escritório</h2>
+                <h3>Exemplificação | Funcionalidade | Utilização</h3>
+                <hr>
+                <div class="linguagens">
+                    <div class="linguagem-card">
+                        <img src="../img/word_logo.png" alt="Microsoft Word" loading="lazy">
+                        <span>Word</span>
+                    </div>
+                    <div class="linguagem-card">
+                        <img src="../img/excel_logo.png" alt="Microsoft Excel" loading="lazy">
+                        <span>Excel</span>
+                    </div>
+                    <div class="linguagem-card">
+                        <img src="../img/powerpoint_logo.png" alt="Microsoft PowerPoint" loading="lazy">
+                        <span>PowerPoint</span>
+                    </div>
+                </div>
+                <div class="bloco-componentes">
+                    <div class="destaque">
+                        <p>Os softwares de escritório são ferramentas essenciais para a criação, edição e gerenciamento
+                            de documentos, planilhas e apresentações.</p>
+                    </div>
+
+                    <p><strong>Microsoft Word:</strong> Processador de texto amplamente utilizado para criar documentos
+                        escritos, como relatórios, cartas e currículos.</p>
+
+                    <p><strong>Microsoft Excel:</strong> Poderosa ferramenta de planilhas que permite organizar dados,
+                        realizar cálculos complexos e criar gráficos.</p>
+
+                    <p><strong>Microsoft PowerPoint:</strong> Software de apresentação que facilita a criação de slides
+                        visuais para reuniões, aulas e conferências.</p>
+                </div>
+            </div>
+
+            <h3 class="subtitulo-iframes">Três softwares de escritório em uso prático:</h3>
+
+            <h4 class="categoria-iframes">📝 Microsoft Word - Textos</h4>
+            <div class="iframe-container">
+                <iframe src="../img/editor_de_texto_word.pdf" loading="lazy"></iframe>
+                <iframe src="../img/direitos_humanos.docx.pdf" loading="lazy"></iframe>
+            </div>
+
+            <h4 class="categoria-iframes">📊 Microsoft PowerPoint - Apresentações</h4>
+            <div class="iframe-container">
+                <iframe src="../img/Softwares de Escritório.pptx.pdf" loading="lazy"></iframe>
+                <iframe src="../img/Inserindo Elementos no Word - Estatísitic.pptx.pdf" loading="lazy"></iframe>
+            </div>
+
+            <h4 class="categoria-iframes">📈 Microsoft Excel - Planilhas</h4>
+            <div class="iframe-container">
+                <iframe src="../img/controle_gastos.pdf" loading="lazy"></iframe>
+                <iframe src="../img/controle_vendas.pdf" loading="lazy"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <footer class="reveal">
+        <div class="footer-content">
+            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">📷 Instagram</a>
+                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">💬 Whatsapp</a>
+                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">🐙 GitHub</a>
+            </div>
         </div>
-        <h3 class="iframe-documentos">Microsoft PowerPoint - Apresentações</h3>
-        <div class="iframe-documentos">
-            <iframe src="../img/Softwares de Escritório.pptx.pdf" width="auto" height="100%"></iframe>
-            <iframe src="../img/Inserindo Elementos no Word - Estatísitic.pptx.pdf" width="auto" height="100%"></iframe>
-        </div>
-        <h3 class="iframe-documentos">Microsoft Excel - Planilhas</h3>
-        <div class="iframe-documentos">
-            <iframe src="../img/controle_gastos.pdf" width="auto" height="100%"></iframe>
-            <iframe src="../img/controle_vendas.pdf" width="auto" height="100%"></iframe>
-        </div>
-    </section>
-</main>
-<footer>
-    <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-    <p>
-        <a href=" https://www.instagram.com/elielbrnrd/">Instagram</a>
-        <a href="https://wa.me/5548991013184">Whatsapp</a>
-        <a href="https://github.com/eli-bernardi">GitHub</a>
-    </p>
-</footer>
+    </footer>
 </body>
 
 </html>

@@ -6,13 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/fundamento_rede.css">
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
+    <script src="../js/fundamento_rede.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Del Company</title>
+    <title>Del Company - Fundamentos de Rede</title>
 </head>
 
-<body class="bg-[#111] text-white">
+<body class="bg-[#0a0a0a] text-white">
 
-    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#222] shadow-md">
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
         <div class="logo text-xl font-bold text-[#d62828]">Del Company</div>
 
         <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
@@ -22,36 +24,36 @@
         </button>
 
         <nav id="menu"
-            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#222] md:bg-transparent md:p-0 p-4 md:rounded-none rounded-b-lg border-b-2 border-[#d62828] md:border-none">
-
-            <a href="../index.html" class="block py-2 hover:text-[#d62828]">Início</a>
-
+            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#0a0a0a]/95 md:bg-transparent p-4 md:p-0 rounded-b-lg border-b-2 border-[#d62828] md:border-none">
+            <a href="../index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
             <div class="relative group">
-                <a href="../service.html" class="block py-2 hover:text-[#d62828]">Serviços</a>
-                <ul class="hidden group-hover:block absolute bg-[#2c2c2c] rounded min-w-[200px] py-2 shadow-lg z-50">
+                <a href="../service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
+                <ul
+                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
                     <li><a href="../servicos/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Lógica de Programação</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
+                            Programação</a></li>
                     <li><a href="../servicos/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Sistemas de Rede</a></li>
+                            class="block px-4 py-2 text-[#d62828] transition-colors">Sistemas de Rede</a></li>
                     <li><a href="../servicos/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Lógica Computacional</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
+                            Computacional</a></li>
                     <li><a href="../servicos/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Fundamentos de Eletrônica</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
+                            Eletrônica</a></li>
                     <li><a href="../servicos/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Tecnologia da Informação</a></li>
-                    <li><a href="../servicos/banco_dados.html" class="block px-4 py-2 hover:bg-[#d62828] rounded">Banco
-                            de Dados</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
+                            Informação</a></li>
+                    <li><a href="../servicos/banco_dados.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
                 </ul>
             </div>
-
-            <a href="../contato.html" class="block py-2 hover:text-[#d62828]">Contato</a>
+            <a href="../contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
         </nav>
     </header>
 
-    <br>
-
-    <main>
-        <section>
+    <main class="pt-20">
+        <section class="reveal">
             <h2>Fundamentos de Redes de Computadores</h2>
             <h3>Conceitos | Protocolos | Arquitetura | Aplicações</h3>
             <hr>
@@ -69,28 +71,26 @@
             </div>
         </section>
 
-        <section class="infraestrutura-rede">
+        <section class="infraestrutura-rede reveal">
             <h2>Infraestrutura de Rede</h2>
-            <div class="image-grid">
-                <div class="image-card-infraestrutura">
-                    <img src="../img/data_center.png" alt="Rack de Servidores" class="network-image">
-                    <p>Rack de servidores em data center</p>
+            <hr>
+            <div class="image-grid three-col">
+                <div class="image-card">
+                    <img src="../img/data_center.png" alt="Rack de Servidores" class="network-image" loading="lazy">
+                    <p class="image-caption">Rack de servidores em data center</p>
                 </div>
-
-                <div class="image-card-infraestrutura">
-                    <img src="../img/switch_rede.png" alt="Switch de Rede" class="network-image">
-                    <p>Switch de rede empresarial</p>
+                <div class="image-card">
+                    <img src="../img/switch_rede.png" alt="Switch de Rede" class="network-image" loading="lazy">
+                    <p class="image-caption">Switch de rede empresarial</p>
                 </div>
-
-                <div class="image-card-infraestrutura">
-                    <img src="../img/cabo_coaxiais.png" alt="Cabos de Rede" class="network-image">
-                    <p>Organização de cabos de rede</p>
+                <div class="image-card">
+                    <img src="../img/cabo_coaxiais.png" alt="Cabos de Rede" class="network-image" loading="lazy">
+                    <p class="image-caption">Organização de cabos de rede</p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <br>
+        <section class="reveal">
             <h2>O que são Redes de Computadores?</h2>
             <hr>
             <p>
@@ -105,168 +105,193 @@
             </p>
         </section>
 
-        <section>
+        <section class="reveal">
             <h2>O que é uma Rede Mínima?</h2>
+            <hr>
             <p>
                 Uma <strong>rede mínima</strong> é a configuração mais simples possível para conectar dispositivos.
                 Basicamente consiste em:
             </p>
-            <ul>
-                <li><strong>Dois dispositivos</strong></li>
-                <li><strong>Meio de conexão</strong></li>
-                <li><strong>Protocolo de comunicação</strong></li>
-            </ul>
+            <div class="conceito-box">
+                <div class="conceito-titulo">🔗 Elementos Essenciais</div>
+                <ul class="lista-conceito">
+                    <li><strong>Dois dispositivos</strong> - computadores, celulares, etc.</li>
+                    <li><strong>Meio de conexão</strong> - cabo ou sinal wireless</li>
+                    <li><strong>Protocolo de comunicação</strong> - regras para troca de dados</li>
+                </ul>
+            </div>
             <p>
                 Exemplo: Conexão ponto a ponto entre dois computadores usando um cabo crossover ou uma conexão
                 Wi-Fi direta ad-hoc.
             </p>
         </section>
 
-        <section>
+        <section class="reveal">
             <h2>O que é a Internet? O que a compõe?</h2>
+            <hr>
             <p>
                 A <strong>Internet</strong> é uma rede global de redes interconectadas que utiliza o protocolo
                 TCP/IP para comunicação. É composta por:
             </p>
-            <ul>
-                <li>Backbone</li>
-                <li>ISPs</li>
-                <li>Data Centers</li>
-                <li>Roteadores</li>
-                <li>Cabos submarinos</li>
-                <li>Dispositivos dos usuários</li>
-            </ul>
+            <div class="tags-container">
+                <span class="info-tag">Backbone</span>
+                <span class="info-tag">ISPs</span>
+                <span class="info-tag">Data Centers</span>
+                <span class="info-tag">Roteadores</span>
+                <span class="info-tag">Cabos submarinos</span>
+                <span class="info-tag">Dispositivos dos usuários</span>
+            </div>
         </section>
 
-        <section>
+        <section class="reveal">
             <h2>O que é a Web?</h2>
+            <hr>
             <p>
-                A <strong>Web</strong> é um sistema de documentos interligados acessados por navegadores.
-                A Web é o conteúdo; a Internet é a infraestrutura.
+                A <strong>Web</strong> (World Wide Web) é um sistema de documentos interligados acessados por
+                navegadores
+                através da Internet. É importante entender a diferença:
             </p>
+            <div class="diferenca-grid">
+                <div class="diferenca-card">
+                    <div class="diferenca-icon">🌐</div>
+                    <h4>Internet</h4>
+                    <p>A infraestrutura física e lógica que conecta os dispositivos globalmente</p>
+                </div>
+                <div class="diferenca-card">
+                    <div class="diferenca-icon">🕸️</div>
+                    <h4>Web</h4>
+                    <p>O conteúdo (sites, páginas) que trafega sobre a infraestrutura da Internet</p>
+                </div>
+            </div>
         </section>
 
-        <section>
+        <section class="reveal">
             <h2>Mapa Global de Fibra Óptica</h2>
+            <hr>
             <p>
                 O <strong>mapa de fibra óptica</strong> mostra a extensa rede de cabos submarinos e terrestres
                 que formam o backbone da Internet global.
             </p>
-            <div class="image-grid">
+            <div class="image-grid two-col">
                 <div class="image-card">
-                    <img src="../img/cabos_submarinos.jpg" alt="Mapa Global de Cabos Submarinos">
+                    <img src="../img/cabos_submarinos.jpg" alt="Mapa Global de Cabos Submarinos" loading="lazy">
+                    <p class="image-caption">Rotas de cabos submarinos intercontinentais</p>
                 </div>
-
                 <div class="image-card">
-                    <img src="../img/cabos_submarinos(2).jpg" alt="Mapa Global de Cabos Submarinos">
+                    <img src="../img/cabos_submarinos(2).jpg" alt="Mapa Global de Cabos Submarinos" loading="lazy">
+                    <p class="image-caption">Densidade de conexões entre continentes</p>
                 </div>
             </div>
             <p><em>Mapa ilustrativo dos cabos submarinos que conectam continentes</em></p>
         </section>
 
-        <section id="hardware-wifi">
+        <section id="hardware-wifi" class="reveal">
             <h2>Componentes de Hardware de uma Rede Wi-Fi</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
-            <div class="image-grid">
-                <div class="image-card1">
-                    <img src="../img/roteador.png" alt="Roteador Wi-Fi" class="network-image">
-                    <p>Roteador Wi-Fi moderno</p>
+            <hr>
+            <div class="image-grid two-col">
+                <div class="image-card">
+                    <img src="../img/roteador.png" alt="Roteador Wi-Fi" class="network-image" loading="lazy">
+                    <p class="image-caption">Roteador Wi-Fi moderno</p>
                 </div>
-
-                <div class="image-card2">
-                    <img src="../img/acess_point.png" alt="Access Point" class="network-image">
-                    <p>Access Point empresarial</p>
+                <div class="image-card">
+                    <img src="../img/acess_point.png" alt="Access Point" class="network-image" loading="lazy">
+                    <p class="image-caption">Access Point empresarial</p>
                 </div>
             </div>
 
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Componente</th>
-                        <th>Função</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Roteador Wireless</td>
-                        <td>Gerencia o tráfego entre dispositivos e a internet</td>
-                    </tr>
-                    <tr>
-                        <td>Access Point</td>
-                        <td>Expande a cobertura Wi-Fi</td>
-                    </tr>
-                    <tr>
-                        <td>Adaptador Wi-Fi</td>
-                        <td>Permite conexão wireless</td>
-                    </tr>
-                    <tr>
-                        <td>Antenas</td>
-                        <td>Amplificam o sinal</td>
-                    </tr>
-                    <tr>
-                        <td>Modem</td>
-                        <td>Converte sinais do provedor</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Roteador Wireless</strong></td>
+                            <td>Gerencia o tráfego entre dispositivos e a internet</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Access Point</strong></td>
+                            <td>Expande a cobertura Wi-Fi</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Adaptador Wi-Fi</strong></td>
+                            <td>Permite conexão wireless</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Antenas</strong></td>
+                            <td>Amplificam o sinal</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Modem</strong></td>
+                            <td>Converte sinais do provedor</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section id="hardware-cabeadas">
+        <section id="hardware-cabeadas" class="reveal">
             <h2>Componentes de Hardware de Rede Cabeadas</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
-            <div class="image-grid">
+            <hr>
+            <div class="image-grid two-col">
                 <div class="image-card">
-                    <img src="../img/switch_rede.png" alt="Switch de Rede" class="network-image">
-                    <p>Switch de rede gerenciável</p>
+                    <img src="../img/switch_rede.png" alt="Switch de Rede" class="network-image" loading="lazy">
+                    <p class="image-caption">Switch de rede gerenciável</p>
                 </div>
-
                 <div class="image-card">
-                    <img src="../img/patch_panel.png" alt="Patch Panel" class="network-image">
-                    <p>Patch Panel organizado</p>
+                    <img src="../img/patch_panel.png" alt="Patch Panel" class="network-image" loading="lazy">
+                    <p class="image-caption">Patch Panel organizado</p>
                 </div>
             </div>
 
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Componente</th>
-                        <th>Função</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Switch</td>
-                        <td>Conecta múltiplos dispositivos</td>
-                    </tr>
-                    <tr>
-                        <td>Roteador</td>
-                        <td>Interconecta redes</td>
-                    </tr>
-                    <tr>
-                        <td>Cabos Ethernet</td>
-                        <td>Transmissão física de dados</td>
-                    </tr>
-                    <tr>
-                        <td>Patch Panel</td>
-                        <td>Organização da infraestrutura</td>
-                    </tr>
-                    <tr>
-                        <td>Conectores RJ45</td>
-                        <td>Interface para cabos Ethernet</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Componente</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Switch</strong></td>
+                            <td>Conecta múltiplos dispositivos</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Roteador</strong></td>
+                            <td>Interconecta redes</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Cabos Ethernet</strong></td>
+                            <td>Transmissão física de dados</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Patch Panel</strong></td>
+                            <td>Organização da infraestrutura</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Conectores RJ45</strong></td>
+                            <td>Interface para cabos Ethernet</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section id="protocolos">
+        <section id="protocolos" class="reveal">
             <h2>Protocolos de Comunicação</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
+            <hr>
             <div class="container">
                 <p>
                     Um <strong>protocolo de comunicação</strong> é um conjunto de regras que define
                     como os dispositivos trocam informações em uma rede.
                 </p>
-
                 <p>
                     Os protocolos especificam formato, sequência de mensagens, detecção de erros e métodos de
                     endereçamento.
@@ -274,55 +299,63 @@
             </div>
         </section>
 
-        <section>
+        <section class="reveal">
             <h2>Comparação de Modelos</h2>
+            <hr>
             <div class="models-comparison">
                 <div class="model-card">
                     <h3>📊 Modelo OSI</h3>
-                    <div>
-                        <img src="../img/modelo_osi.png" alt="Teoria do Modelo OSI">
+                    <div class="model-image">
+                        <img src="../img/modelo_osi.png" alt="Teoria do Modelo OSI" loading="lazy">
                     </div>
                 </div>
-
                 <div class="model-card">
                     <h3>🌐 Modelo TCP/IP</h3>
-                    <div>
-                        <img src="../img/modelo_tcp_ip.png" alt="Teoria do Modelo TCP/IP">
+                    <div class="model-image">
+                        <img src="../img/modelo_tcp_ip.png" alt="Teoria do Modelo TCP/IP" loading="lazy">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="protocolos-ip">
+        <section id="protocolos-ip" class="reveal">
             <h2>Protocolos IP V4 e IP V6</h2>
-            <div class="container">
-                <p><strong>IP V4:</strong></p>
-                <ul>
-                    <li>32 bits</li>
-                    <li>4.3 bilhões de endereços</li>
-                    <li>Uso de NAT</li>
-                </ul>
-
-                <p><strong>IP V6:</strong></p>
-                <ul>
-                    <li>128 bits</li>
-                    <li>3.4×10³⁸ endereços</li>
-                    <li>IPsec nativo</li>
-                </ul>
+            <hr>
+            <div class="ip-comparison">
+                <div class="ip-card">
+                    <div class="ip-icon">4️⃣</div>
+                    <h4>IP V4</h4>
+                    <ul>
+                        <li>32 bits</li>
+                        <li>4.3 bilhões de endereços</li>
+                        <li>Uso de NAT</li>
+                        <li>Formato: 192.168.0.1</li>
+                    </ul>
+                </div>
+                <div class="ip-card">
+                    <div class="ip-icon">6️⃣</div>
+                    <h4>IP V6</h4>
+                    <ul>
+                        <li>128 bits</li>
+                        <li>3.4×10³⁸ endereços</li>
+                        <li>IPsec nativo</li>
+                        <li>Formato: 2001:db8::1</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
-        <section id="configuracao-node">
+        <section id="configuracao-node" class="reveal">
             <h2>Configuração IP/TCP em Node.js</h2>
+            <hr>
             <div class="container">
                 <p>
                     No Node.js, IP e TCP são configurados com o módulo <strong>net</strong> para conexões raw.
                 </p>
 
-                <div class="exemplo">
-                    <strong>Exemplo de servidor TCP em Node.js:</strong><br><br>
-                    <pre><code>
-const net = require('net');
+                <div class="code-block">
+                    <div class="code-header">📄 Servidor TCP em Node.js</div>
+                    <pre><code>const net = require('net');
 const server = net.createServer((socket) => {
     console.log('Cliente conectado: ' + socket.remoteAddress);
     socket.write('Bem-vindo ao servidor TCP!\r\n');
@@ -333,67 +366,101 @@ const server = net.createServer((socket) => {
 
 server.listen(8080, '0.0.0.0', () => {
     console.log('Servidor TCP ouvindo na porta 8080');
-});
-                    </code></pre>
+});</code></pre>
                 </div>
             </div>
         </section>
 
-        <section id="protocolo-http">
+        <section id="protocolo-http" class="reveal">
             <h2>Protocolo HTTP</h2>
+            <hr>
             <div class="container">
                 <p>
-                    HTTP é o protocolo de aplicação para transferência de hipertexto na Web.
+                    <strong>HTTP</strong> (HyperText Transfer Protocol) é o protocolo de aplicação para transferência
+                    de hipertexto na Web.
                 </p>
-                <p><strong>Características:</strong></p>
-                <ul>
-                    <li>Stateless</li>
-                    <li>Porta 80</li>
-                    <li>Métodos GET, POST, PUT, DELETE</li>
-                    <li>Códigos 200, 404, 500...</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="protocolo-https">
-            <h2>Protocolo HTTPS</h2>
-            <div class="container">
-                <p>
-                    HTTPS é a versão segura do HTTP utilizando TLS/SSL.
-                </p>
-                <ul>
-                    <li>Confidencialidade</li>
-                    <li>Integridade</li>
-                    <li>Autenticação</li>
-                    <li>Porta 443</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="frameworks-node">
-            <h2>Frameworks HTTP para Node.js</h2>
-            <div class="container">
-                <p><strong>Exemplos:</strong></p>
-
-                <div class="exemplo">
-                    <p>Express.js</p>
-                    <p>Fastify</p>
-                    <p>Koa.js</p>
-                    <p>Nest.js</p>
-                    <p>Hapi.js</p>
+                <div class="conceito-box">
+                    <div class="conceito-titulo">📋 Características</div>
+                    <ul class="lista-conceito">
+                        <li><strong>Stateless</strong> - Cada requisição é independente</li>
+                        <li><strong>Porta 80</strong> - Porta padrão</li>
+                        <li><strong>Métodos:</strong> GET, POST, PUT, DELETE</li>
+                        <li><strong>Códigos:</strong> 200 (OK), 404 (Não encontrado), 500 (Erro interno)</li>
+                    </ul>
                 </div>
             </div>
         </section>
 
-        <section id="exemplos-codigo">
-            <h2>Exemplo de Código Backend</h2>
-            <h3>Troca de Mensagens Frontend/Backend</h3>
+        <section id="protocolo-https" class="reveal">
+            <h2>Protocolo HTTPS</h2>
+            <hr>
             <div class="container">
+                <p>
+                    <strong>HTTPS</strong> é a versão segura do HTTP utilizando TLS/SSL para criptografia.
+                </p>
+                <div class="beneficios-grid">
+                    <div class="beneficio-item">
+                        <span class="beneficio-icon">🔒</span>
+                        <strong>Confidencialidade</strong>
+                    </div>
+                    <div class="beneficio-item">
+                        <span class="beneficio-icon">✅</span>
+                        <strong>Integridade</strong>
+                    </div>
+                    <div class="beneficio-item">
+                        <span class="beneficio-icon">🛡️</span>
+                        <strong>Autenticação</strong>
+                    </div>
+                    <div class="beneficio-item">
+                        <span class="beneficio-icon">4️⃣4️⃣3️⃣</span>
+                        <strong>Porta 443</strong>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-                <div class="exemplo">
-                    <strong>Exemplo: API REST com Express.js</strong><br><br>
-                    <pre><code>
-const express = require('express')
+        <section id="frameworks-node" class="reveal">
+            <h2>Frameworks HTTP para Node.js</h2>
+            <hr>
+            <div class="container">
+                <div class="frameworks-grid">
+                    <div class="framework-card">
+                        <div class="framework-icon">⚡</div>
+                        <h4>Express.js</h4>
+                        <p>Minimalista e flexível</p>
+                    </div>
+                    <div class="framework-card">
+                        <div class="framework-icon">🚀</div>
+                        <h4>Fastify</h4>
+                        <p>Alta performance</p>
+                    </div>
+                    <div class="framework-card">
+                        <div class="framework-icon">🎯</div>
+                        <h4>Koa.js</h4>
+                        <p>Moderno e leve</p>
+                    </div>
+                    <div class="framework-card">
+                        <div class="framework-icon">🏗️</div>
+                        <h4>Nest.js</h4>
+                        <p>Arquitetura robusta</p>
+                    </div>
+                    <div class="framework-card">
+                        <div class="framework-icon">🔧</div>
+                        <h4>Hapi.js</h4>
+                        <p>Configuração rica</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="exemplos-codigo" class="reveal">
+            <h2>Exemplo de Código Backend</h2>
+            <h3>Troca de Mensagens Frontend/Backend com Arduino</h3>
+            <hr>
+            <div class="container">
+                <div class="code-block">
+                    <div class="code-header">📄 API REST com Express.js + Comunicação Serial Arduino</div>
+                    <pre><code>const express = require('express')
 const app = express()
 const { SerialPort, ReadlineParser } = require('serialport')
 const readline = require('readline')
@@ -423,77 +490,34 @@ arduino.on("error", (err)=>{
     console.error('Erro na comunicação serial', err)
 })
 
-parserDados.on("dados", (dad)=>{
+parserDados.on("data", (dad)=>{
     const linha = dad.toString().trim()
-    if(linha > 0){
-        console.log('Arduino: ',linha)
-    }
+    if(linha) console.log('Arduino: ', linha)
 })
 
-const teclado = readline.createInterface({
-    input: process.stdin,
-    output: process.stdout,
-})
+// ... endpoints e controle do teclado</code></pre>
+                </div>
 
-teclado.on("line", (input)=>{
-    const comando2 = input.trim()
-
-    if(comando2 === 's' || comando2 === 'd'){
-        arduino.write(comando2, (err)=>{
-            if(err){
-                console.error("Erro ao enviar comando: ", err)
-            }else{
-                console.log(`Comando: ${comando2} enviado`)
-            }
-        })
-    }else{
-        console.log("Digite 's' ou 'd' ")
-    }
-})
-
-app.get('/ligar', (req,res)=>{
-    arduino.write("s", (err)=>{
-        if(err){
-            return res.status(500).json({ led: "erro"})
-        }
-    })
-    res.status(200).json({ led: "ligado"})
-})
-
-app.get('/desligar', (req,res)=>{
-    arduino.write("d", (err)=>{
-        if(err){
-            return res.status(500).json({ led: "erro"})
-        }
-    })
-    res.status(200).json({ led: "desligado"})
-})
-
-app.listen(PORT, hostname, ()=>{
-    console.log(`Servidor rodando em ${hostname}:${PORT}`)
-})
-                    </code></pre>
-
-                    <h3 style="text-align: center;">Resultado Final na Prática:</h3>
-                    <br>
-                    <div class="video"
-                        style="display: flex; justify-content: center; width: auto; height: 600px; border-radius: 12px; border: 1px solid #d62828; box-shadow: 0 0 10px rgba(214, 40, 40, 0.5);">
-                        <video controls width="auto" height="600" style="border-radius: 12px;">
-                            <source src="../img/ligando_arduino_com_teclado.mp4" type="video/mp4">
-                        </video>
-                    </div>
+                <h3 style="text-align: center; margin-top: 32px;">🎬 Resultado Final na Prática:</h3>
+                <div class="video-container">
+                    <video controls class="demo-video">
+                        <source src="../img/ligando_arduino_com_teclado.mp4" type="video/mp4">
+                        Seu navegador não suporta o elemento de vídeo.
+                    </video>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p> &copy; 2025 - Del Company | Todos os direitos reservados</p>
-        <p>
-            <a href="https://www.instagram.com/elielbrnrd/">Instagram</a>
-            <a href="https://wa.me/5548991013184">Whatsapp</a>
-            <a href="https://github.com/eli-bernardi">GitHub</a>
-        </p>
+    <footer class="reveal">
+        <div class="footer-content">
+            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">📷 Instagram</a>
+                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">💬 Whatsapp</a>
+                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">🐙 GitHub</a>
+            </div>
+        </div>
     </footer>
 </body>
 

@@ -8,11 +8,12 @@
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
     <script src="../js/logica_programacao.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <title>Del Company</title>
+    <title>Del Company - Lógica de Programação</title>
 </head>
 
-<body class="bg-[#111] text-white">
-    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#222] shadow-md">
+<body class="bg-[#0a0a0a] text-white">
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
         <div class="logo text-xl font-bold text-[#d62828]">Del Company</div>
 
         <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
@@ -22,35 +23,38 @@
         </button>
 
         <nav id="menu"
-            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#222] md:bg-transparent md:p-0 p-4 md:rounded-none rounded-b-lg border-b-2 border-[#d62828] md:border-none">
-            <a href="../index.html" class="block py-2 hover:text-[#d62828]">Início</a>
+            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#0a0a0a]/95 md:bg-transparent p-4 md:p-0 rounded-b-lg border-b-2 border-[#d62828] md:border-none">
+            <a href="../index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
 
             <div class="relative group">
-                <a href="../service.html" class="block py-2 hover:text-[#d62828]">Serviços</a>
-                <ul class="hidden group-hover:block absolute bg-[#2c2c2c] rounded min-w-[200px] py-2 shadow-lg z-50">
+                <a href="../service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
+                <ul
+                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
                     <li><a href="../servicos/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Lógica de Programação</a></li>
+                            class="block px-4 py-2 text-[#d62828] transition-colors">Lógica de Programação</a></li>
                     <li><a href="../servicos/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Sistemas de Rede</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
+                    </li>
                     <li><a href="../servicos/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Lógica Computacional</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
+                            Computacional</a></li>
                     <li><a href="../servicos/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Fundamentos de Eletrônica</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
+                            Eletrônica</a></li>
                     <li><a href="../servicos/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded">Tecnologia da Informação</a></li>
-                    <li><a href="../servicos/banco_dados.html" class="block px-4 py-2 hover:bg-[#d62828] rounded">Banco
-                            de Dados</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
+                            Informação</a></li>
+                    <li><a href="../servicos/banco_dados.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
                 </ul>
             </div>
 
-            <a href="../contato.html" class="block py-2 hover:text-[#d62828]">Contato</a>
+            <a href="../contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
         </nav>
     </header>
 
-    <main class="mt-16">
-        <br>
-
-        <section class="hero">
+    <main class="pt-20">
+        <section class="hero reveal">
             <h2>Lógica de Programação</h2>
             <h3>Segmentos | Utilidades | Aplicações</h3>
             <hr>
@@ -62,30 +66,32 @@
                 e cientistas da computação a resolver problemas de forma estruturada.</p>
         </section>
 
-        <section>
+        <section class="reveal">
             <h2>Diferentes Tipos de Linguagens</h2>
             <h3>Exemplificação | Funcionalidade | Utilização</h3>
             <hr>
 
             <div class="linguagens">
                 <div class="linguagem-card">
-                    <img src="../img/c++-png.png" alt="C++">
-                </div>
-
-                <div class="linguagem-card">
-                    <img src="../img/js-png.png" alt="JavaScript">
+                    <img src="../img/c++-png.png" alt="C++" loading="lazy">
+                    <span>C++</span>
                 </div>
                 <div class="linguagem-card">
-                    <img src="../img/pyton-png.png" alt="Python">
+                    <img src="../img/js-png.png" alt="JavaScript" loading="lazy">
+                    <span>JavaScript</span>
                 </div>
                 <div class="linguagem-card">
-                    <img src="../img/php-png.png" alt="PHP">
+                    <img src="../img/pyton-png.png" alt="Python" loading="lazy">
+                    <span>Python</span>
+                </div>
+                <div class="linguagem-card">
+                    <img src="../img/php-png.png" alt="PHP" loading="lazy">
+                    <span>PHP</span>
                 </div>
             </div>
-            <br>
         </section>
 
-        <section>
+        <section class="reveal">
             <div id="interpretada">
                 <h2>Linguagem de Programação Interpretada</h2>
                 <h3>Exemplificação | Funcionalidade | Utilização</h3>
@@ -94,36 +100,28 @@
             <div>
                 <p>
                     Uma <strong>linguagem de programação interpretada</strong> é aquela em que o código-fonte é
-                    executado
-                    diretamente por um <em>interpretador</em>, sem precisar ser convertido antes em um arquivo
-                    executável.
-                    Isso significa que o programa é lido e executado linha por linha, o que facilita os testes e o
-                    desenvolvimento,
-                    mas pode ser um pouco mais lento que uma linguagem compilada.
-                </p><br>
+                    executado diretamente por um <em>interpretador</em>, sem precisar ser convertido antes em um arquivo
+                    executável. Isso significa que o programa é lido e executado linha por linha, o que facilita os
+                    testes e o desenvolvimento, mas pode ser um pouco mais lento que uma linguagem compilada.
+                </p>
+                <br>
                 <h2>Exemplos de Linguagens Interpretadas</h2>
 
-                <div class="exemplo">
-                    <h3>🔹 Python</h3>
-                    <code>
-                        print("Olá, mundo!")
-                    </code>
+                <div class="code-block">
+                    <div class="code-header">🔹 Python</div>
+                    <pre><code>print("Olá, mundo!")</code></pre>
                 </div>
 
-                <div class="exemplo">
-                    <h3>🔹 JavaScript</h3>
-                    <code>
-                        console.log("Olá, mundo!");
-                    </code>
+                <div class="code-block">
+                    <div class="code-header">🔹 JavaScript</div>
+                    <pre><code>console.log("Olá, mundo!");</code></pre>
                 </div>
 
-                <div class="exemplo">
-                    <h3>🔹 PHP</h3>
-                    <code>
-                        &lt;?php<br>
-                        echo "Olá, mundo!";<br>
-                        ?&gt;
-                    </code>
+                <div class="code-block">
+                    <div class="code-header">🔹 PHP</div>
+                    <pre><code>&lt;?php
+echo "Olá, mundo!";
+?&gt;</code></pre>
                 </div>
 
                 <p class="centralizar">
@@ -132,7 +130,7 @@
             </div>
         </section>
 
-        <section>
+        <section class="reveal">
             <div id="compilada">
                 <h2>Linguagem de Programação Compilada</h2>
                 <h3>Exemplificação | Funcionalidade | Utilização</h3>
@@ -140,53 +138,46 @@
             <hr>
             <div>
                 <p>
-                    Uma <strong>linguagem de programação compilada</strong> é aquela em que o código-fonte
-                    precisa ser convertido (ou "compilado") para código de máquina antes de ser executado.
-                    Essa conversão é feita por um programa chamado <em>compilador</em>.
+                    Uma <strong>linguagem de programação compilada</strong> é aquela em que o código-fonte precisa ser
+                    convertido (ou "compilado") para código de máquina antes de ser executado. Essa conversão é feita
+                    por um programa chamado <em>compilador</em>.
                 </p>
                 <br>
                 <h2>Como funciona?</h2>
                 <p>
-                    O compilador analisa todo o código-fonte de uma vez e gera um arquivo executável,
-                    que pode ser rodado diretamente pelo sistema operacional.
-                    Esse processo costuma deixar o programa mais rápido e eficiente, mas torna o ciclo
-                    de testes e correções um pouco mais demorado.
+                    O compilador analisa todo o código-fonte de uma vez e gera um arquivo executável, que pode ser
+                    rodado diretamente pelo sistema operacional. Esse processo costuma deixar o programa mais rápido e
+                    eficiente, mas torna o ciclo de testes e correções um pouco mais demorado.
                 </p>
                 <br>
                 <h2>Exemplos de Linguagens Compiladas</h2>
 
-                <div class="exemplo">
-                    <h3>🔹C</h3>
-                    <code>
-                        #include &lt;stdio.h&gt;<br>
-                        int main() {<br>
-                        &nbsp;&nbsp;printf("Olá, mundo!");<br>
-                        &nbsp;&nbsp;return 0;<br>
-                        }
-                    </code>
+                <div class="code-block">
+                    <div class="code-header">🔹 C</div>
+                    <pre><code>#include &lt;stdio.h&gt;
+int main() {
+    printf("Olá, mundo!");
+    return 0;
+}</code></pre>
                 </div>
 
-                <div class="exemplo">
-                    <h3>🔹C++</h3>
-                    <code>
-                        #include &lt;iostream&gt;<br>
-                        using namespace std;<br>
-                        int main() {<br>
-                        &nbsp;&nbsp;cout &lt;&lt; "Olá, mundo!";<br>
-                        &nbsp;&nbsp;return 0;<br>
-                        }
-                    </code>
+                <div class="code-block">
+                    <div class="code-header">🔹 C++</div>
+                    <pre><code>#include &lt;iostream&gt;
+using namespace std;
+int main() {
+    cout &lt;&lt; "Olá, mundo!";
+    return 0;
+}</code></pre>
                 </div>
 
-                <div class="exemplo">
-                    <h3>🔹Go (Golang)</h3>
-                    <code>
-                        package main<br>
-                        import "fmt"<br>
-                        func main() {<br>
-                        &nbsp;&nbsp;fmt.Println("Olá, mundo!")<br>
-                        }
-                    </code>
+                <div class="code-block">
+                    <div class="code-header">🔹 Go (Golang)</div>
+                    <pre><code>package main
+import "fmt"
+func main() {
+    fmt.Println("Olá, mundo!")
+}</code></pre>
                 </div>
 
                 <p class="centralizar">
@@ -195,14 +186,14 @@
             </div>
         </section>
 
-        <section>
+        <section class="reveal">
             <div id="html-css">
                 <h2>HTML e CSS</h2>
                 <h3>Exemplificação | Funcionalidade | Utilização</h3>
             </div>
             <hr>
             <div>
-                <section class="info-html-css">
+                <div class="info-html-css">
                     <div class="bloco html">
                         <h2>HTML</h2>
                         <p>O HTML (HyperText Markup Language) é a base de toda página web. Ele é responsável por
@@ -216,18 +207,18 @@
                             fontes, espaçamentos, tamanhos e até animações. Com o CSS, transformamos uma estrutura
                             simples em uma interface bonita e moderna, deixando o site com estilo e personalidade.</p>
                     </div>
-                </section>
+                </div>
             </div>
         </section>
 
-        <section>
+        <section class="reveal">
             <div id="ide">
                 <h2>Integrated Development Environment (Ambiente de Desenvolvimento Integrado)</h2>
                 <h3>Exemplificação | Funcionalidade | Utilização</h3>
             </div>
             <hr>
             <div>
-                <section class="info-ide">
+                <div class="info-ide">
                     <div>
                         <h2>O que é uma IDE?</h2>
                         <p>Uma IDE (Integrated Development Environment), ou Ambiente de Desenvolvimento Integrado, é um
@@ -239,7 +230,7 @@
                     </div>
 
                     <div class="exemplos">
-                        <div class="bloco exemplo">
+                        <div class="bloco exemplo-ide">
                             <h3>Visual Studio Code</h3>
                             <p>O VS Code é uma das IDEs mais populares do mundo. Desenvolvido pela Microsoft, ele é
                                 leve, personalizável e compatível com diversas linguagens. Conta com milhares de
@@ -247,7 +238,7 @@
                                 dinâmico.</p>
                         </div>
 
-                        <div class="bloco exemplo">
+                        <div class="bloco exemplo-ide">
                             <h3>IntelliJ IDEA</h3>
                             <p>O IntelliJ IDEA é uma IDE voltada especialmente para Java, mas também suporta várias
                                 outras linguagens. Conhecida por sua inteligência na sugestão de códigos e ferramentas
@@ -255,139 +246,136 @@
                                 produtividade e robustez.</p>
                         </div>
                     </div>
-                </section>
+                </div>
             </div>
         </section>
 
-        <section>
+        <section class="reveal">
             <div id="conceitos">
                 <h2>Variáveis | Condicionais | Laços de Repetição | Funções | Operadores Lógicos</h2>
                 <h3>Exemplificação | Funcionalidade | Utilização</h3>
             </div>
             <hr>
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Nome</th>
-                        <th>Função</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Variáveis</td>
-                        <td>Servem para armazenar informações temporárias, como números, textos ou resultados de
-                            cálculos, que serão usadas no programa.</td>
-                    </tr>
-                    <tr>
-                        <td>Condicionais</td>
-                        <td>Permitem executar ações diferentes dependendo de uma condição (ex: if, else, switch).</td>
-                    </tr>
-                    <tr>
-                        <td>Laços de Repetição</td>
-                        <td>Repetem um trecho de código várias vezes, de acordo com uma condição (ex: for, while,
-                            do...while).</td>
-                    </tr>
-                    <tr>
-                        <td>Funções</td>
-                        <td>Agrupam um conjunto de comandos que podem ser reutilizados várias vezes ao longo do
-                            programa.</td>
-                    </tr>
-                    <tr>
-                        <td>Operadores Lógicos</td>
-                        <td>São usados para comparar valores e tomar decisões lógicas</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Função</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Variáveis</strong></td>
+                            <td>Servem para armazenar informações temporárias, como números, textos ou resultados de
+                                cálculos, que serão usadas no programa.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Condicionais</strong></td>
+                            <td>Permitem executar ações diferentes dependendo de uma condição (ex: if, else, switch).
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Laços de Repetição</strong></td>
+                            <td>Repetem um trecho de código várias vezes, de acordo com uma condição (ex: for, while,
+                                do...while).</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Funções</strong></td>
+                            <td>Agrupam um conjunto de comandos que podem ser reutilizados várias vezes ao longo do
+                                programa.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Operadores Lógicos</strong></td>
+                            <td>São usados para comparar valores e tomar decisões lógicas</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </section>
 
-        <section>
+        <section class="reveal">
             <div class="programas">
                 <h2>Programas Criados pela Nossa Equipe</h2>
                 <h3>Exemplificação | Funcionalidade | Utilização</h3>
                 <hr>
-                
-                <div class="bloco-programas">
-                    <div class="ordem-crescente-decresente">
+
+                <div class="container-blocos">
+                    <div class="bloco-programas">
                         <h3>Questão 5: Ordenação com Bubble Sort</h3>
-                        <p>Ordenar 20 números de forma <strong>crescente</strong> e <strong>decrescente</strong> usando Bubble Sort</p>
-                        <button onclick="gerarAleatorio1()">Gerar Aleatórios (1-100)</button>
-                        <button onclick="crescente()">Ordem Crescente</button>
-                        <button onclick="decrescente()">Ordem Decrescente</button>
+                        <p>Ordenar 20 números de forma <strong>crescente</strong> e <strong>decrescente</strong> usando
+                            Bubble Sort</p>
+                        <button id="btn-gerar-aleatorio">Gerar Aleatórios (1-100)</button>
+                        <button id="btn-crescente">Ordem Crescente</button>
+                        <button id="btn-decrescente">Ordem Decrescente</button>
                         <div id="res4" class="resultado"></div>
                         <div id="res5" class="resultado"></div>
                     </div>
-                </div>
 
-                <div class="bloco-programas">
-                    <div class="ordem-bubleSort">
+                    <div class="bloco-programas">
                         <h3>Questão 6: Bubble Sort com Aleatórios</h3>
                         <p>Ordenar 10 números aleatórios (1-20) com <strong>BubbleSort</strong></p>
-                        <button onclick="principal6()">Gerar e Ordenar</button>
+                        <button id="btn-bubble-sort">Gerar e Ordenar</button>
                         <div id="res6" class="resultado"></div>
                     </div>
-                </div>
 
-                <!-- QUESTÃO 7 - Soma de Array -->
-                <div class="bloco-programas">
-                    <div class="ordem-array">
+                    <div class="bloco-programas">
                         <h3>Questão 7: Soma de Array</h3>
                         <p>Somar 10 números aleatórios (1-220)</p>
-                        <button onclick="principal7()">Gerar e Somar</button>
+                        <button id="btn-soma-array">Gerar e Somar</button>
                         <div id="res7" class="resultado"></div>
                     </div>
-                </div>
 
-                <div class="bloco-programas">
-                    <div class="matriz-3x3">
+                    <div class="bloco-programas">
                         <h3>Questão 8: Matriz 3x3 Aleatória</h3>
                         <p>Gerar uma <strong>matriz 3x3</strong> com números aleatórios (1-20)</p>
-                        <button onclick="matriz8()">Gerar Matriz</button>
+                        <button id="btn-matriz">Gerar Matriz</button>
                         <div id="res8" class="resultado"></div>
                     </div>
-                </div>
-                <div class="bloco-programas">
-                    <div class="calculo-imc">
+
+                    <div class="bloco-programas">
                         <h3>Questão 9: Cálculo de IMC</h3>
                         <p>Calcular o <strong>IMC</strong> (Índice de Massa Corporal)</p>
                         <label for="peso">Peso (kg):</label>
-                        <input type="number" id="peso" step="0.1" placeholder="Ex: 70.5"><br>
+                        <input type="number" id="peso" step="0.1" placeholder="Ex: 70.5">
                         <label for="altura">Altura (m):</label>
-                        <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75"><br><br>
-                        <button onclick="principal9()">Calcular IMC</button>
+                        <input type="number" id="altura" step="0.01" placeholder="Ex: 1.75">
+                        <button id="btn-imc">Calcular IMC</button>
                         <div id="res9" class="resultado"></div>
                     </div>
-                </div>
-                <div class="bloco-programas">
-                    <div class="conversao-temperatura">
+
+                    <div class="bloco-programas">
                         <h3>Questão 10: Conversão de Temperatura</h3>
                         <p>Converter <strong>Celsius</strong> para <strong>Fahrenheit</strong></p>
                         <label for="celsius">Temperatura em Celsius (°C):</label>
-                        <input type="number" id="celsius" placeholder="Ex: 25"><br><br>
-                        <button onclick="principal10()">Converter para Fahrenheit</button>
+                        <input type="number" id="celsius" placeholder="Ex: 25">
+                        <button id="btn-temperatura">Converter para Fahrenheit</button>
                         <div id="res10" class="resultado"></div>
                     </div>
-                </div>
 
-                <div class="bloco-programas">
-                    <div class="busca-linear">
+                    <div class="bloco-programas">
                         <h3>Questão 11: Busca Linear</h3>
                         <p>Encontrar o <strong>menor valor</strong> em um array aleatório</p>
-                        <button onclick="buscaLinear11()">Executar Busca Linear</button>
+                        <button id="btn-busca-linear">Executar Busca Linear</button>
                         <div id="res11" class="resultado"></div>
                     </div>
                 </div>
 
-                <hr>
-                <button onclick="limparResultados()" class="btn-limpar">Limpar Todos os Resultados</button>
+                <button id="btn-limpar" class="btn-limpar">Limpar Todos os Resultados</button>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-        <p>
-            <a href="https://www.instagram.com/elielbrnrd/">Instagram</a>
-            <a href="https://wa.me/5548991013184">Whatsapp</a>
-            <a href="https://github.com/eli-bernardi">GitHub</a>
-        </p>
+    <footer class="reveal">
+        <div class="footer-content">
+            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">📷 Instagram</a>
+                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">💬 Whatsapp</a>
+                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">🐙 GitHub</a>
+            </div>
+        </div>
     </footer>
+</body>
+
+</html>

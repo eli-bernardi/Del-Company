@@ -6,25 +6,32 @@
 
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: #000000;
+    background: #0a0a0a;
     color: #ffffff;
     line-height: 1.6;
 }
 
+/* ========== HEADER ========== */
 header {
-    background: rgba(0, 0, 0, 0.9) !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 1rem 10rem !important;
+    transition: padding 0.3s ease;
 }
 
 .logo {
     font-size: 24px !important;
-    font-weight: bold;
-    background: linear-gradient(135deg, #ff6b6b 100%);
+    font-weight: 700;
+    background: linear-gradient(135deg, #ff6b6b, #d62828);
+    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center !important;
+    letter-spacing: 1px;
 }
 
+/* ========== MAIN ========== */
 main {
     margin-top: 80px;
 }
@@ -33,9 +40,10 @@ section {
     padding: 96px 32px;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* ========== TYPOGRAPHY ========== */
 h2 {
     font-size: 32px !important;
     margin-bottom: 16px;
@@ -43,6 +51,7 @@ h2 {
     position: relative;
     text-align: center;
     font-weight: bold;
+    letter-spacing: -0.5px;
 }
 
 h3 {
@@ -54,11 +63,19 @@ h3 {
 }
 
 section hr {
-    width: 1140px;
-    height: 2px;
-    background: linear-gradient(135deg, #ff6b6b 100%);
+    width: 100%;
+    max-width: 300px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d62828, transparent);
     border: none;
     margin: 32px auto;
+    opacity: 0.6;
+    transition: all 0.3s ease;
+}
+
+section:hover hr {
+    opacity: 1;
+    max-width: 400px;
 }
 
 p {
@@ -66,6 +83,7 @@ p {
     color: #888;
     margin: 16px;
     line-height: 1.8;
+    text-align: center;
 }
 
 strong {
@@ -86,12 +104,18 @@ li {
     line-height: 1.6;
 }
 
+/* ========== TABELA ========== */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 32px 0;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
-    margin: 32px 0;
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
     overflow: hidden;
 }
@@ -106,20 +130,22 @@ th {
     font-size: 20px;
     font-weight: 600;
     color: #d62828;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 td {
     padding: 20px;
     font-size: 18px;
     color: #888;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background 0.3s;
 }
 
-tr:hover {
+tr:hover td {
     background: rgba(255, 255, 255, 0.02);
 }
 
+/* ========== SÍMBOLOS DO FLUXOGRAMA ========== */
 .symbol {
     width: 80px;
     height: 60px;
@@ -131,26 +157,31 @@ tr:hover {
     font-size: 14px;
     border: 2px solid #d62828;
     background: rgba(214, 40, 40, 0.1);
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
 }
 
 .symbol:hover {
     background: rgba(214, 40, 40, 0.2);
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: #ff6b6b;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(214, 40, 40, 0.3);
 }
 
 .symbol.terminador {
     border-radius: 50%;
+    width: 70px;
+    height: 70px;
 }
 
 .symbol.processo {
-    border-radius: 4px;
+    border-radius: 8px;
 }
 
 .symbol.decisao {
     transform: rotate(45deg);
     width: 70px;
     height: 70px;
+    border-radius: 4px;
 }
 
 .symbol.decisao span {
@@ -168,53 +199,73 @@ tr:hover {
 .symbol.fluxo::after {
     content: '';
     position: absolute;
-    right: -8px;
-    top: -4px;
+    right: -10px;
+    top: -6px;
     width: 0;
     height: 0;
-    border-left: 8px solid #d62828;
-    border-top: 6px solid transparent;
-    border-bottom: 6px solid transparent;
+    border-left: 10px solid #d62828;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
 }
 
 .symbol.entrada-saida {
     border-radius: 0;
+    transform: skewX(-15deg);
 }
 
+.symbol.entrada-saida span {
+    transform: skewX(15deg);
+}
+
+/* ========== FLUXOGRAMAS ========== */
 .fluxograma-img {
     text-align: center;
     margin: 48px 0;
 }
 
-.fluxograma-img img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+.fluxograma-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
 }
 
-.fluxograma-img img:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+.fluxograma-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+    cursor: pointer;
+}
+
+.fluxograma-grid img:hover {
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: scale(1.03);
     box-shadow: 0 15px 40px rgba(214, 40, 40, 0.2);
 }
 
+/* ========== BLOCOS CONSTANTE/VARIÁVEL ========== */
 .blocos {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 32px;
     margin: 48px 0;
 }
 
 .bloco {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 40px;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
 }
 
 .bloco:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .bloco.constante {
@@ -239,65 +290,137 @@ tr:hover {
     color: #d62828;
 }
 
-.portugol-inicio-exe {
+.bloco p {
+    font-size: 18px;
+    margin: 8px 0;
+}
+
+/* ========== GALERIA DE IMAGENS ========== */
+.portugol-gallery {
     text-align: center;
     margin: 32px 0;
 }
 
-.portugol-inicio-exe img {
-    max-width: 50%;
+.gallery-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.gallery-row img {
+    max-width: 45%;
     height: auto;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.4s ease;
-    display: inline-block;
+    cursor: pointer;
 }
 
-.imagens-funcoes-portugol,
-.imagens-vetores-portugol {
-    text-align: center;
-    margin: 32px 0;
-}
-
-.imagens-funcoes-portugol img,
-.imagens-vetores-portugol img {
+.gallery-row.three-col img {
     max-width: 30%;
-    height: auto;
-    border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 16px;
-    transition: all 0.4s ease;
-    display: inline-block;
 }
 
-.portugol-inicio-exe img:hover,
-.imagens-funcoes-portugol img:hover,
-.imagens-vetores-portugol img:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+.gallery-row img:hover {
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: scale(1.05);
     box-shadow: 0 15px 40px rgba(214, 40, 40, 0.2);
 }
 
+/* ========== FOOTER ========== */
 footer {
-    background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 48px 32px;
     text-align: center;
 }
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 footer p {
     color: #666;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     font-size: 18px;
 }
 
-footer a {
-    color: #888;
-    text-decoration: none;
-    margin: 0 16px;
-    font-size: 16px;
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
-footer a:hover {
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.footer-links a:hover {
     color: #d62828;
+    background: rgba(214, 40, 40, 0.1);
+}
+
+/* ========== ANIMAÇÕES ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2rem !important;
+    }
+
+    section {
+        padding: 64px 20px;
+    }
+
+    h2 {
+        font-size: 28px !important;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .blocos {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-row img {
+        max-width: 90% !important;
+    }
+
+    .gallery-row.three-col img {
+        max-width: 90% !important;
+    }
+
+    .fluxograma-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .symbol.terminador {
+        width: 55px;
+        height: 55px;
+    }
+
+    .symbol.decisao {
+        width: 55px;
+        height: 55px;
+    }
 }

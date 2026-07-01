@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/service.css">
+    <link rel="stylesheet" href="./css/service.css">
     <link rel="shortcut icon" href="../img/dell.png" type="image/png">
-    <script src="../js/service.js" defer></script>
+    <script src="./js/service.js" defer></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Del Company - Serviços</title>
 </head>
 
-<body class="bg-[#111] text-white">
-    <header class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#222] shadow-md">
+<body class="bg-[#0a0a0a] text-white">
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
         <div class="logo text-xl font-bold text-[#d62828]">Del Company</div>
         <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
             <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
@@ -20,11 +21,12 @@
             </svg>
         </button>
         <nav id="menu"
-            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#222] md:bg-transparent md:p-0 p-4 md:rounded-none rounded-b-lg border-b-2 border-[#d62828] md:border-none">
+            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#0a0a0a]/95 md:bg-transparent p-4 md:p-0 rounded-b-lg border-b-2 border-[#d62828] md:border-none">
             <a href="../index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
             <div class="relative group">
                 <a href="../service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-                <ul class="hidden group-hover:block absolute bg-[#2c2c2c] rounded min-w-[200px] py-2 shadow-lg z-50">
+                <ul
+                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
                     <li><a href="../servicos/logica_programacao.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
                             Programação</a></li>
@@ -40,44 +42,61 @@
                     <li><a href="../servicos/tecnologia_informacao.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
                             Informação</a></li>
-                    <li><a href="../servicos/banco_dados.html" class="block px-4 py-2 hover:bg-[#d62828] rounded">Banco
-                            de Dados</a></li>
+                    <li><a href="../servicos/banco_dados.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
                 </ul>
             </div>
             <a href="../contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
         </nav>
     </header>
-    <main class="pt-28">
-        <section class="hero animate-fade-in">
+
+    <main class="pt-20">
+        <section class="hero reveal">
             <h2>Transformando Ideias em Código</h2>
             <p>Desenvolvimento de sites, sistemas e soluções digitais sob medida para você e sua empresa.</p>
-            <button><a href="./contato.html">Entre em contato</a></button>
+            <button class="btn-primary">
+                <a href="./contato.html">Entre em contato</a>
+            </button>
         </section>
 
-        <section id="serviços" class="animate-fade-in">
+        <section id="servicos-lista" class="reveal">
             <h2>Trabalhamos com:</h2>
             <article>
-                <p>
-                    ➤ <a href="../servicos/fundamentos_eletronica.html">Fundamentos de Eletrônica</a><br>
-                    ➤ <a href="../servicos/fundamentos_rede.html">Fundamentos de Rede</a><br>
-                    ➤ <a href="../servicos/tecnologia_informacao.html">Tecnologia da Informação</a><br>
-                    ➤ <a href="../servicos/logica_programacao.html">Lógica de Programação</a><br>
-                    ➤ <a href="../servicos/logica_computacional.html">Lógica Computacional</a><br>
-                    ➤ <a href="../servicos/banco_dados.html">Banco de Dados</a><br>
-                </p>
+                <div class="servicos-links">
+                    <a href="../servicos/fundamentos_eletronica.html" class="servico-item-link">
+                        <span class="servico-emoji">⚡</span> Fundamentos de Eletrônica
+                    </a>
+                    <a href="../servicos/fundamentos_rede.html" class="servico-item-link">
+                        <span class="servico-emoji">🌐</span> Fundamentos de Rede
+                    </a>
+                    <a href="../servicos/tecnologia_informacao.html" class="servico-item-link">
+                        <span class="servico-emoji">💻</span> Tecnologia da Informação
+                    </a>
+                    <a href="../servicos/logica_programacao.html" class="servico-item-link">
+                        <span class="servico-emoji">👨‍💻</span> Lógica de Programação
+                    </a>
+                    <a href="../servicos/logica_computacional.html" class="servico-item-link">
+                        <span class="servico-emoji">🧮</span> Lógica Computacional
+                    </a>
+                    <a href="../servicos/banco_dados.html" class="servico-item-link">
+                        <span class="servico-emoji">🗃️</span> Banco de Dados
+                    </a>
+                </div>
             </article>
         </section>
 
-        <section class="meus-sites animate-fade-in">
+        <section class="meus-sites reveal">
             <h2>Meus Projetos</h2>
             <p class="section-subtitle">Conheça alguns dos sites e sistemas que desenvolvi</p>
 
             <div class="sites-grid">
                 <div class="site-card">
                     <div class="site-image">
-                        <img src="./img/del_compay.png" alt="Del Company - Site Institucional" />
+                        <img src="./img/del_compay.png" alt="Del Company - Site Institucional" loading="lazy" />
                         <div class="site-overlay">
-                            <a href="https://del-company.vercel.app/" class="site-link" target="_blank">Visitar Site</a>
+                            <a href="https://del-company.vercel.app/" class="site-link" target="_blank" rel="noopener">
+                                <span>🔗</span> Visitar Site
+                            </a>
                         </div>
                     </div>
                     <div class="site-content">
@@ -94,10 +113,13 @@
 
                 <div class="site-card">
                     <div class="site-image">
-                        <img src="./img/site_switch_case.png" alt="Postos de Gasolina - Sistema Switch Case" />
+                        <img src="./img/site_switch_case.png" alt="Postos de Gasolina - Sistema Switch Case"
+                            loading="lazy" />
                         <div class="site-overlay">
-                            <a href="https://gasolina-steel.vercel.app/" 'class="site-link" target="_blank">Visitar
-                                Site</a>
+                            <a href="https://gasolina-steel.vercel.app/" class="site-link" target="_blank"
+                                rel="noopener">
+                                <span>🔗</span> Visitar Site
+                            </a>
                         </div>
                     </div>
                     <div class="site-content">
@@ -115,16 +137,17 @@
 
                 <div class="site-card">
                     <div class="site-image">
-                        <img src="./img/site_voltaire.png" alt="Estudo sobre Voltaire" />
+                        <img src="./img/site_voltaire.png" alt="Estudo sobre Voltaire" loading="lazy" />
                         <div class="site-overlay">
-                            <a href="https://site-humanas.vercel.app/" class="site-link" target="_blank">Visitar
-                                Site</a>
+                            <a href="https://site-humanas.vercel.app/" class="site-link" target="_blank" rel="noopener">
+                                <span>🔗</span> Visitar Site
+                            </a>
                         </div>
                     </div>
                     <div class="site-content">
                         <h3>Estudo sobre o Voltaire</h3>
                         <p class="site-description">Site desenvolvido para a facilitação nos estudos sobre a vida de
-                            Voltaire, visando conhecimento sobre sua carreia pessoal e profissional. </p>
+                            Voltaire, visando conhecimento sobre sua carreira pessoal e profissional.</p>
                         <div class="site-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -135,17 +158,18 @@
 
                 <div class="site-card">
                     <div class="site-image">
-                        <img src="./img/site_enem.png" alt="Site sobre o ENEM" />
+                        <img src="./img/site_enem.png" alt="Site sobre o ENEM" loading="lazy" />
                         <div class="site-overlay">
-                            <a href="https://site-enem-iota.vercel.app/" class="site-link" target="_blank">Visitar
-                                Site</a>
+                            <a href="https://site-enem-iota.vercel.app/" class="site-link" target="_blank"
+                                rel="noopener">
+                                <span>🔗</span> Visitar Site
+                            </a>
                         </div>
                     </div>
                     <div class="site-content">
                         <h3>Site sobre o ENEM</h3>
                         <p class="site-description">Site visando apresentar os principais temas para a redação do ENEM.
-                            Onde apresentamos um pouco de sua estrutura, o que é o ENEM, etc.
-                        </p>
+                            Onde apresentamos um pouco de sua estrutura, o que é o ENEM, etc.</p>
                         <div class="site-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -156,9 +180,11 @@
 
                 <div class="site-card">
                     <div class="site-image">
-                        <img src="./img/site_namorados.png" alt="Site para Dia dos Namorados" />
+                        <img src="./img/site_namorados.png" alt="Site para Dia dos Namorados" loading="lazy" />
                         <div class="site-overlay">
-                            <a href="https://eliel-bia.vercel.app/" class="site-link" target="_blank">Visitar Site</a>
+                            <a href="https://eliel-bia.vercel.app/" class="site-link" target="_blank" rel="noopener">
+                                <span>🔗</span> Visitar Site
+                            </a>
                         </div>
                     </div>
                     <div class="site-content">
@@ -175,15 +201,18 @@
 
                 <div class="site-card">
                     <div class="site-image">
-                        <img src="./img/producao_semanal.png" alt="Introdução à Gráficos" />
+                        <img src="./img/producao_semanal.png" alt="Introdução à Gráficos" loading="lazy" />
                         <div class="site-overlay">
-                            <a href="https://excel-dowload.vercel.app/" class="site-link" target="_blank">Visitar
-                                Site</a>
+                            <a href="https://excel-dowload.vercel.app/" class="site-link" target="_blank"
+                                rel="noopener">
+                                <span>🔗</span> Visitar Site
+                            </a>
                         </div>
                     </div>
                     <div class="site-content">
                         <h3>Introdução à Gráfico</h3>
-                        <p class="site-description">Programa para inserção de dados por meio do teclado, com opção de dowload do gráfico</p>
+                        <p class="site-description">Programa para inserção de dados por meio do teclado, com opção de
+                            download do gráfico</p>
                         <div class="site-tech">
                             <span class="tech-tag">HTML</span>
                             <span class="tech-tag">CSS</span>
@@ -194,37 +223,44 @@
             </div>
         </section>
 
-        <section id="conteudos" class="animate-fade-in">
+        <section id="conteudos" class="reveal">
             <h2>Nossos Serviços</h2>
-            <div class="carrossel">
-                <div class="carrossel-track">
-                    <div class="carrossel-item">
-                        <img src="./img/tecnologia_informacao.png" alt="Tecnologia da Informação" />
-                        <p>Tecnologia da Informação: Computadores, softwares e redes para processar informações.</p>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="./img/fundamento_rede.png" alt="Fundamentos de Rede" />
-                        <p>Fundamentos de Rede: Conceitos básicos de conexão e troca de informações.</p>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="./img/logica_de_computaria.png" alt="Lógica Computacional" />
-                        <p>Lógica Computacional: Organizando ideias em passos lógicos para algoritmos.</p>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="./img/logica-programacao.png" alt="Lógica de Programação" />
-                        <p>Lógica de Programação: Transformando ideias em código claro e executável.</p>
-                    </div>
-                    <div class="carrossel-item">
-                        <img src="./img/fundamento-eletronica.png" alt="Fundamentos de Eletrônica" />
-                        <p>Fundamentos de Eletrônica: Entendendo resistores, capacitores e circuitos.</p>
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="carrossel-track" id="carrosselTrack">
+                        <div class="carrossel-item">
+                            <img src="./img/tecnologia_informacao.png" alt="Tecnologia da Informação" loading="lazy" />
+                            <h4>Tecnologia da Informação</h4>
+                            <p>Computadores, softwares e redes para processar informações.</p>
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="./img/fundamento_rede.png" alt="Fundamentos de Rede" loading="lazy" />
+                            <h4>Fundamentos de Rede</h4>
+                            <p>Conceitos básicos de conexão e troca de informações.</p>
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="./img/logica_de_computaria.png" alt="Lógica Computacional" loading="lazy" />
+                            <h4>Lógica Computacional</h4>
+                            <p>Organizando ideias em passos lógicos para algoritmos.</p>
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="./img/logica-programacao.png" alt="Lógica de Programação" loading="lazy" />
+                            <h4>Lógica de Programação</h4>
+                            <p>Transformando ideias em código claro e executável.</p>
+                        </div>
+                        <div class="carrossel-item">
+                            <img src="./img/fundamento-eletronica.png" alt="Fundamentos de Eletrônica" loading="lazy" />
+                            <h4>Fundamentos de Eletrônica</h4>
+                            <p>Entendendo resistores, capacitores e circuitos.</p>
+                        </div>
                     </div>
                 </div>
-                <button class="carrossel-btn prev">&lt;</button>
-                <button class="carrossel-btn next">&gt;</button>
+                <button class="carrossel-btn prev" id="prevBtn" aria-label="Anterior">❮</button>
+                <button class="carrossel-btn next" id="nextBtn" aria-label="Próximo">❯</button>
             </div>
         </section>
 
-        <section class="servicos-detalhados animate-fade-in">
+        <section class="servicos-detalhados reveal">
             <h2>Serviços Detalhados</h2>
             <div class="servicos-grid">
                 <div class="servico-card">
@@ -251,7 +287,7 @@
             </div>
         </section>
 
-        <section class="beneficios animate-fade-in">
+        <section class="beneficios reveal">
             <h2>Por que escolher nossos serviços?</h2>
             <div class="beneficios-grid">
                 <div class="beneficio-item">
@@ -278,13 +314,21 @@
         </section>
     </main>
 
-    <footer>
-        <p> &copy; 2025 - Del Company | Todos os direitos reservados</p>
-        <p>
-            <a href=" https://www.instagram.com/elielbrnrd/">Instagram</a>
-            <a href="https://wa.me/5548991013184">Whatsapp</a>
-            <a href="https://github.com/eli-bernardi">GitHub</a>
-        </p>
+    <footer class="reveal">
+        <div class="footer-content">
+            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
+                    <span>📷</span> Instagram
+                </a>
+                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
+                    <span>💬</span> Whatsapp
+                </a>
+                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
+                    <span>🐙</span> GitHub
+                </a>
+            </div>
+        </div>
     </footer>
 
 </body>

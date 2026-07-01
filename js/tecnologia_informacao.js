@@ -27,43 +27,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { root: null, threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
     revealElements.forEach(el => observer.observe(el));
 
-    // ---- CARROSSEL ----
-    const track = document.getElementById('carrosselTrack');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
-    if (track && prevBtn && nextBtn) {
-        let currentIndex = 0;
-        let itemsPerView = 3;
-        const updateItemsPerView = () => {
-            if (window.innerWidth <= 768) itemsPerView = 1;
-            else if (window.innerWidth <= 1024) itemsPerView = 2;
-            else itemsPerView = 3;
-        };
-        const updateCarrossel = () => {
-            const itemWidth = track.querySelector('.carrossel-item').offsetWidth;
-            const gap = 32;
-            track.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
-        };
-        const moveNext = () => {
-            const maxIndex = track.children.length - itemsPerView;
-            currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
-            updateCarrossel();
-        };
-        const movePrev = () => {
-            currentIndex = currentIndex > 0 ? currentIndex - 1 : track.children.length - itemsPerView;
-            updateCarrossel();
-        };
-        nextBtn.addEventListener('click', moveNext);
-        prevBtn.addEventListener('click', movePrev);
-        window.addEventListener('resize', () => {
-            updateItemsPerView();
-            updateCarrossel();
-        });
-        updateItemsPerView();
-    }
-
     // ---- EFEITO DE BRILHO DO MOUSE (VERMELHO) ----
-    const cards = document.querySelectorAll('.site-card, .servico-card, .beneficio-item, .carrossel-item, .servico-item-link');
+    const cards = document.querySelectorAll('.linguagem-card, .bloco-componentes, .beneficio-item, .iframe-container iframe');
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();

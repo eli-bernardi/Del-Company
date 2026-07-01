@@ -6,25 +6,32 @@
 
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: #000000;
+    background: #0a0a0a;
     color: #ffffff;
     line-height: 1.6;
 }
 
+/* ========== HEADER ========== */
 header {
-    background: rgba(0, 0, 0, 0.9) !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.9) !important;
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
     padding: 1rem 10rem !important;
+    transition: padding 0.3s ease;
 }
 
 .logo {
     font-size: 24px !important;
-    font-weight: bold;
-    background: linear-gradient(135deg, #ff6b6b 100%);
+    font-weight: 700;
+    background: linear-gradient(135deg, #ff6b6b, #d62828);
+    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center !important;
+    letter-spacing: 1px;
 }
 
+/* ========== MAIN ========== */
 main {
     margin-top: 80px;
 }
@@ -33,9 +40,10 @@ section {
     padding: 96px 32px;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* ========== TYPOGRAPHY ========== */
 h2 {
     font-size: 32px !important;
     margin-bottom: 16px;
@@ -43,6 +51,7 @@ h2 {
     position: relative;
     text-align: center;
     font-weight: bold;
+    letter-spacing: -0.5px;
 }
 
 h3 {
@@ -54,228 +63,27 @@ h3 {
 }
 
 section hr {
-    width: 1140px;
-    height: 2px;
-    background: linear-gradient(135deg, #ff6b6b 100%);
-    border: none;
-    margin: 32px auto;
-}
-
-.hero {
-    text-align: center;
-    padding: 128px 32px;
-    position: relative;
-}
-
-.hero::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 1140px;
-    height: 2px;
-    background: linear-gradient(135deg, #ff6b6b 100%);
-}
-
-<<<<<<< HEAD
-p {
-    font-size: 20px;
-=======
-/* HTML e CSS */
-.info-html-css {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.bloco {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 2.5rem;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.bloco:hover {
-    transform: translateY(-5px);
-    border-color: rgba(214, 40, 40, 0.3);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.bloco.html h2 {
-    color: #e34c26;
-}
-
-.bloco.css h2 {
-    color: #264de4;
-}
-
-.bloco h2 {
-    font-size: 1.8rem;
-    margin-bottom: 1.5rem;
-}
-
-.bloco p {
-    color: #888;
-    line-height: 1.7;
-}
-
-/* IDEs */
-.info-ide {
-    margin: 3rem 0;
-}
-
-.exemplos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    margin-top: 2rem;
-}
-
-/* Tabelas */
-table {
-    width: 100%;
-    border-collapse: collapse;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    overflow: hidden;
-    backdrop-filter: blur(10px);
-    margin: 2rem 0;
-}
-
-thead {
-    background: rgba(214, 40, 40, 0.1);
-}
-
-th {
-    padding: 1.5rem;
-    text-align: left;
-    font-weight: 600;
-    color: #d62828;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-td {
-    padding: 1.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    color: #888;
-}
-
-tr:hover {
-    background: rgba(255, 255, 255, 0.02);
-}
-
-/* Programas interativos */
-.container-blocos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2rem;
-    margin: 3rem 0;
-}
-
-.bloco-programas {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 2rem;
-    transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
-}
-
-.bloco-programas:hover {
-    transform: translateY(-5px);
-    border-color: rgba(214, 40, 40, 0.3);
-    background: rgba(255, 255, 255, 0.05);
-}
-
-.bloco-programas-busca {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 2rem;
-    margin: 2rem 0;
-    backdrop-filter: blur(10px);
-}
-
-/* Botões */
-button {
-    background: linear-gradient(135deg, #d62828 0%, #c82323 100%) !important;
-    color: white;
-    border: none;
-    padding: 0.875rem 1.5rem;
-    font-size: 0.9rem;
-    font-weight: 600;   
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    margin: 0.5rem;
-    backdrop-filter: blur(10px);
-}
-
-button:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(214, 40, 40, 0.4);
-    background: linear-gradient(135deg, #e02d2d 0%, #d62828 100%);
-}
-
-.btn-limpar {
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.btn-limpar:hover {
-    background: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
-}
-
-/* Inputs */
-input {
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 0.75rem 1rem;
-    color: white;
-    font-size: 1rem;
-    margin: 0.5rem 0;
     width: 100%;
     max-width: 300px;
+    height: 3px;
+    background: linear-gradient(90deg, transparent, #d62828, transparent);
+    border: none;
+    margin: 32px auto;
+    opacity: 0.6;
     transition: all 0.3s ease;
-    backdrop-filter: blur(10px);
 }
 
-input:focus {
-    outline: none;
-    border-color: #d62828;
-    box-shadow: 0 0 0 2px rgba(214, 40, 40, 0.2);
+section:hover hr {
+    opacity: 1;
+    max-width: 400px;
 }
 
-label {
-    color: #888;
-    font-size: 0.9rem;
-    margin-bottom: 0.5rem;
-    display: block;
-}
-
-/* Resultados */
-#resultado {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 2rem;
-    margin: 2rem 0;
-    backdrop-filter: blur(10px);
-}
-
-.centralizar {
-    text-align: center;
-    margin: 2rem 0;
->>>>>>> cb661610c131294c258a3125149169143c02072f
+p {
+    font-size: 20px;
     color: #888;
     margin: 16px;
     line-height: 1.8;
+    text-align: center;
 }
 
 strong {
@@ -283,25 +91,27 @@ strong {
     font-weight: 600;
 }
 
-ul,
-ol {
-    margin: 24px 32px;
-    padding-left: 24px;
+.centralizar {
+    text-align: center;
+    margin: 32px 0;
+    color: #888;
+    font-size: 20px;
 }
 
-li {
-    color: #888;
-    font-size: 18px;
-    margin: 12px 0;
-    line-height: 1.6;
+/* ========== TABELA ========== */
+.table-wrapper {
+    overflow-x: auto;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    margin: 32px 0;
 }
 
 table {
     width: 100%;
+    border-collapse: collapse;
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 16px;
-    margin: 32px 0;
+    overflow: hidden;
 }
 
 thead {
@@ -314,99 +124,128 @@ th {
     font-size: 20px;
     font-weight: 600;
     color: #d62828;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 td {
     padding: 20px;
     font-size: 18px;
     color: #888;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background 0.3s;
 }
 
-tr:hover {
+tr:hover td {
     background: rgba(255, 255, 255, 0.02);
 }
 
+/* ========== LINGUAGENS ========== */
 .linguagens {
     display: grid;
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
     margin: 48px 0;
 }
 
 .linguagem-card {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 32px;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 12px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
 }
 
 .linguagem-card:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 .linguagem-card img {
-    max-width: 120px;
+    max-width: 100px;
     height: auto;
+    transition: transform 0.3s;
 }
 
-.exemplo {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.linguagem-card:hover img {
+    transform: scale(1.1);
+}
+
+.linguagem-card span {
+    color: #888;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* ========== CÓDIGO ========== */
+.code-block {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
-    padding: 32px;
-    margin: 32px 0;
-    transition: all 0.4s ease;
+    margin: 24px 0;
+    overflow: hidden;
 }
 
-.exemplo:hover {
-    border-color: rgba(214, 40, 40, 0.3);
-}
-
-.exemplo h3 {
+.code-header {
+    background: rgba(214, 40, 40, 0.15);
+    padding: 14px 20px;
+    font-size: 16px;
     color: #d62828;
-    margin-bottom: 16px;
-    text-align: left;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    font-weight: 600;
 }
 
-.exemplo code {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    padding: 24px;
-    display: block;
-    font-family: 'Inter', sans-serif;
-    color: #d62828;
-    font-size: 18px;
+.code-block pre {
+    padding: 20px;
+    margin: 0;
+    font-size: 14px;
     line-height: 1.6;
+    overflow-x: auto;
+    color: #ccc;
+    font-family: 'Courier New', monospace;
 }
 
+/* ========== BLOCOS HTML/CSS ========== */
 .info-html-css {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
     margin: 48px 0;
 }
 
 .bloco {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 40px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
 }
 
 .bloco:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    transform: translateY(-6px);
+    border-color: rgba(214, 40, 40, 0.4);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.bloco.html {
+    border-left: 4px solid #ff6b6b;
+}
+
+.bloco.css {
+    border-left: 4px solid #264de4;
 }
 
 .bloco.html h2 {
-    color: #d62828;
+    color: #ff6b6b;
 }
 
 .bloco.css h2 {
-    color: #d62828;
+    color: #264de4;
 }
 
 .bloco h2 {
@@ -417,131 +256,235 @@ tr:hover {
 .bloco p {
     color: #888;
     line-height: 1.7;
+    text-align: left;
+    margin: 0;
 }
 
+/* ========== IDE ========== */
 .info-ide {
     margin: 48px 0;
 }
 
 .exemplos {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
     margin-top: 32px;
 }
 
+.exemplo-ide {
+    border-left: 4px solid #d62828;
+}
+
+/* ========== PROGRAMAS INTERATIVOS ========== */
 .container-blocos {
     display: grid;
-    gap: 32px;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 24px;
     margin: 48px 0;
 }
 
 .bloco-programas {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
-    padding: 32px;
-    transition: all 0.4s ease;
+    padding: 28px;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    text-align: center;
 }
 
 .bloco-programas:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-.bloco-programas-busca {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-    padding: 32px;
-    margin: 32px 0;
+.bloco-programas h3 {
+    color: #d62828;
+    font-size: 20px;
+    margin-bottom: 12px;
 }
 
+.bloco-programas p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+/* ========== BOTÕES ========== */
 button {
-    background: linear-gradient(135deg, #d62828 0%, #c82323 100%) !important;
+    background: linear-gradient(135deg, #d62828 0%, #c82323 100%);
     color: white;
     border: none;
-    padding: 16px 40px;
-    font-size: 20px;
+    padding: 12px 24px;
+    font-size: 16px;
     font-weight: 600;
     border-radius: 50px;
     cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    margin: 6px;
     position: relative;
-    margin: 8px;
+    overflow: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s ease;
+}
+
+button:hover::before {
+    left: 100%;
 }
 
 button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(214, 40, 40, 0.3);
     background: linear-gradient(135deg, #e02d2d 0%, #d62828 100%);
-    color: white;
 }
 
 .btn-limpar {
-    background: rgba(255, 255, 255, 0.1) !important;
-    color: white;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    display: block;
+    margin: 24px auto 0;
+    padding: 14px 40px;
+    font-size: 18px;
 }
 
 .btn-limpar:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 25px rgba(255, 255, 255, 0.1);
 }
 
+/* ========== INPUTS ========== */
 input {
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 8px;
     padding: 12px 16px;
     color: white;
-    font-size: 18px;
+    font-size: 16px;
     margin: 8px 0;
     width: 100%;
     max-width: 300px;
+    transition: all 0.3s ease;
 }
 
 input:focus {
     outline: none;
     border-color: #d62828;
+    box-shadow: 0 0 15px rgba(214, 40, 40, 0.2);
 }
 
 label {
     color: #888;
-    font-size: 18px;
-    margin-bottom: 8px;
+    font-size: 16px;
+    margin-bottom: 6px;
     display: block;
 }
 
-#resultado {
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 12px;
-    padding: 32px;
-    margin: 32px 0;
-}
-
-.centralizar {
+/* ========== RESULTADOS ========== */
+.resultado {
+    background: rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 8px;
+    padding: 16px;
+    margin-top: 16px;
+    font-size: 14px;
+    color: #e0e0e0;
+    min-height: 40px;
     text-align: center;
-    margin: 32px 0;
-    color: #888;
-    font-size: 20px;
+    word-break: break-all;
 }
 
+/* ========== FOOTER ========== */
 footer {
-    background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 48px 32px;
     text-align: center;
 }
 
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 footer p {
     color: #666;
-    margin-bottom: 16px;
+    margin-bottom: 24px;
     font-size: 18px;
 }
 
-footer a {
-    color: #888;
-    text-decoration: none;
-    margin: 0 16px;
-    font-size: 16px;
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
 }
 
-footer a:hover {
+.footer-links a {
+    color: #888;
+    text-decoration: none;
+    font-size: 16px;
+    transition: all 0.3s;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.footer-links a:hover {
     color: #d62828;
+    background: rgba(214, 40, 40, 0.1);
+}
+
+/* ========== ANIMAÇÕES ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2rem !important;
+    }
+
+    section {
+        padding: 64px 20px;
+    }
+
+    h2 {
+        font-size: 28px !important;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container-blocos {
+        grid-template-columns: 1fr;
+    }
+
+    .linguagens {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .info-html-css {
+        grid-template-columns: 1fr;
+    }
+
+    .exemplos {
+        grid-template-columns: 1fr;
+    }
 }

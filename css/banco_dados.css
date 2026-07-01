@@ -6,25 +6,33 @@
 
 body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
-    background: #000000;
+    background: #0a0a0a;
     color: #ffffff;
     line-height: 1.6;
+    scroll-behavior: smooth;
 }
 
+/* ========== HEADER ========== */
 header {
-    background: rgba(0, 0, 0, 0.9) !important;
-    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+    background: rgba(10, 10, 10, 0.9) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
     padding: 1rem 10rem !important;
+    transition: padding 0.3s ease;
 }
 
 .logo {
     font-size: 24px !important;
     font-weight: 700;
-    background: linear-gradient(135deg, #ff6b6b 100%);
+    background: linear-gradient(135deg, #ff6b6b, #d62828);
+    -webkit-background-clip: text;
     background-clip: text;
+    -webkit-text-fill-color: transparent;
     text-align: center !important;
+    letter-spacing: 1px;
 }
 
+/* ========== MAIN LAYOUT ========== */
 main {
     margin-top: 80px;
 }
@@ -33,9 +41,10 @@ section {
     padding: 96px 32px;
     max-width: 1200px;
     margin: 0 auto;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
 }
 
+/* ========== TYPOGRAPHY ========== */
 h2 {
     font-size: 32px !important;
     margin-bottom: 16px;
@@ -43,6 +52,7 @@ h2 {
     position: relative;
     text-align: center;
     font-weight: bold;
+    letter-spacing: -0.5px;
 }
 
 h3 {
@@ -54,13 +64,33 @@ h3 {
 }
 
 section hr {
-    width: 1140px;
+    width: 100%;
+    max-width: 1140px;
     height: 2px;
-    background: linear-gradient(135deg, #ff6b6b 100%);
+    background: linear-gradient(90deg, transparent, #d62828, transparent);
     border: none;
     margin: 32px auto;
+    opacity: 0.6;
+    transition: opacity 0.3s;
 }
 
+section:hover hr {
+    opacity: 1;
+}
+
+p {
+    font-size: 20px;
+    color: #888;
+    margin: 16px;
+    line-height: 1.8;
+}
+
+strong {
+    color: #d62828;
+    font-weight: 600;
+}
+
+/* ========== HERO ========== */
 .hero {
     text-align: center;
     padding: 128px 32px;
@@ -72,6 +102,7 @@ section hr {
     font-weight: 700;
     margin-bottom: 16px;
     color: #ffffff;
+    animation: fadeInDown 0.8s ease;
 }
 
 .hero h3 {
@@ -91,81 +122,76 @@ section hr {
     margin-right: auto;
 }
 
-p {
-    font-size: 20px;
-    color: #888;
-    margin: 16px;
-    line-height: 1.8;
-}
-
-strong {
-    color: #d62828;
-    font-weight: 600;
-}
-
-footer {
-    background: rgba(0, 0, 0, 0.9);
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 48px 32px;
-    text-align: center;
-}
-
-footer p {
-    color: #666;
-    margin-bottom: 16px;
-    font-size: 18px;
-}
-
-footer a {
-    color: #888;
-    text-decoration: none;
-    margin: 0 16px;
-    font-size: 16px;
-}
-
-footer a:hover {
-    color: #d62828;
-}
-
+/* ========== CONTAINERS & CARDS ========== */
 .container {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 40px;
     margin: 32px 0;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
 }
 
 .container:hover {
     border-color: rgba(214, 40, 40, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 40px rgba(214, 40, 40, 0.05);
 }
 
+/* SGBD Grid */
 .sgbd-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
     margin: 32px 0;
 }
 
 .sgbd-card {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 32px;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.sgbd-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(214, 40, 40, 0.03), transparent);
+    transition: left 0.5s ease;
+}
+
+.sgbd-card:hover::before {
+    left: 100%;
 }
 
 .sgbd-card:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .sgbd-icon {
     font-size: 48px;
     margin-bottom: 16px;
     color: #d62828;
+    transition: transform 0.3s;
+}
+
+.sgbd-card:hover .sgbd-icon {
+    transform: scale(1.1);
 }
 
 .sgbd-exemplos {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
     margin-top: 16px;
@@ -178,24 +204,44 @@ footer a:hover {
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
+    border: 1px solid rgba(214, 40, 40, 0.2);
+    transition: 0.3s;
 }
 
+.exemplo-tag:hover {
+    background: rgba(214, 40, 40, 0.2);
+}
+
+/* Aplicações Grid */
 .aplicacoes-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 24px;
     margin: 32px 0;
 }
 
 .aplicacao-item {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 24px;
+    transition: all 0.3s ease;
+    text-align: center;
 }
 
 .aplicacao-item:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
+.aplicacao-item strong {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+/* ========== BANCOS DE DADOS ========== */
 .bancos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -205,15 +251,17 @@ footer a:hover {
 
 .banco-card {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 32px;
     text-align: center;
-    transition: all 0.4s ease;
+    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
 }
 
 .banco-card:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
 .banco-card img {
@@ -222,10 +270,17 @@ footer a:hover {
     object-fit: contain;
     margin-bottom: 16px;
     transition: all 0.4s ease;
+    filter: grayscale(20%);
+}
+
+.banco-card:hover img {
+    transform: scale(1.1);
+    filter: grayscale(0%);
 }
 
 .banco-tags {
     display: flex;
+    flex-wrap: wrap;
     gap: 8px;
     justify-content: center;
     margin-top: 16px;
@@ -238,87 +293,80 @@ footer a:hover {
     border-radius: 20px;
     font-size: 14px;
     font-weight: 600;
+    border: 1px solid rgba(214, 40, 40, 0.2);
+    transition: 0.3s;
 }
 
+.tag:hover {
+    background: rgba(214, 40, 40, 0.2);
+}
+
+/* ========== TABELAS ========== */
 .tabela-comparativa {
     margin: 48px 0;
 }
 
-.tabela-comparativa table {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+.table-wrapper {
+    overflow-x: auto;
     border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.tabela-comparativa th {
-    background: rgba(214, 40, 40, 0.1);
+table {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.02);
+    border-collapse: collapse;
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+th {
+    background: rgba(214, 40, 40, 0.15);
     padding: 24px;
     text-align: left;
     font-size: 20px;
     font-weight: 600;
     color: #d62828;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.tabela-comparativa td {
-    padding: 24px;
-    font-size: 18px;
-    color: #888;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.tabela-comparativa tr:hover {
+td {
+    padding: 24px;
+    font-size: 18px;
+    color: #888;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    transition: background 0.3s;
+}
+
+tr:hover td {
     background: rgba(255, 255, 255, 0.02);
 }
 
+/* Dicionário */
 .exemplo-dicionario {
     margin: 32px 0;
 }
 
-.exemplo-dicionario table {
-    width: 100%;
-    background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 16px;
-}
-
-.exemplo-dicionario th {
-    background: rgba(214, 40, 40, 0.1);
-    padding: 20px;
-    text-align: left;
-    font-size: 18px;
-    font-weight: 600;
-    color: #d62828;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.exemplo-dicionario td {
-    padding: 20px;
-    font-size: 16px;
-    color: #888;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.exemplo-dicionario tr:hover {
-    background: rgba(255, 255, 255, 0.02);
-}
-
+/* ========== TIPOS DE DADOS ========== */
 .tipos-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 32px;
     margin: 32px 0;
 }
 
 .tipo-card {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 24px;
+    transition: all 0.3s ease;
 }
 
 .tipo-card:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
 .tipo-card h4 {
@@ -347,21 +395,26 @@ footer a:hover {
     color: #d62828;
 }
 
+/* ========== MODELAGEM ========== */
 .modelagem-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
     gap: 32px;
     margin: 32px 0;
 }
 
 .modelo-card {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 32px;
+    transition: all 0.3s ease;
 }
 
 .modelo-card:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
 }
 
 .modelo-card h4 {
@@ -382,15 +435,24 @@ footer a:hover {
     padding: 12px;
     background: rgba(255, 255, 255, 0.02);
     border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.2s;
+}
+
+.elemento-item:hover {
+    border-color: rgba(214, 40, 40, 0.3);
+    background: rgba(214, 40, 40, 0.03);
 }
 
 .elemento-icon {
     font-size: 20px;
     font-weight: bold;
     color: #d62828;
+    min-width: 30px;
+    text-align: center;
 }
 
+/* ========== DIAGRAMAS ========== */
 .diagrama-container {
     text-align: center;
     margin: 32px 0;
@@ -400,28 +462,40 @@ footer a:hover {
     max-width: 100%;
     height: auto;
     border-radius: 16px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
     transition: all 0.4s ease;
+    cursor: pointer;
 }
 
 .diagrama:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: scale(1.02);
+    box-shadow: 0 15px 40px rgba(214, 40, 40, 0.1);
 }
 
+/* Explicações DER/MER */
 .explicacao-der,
 .explicacao-mer {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 12px;
     padding: 32px;
     margin: 32px 0;
     border-left: 4px solid #d62828;
+    transition: all 0.3s;
+}
+
+.explicacao-der:hover,
+.explicacao-mer:hover {
+    border-color: rgba(214, 40, 40, 0.4);
+    background: rgba(214, 40, 40, 0.02);
 }
 
 .entidades-grid,
 .cardinalidades-grid {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     gap: 24px;
     margin-top: 24px;
 }
@@ -429,15 +503,17 @@ footer a:hover {
 .entidade-item,
 .cardinalidade-item {
     background: rgba(255, 255, 255, 0.02);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 8px;
     padding: 24px;
     text-align: center;
+    transition: all 0.3s ease;
 }
 
 .entidade-item:hover,
 .cardinalidade-item:hover {
-    border-color: rgba(214, 40, 40, 0.3);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-3px);
 }
 
 .entidade-atributos {
@@ -445,4 +521,106 @@ footer a:hover {
     margin-top: 8px;
     font-size: 14px;
     color: #666;
+}
+
+/* ========== FOOTER ========== */
+footer {
+    background: rgba(10, 10, 10, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 48px 32px;
+    text-align: center;
+}
+
+footer p {
+    color: #666;
+    margin-bottom: 16px;
+    font-size: 18px;
+}
+
+footer a {
+    color: #888;
+    text-decoration: none;
+    margin: 0 16px;
+    font-size: 16px;
+    transition: color 0.3s;
+    position: relative;
+}
+
+footer a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 1px;
+    bottom: -2px;
+    left: 0;
+    background: #d62828;
+    transition: width 0.3s;
+}
+
+footer a:hover {
+    color: #d62828;
+}
+
+footer a:hover::after {
+    width: 100%;
+}
+
+/* ========== ANIMAÇÕES REVELAÇÃO (JS) ========== */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* ========== KEYFRAMES ========== */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========== RESPONSIVIDADE ========== */
+@media (max-width: 768px) {
+    header {
+        padding: 1rem 2rem !important;
+    }
+
+    section {
+        padding: 64px 20px;
+    }
+
+    .hero h2 {
+        font-size: 36px !important;
+    }
+
+    .hero h3 {
+        font-size: 18px;
+    }
+
+    p {
+        font-size: 18px;
+    }
+
+    .container {
+        padding: 24px;
+    }
+
+    .modelagem-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .sgbd-grid {
+        grid-template-columns: 1fr;
+    }
 }
