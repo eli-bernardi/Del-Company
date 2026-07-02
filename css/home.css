@@ -32,26 +32,36 @@ header {
 }
 
 .logo-centro {
-    font-size: 48px !important;
-    font-weight: 700;
+    font-size: 84px !important;
+    font-weight: 780;
     background: linear-gradient(135deg, #ff6b6b, #d62828);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     text-align: center !important;
     margin-bottom: 16px;
+    display: block;
+    width: 100%;
 }
 
 /* ========== MAIN ========== */
 main {
     margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 section {
     padding: 96px 32px;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* ========== TYPOGRAPHY ========== */
@@ -60,8 +70,9 @@ h2 {
     margin-bottom: 16px;
     color: #ffffff;
     position: relative;
-    text-align: center;
     font-weight: bold;
+    text-align: center;
+    width: 100%;
 }
 
 h2 a {
@@ -97,6 +108,7 @@ p {
     line-height: 1.8;
     max-width: 900px;
     text-align: center;
+    width: 100%;
 }
 
 strong {
@@ -105,7 +117,8 @@ strong {
 }
 
 /* ========== BUTTONS ========== */
-button, .btn-primary {
+button,
+.btn-primary {
     background: linear-gradient(135deg, #d62828 0%, #c82323 100%);
     color: white;
     border: none;
@@ -118,9 +131,11 @@ button, .btn-primary {
     display: inline-block;
     position: relative;
     overflow: hidden;
+    margin: 16px auto;
 }
 
-button::before, .btn-primary::before {
+button::before,
+.btn-primary::before {
     content: '';
     position: absolute;
     top: 0;
@@ -131,17 +146,20 @@ button::before, .btn-primary::before {
     transition: left 0.5s ease;
 }
 
-button:hover::before, .btn-primary:hover::before {
+button:hover::before,
+.btn-primary:hover::before {
     left: 100%;
 }
 
-button:hover, .btn-primary:hover {
+button:hover,
+.btn-primary:hover {
     background: linear-gradient(135deg, #e02d2d 0%, #d62828 100%);
     transform: translateY(-3px);
     box-shadow: 0 10px 30px rgba(214, 40, 40, 0.3);
 }
 
-button a, .btn-primary a {
+button a,
+.btn-primary a {
     color: white;
     text-decoration: none;
     display: block;
@@ -154,10 +172,14 @@ button a, .btn-primary a {
     text-align: center;
     padding: 128px 32px;
     position: relative;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 /* ========== QUEM SOMOS ========== */
-section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):not(.mapa) p {
+section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):not(.mapa) {
     text-align: center;
 }
 
@@ -167,6 +189,7 @@ section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):n
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     gap: 32px;
     margin: 48px 0;
+    width: 100%;
 }
 
 .stat-item {
@@ -230,6 +253,7 @@ section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):n
     gap: 16px;
     margin: 32px auto;
     max-width: 600px;
+    width: 100%;
 }
 
 .servico-link {
@@ -287,6 +311,7 @@ section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):n
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 32px;
     margin-top: 48px;
+    width: 100%;
 }
 
 .time-card {
@@ -322,11 +347,15 @@ section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):n
 }
 
 .time-img {
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     margin-bottom: 24px;
 }
 
 .time-img img {
+    display: block;
+    /* garante que a imagem seja tratada como bloco para centralização */
     width: 140px;
     height: 140px;
     border-radius: 50%;
@@ -376,12 +405,18 @@ section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):n
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    justify-items: center;
+    /* centraliza os itens dentro das células */
     gap: 48px;
-    margin: 48px 0;
+    margin: 48px auto;
+    max-width: 1100px;
+    /* opcional, para não ficar muito largo */
+    width: 100%;
 }
 
 .contato-info {
-    text-align: left;
+    text-align: center;
+    /* muda de left para center */
 }
 
 .contato-info h2 {
@@ -390,8 +425,8 @@ section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):n
 }
 
 .contato-info p {
-    text-align: left;
-    margin: 8px 0;
+    text-align: center;
+    margin: 8px auto;
 }
 
 .contato-detalhes {
@@ -408,6 +443,7 @@ section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):n
     border-radius: 8px;
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.3s;
+    justify-content: center;
 }
 
 .contato-item:hover {
@@ -466,6 +502,7 @@ section:not(.hero):not(.stats):not(.servicos):not(.nossa-equipe):not(.contato):n
     border: 1px solid rgba(255, 255, 255, 0.05);
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
     overflow: hidden;
+    width: 100%;
 }
 
 .map-container:hover {
@@ -479,7 +516,7 @@ footer {
     background: rgba(10, 10, 10, 0.95);
     border-top: 1px solid rgba(255, 255, 255, 0.05);
     padding: 48px 32px;
-    text-align: center;
+    text-align: center !important;
 }
 
 .footer-content {
@@ -491,7 +528,7 @@ footer p {
     color: #666;
     margin-bottom: 24px;
     font-size: 18px;
-    text-align: center;
+    text-align: center !important;
 }
 
 .footer-links {
@@ -512,6 +549,8 @@ footer p {
     gap: 8px;
     padding: 8px 16px;
     border-radius: 8px;
+    justify-content: center !important;
+    text-align: center !important;
 }
 
 .footer-links a:hover {
@@ -537,6 +576,7 @@ footer p {
         opacity: 0;
         transform: translateY(-20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
