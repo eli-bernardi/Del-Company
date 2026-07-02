@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/robo_polar.css">
+    <link rel="shortcut icon" href="../img/dell.png" type="image/png">
+    <script src="../js/robo_polar.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Del Company - Robô Polar</title>
+</head>
+
+<body class="bg-[#0a0a0a] text-white">
+
+    <header
+        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
+        <div class="logo text-xl font-bold text-[#d62828]">Del Company</div>
+        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
+            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+        </button>
+        <nav id="menu"
+            class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#0a0a0a]/95 md:bg-transparent p-4 md:p-0 rounded-b-lg border-b-2 border-[#d62828] md:border-none">
+            <a href="../index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
+            <div class="relative group">
+                <a href="../service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
+                <ul
+                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
+                    <li><a href="../service/logica_programacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
+                            Programação</a></li>
+                    <li><a href="../service/fundamentos_rede.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
+                    </li>
+                    <li><a href="../service/logica_computacional.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
+                            Computacional</a></li>
+                    <li><a href="../service/fundamentos_eletronica.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
+                            Eletrônica</a></li>
+                    <li><a href="../service/tecnologia_informacao.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
+                            Informação</a></li>
+                    <li><a href="../service/banco_dados.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
+                </ul>
+            </div>
+            <div class="relative group">
+                <a href="../robotizacao.html" class="block py-2 hover:text-[#d62828] transition-colors">Robotização</a>
+                <ul
+                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[240px] py-2 shadow-xl z-50 border border-white/5">
+                    <li><a href="./robo_cartesiano.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Cartesiano</a></li>
+                    <li><a href="./robo_scara.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô SCARA</a></li>
+                    <li><a href="./robo_articulado.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Articulado</a></li>
+                    <li><a href="./robo_cilindrico.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Cilíndrico</a></li>
+                    <li><a href="./robo_delta.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Delta</a></li>
+                    <li><a href="./robo_polar.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Polar</a></li>
+                    <li><a href="./robo_colaborativo.html"
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Colaborativo</a>
+                    </li>
+                </ul>
+            </div>
+            <a href="../contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
+        </nav>
+    </header>
+
+    <main class="pt-20">
+
+        <section class="hero reveal">
+            <h2 class="logo-centro">Robô Polar</h2>
+            <h3>Robô de Coordenadas Esféricas</h3>
+            <hr>
+            <p>O <strong>robô polar</strong> (ou esférico) combina rotação de base, elevação angular e extensão
+                linear, gerando um volume de trabalho esférico. São úteis para grandes alcances com estrutura
+                vertical.</p>
+        </section>
+
+        <section class="reveal">
+            <h2>Características Técnicas</h2>
+            <hr>
+            <div class="specs-grid">
+                <div class="spec-item"><strong>Graus de liberdade</strong> 3–5</div>
+                <div class="spec-item"><strong>Repetibilidade</strong> ±0,1 mm a ±0,5 mm</div>
+                <div class="spec-item"><strong>Carga útil</strong> Até 200 kg</div>
+                <div class="spec-item"><strong>Alcance radial</strong> Até 2500 mm</div>
+                <div class="spec-item"><strong>Rotação da base</strong> 360°</div>
+                <div class="spec-item"><strong>Elevação</strong> -30° a +150°</div>
+            </div>
+        </section>
+
+        <section class="reveal">
+            <h2>Aplicações Industriais</h2>
+            <hr>
+            <ul class="lista-aplicacoes">
+                <li>✅ Soldagem por pontos</li>
+                <li>✅ Pintura robotizada</li>
+                <li>✅ Manuseio de chapas metálicas</li>
+            </ul>
+        </section>
+
+        <section class="reveal">
+            <h2>Modelos Comerciais</h2>
+            <hr>
+            <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 32px;">
+                <div class="modelo-card">
+                    <img src="../img/robos/polar_kuka.jpg" alt="KUKA KR 360" loading="lazy">
+                    <h4>KUKA KR 360</h4>
+                    <p><strong>Fabricante:</strong> KUKA (Alemanha)</p>
+                </div>
+                <div class="modelo-card">
+                    <img src="../img/robos/polar_durr.jpg" alt="Dürr EcoRP" loading="lazy">
+                    <h4>Dürr EcoRP</h4>
+                    <p><strong>Fabricante:</strong> Dürr (Alemanha)</p>
+                </div>
+                <div class="modelo-card">
+                    <img src="../img/robos/polar_fanuc.jpg" alt="FANUC P-250iA" loading="lazy">
+                    <h4>FANUC P-250iA</h4>
+                    <p><strong>Fabricante:</strong> FANUC (Japão)</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="reveal">
+        <div class="footer-content">
+            <p>&copy 2025 - Del Company | Todos os direitos reservados</p>
+            <div class="footer-links">
+                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
+                    <span>📷</span> Instagram
+                </a>
+                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
+                    <span>💬</span> Whatsapp
+                </a>
+                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
+                    <span>🐙</span> GitHub
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
