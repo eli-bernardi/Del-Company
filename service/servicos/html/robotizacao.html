@@ -21,13 +21,11 @@
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
             </svg>
         </button>
-
-        <!-- ===== MENU DESKTOP ===== -->
         <nav id="menu-desktop" class="hidden md:flex items-center space-x-6 text-sm font-medium">
             <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
 
             <div class="relative group">
-                <a href="../service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
+                <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
                 <ul
                     class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
                     <li><a href="./robotizacao.html"
@@ -52,25 +50,25 @@
                 </ul>
             </div>
             <div class="relative group">
-                <a href="/robotizacao.html" class="text-[#d62828] transition-colors">Robotização</a>
+                <a href="../html/robotizacao.html" class="text-[#d62828] transition-colors">Robotização</a>
                 <ul
                     class="absolute left-0 top-full hidden group-hover:block bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="./robots/html/robo_cartesiano.html"
+                    <li><a href="/service/robots/html/robo_cartesiano.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Cartesiano</a>
                     </li>
-                    <li><a href="./robots/html/robo_scara.html"
+                    <li><a href="/service/robots/html/robo_scara.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô SCARA</a></li>
                     <li><a href="./robots/html/robo_articulado.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Articulado</a>
                     </li>
-                    <li><a href="./robots/html/robo_cilindrico.html"
+                    <li><a href="/service/robots/html/robo_cilindrico.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Cilíndrico</a>
                     </li>
-                    <li><a href="./robots/html/robo_delta.html"
+                    <li><a href="/service/robots/html/robo_delta.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Delta</a></li>
-                    <li><a href="./robots/html/robo_polar.html"
+                    <li><a href="/service/robots/html/robo_polar.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Polar</a></li>
-                    <li><a href="./robots/html/robo_colaborativo.html"
+                    <li><a href="/service/robots/html/robo_colaborativo.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Colaborativo</a>
                     </li>
                 </ul>
@@ -78,13 +76,10 @@
 
             <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
         </nav>
-
-        <!-- ===== MENU MOBILE (HAMBÚRGUER) ===== -->
         <nav id="menu-mobile"
             class="md:hidden flex flex-col absolute top-[70px] left-0 w-full bg-[#0a0a0a]/95 p-4 rounded-b-lg border-b-2 border-[#d62828] hidden">
             <a href="/index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
 
-            <!-- Accordion Serviços (com Robotização e serviços) -->
             <div class="relative">
                 <button id="servicos-toggle"
                     class="flex items-center justify-between w-full py-2 hover:text-[#d62828] transition-colors focus:outline-none">
@@ -95,10 +90,9 @@
                     </svg>
                 </button>
                 <ul id="servicos-submenu" class="hidden pl-4 space-y-1 border-l border-white/10 ml-2">
-                    <!-- Robotização como subitem -->
+
                     <li><a href="/robotizacao.html"
                             class="block py-2 hover:text-[#d62828] transition-colors">Robotização</a></li>
-                    <!-- Demais serviços -->
                     <li><a href="/service/logica_programacao.html"
                             class="block py-2 hover:text-[#d62828] transition-colors">Lógica de Programação</a></li>
                     <li><a href="/service/fundamentos_rede.html"
