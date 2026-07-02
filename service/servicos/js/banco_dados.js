@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded', () => {
             menu.classList.toggle('flex-col');
         });
 
-        // Fecha o menu ao clicar em um link (mobile)
         menu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth < 768) {
@@ -19,6 +18,10 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
+    } else {
+        if (!document.getElementById('menu-toggle')) {
+            console.warn('⚠️ [Del Company] Botão #menu-toggle não encontrado.');
+        }
     }
 
     // ---- ANIMAÇÃO DE REVELAÇÃO COM INTERSECTION OBSERVER ----
@@ -29,8 +32,10 @@ document.addEventListener('DOMContentLoaded', () => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Opcional: parar de observar após ativar
-                    // observer.unobserve(entry.target);
+                    const delay = entry.target.getAttribute('data-delay');
+                    if (delay) {
+                        entry.target.style.transitionDelay = delay;
+                    }
                 }
             });
         },
@@ -43,7 +48,47 @@ document.addEventListener('DOMContentLoaded', () => {
 
     revealElements.forEach(el => observer.observe(el));
 
-    // ---- EFEITO SMOOTH NOS LINKS INTERNOS (se houver âncoras) ----
+    // ---- ANIMAÇÃO DOS NÚMEROS (CONTADOR) ----
+    // (mesmo que não haja números na página, mantemos para consistência)
+    const statNumbers = document.querySelectorAll('.stat-number[data-target]');
+
+    const animateNumber = (element) => {
+        const target = parseInt(element.getAttribute('data-target'));
+        const suffix = element.textContent.replace(/[0-9]/g, '').trim();
+        const duration = 2000;
+        const step = target / (duration / 16);
+        let current = 0;
+
+        const updateNumber = () => {
+            current += step;
+            if (current < target) {
+                element.textContent = Math.floor(current) + suffix;
+                requestAnimationFrame(updateNumber);
+            } else {
+                element.textContent = target + suffix;
+            }
+        };
+
+        updateNumber();
+    };
+
+    const numberObserver = new IntersectionObserver(
+        (entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    animateNumber(entry.target);
+                    numberObserver.unobserve(entry.target);
+                }
+            });
+        },
+        {
+            threshold: 0.5
+        }
+    );
+
+    statNumbers.forEach(number => numberObserver.observe(number));
+
+    // ---- EFEITO SMOOTH NOS LINKS INTERNOS ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const target = document.querySelector(this.getAttribute('href'));
@@ -54,8 +99,14 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- EFEITO DE BRILHO NOS CARDS AO MOVER O MOUSE (OPCIONAL) ----
-    const cards = document.querySelectorAll('.banco-card, .sgbd-card, .aplicacao-item, .tipo-card, .modelo-card');
+    // ---- EFEITO DE BRILHO NOS CARDS AO MOVER O MOUSE ----
+    // Seletores específicos para os cards desta página
+    const cards = document.querySelectorAll(
+        '.banco-card, .sgbd-card, .aplicacao-item, ' +
+        '.tipo-card, .modelo-card, .container, ' +
+        '.explicacao-der, .explicacao-mer, ' +
+        '.entidade-item, .cardinalidade-item'
+    );
 
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -63,10 +114,6 @@ document.addEventListener('DOMContentLoaded', () => {
             const x = e.clientX - rect.left;
             const y = e.clientY - rect.top;
 
-            card.style.setProperty('--mouse-x', `${x}px`);
-            card.style.setProperty('--mouse-y', `${y}px`);
-
-            // Pequeno gradiente radial que segue o mouse
             card.style.background = `
                 radial-gradient(circle at ${x}px ${y}px, rgba(214, 40, 40, 0.08), rgba(255, 255, 255, 0.02))
             `;

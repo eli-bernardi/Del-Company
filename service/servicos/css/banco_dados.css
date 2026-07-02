@@ -40,8 +40,13 @@ main {
 section {
     padding: 96px 32px;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 /* ========== TYPOGRAPHY ========== */
@@ -128,14 +133,18 @@ strong {
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
     padding: 40px;
-    margin: 32px 0;
+    margin: 32px auto;
+    max-width: 1140px;
+    width: 100%;
     transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1.2);
+    position: relative;
+    overflow: hidden;
 }
 
 .container:hover {
-    border-color: rgba(214, 40, 40, 0.3);
-    transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(214, 40, 40, 0.05);
+    border-color: rgba(214, 40, 40, 0.4);
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
 /* SGBD Grid */
@@ -454,17 +463,23 @@ tr:hover td {
 
 /* ========== DIAGRAMAS ========== */
 .diagrama-container {
-    text-align: center;
-    margin: 32px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px auto;
+    width: 100%;
+    max-width: 900px;
+    /* mesmo limite dos parágrafos */
 }
 
-.diagrama {
+.diagrama-container img {
     max-width: 100%;
     height: auto;
     border-radius: 16px;
+    /* opcional, para manter estilo */
     border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-    transition: all 0.4s ease;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease;
     cursor: pointer;
 }
 
