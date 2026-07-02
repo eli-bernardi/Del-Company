@@ -12,7 +12,6 @@ body {
     line-height: 1.6;
 }
 
-/* ===== HEADER / NAVEGAÇÃO ===== */
 header {
     background: rgba(10, 10, 10, 0.9) !important;
     backdrop-filter: blur(20px);
@@ -80,9 +79,15 @@ main {
 section {
     padding: 96px 32px;
     max-width: 1200px;
+    width: 100%;
     margin: 0 auto;
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+
 
 /* ===== TIPOGRAFIA ===== */
 h2 {

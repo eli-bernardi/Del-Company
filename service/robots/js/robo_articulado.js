@@ -3,8 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const menu = document.getElementById('menu');
 
-    // Se você ainda não colocou o botão #menu-toggle no HTML, 
-    // esta parte só vai ativar quando ele existir.
     if (menuToggle && menu) {
         menuToggle.addEventListener('click', () => {
             menu.classList.toggle('hidden');
@@ -21,11 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 }
             });
         });
-    } else {
-        // Aviso amigável no console para você lembrar de adicionar o botão
-        if (!document.getElementById('menu-toggle')) {
-            console.warn('⚠️ [Del Company] Botão #menu-toggle não encontrado. Adicione um botão no header para ativar o menu mobile.');
-        }
     }
 
     // ---- ANIMAÇÃO DE REVELAÇÃO COM INTERSECTION OBSERVER ----
@@ -54,7 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
     revealElements.forEach(el => observer.observe(el));
 
     // ---- ANIMAÇÃO DOS NÚMEROS (CONTADOR) ----
-    // (Mantido, mas só vai funcionar se você colocar elementos com .stat-number[data-target])
     const statNumbers = document.querySelectorAll('.stat-number[data-target]');
 
     const animateNumber = (element) => {
@@ -104,10 +96,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const cards = document.querySelectorAll(
-        '.stat-item, .time-card, .servico-link, ' +
-        '.spec-item, .modelo-card, .lista-aplicacoes li'
-    );
+    // ---- EFEITO DE BRILHO NOS CARDS AO MOVER O MOUSE ----
+    const cards = document.querySelectorAll('.stat-item, .time-card, .servico-link');
 
     cards.forEach(card => {
         card.addEventListener('mousemove', (e) => {
@@ -116,12 +106,12 @@ document.addEventListener('DOMContentLoaded', () => {
             const y = e.clientY - rect.top;
 
             card.style.background = `
-                radial-gradient(circle at ${x}px ${y}px, rgba(214, 40, 40, 0.10), rgba(255, 255, 255, 0.02))
+                radial-gradient(circle at ${x}px ${y}px, rgba(214, 40, 40, 0.08), rgba(255, 255, 255, 0.02))
             `;
         });
 
         card.addEventListener('mouseleave', () => {
-            card.style.background = '';
+            card.style.background = 'rgba(255, 255, 255, 0.02)';
         });
     });
 });
