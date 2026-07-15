@@ -195,7 +195,7 @@ Distribuído sob a licença MIT. Veja LICENSE para mais informações.
 
 📬 Contato
 Eliel Bernardi
-https://img.shields.io/badge/Instagram-@elielbrnrd-E4405F?logo=instagram&logoColor=white
-https://img.shields.io/badge/WhatsApp-(48)99101%E2%80%913184-25D366?logo=whatsapp&logoColor=white
-https://img.shields.io/badge/GitHub-eli--bernardi-181717?logo=github&logoColor=white
-
+📷 https://www.instagram.com/elielbrnrd/
+💬 https://api.whatsapp.com/send/?phone=5548991013184&text&type=phone_number&app_absent=0
+🐙 https://github.com/eli-bernardi
+✉  elielbernardi0012@gmail.com
