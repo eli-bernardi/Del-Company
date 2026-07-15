@@ -195,7 +195,11 @@ Distribuído sob a licença MIT. Veja LICENSE para mais informações.
 
 📬 Contato
 Eliel Bernardi
+
 📷 https://www.instagram.com/elielbrnrd/
+
 💬 https://api.whatsapp.com/send/?phone=5548991013184&text&type=phone_number&app_absent=0
+
 🐙 https://github.com/eli-bernardi
+
 ✉  elielbernardi0012@gmail.com
