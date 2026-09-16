@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Del Company - Laboratório e Desafios Práticos com Sensores: demonstrações reais em bancada com Arduino e microcontroladores.">
+    <meta name="description"
+        content="Del Company - Laboratório e Desafios Práticos com Sensores: demonstrações reais em bancada com Arduino e microcontroladores.">
     <link rel="stylesheet" href="../css/sensores.css">
     <link rel="shortcut icon" href="/img/dell.png" type="image/png">
     <script src="../js/sensores.js" defer></script>
@@ -13,7 +14,6 @@
 </head>
 
 <body class="bg-[#0a0a0a] text-white">
-    <!-- Header padronizado -->
     <header
         class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
         <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
@@ -57,15 +57,19 @@
                 <ul
                     class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
                     <li><a href="/service/sensors/html/sensor-introduca.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Introdução a Sensores</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Introdução a
+                            Sensores</a></li>
                     <li><a href="/service/sensors/html/sensor-tipos.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tipos de Sensores</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tipos de Sensores</a>
+                    </li>
                     <li><a href="/service/sensors/html/sensor-comunicacao.html"
                             class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Comunicação</a></li>
                     <li><a href="/service/sensors/html/sensor-plataformas.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Plataformas IoT</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Plataformas IoT</a>
+                    </li>
                     <li><a href="/service/sensors/html/sensor-pratica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Prática &amp; Desafios</a></li>
+                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Prática &amp;
+                            Desafios</a></li>
                 </ul>
             </div>
             <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
@@ -73,7 +77,6 @@
     </header>
 
     <main class="pt-20">
-        <!-- Hero Section -->
         <section class="hero reveal">
             <h2 class="logo-centro">Laboratório Prático com Sensores</h2>
             <h3>Desafios de Bancada | Integração Hardware &amp; Software</h3>
@@ -85,213 +88,400 @@
             </p>
             <div class="destaque">
                 <p>
-                    <strong>Metodologia Aplicada:</strong> Leitura contínua dos sensores &rarr; Processamento de limiares no microcontrolador &rarr; Acionamento de indicadores e atuadores em tempo real.
+                    <strong>Metodologia Aplicada:</strong> Leitura contínua dos sensores &rarr; Processamento de
+                    limiares no microcontrolador &rarr; Acionamento de indicadores e atuadores em tempo real.
                 </p>
             </div>
         </section>
 
-        <!-- Grade de Desafios Práticos com Vídeos -->
         <section class="reveal">
-            <h2>Demonstrações em Vídeo</h2>
+            <h2>Demonstrações em Vídeo &amp; Desafios</h2>
             <h3>Execução dos Desafios na Prática</h3>
             <hr>
 
+            <div class="desafios-intro">
+                <strong>Metodologia aplicada:</strong> leitura contínua dos sensores &rarr;
+                processamento dos limiares no microcontrolador Arduino &rarr; acionamento de atuadores e sinalizadores
+                em tempo real.
+            </div>
+
             <div class="desafios-grid">
-                <!-- DESAFIO 1 -->
                 <article class="desafio-card">
                     <span class="desafio-badge-num">Desafio Prático 01</span>
-                    <h3>Leitura e Monitoramento de Variáveis Físicas</h3>
-                    
+                    <h3>💡 Iluminação Inteligente</h3>
+
                     <div class="tags-list">
                         <span class="tag-badge">Arduino UNO</span>
-                        <span class="tag-badge">Sensoriamento em Tempo Real</span>
-                        <span class="tag-badge">Monitor Serial</span>
-                        <span class="tag-badge">Sinalização Visual</span>
+                        <span class="tag-badge">LED</span>
+                        <span class="tag-badge">Sensor de Presença (PIR)</span>
+                        <span class="tag-badge">Sensor de Luminosidade (LDR)</span>
                     </div>
 
                     <p>
-                        Demonstração do circuito de bancada realizando a leitura contínua de sinais emitidos pelo sensor.
-                        O microcontrolador amostra os valores analógicos/digitais, realiza a conversão e sinaliza o estado operacional instantaneamente.
+                        Circuito que controla automaticamente um LED combinando as informações de dois sensores: a
+                        presença de uma pessoa no ambiente e o nível de luminosidade. A lâmpada só é acionada quando
+                        realmente há necessidade, evitando consumo desnecessário de energia.
                     </p>
 
-                    <div class="video-container">
-                        <video controls preload="metadata" class="demo-video">
-                            <source src="../img/desafio1.mp4" type="video/mp4">
-                            Seu navegador não suporta a reprodução de vídeo MP4.
-                        </video>
+                    <div class="desafio-conteudo">
+                        <div class="desafio-video">
+                            <h4>🎬 Demonstração &amp; Vídeo Explicativo</h4>
+
+                            <div class="video-container">
+                                <video controls preload="metadata" class="demo-video">
+                                    <source src="../img/desafio1.mp4" type="video/mp4">
+                                    Seu navegador não suporta a reprodução de vídeo MP4.
+                                </video>
+                            </div>
+
+                            <p class="video-legenda">
+                                Demonstração do funcionamento e explicação do uso dos sensores na bancada.
+                            </p>
+                        </div>
+
+                        <div class="desafio-regras">
+                            <h4>⚙️ Lógica do Sistema</h4>
+
+                            <ul>
+                                <li>Pessoa presente + ambiente escuro &rarr; LED ligado</li>
+                                <li>Pessoa presente + ambiente claro &rarr; LED desligado</li>
+                                <li>Sem pessoa no local &rarr; LED desligado</li>
+                            </ul>
+
+                            <div class="desafio-bonus">
+                                <strong>Como os sensores atuam:</strong> o sensor PIR fornece um sinal digital
+                                (HIGH/LOW) indicando movimento, enquanto o LDR fornece um valor analógico de 0 a 1023
+                                proporcional à luz. O LED só é ligado quando as duas condições são verdadeiras ao mesmo
+                                tempo.
+                            </div>
+
+                            <a class="desafio-tinkercad" href="#" target="_blank" rel="noopener">
+                                🔗 Circuito no Tinkercad (adicionar link)
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="code-block">
-                        <div class="code-header"> Código de Base - Leitura de Sensor (Arduino / C++)</div>
-                        <pre><code>// Desafio 01 - Leitura e Monitoramento de Sensor
-const int SENSOR_PIN = A0;
-const int LED_INDICADOR = 13;
-int valorSensor = 0;
+                    <div class="desafio-codigo">
+                        <h4>💻 Código do Arduino</h4>
+
+                        <div class="code-wrapper">
+                            <button class="btn-copiar" type="button">📋 Copiar</button>
+                            <pre>// Desafio 1 - Iluminação Inteligente
+// Componentes: LED, Sensor de Presença (PIR) e Sensor de Luminosidade (LDR)
+
+const int PINO_PIR = 2;     // Saída digital do sensor de presença
+const int PINO_LDR = A0;    // Saída analógica do sensor de luminosidade
+const int PINO_LED = 8;     // LED controlado pelo sistema
+
+const int LIMIAR_ESCURO = 500; // Abaixo deste valor o ambiente é considerado escuro
 
 void setup() {
-    Serial.begin(9600);
-    pinMode(LED_INDICADOR, OUTPUT);
-    pinMode(SENSOR_PIN, INPUT);
-    Serial.println(">>> Desafio 01 Inicializado - Lendo Sensor...");
+  pinMode(PINO_PIR, INPUT);
+  pinMode(PINO_LED, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-    valorSensor = analogRead(SENSOR_PIN);
-    Serial.print("Leitura Atual do Sensor: ");
-    Serial.println(valorSensor);
+  bool presenca = digitalRead(PINO_PIR) == HIGH;   // Há alguém no ambiente?
+  int luminosidade = analogRead(PINO_LDR);         // Nível de luz (0 a 1023)
+  bool ambienteEscuro = luminosidade &lt; LIMIAR_ESCURO;
 
-    if (valorSensor > 500) {
-        digitalWrite(LED_INDICADOR, HIGH);
-    } else {
-        digitalWrite(LED_INDICADOR, LOW);
-    }
-    delay(100);
-}</code></pre>
+  // O LED só liga quando as DUAS condições são verdadeiras
+  if (presenca &amp;&amp; ambienteEscuro) {
+    digitalWrite(PINO_LED, HIGH);
+  } else {
+    digitalWrite(PINO_LED, LOW);
+  }
+
+  Serial.print("Presença: ");
+  Serial.print(presenca);
+  Serial.print(" | Luminosidade: ");
+  Serial.println(luminosidade);
+
+  delay(200);
+}</pre>
+                        </div>
                     </div>
                 </article>
 
-                <!-- DESAFIO 2 -->
                 <article class="desafio-card">
                     <span class="desafio-badge-num">Desafio Prático 02</span>
-                    <h3>Controle de Limiares e Resposta Automatizada</h3>
+                    <h3>🚗 Estacionamento Inteligente</h3>
 
                     <div class="tags-list">
-                        <span class="tag-badge">Controle com Histerese</span>
-                        <span class="tag-badge">Atuadores</span>
-                        <span class="tag-badge">Automação de Bancada</span>
-                        <span class="tag-badge">Tratamento de Ruído</span>
+                        <span class="tag-badge">Arduino UNO</span>
+                        <span class="tag-badge">LED</span>
+                        <span class="tag-badge">Sensor Ultrassônico (HC-SR04)</span>
+                        <span class="tag-badge">Potenciômetro</span>
                     </div>
 
                     <p>
-                        Neste experimento, o sistema avalia faixas de operação e limiares críticos. Ao detectar variações
-                        bruscas na grandeza física, o microcontrolador aciona automaticamente o elemento de resposta, prevenindo falsos positivos por meio de temporização.
+                        Sistema de auxílio ao estacionamento que mede a distância de um obstáculo com o sensor
+                        ultrassônico e permite ao usuário ajustar manualmente a distância de segurança através do
+                        potenciômetro.
                     </p>
 
-                    <div class="video-container">
-                        <video controls preload="metadata" class="demo-video">
-                            <source src="../img/desafio2.mp4" type="video/mp4">
-                            Seu navegador não suporta a reprodução de vídeo MP4.
-                        </video>
+                    <div class="desafio-conteudo">
+                        <div class="desafio-video">
+                            <h4>🎬 Demonstração &amp; Vídeo Explicativo</h4>
+
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/MvFgOhmP-0k"
+                                    title="Desafio 2 - Estacionamento Inteligente"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <p class="video-legenda">
+                                Testes com diferentes distâncias e posições reguladas no potenciômetro.
+                            </p>
+
+                            <a class="video-link" href="https://youtube.com/shorts/MvFgOhmP-0k" target="_blank"
+                                rel="noopener">
+                                ▶ Assistir no YouTube Shorts
+                            </a>
+                        </div>
+
+                        <div class="desafio-regras">
+                            <h4>⚙️ Lógica do Sistema</h4>
+
+                            <ul>
+                                <li>Objeto distante (&gt; limite) &rarr; LED desligado</li>
+                                <li>Objeto se aproximando &rarr; LED piscando (quanto mais perto, mais rápido)</li>
+                                <li>Objeto dentro da distância mínima (≤ limite / 2) &rarr; LED ligado contínuo</li>
+                            </ul>
+
+                            <div class="desafio-bonus">
+                                <strong>Desafio adicional implementado:</strong> o LED pisca cada vez mais rapidamente
+                                conforme o obstáculo se aproxima, atuando como alerta visual progressivo. O
+                                potenciômetro altera diretamente o comportamento dinâmico do sistema, definindo o valor
+                                da distância limite (5 a 50 cm) usada nas comparações.
+                            </div>
+
+                            <a class="desafio-tinkercad" href="#" target="_blank" rel="noopener">
+                                🔗 Circuito no Tinkercad (adicionar link)
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="code-block">
-                        <div class="code-header"> Código de Base - Lógica de Decisão e Histerese (Arduino / C++)</div>
-                        <pre><code>// Desafio 02 - Controle Automático com Faixa de Segurança
-const int PINO_SENSOR = A1;
-const int ATUADOR_PIN = 8;
-const int LIMIAR_SUPERIOR = 650;
-const int LIMIAR_INFERIOR = 450;
-bool estadoAtivo = false;
+                    <div class="desafio-codigo">
+                        <h4>💻 Código do Arduino</h4>
+
+                        <div class="code-wrapper">
+                            <button class="btn-copiar" type="button">📋 Copiar</button>
+                            <pre>// Desafio 2 - Estacionamento Inteligente
+// Componentes: LED, Sensor Ultrassônico HC-SR04 e Potenciômetro
+
+const int PINO_TRIGGER = 9;
+const int PINO_ECHO = 10;
+const int PINO_POT = A0;
+const int PINO_LED = 8;
 
 void setup() {
-    Serial.begin(9600);
-    pinMode(ATUADOR_PIN, OUTPUT);
+  pinMode(PINO_TRIGGER, OUTPUT);
+  pinMode(PINO_ECHO, INPUT);
+  pinMode(PINO_LED, OUTPUT);
+  Serial.begin(9600);
+}
+
+long medirDistanciaCm() {
+  digitalWrite(PINO_TRIGGER, LOW);
+  delayMicroseconds(2);
+  digitalWrite(PINO_TRIGGER, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(PINO_TRIGGER, LOW);
+
+  long duracao = pulseIn(PINO_ECHO, HIGH);
+  return duracao * 0.0343 / 2; // Velocidade do som (~343 m/s)
 }
 
 void loop() {
-    int leitura = analogRead(PINO_SENSOR);
+  // O potenciômetro define a distância limite de segurança (5 a 50 cm)
+  int leituraPot = analogRead(PINO_POT);
+  int distanciaLimite = map(leituraPot, 0, 1023, 5, 50);
 
-    // Controle com histerese para evitar oscilações
-    if (leitura >= LIMIAR_SUPERIOR && !estadoAtivo) {
-        estadoAtivo = true;
-        digitalWrite(ATUADOR_PIN, HIGH);
-        Serial.println("[ALERTA] Limiar atingido - Atuador ACIONADO!");
-    } else if (leitura <= LIMIAR_INFERIOR && estadoAtivo) {
-        estadoAtivo = false;
-        digitalWrite(ATUADOR_PIN, LOW);
-        Serial.println("[INFO] Retorno ao normal - Atuador DESLIGADO.");
-    }
-    delay(150);
-}</code></pre>
+  long distancia = medirDistanciaCm();
+
+  if (distancia &gt; distanciaLimite) {
+    // Objeto distante -> LED desligado
+    digitalWrite(PINO_LED, LOW);
+
+  } else if (distancia &gt; distanciaLimite / 2) {
+    // Objeto se aproximando -> LED piscando (quanto mais perto, mais rápido)
+    int intervalo = map(distancia, distanciaLimite / 2, distanciaLimite, 50, 400);
+    digitalWrite(PINO_LED, HIGH);
+    delay(intervalo);
+    digitalWrite(PINO_LED, LOW);
+    delay(intervalo);
+
+  } else {
+    // Objeto dentro da distância mínima -> LED ligado continuamente
+    digitalWrite(PINO_LED, HIGH);
+  }
+
+  Serial.print("Distância: ");
+  Serial.print(distancia);
+  Serial.print(" cm | Limite definido: ");
+  Serial.print(distanciaLimite);
+  Serial.println(" cm");
+}</pre>
+                        </div>
                     </div>
                 </article>
 
-                <!-- DESAFIO 3 -->
                 <article class="desafio-card">
                     <span class="desafio-badge-num">Desafio Prático 03</span>
-                    <h3>Sistema Multissensorial Integrado e Alertas Críticos</h3>
+                    <h3>🌡️ Ambiente Inteligente</h3>
 
                     <div class="tags-list">
-                        <span class="tag-badge">Integração Multissensor</span>
-                        <span class="tag-badge">Sistemas Embarcados</span>
-                        <span class="tag-badge">Indústria 4.0 / IoT</span>
-                        <span class="tag-badge">Lógica Combinada</span>
+                        <span class="tag-badge">Arduino UNO</span>
+                        <span class="tag-badge">LEDs (verde, vermelho, amarelo)</span>
+                        <span class="tag-badge">Sensor de Temperatura</span>
+                        <span class="tag-badge">Sensor de Umidade (DHT11)</span>
                     </div>
 
                     <p>
-                        Apresentação do desafio mais avançado: integração de múltiplos pontos de sensoriamento sincronizados.
-                        O firmware processa simultaneamente diferentes tipos de estímulos do ambiente e gera alertas em cascata conforme a gravidade das leituras.
+                        Sistema de monitoramento de uma estufa, capaz de acompanhar a temperatura e a umidade do
+                        ambiente. Os LEDs funcionam como indicadores visuais das condições, sinalizando inclusive quando
+                        duas situações críticas acontecem ao mesmo tempo.
                     </p>
 
-                    <div class="video-container">
-                        <video controls preload="metadata" class="demo-video">
-                            <source src="../img/desafio3.mp4" type="video/mp4">
-                            Seu navegador não suporta a reprodução de vídeo MP4.
-                        </video>
+                    <div class="desafio-conteudo">
+                        <div class="desafio-video">
+                            <h4>🎬 Demonstração &amp; Vídeo Explicativo</h4>
+
+                            <div class="video-container">
+                                <iframe src="https://www.youtube.com/embed/1XGZHVvOQg8"
+                                    title="Desafio 3 - Ambiente Inteligente"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+                                </iframe>
+                            </div>
+
+                            <p class="video-legenda">
+                                Testes simulando diferentes temperaturas e níveis críticos de umidade.
+                            </p>
+
+                            <a class="video-link" href="https://youtube.com/shorts/1XGZHVvOQg8" target="_blank"
+                                rel="noopener">
+                                ▶ Assistir no YouTube Shorts
+                            </a>
+                        </div>
+
+                        <div class="desafio-regras">
+                            <h4>⚙️ Lógica do Sistema</h4>
+
+                            <ul>
+                                <li>Temperatura e umidade adequadas &rarr; LED verde ligado</li>
+                                <li>Temperatura acima do limite (&gt; 30°C) &rarr; LED vermelho ligado</li>
+                                <li>Umidade abaixo do limite (&lt; 40%) &rarr; LED amarelo ligado</li>
+                            </ul>
+
+                            <div class="desafio-bonus">
+                                <strong>Desafio adicional implementado:</strong> cada LED representa uma condição
+                                independente. Quando ocorre temperatura alta e umidade baixa ao mesmo tempo, o vermelho
+                                e o amarelo acendem juntos, indicando visualmente as duas condições críticas
+                                simultâneas. O LED verde só acende quando as variáveis estão dentro do padrão ideal.
+                            </div>
+
+                            <a class="desafio-tinkercad" href="#" target="_blank" rel="noopener">
+                                🔗 Circuito no Tinkercad (adicionar link)
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="code-block">
-                        <div class="code-header"> Código de Base - Sistema Integrado Multissensor (Arduino / C++)</div>
-                        <pre><code>// Desafio 03 - Sistema Multissensorial com Alertas
-const int SENSOR_DIGITAL = 2;
-const int SENSOR_ANALOGICO = A2;
-const int BUZZER_PIN = 9;
-const int LED_STATUS = 12;
+                    <div class="desafio-codigo">
+                        <h4>💻 Código do Arduino</h4>
+
+                        <div class="code-wrapper">
+                            <button class="btn-copiar" type="button">📋 Copiar</button>
+                            <pre>// Desafio 3 - Ambiente Inteligente (Estufa)
+// Componentes: LEDs (verde, vermelho, amarelo) e Sensor DHT (temperatura e umidade)
+
+#include &lt;DHT.h&gt;
+
+#define PINO_DHT 2
+#define TIPO_DHT DHT11
+
+DHT dht(PINO_DHT, TIPO_DHT);
+
+const int PINO_LED_VERDE = 8;
+const int PINO_LED_VERMELHO = 9;
+const int PINO_LED_AMARELO = 10;
+
+const float TEMP_LIMITE = 30.0; // Acima disso -> temperatura elevada
+const float UMID_LIMITE = 40.0; // Abaixo disso -> umidade inadequada
 
 void setup() {
-    Serial.begin(9600);
-    pinMode(SENSOR_DIGITAL, INPUT_PULLUP);
-    pinMode(BUZZER_PIN, OUTPUT);
-    pinMode(LED_STATUS, OUTPUT);
-    Serial.println(">>> Sistema Multissensorial Operante <<<");
+  dht.begin();
+  pinMode(PINO_LED_VERDE, OUTPUT);
+  pinMode(PINO_LED_VERMELHO, OUTPUT);
+  pinMode(PINO_LED_AMARELO, OUTPUT);
+  Serial.begin(9600);
 }
 
 void loop() {
-    int presenca = digitalRead(SENSOR_DIGITAL);
-    int nivelSinal = analogRead(SENSOR_ANALOGICO);
+  float temperatura = dht.readTemperature();
+  float umidade = dht.readHumidity();
 
-    // Avaliação de condições combinadas
-    if (presenca == LOW || nivelSinal > 750) {
-        digitalWrite(LED_STATUS, HIGH);
-        tone(BUZZER_PIN, 1000, 200);
-        Serial.print("[CRÍTICO] Evento detectado! Nível: ");
-        Serial.println(nivelSinal);
-    } else {
-        digitalWrite(LED_STATUS, LOW);
-        noTone(BUZZER_PIN);
-    }
-    delay(200);
-}</code></pre>
+  if (isnan(temperatura) || isnan(umidade)) {
+    Serial.println("Falha na leitura do sensor DHT!");
+    delay(2000);
+    return;
+  }
+
+  bool temperaturaAlta = temperatura &gt; TEMP_LIMITE;
+  bool umidadeBaixa = umidade &lt; UMID_LIMITE;
+
+  // Cada LED indica uma condição; mais de um pode acender ao mesmo tempo
+  digitalWrite(PINO_LED_VERMELHO, temperaturaAlta ? HIGH : LOW);
+  digitalWrite(PINO_LED_AMARELO, umidadeBaixa ? HIGH : LOW);
+
+  // O verde só acende quando as duas variáveis estão dentro do ideal
+  digitalWrite(PINO_LED_VERDE, (!temperaturaAlta &amp;&amp; !umidadeBaixa) ? HIGH : LOW);
+
+  Serial.print("Temp: ");
+  Serial.print(temperatura);
+  Serial.print(" °C | Umidade: ");
+  Serial.print(umidade);
+  Serial.println(" %");
+
+  delay(200);
+}</pre>
+                        </div>
                     </div>
                 </article>
             </div>
         </section>
 
-        <!-- Boas práticas e aprendizados -->
         <section class="reveal">
             <h2>Boas Práticas no Laboratório</h2>
             <hr>
             <div class="specs-grid">
                 <div class="spec-item">
                     <strong>Filtragem de Ruído</strong>
-                    <span>Utilize capacitores de desacoplamento e médias móveis no código para estabilizar sinais analógicos.</span>
+                    <span>Utilize capacitores de desacoplamento e médias móveis no código para estabilizar sinais
+                        analógicos.</span>
                 </div>
                 <div class="spec-item">
                     <strong>Resistores de Pull-up/down</strong>
-                    <span>Evite pinos flutuantes em sensores digitais garantindo níveis lógicos bem definidos (HIGH/LOW).</span>
+                    <span>Evite pinos flutuantes em sensores digitais garantindo níveis lógicos bem definidos
+                        (HIGH/LOW).</span>
                 </div>
                 <div class="spec-item">
                     <strong>Compatibilidade de Tensão</strong>
-                    <span>Respeite as tensões de operação (3.3V vs 5V) usando divisores de tensão ou conversores de nível lógico.</span>
+                    <span>Respeite as tensões de operação (3.3V vs 5V) usando divisores de tensão ou conversores de
+                        nível lógico.</span>
                 </div>
                 <div class="spec-item">
                     <strong>Calibração em Bancada</strong>
-                    <span>Compare leituras brutas com grandezas reais conhecidas para ajustar as curvas de calibração do sensor.</span>
+                    <span>Compare leituras brutas com grandezas reais conhecidas para ajustar as curvas de calibração do
+                        sensor.</span>
                 </div>
             </div>
         </section>
 
-        <!-- Navegação entre os módulos -->
         <section class="reveal">
             <h2>Continue Explorando</h2>
             <h3>Aprofunde a teoria por trás dos experimentos</h3>
@@ -321,7 +511,6 @@ void loop() {
         </section>
     </main>
 
-    <!-- Footer padronizado -->
     <footer class="reveal">
         <div class="footer-content">
             <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
