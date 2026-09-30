@@ -1,177 +1,243 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/sensores.css">
-   <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-   <script src="../js/sensores.js" defer></script>
-   <script src="https://cdn.tailwindcss.com"></script>
-   <title>Del Company - Comunicação com Sensores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - Protocolos de comunicação para sensores: I2C, SPI, UART, malha 4-20mA e IO-Link.">
+    <title>Del Company | Comunicação com Sensores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/dell.png" type="image/png">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
 </head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="/service/servicos/html/sensores.html">Módulos <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Introdução</a></li>
+                        <li><a href="/service/sensors/html/sensor-tipos.html">Tipos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Prática &amp; Desafios</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/index.html">Início</a>
+        <a href="/service.html">Serviços</a>
+        <a href="/contato.html">Contato</a>
+    </div>
+    <main>
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb">
+                        <a href="/index.html">Início</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service.html">Serviços</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service/servicos/html/sensores.html">Sensores</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">Comunicação com Sensores</span>
+                    </nav>
+                    <span class="section-label">Sensoriamento &amp; Medição</span>
+                    <h1>Comunicação com Sensores</h1>
+                    <span class="content-subtitle">Protocolos I2C, SPI, UART, 4-20mA e IO-Link</span>
+                    <div class="divider"></div>
+                    <p class="lead">Descubra como os sensores transmitem seus dados com integridade para microcontroladores e CLPs, explorando desde barramentos em placa até redes industriais de longa distância.</p>
+                </div>
+            </div>
+        </div>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Barramento Digital</span>
+                <h2>Protocolo I2C (Inter-Integrated Circuit)</h2>
+                <div class="divider"></div>
+                <p>O <strong>I2C</strong> é um barramento síncrono half-duplex de 2 fios (SDA para dados e SCL para clock), permitindo conectar dezenas de sensores a um único microcontrolador através de endereçamento de 7 ou 10 bits com resistores de pull-up.</p>
+                <div class="img-container"><img src="../img/diagrama-i2c.png" alt="Diagrama I2C" class="img-diagrama"></div>
+            </div>
+        </section>
 
-<body class="bg-[#0a0a0a] text-white">
-   <header
-       class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-       <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-           Company</a>
-       <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-           <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-           </svg>
-       </button>
-       <nav id="menu" class="hidden md:flex items-center space-x-6 text-sm font-medium">
-           <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
-           <div class="relative group">
-               <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                   <li><a href="/service/servicos/html/robotizacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                   <li><a href="/service/servicos/html/logica_programacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                           Programação</a></li>
-                   <li><a href="/service/servicos/html/fundamentos_rede.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                   </li>
-                   <li><a href="/service/servicos/html/logica_computacional.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                           Computacional</a></li>
-                   <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                           Eletrônica</a></li>
-                   <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                           Informação</a></li>
-                   <li><a href="/service/servicos/html/banco_dados.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-               </ul>
-           </div>
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Alta Velocidade</span>
+                <h2>Protocolo SPI (Serial Peripheral Interface)</h2>
+                <div class="divider"></div>
+                <p>O <strong>SPI</strong> é um barramento full-duplex síncrono de 4 fios (MOSI, MISO, SCLK e CS/SS). Capaz de alcançar taxas de transferência elevadas (acima de dezenas de MHz), sendo ideal para displays, memórias flash e sensores de alta taxa de amostragem.</p>
+                <div class="img-container"><img src="../img/diagrama-spi.png" alt="Diagrama SPI" class="img-diagrama"></div>
+            </div>
+        </section>
 
-           <div class="relative group">
-               <a href="/service/servicos/html/sensores.html"
-                   class="block py-2 text-[#d62828] transition-colors">Sensores</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                   <li><a href="/service/sensors/html/sensor-introduca.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Introdu&#231;&#227;o a Sensores</a></li>
-                   <li><a href="/service/sensors/html/sensor-tipos.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tipos de Sensores</a></li>
-                   <li><a href="/service/sensors/html/sensor-comunicacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Comunica&#231;&#227;o</a></li>
-                   <li><a href="/service/sensors/html/sensor-plataformas.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Plataformas IoT</a></li>
-                   <li><a href="/service/sensors/html/sensor-pratica.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Prática &amp; Desafios</a></li>
-               </ul>
-           </div>
-                      <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-       </nav>
-   </header>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Serial Assíncrona</span>
+                <h2>UART (Universal Asynchronous Receiver/Transmitter)</h2>
+                <div class="divider"></div>
+                <p>Comunicação ponto a ponto sem linha de clock dedicada (TX e RX). A sincronização é garantida pela taxa de transmissão pré-definida (baud rate) e bits de start/stop. Utilizado em módulos GPS, Bluetooth e modems LoRa.</p>
+                <div class="img-container"><img src="../img/diagrama-uart.png" alt="Diagrama UART" class="img-diagrama"></div>
+            </div>
+        </section>
 
-   <main class="pt-20">
-       <section class="hero reveal">
-           <h2 class="logo-centro">Comunicação com Sensores</h2>
-           <h3>Protocolos e Padrões</h3>
-           <hr>
-           <p>Os sensores digitais modernos transmitem dados através de diversos protocolos de comunicação. Conhecer
-               esses protocolos é essencial para integrar sensores a microcontroladores, CLPs e sistemas IoT.</p>
-       </section>
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Padrões Industriais</span>
+                <h2>Malha de Corrente 4-20 mA &amp; IO-Link</h2>
+                <div class="divider"></div>
+                <div class="modelagem-grid">
+                    <div class="modelo-card">
+                        <h4>Sinal 4–20 mA</h4>
+                        <p>Padrão industrial global imune a ruídos e quedas de tensão em cabos longos (até quilômetros). O nível de 4mA serve como "zero vivo" (detecta rompimento do cabo se cair a 0mA).</p>
+                        <div class="img-container"><img src="../img/transmissor-4-20ma.png" alt="Transmissor 4-20mA" class="img-diagrama"></div>
+                    </div>
+                    <div class="modelo-card">
+                        <h4>IO-Link (IEC 61131-9)</h4>
+                        <p>Comunicação digital ponto a ponto que transforma sensores e atuadores comuns em dispositivos inteligentes para Indústria 4.0 com diagnósticos avançados e parametrização remota.</p>
+                        <div class="img-container"><img src="../img/diagrama-iolink.png" alt="Diagrama IO-Link" class="img-diagrama"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-       <section class="reveal">
-           <h2>I²C (Inter-Integrated Circuit)</h2>
-           <hr>
-           <div class="img-container">
-               <img src="../img/diagrama-i2c.png" alt="Diagrama de comunicação I2C (SDA/SCL)" class="img-diagrama">
-               <p class="img-caption">Figura 1: Topologia I²C mostrando um mestre e múltiplos escravos via SDA/SCL</p>
-           </div>
-           <p>Protocolo serial que utiliza duas linhas: <strong>SDA</strong> (dados) e <strong>SCL</strong> (clock).
-               Permite conectar vários dispositivos com endereços únicos no mesmo barramento.</p>
-           <p><strong>Aplicações:</strong> Sensores, displays, memórias, RTCs, expansores de GPIO.</p>
-           <p><em>Exemplo: Raspberry Pi possui suporte a I²C em seus GPIOs.</em></p>
-       </section>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Resumo</span>
+                <h2>Comparação Técnica dos Protocolos</h2>
+                <div class="divider"></div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Protocolo</th>
+                                <th>Topologia</th>
+                                <th>Fios</th>
+                                <th>Velocidade Típica</th>
+                                <th>Alcance</th>
+                                <th>Principal Vantagem</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td><strong>I2C</strong></td><td>Mestre-Múltiplos Escravos</td><td>2</td><td>100 kbps a 3.4 Mbps</td><td>Até 1 metro</td><td>Muitos sensores usando apenas 2 pinos</td></tr>
+                            <tr><td><strong>SPI</strong></td><td>Mestre-Escravo</td><td>4 + 1 CS por nó</td><td>10 Mbps a 50+ Mbps</td><td>Até 1 metro</td><td>Taxa de transmissão de altíssima velocidade</td></tr>
+                            <tr><td><strong>UART</strong></td><td>Ponto a ponto</td><td>2 (TX/RX)</td><td>9.6 kbps a 921.6 kbps</td><td>Até 15 metros</td><td>Simplicidade e ampla compatibilidade</td></tr>
+                            <tr><td><strong>4–20 mA</strong></td><td>Ponto a ponto industrial</td><td>2 ou 3</td><td>Contínuo analógico</td><td>Mais de 1.000 metros</td><td>Imunidade a ruídos eletromagnéticos severos</td></tr>
+                            <tr><td><strong>IO-Link</strong></td><td>Ponto a ponto digital</td><td>3 (cabo padrão)</td><td>230.4 kbps (COM3)</td><td>Até 20 metros</td><td>Diagnóstico, parametrização e telemetria</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
 
-       <section class="reveal">
-           <h2>SPI (Serial Peripheral Interface)</h2>
-           <hr>
-           <div class="img-container">
-               <img src="../img/diagrama-spi.png" alt="Diagrama de comunicação SPI (MOSI/MISO/SCLK/CS)" class="img-diagrama">
-               <p class="img-caption">Figura 2: Conexão SPI com as linhas MOSI, MISO, SCLK e seleção (CS)</p>
-           </div>
-           <p>Protocolo serial rápido com quatro sinais principais: <strong>MOSI</strong> (Master Out, Slave In),
-               <strong>MISO</strong> (Master In, Slave Out), <strong>SCLK</strong> (clock) e <strong>CS/CE</strong>
-               (seleção do dispositivo).</p>
-           <p><strong>Uso:</strong> Comunicação rápida entre controlador e periféricos.</p>
-           <p><em>Raspberry Pi também oferece SPI via GPIOs.</em></p>
-       </section>
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
 
-       <section class="reveal">
-           <h2>UART (Universal Asynchronous Receiver/Transmitter)</h2>
-           <hr>
-           <div class="img-container">
-               <img src="../img/diagrama-uart.png" alt="Diagrama de comunicação UART (TX/RX)" class="img-diagrama">
-               <p class="img-caption">Figura 3: Comunicação serial UART cruzando linhas TX e RX</p>
-           </div>
-           <p>Comunicação serial assíncrona com duas linhas: <strong>TX</strong> (transmissão) e <strong>RX</strong>
-               (recepção). Muito usada para conectar módulos, sensores, GPS, equipamentos industriais e
-               microcontroladores.</p>
-           <p><em>Raspberry Pi e outros microcontroladores oferecem UART.</em></p>
-       </section>
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
 
-       <section class="reveal">
-           <h2>Sinal 4–20 mA</h2>
-           <hr>
-           <div class="img-container">
-               <img src="../img/transmissor-4-20ma.png" alt="Transmissor industrial 4-20mA ligado a um CLP" class="img-diagrama">
-               <p class="img-caption">Figura 4: Exemplo de laço de corrente 4-20 mA em ambiente industrial</p>
-           </div>
-           <p>Padrão industrial onde uma corrente representa a variável medida: <strong>4 mA → valor mínimo</strong>,
-               <strong>20 mA → valor máximo</strong>. Muito utilizado em ambientes industriais para transmissão de
-               sinais entre instrumentos e sistemas de controle.</p>
-       </section>
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
 
-       <section class="reveal">
-           <h2>IO-Link</h2>
-           <hr>
-           <div class="img-container">
-               <img src="../img/diagrama-iolink.png" alt="Arquitetura IO-Link com Sensor, Mestre e CLP" class="img-diagrama">
-               <p class="img-caption">Figura 5: Topologia IO-Link conectando sensores ao controlador principal</p>
-           </div>
-           <p>Tecnologia de comunicação para conectar sensores e atuadores a sistemas de controle na Indústria 4.0.
-               Permite transmitir valores medidos, diagnósticos, parâmetros, identificação do dispositivo e informações
-               de funcionamento.</p>
-       </section>
-
-       <section class="reveal">
-           <h2>Comparação das Tecnologias</h2>
-           <hr>
-           <div class="specs-grid">
-               <div class="spec-item"><strong>Tecnologia</strong> → <strong>Tipo</strong> → <strong>Aplicação
-                       típica</strong></div>
-               <div class="spec-item">Analógico → Sinal contínuo → Temperatura, corrente</div>
-               <div class="spec-item">Digital → Dados digitais → Presença, sensores digitais</div>
-               <div class="spec-item">I²C → Comunicação serial → Sensores digitais</div>
-               <div class="spec-item">SPI → Comunicação serial rápida → Sensores e periféricos</div>
-               <div class="spec-item">UART → Comunicação serial → Módulos e equipamentos</div>
-               <div class="spec-item">1‑Wire → Comunicação serial → Temperatura (DS18B20)</div>
-               <div class="spec-item">4‑20 mA → Sinal industrial → Instrumentação</div>
-               <div class="spec-item">IO‑Link → Comunicação industrial → Sensores inteligentes</div>
-           </div>
-       </section>
-   </main>
-
-   <footer class="reveal">
-       <div class="footer-content">
-           <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-           <div class="footer-links">
-               <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener"><span></span>
-                   Instagram</a>
-               <a href="https://wa.me/5548991013184" target="_blank" rel="noopener"><span></span> Whatsapp</a>
-               <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener"><span></span> GitHub</a>
-           </div>
-       </div>
-   </footer>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>

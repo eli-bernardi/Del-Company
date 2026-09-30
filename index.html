@@ -1,230 +1,410 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/home.css">
+    <meta name="description" content="Del Company - Soluções digitais inovadoras em desenvolvimento web, infraestrutura e tecnologia para empresas e pessoas.">
+    <title>Del Company | Soluções Digitais</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="shortcut icon" href="./img/dell.png" type="image/png">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/home.css">
+
     <script src="./js/home.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Del Company</title>
 </head>
 
-<body class="bg-[#0a0a0a] text-white">
-    <header
-        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-        <a href="./index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-            Company</a>
+<body>
 
-        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-        <nav id="menu" class="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
-            <div class="relative group">
-                <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/servicos/html/robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="/service/servicos/html/sensores.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sensores</a></li>
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="./index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
 
-                    <li><a href="/service/servicos/html/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                            Programação</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                    </li>
-                    <li><a href="/service/servicos/html/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                            Computacional</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                            Eletrônica</a></li>
-                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                            Informação</a></li>
-                    <li><a href="/service/servicos/html/banco_dados.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
- 
-                      <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-        </nav>
+            <nav class="nav">
+                <a href="./index.html" class="active">Início</a>
+                <div class="nav-dropdown">
+                    <a href="./service.html">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="./service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="./service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="./service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="./service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="./service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="./service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="./service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <a href="./contato.html">Contato</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <main class="pt-20">
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="./index.html">Início</a>
+        <a href="./service.html">Serviços</a>
+        <a href="./contato.html">Contato</a>
+    </div>
+
+    <main>
+
+        <!-- HERO -->
         <section class="hero reveal">
-            <h2 class="logo-centro">Del Company</h2>
-            <h2>Soluções Digitais</h2>
-            <hr>
-            <p>Transformamos suas ideias em realidade digital com soluções inovadoras e personalizadas</p>
-            <button class="btn-primary">
-                <a href="./contato.html">Entre em contato</a>
-            </button>
-        </section>
-
-        <section class="reveal">
-            <h2>Quem somos?</h2>
-            <hr>
-            <p>Somos uma empresa jovem, mas com a experiência de quem já carrega anos de dedicação ao universo da
-                tecnologia.</p>
-            <p>Nossa história começou há 2 anos, quando um jovem apaixonado por programação decidiu transformar sua
-                curiosidade em profissão.</p>
-            <p>Desde então, trabalhamos com foco em soluções inteligentes e acessíveis para empresas e pessoas que
-                buscam inovação.</p>
-            <p>Acreditamos que tecnologia não é apenas código: é proximidade, confiança e criatividade.</p>
-            <p>Aqui, unimos a energia de quem vive a tecnologia no dia a dia, com a seriedade de quem sabe que cada
-                linha de código pode transformar ideias em realidade.</p>
-        </section>
-
-        <section class="stats reveal">
-            <h2>Nossos Números</h2>
-            <hr>
-            <div class="stats-grid">
-                <div class="stat-item">
-                    <span class="stat-number" data-target="3">0+</span>
-                    <span class="stat-label">Anos de Experiência</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="30">0+</span>
-                    <span class="stat-label">Projetos Concluídos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="100">0%</span>
-                    <span class="stat-label">Clientes Satisfeitos</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number" data-target="6">0</span>
-                    <span class="stat-label">Serviços Especializados</span>
-                </div>
-            </div>
-        </section>
-
-        <section class="servicos reveal">
-            <h2><a href="../service.html" class="hover:text-[#d62828] transition-colors">Serviços</a></h2>
-            <hr>
-            <div class="servicos-lista">
-                <a href="./service/servicos/html/fundamentos_eletronica.html" class="servico-link">
-                    <span class="servico-icon"></span> Fundamentos de Eletrônica
-                </a>
-                <a href="./service/servicos/html/fundamentos_rede.html" class="servico-link">
-                    <span class="servico-icon"></span> Fundamentos de Rede
-                </a>
-                <a href="./service/servicos/html/tecnologia_informacao.html" class="servico-link">
-                    <span class="servico-icon"></span> Tecnologia da Informação
-                </a>
-                <a href="./service/servicos/html/logica_programacao.html" class="servico-link">
-                    <span class="servico-icon"></span> Lógica de Programação
-                </a>
-                <a href="./service/servicos/html/logica_computacional.html" class="servico-link">
-                    <span class="servico-icon"></span> Lógica Computacional
-                </a>
-                <a href="../service/servicos/html/banco_dados.html" class="servico-link">
-                    <span class="servico-icon"></span> Banco de Dados
-                </a>
-            </div>
-            <button class="btn-primary mt-8">
-                <a href="../service.html">Ver todos os serviços</a>
-            </button>
-        </section>
-
-        <section class="nossa-equipe reveal">
-            <h2>Nossa Equipe</h2>
-            <hr>
-            <p>Conheça os profissionais dedicados que tornam tudo isso possível:</p>
-            <div class="time-lista">
-                <div class="time-card">
-                    <div class="time-img">
-                        <img src="./img/eliel.png" alt="Eliel Bernardi">
-                    </div>
-                    <div class="time-info">
-                        <strong>Eliel Bernardi</strong>
-                        <span class="time-cargo">Fundador e Desenvolvedor Chefe</span>
-                        <p class="time-desc">Especialista em desenvolvimento full-stack com paixão por inovação</p>
-                    </div>
-                </div>
-                <div class="time-card">
-                    <div class="time-img">
-                        <img src="./img/carlos.png" alt="Carlos Roberto">
-                    </div>
-                    <div class="time-info">
-                        <strong>Carlos Roberto</strong>
-                        <span class="time-cargo">Analista de Suporte Técnico</span>
-                        <p class="time-desc">Experiência em suporte técnico e resolução de problemas</p>
-                    </div>
-                </div>
-                <div class="time-card">
-                    <div class="time-img">
-                        <img src="./img/macaneiro.jpg" alt="José Maçaneiro">
-                    </div>
-                    <div class="time-info">
-                        <strong>José Maçaneiro</strong>
-                        <span class="time-cargo">Especialista em Redes</span>
-                        <p class="time-desc">Certificado em infraestrutura de redes e segurança digital</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="contato reveal">
-            <div class="contato-container">
-                <div class="contato-info">
-                    <h2>Vamos conversar?</h2>
-                    <p>Entre em contato e vamos conversar sobre seu projeto!</p>
-                    <div class="contato-detalhes">
-                        <div class="contato-item">
-                            <span class="contato-icon"></span>
-                            <p><strong>Email:</strong> elielbernardi0012@gmail.com</p>
-                        </div>
-                        <div class="contato-item">
-                            <span class="contato-icon"></span>
-                            <p><a href="https://wa.me/5548991004282"><strong>Whatsapp:</strong> (48) 99100-4282</a></p>
+            <div class="container">
+                <div class="hero-inner">
+                    <div class="hero-content">
+                        <span class="hero-eyebrow">Inovação &amp; Tecnologia</span>
+                        <h1 class="hero-title">
+                            Transformamos ideias<br>
+                            em <em>realidade digital.</em>
+                        </h1>
+                        <p class="hero-subtitle">
+                            Soluções inteligentes e acessíveis para empresas e pessoas que buscam inovação.
+                            Unimos criatividade, técnica e proximidade em cada projeto.
+                        </p>
+                        <div class="hero-actions">
+                            <a href="./contato.html" class="btn btn-primary">Entre em contato</a>
+                            <a href="./service.html" class="btn btn-outline">Ver serviços</a>
                         </div>
                     </div>
-                    <button class="btn-primary">
-                        <a href="./contato.html">Enviar mensagem</a>
-                    </button>
+                    <div class="hero-visual">
+                        <div class="hero-badge-container">
+                            <div class="hero-badge-bg">D</div>
+                            <div class="hero-badge-text">
+                                <strong>3+</strong>
+                                <span>Anos de experiência</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <div class="contato-imagem">
-                    <img src="./img/contato.png" alt="Contato">
+            </div>
+            <div class="hero-scroll">Explorar</div>
+        </section>
+
+        <!-- QUEM SOMOS -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <div class="about-inner">
+                    <div class="about-content">
+                        <span class="section-label">Quem somos</span>
+                        <h2>Uma empresa jovem com alma de inovação</h2>
+                        <div class="divider"></div>
+                        <p>Somos uma empresa jovem, mas com a experiência de quem já carrega anos de dedicação ao universo da tecnologia.</p>
+                        <p>Nossa história começou há 2 anos, quando um jovem apaixonado por programação decidiu transformar sua curiosidade em profissão.</p>
+                        <p>Desde então, trabalhamos com foco em soluções inteligentes e acessíveis para empresas e pessoas que buscam inovação.</p>
+                        <div class="about-highlight">
+                            <p>"Acreditamos que tecnologia não é apenas código: é proximidade, confiança e criatividade."</p>
+                        </div>
+                    </div>
+                    <div class="about-visual">
+                        <p class="about-visual-title">Nossos valores</p>
+                        <div class="values-list">
+                            <div class="value-item">
+                                <span class="value-num">01</span>
+                                <div class="value-content">
+                                    <h4>Inovação</h4>
+                                    <p>Buscamos sempre as melhores soluções tecnológicas para cada desafio.</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-num">02</span>
+                                <div class="value-content">
+                                    <h4>Proximidade</h4>
+                                    <p>Trabalhamos lado a lado com nossos clientes em cada etapa do projeto.</p>
+                                </div>
+                            </div>
+                            <div class="value-item">
+                                <span class="value-num">03</span>
+                                <div class="value-content">
+                                    <h4>Qualidade</h4>
+                                    <p>Cada linha de código é entregue com responsabilidade e excelência técnica.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="mapa reveal">
-            <h2>Onde estamos localizados</h2>
-            <hr>
-            <div class="endereco-info">
-                <p><strong>Bairro:</strong> XV de Novembro - Tijucas</p>
-                <p><strong>Rua:</strong> Bathuel de Oliveira, nº 189</p>
+        <!-- STATS -->
+        <div class="stats-section reveal">
+            <div class="container">
+                <div class="stats-inner">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0<span>+</span></span>
+                        <span class="stat-label">Anos de Experiência</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="30">0<span>+</span></span>
+                        <span class="stat-label">Projetos Concluídos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="100">0<span>%</span></span>
+                        <span class="stat-label">Clientes Satisfeitos</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="6">0</span>
+                        <span class="stat-label">Serviços Especializados</span>
+                    </div>
+                </div>
             </div>
-            <div class="map-container">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1773.5801414368784!2d-48.64602146133065!3d-27.2455019941126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8abda3333d14d%3A0xb8b530f5781c438!2sR.%20Bathuel%20de%20Oliveira%2C%20189%20-%20XV%20de%20Novembro%2C%20Tijucas%20-%20SC%2C%2088200-000!5e0!3m2!1spt-BR!2sbr!4v1757681608725!5m2!1spt-BR!2sbr"
-                    width="100%" height="450" style="border: none; border-radius: 16px;" allowfullscreen=""
-                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <!-- SERVIÇOS -->
+        <section class="section reveal">
+            <div class="container">
+                <div class="services-header">
+                    <div>
+                        <span class="section-label">O que fazemos</span>
+                        <h2>Nossos Serviços</h2>
+                    </div>
+                    <a href="./service.html" class="btn btn-outline-red">Ver todos os serviços</a>
+                </div>
+                <div class="servicos-grid">
+                    <a href="./service/servicos/html/fundamentos_eletronica.html" class="servico-card">
+                        <div class="servico-card-num">01</div>
+                        <h4>Fundamentos de Eletrônica</h4>
+                        <p>Conceitos essenciais de eletrônica aplicada para projetos modernos.</p>
+                        <span class="servico-card-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/fundamentos_rede.html" class="servico-card">
+                        <div class="servico-card-num">02</div>
+                        <h4>Fundamentos de Rede</h4>
+                        <p>Infraestrutura e segurança de redes para ambientes corporativos.</p>
+                        <span class="servico-card-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/tecnologia_informacao.html" class="servico-card">
+                        <div class="servico-card-num">03</div>
+                        <h4>Tecnologia da Informação</h4>
+                        <p>Suporte técnico e consultoria em TI para empresas de todos os portes.</p>
+                        <span class="servico-card-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/logica_programacao.html" class="servico-card">
+                        <div class="servico-card-num">04</div>
+                        <h4>Lógica de Programação</h4>
+                        <p>Fundamentos e prática de programação estruturada e orientada a objetos.</p>
+                        <span class="servico-card-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/logica_computacional.html" class="servico-card">
+                        <div class="servico-card-num">05</div>
+                        <h4>Lógica Computacional</h4>
+                        <p>Raciocínio lógico e algoritmos aplicados à resolução de problemas.</p>
+                        <span class="servico-card-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/banco_dados.html" class="servico-card">
+                        <div class="servico-card-num">06</div>
+                        <h4>Banco de Dados</h4>
+                        <p>Modelagem, administração e otimização de bancos de dados relacionais.</p>
+                        <span class="servico-card-arrow">Saiba mais →</span>
+                    </a>
+                </div>
             </div>
         </section>
+
+        <!-- EQUIPE -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <div class="team-header">
+                    <span class="section-label">As pessoas</span>
+                    <h2>Nossa Equipe</h2>
+                    <div class="divider divider-center"></div>
+                    <p class="lead">Conheça os profissionais dedicados que tornam tudo isso possível.</p>
+                </div>
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="./img/eliel.png" alt="Eliel Bernardi">
+                        </div>
+                        <div class="team-info">
+                            <strong>Eliel Bernardi</strong>
+                            <span class="team-cargo">Fundador &amp; Desenvolvedor Chefe</span>
+                            <p>Especialista em desenvolvimento full-stack com paixão por inovação.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="./img/carlos.png" alt="Carlos Roberto">
+                        </div>
+                        <div class="team-info">
+                            <strong>Carlos Roberto</strong>
+                            <span class="team-cargo">Analista de Suporte Técnico</span>
+                            <p>Experiência em suporte técnico e resolução de problemas complexos.</p>
+                        </div>
+                    </div>
+                    <div class="team-card">
+                        <div class="team-img">
+                            <img src="./img/macaneiro.jpg" alt="José Maçaneiro">
+                        </div>
+                        <div class="team-info">
+                            <strong>José Maçaneiro</strong>
+                            <span class="team-cargo">Especialista em Redes</span>
+                            <p>Certificado em infraestrutura de redes e segurança digital.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CONTATO -->
+        <div class="contact-home reveal">
+            <div class="container">
+                <div class="contact-home-inner">
+                    <div class="contact-home-content">
+                        <span class="section-label" style="color:rgba(255,255,255,0.5)">Fale conosco</span>
+                        <h2>Vamos conversar?</h2>
+                        <p>Entre em contato e vamos conversar sobre seu projeto. Respondemos rápido.</p>
+                        <div class="contact-channels">
+                            <div class="contact-channel">
+                                <div class="contact-channel-icon">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div class="contact-channel-text">
+                                    <strong>E-mail</strong>
+                                    <span>elielbernardi0012@gmail.com</span>
+                                </div>
+                            </div>
+                            <a href="https://wa.me/5548991004282" target="_blank" rel="noopener" class="contact-channel">
+                                <div class="contact-channel-icon">
+                                    <i class="fa-brands fa-whatsapp"></i>
+                                </div>
+                                <div class="contact-channel-text">
+                                    <strong>WhatsApp</strong>
+                                    <span>(48) 99100-4282</span>
+                                </div>
+                            </a>
+                        </div>
+                        <a href="./contato.html" class="btn btn-primary" style="margin-top:32px">Enviar mensagem</a>
+                    </div>
+                    <div class="contact-home-visual">
+                        <img src="./img/contato.png" alt="Contato Del Company">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MAPA -->
+        <div class="map-section reveal">
+            <div class="container">
+                <div class="map-header">
+                    <span class="section-label">Localização</span>
+                    <h2>Onde estamos</h2>
+                    <div class="address-info">
+                        <div class="address-item">
+                            <strong>Bairro</strong>
+                            <span>XV de Novembro — Tijucas</span>
+                        </div>
+                        <div class="address-item">
+                            <strong>Endereço</strong>
+                            <span>Rua Bathuel de Oliveira, nº 189</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <iframe class="map-frame"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1773.5801414368784!2d-48.64602146133065!3d-27.2455019941126!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94d8abda3333d14d%3A0xb8b530f5781c438!2sR.%20Bathuel%20de%20Oliveira%2C%20189%20-%20XV%20de%20Novembro%2C%20Tijucas%20-%20SC%2C%2088200-000!5e0!3m2!1spt-BR!2sbr!4v1757681608725!5m2!1spt-BR!2sbr"
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                title="Mapa Del Company"></iframe>
+        </div>
+
     </main>
 
-    <footer class="reveal">
-        <div class="footer-content">
-            <p>&copy 2025 - Del Company | Todos os direitos reservados</p>
-            <div class="footer-links">
-                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
-                    Instagram
-                </a>
-                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
-                    Whatsapp
-                </a>
-                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
-                    GitHub
-                </a>
+    <!-- FOOTER -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
+
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
         </div>
     </footer>

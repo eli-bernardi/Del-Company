@@ -1,210 +1,225 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/sensores.css">
+    <meta name="description" content="Del Company - Plataformas IoT: Arduino, ESP32, Raspberry Pi, CLPs industriais e arquiteturas IIoT.">
+    <title>Del Company | Plataformas & IoT</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-    <script src="../js/sensores.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Del Company - Plataformas & IoT</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
 </head>
-
-<body class="bg-[#0a0a0a] text-white">
-    <header
-        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-        <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-            Company</a>
-        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-        <nav id="menu" class="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
-            <div class="relative group">
-                <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/servicos/html/robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="/service/servicos/html/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                            Programação</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                    </li>
-                    <li><a href="/service/servicos/html/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                            Computacional</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                            Eletrônica</a></li>
-                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                            Informação</a></li>
-                    <li><a href="/service/servicos/html/banco_dados.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
-
-            <div class="relative group">
-                <a href="/service/servicos/html/sensores.html"
-                    class="block py-2 text-[#d62828] transition-colors">Sensores</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/sensors/html/sensor-introduca.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Introdu&#231;&#227;o a Sensores</a></li>
-                    <li><a href="/service/sensors/html/sensor-tipos.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tipos de Sensores</a></li>
-                    <li><a href="/service/sensors/html/sensor-comunicacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Comunica&#231;&#227;o</a></li>
-                    <li><a href="/service/sensors/html/sensor-plataformas.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Plataformas IoT</a></li>
-                    <li><a href="/service/sensors/html/sensor-pratica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Prática &amp; Desafios</a></li>
-                </ul>
-            </div>
-            <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-        </nav>
-    </header>
-
-    <main class="pt-20">
-        <section class="hero reveal">
-            <h2 class="logo-centro">Plataformas & IoT</h2>
-            <h3>Arduino, ESP32, Raspberry Pi, CLP e IIoT</h3>
-            <hr>
-            <p>Sensores não funcionam sozinhos – eles precisam de plataformas para processar, comunicar e atuar. Conheça
-                as principais plataformas e a integração com a Internet das Coisas.</p>
-        </section>
-
-        <section class="reveal">
-            <h2>Arduino</h2>
-            <hr>
-            <div class="img-container">
-                <img src="../img/arduino-uno.png" alt="Placa Arduino UNO" class="img-componente">
-                <p class="img-caption">Figura 1: Arduino UNO, a placa de prototipagem mais popular do mundo</p>
-            </div>
-            <p>Plataforma de prototipagem eletrônica amplamente utilizada. Conecta-se a diversos sensores e atuadores.
-                Estrutura básica: <strong>setup()</strong> (executada uma vez) e <strong>loop()</strong> (executada
-                repetidamente).</p>
-            <p><strong>Exemplo:</strong> Sensor de temperatura → Arduino → programa → ventilador.</p>
-        </section>
-
-        <section class="reveal">
-            <h2>ESP32</h2>
-            <hr>
-            <div class="img-container">
-                <img src="../img/esp32-devkit.png" alt="Placa de desenvolvimento ESP32" class="img-componente">
-                <p class="img-caption">Figura 2: Módulo ESP32 com suporte nativo a Wi-Fi e Bluetooth</p>
-            </div>
-            <p>Microcontrolador com conectividade Wi‑Fi e Bluetooth, ideal para IoT. Combina GPIO, comunicação serial,
-                interfaces digitais e processamento local.</p>
-            <p><strong>Exemplo:</strong> DHT22 → ESP32 → Wi‑Fi → servidor.</p>
-        </section>
-
-        <section class="reveal">
-            <h2>Raspberry Pi</h2>
-            <hr>
-            <div class="img-container">
-                <img src="../img/raspberry-pi.png" alt="Placa Raspberry Pi" class="img-componente">
-                <p class="img-caption">Figura 3: Raspberry Pi, um computador completo de placa única</p>
-            </div>
-            <p>Computador de placa única com sistema operacional (Linux) e GPIOs. Suporta I²C, SPI, UART, PWM. Pode ser
-                usado como servidor local, gateway IoT, dashboard ou sistema de monitoramento.</p>
-            <p><em>A documentação oficial confirma a presença dessas interfaces nos GPIOs.</em></p>
-        </section>
-
-        <section class="reveal">
-            <h2>CLP (Controlador Lógico Programável)</h2>
-            <hr>
-            <div class="img-container">
-                <img src="../img/clp-industrial.png" alt="Controlador Lógico Programável Industrial"
-                    class="img-componente">
-                <p class="img-caption">Figura 4: CLP industrial com seus módulos de entrada e saída (I/O)</p>
-            </div>
-            <p>Equipamento fundamental na automação industrial. Recebe sinais de sensores, botões, chaves e
-                transmissores, executa a lógica programada e aciona saídas (motores, válvulas, relés).</p>
-            <p>Funciona como: <strong>Entradas → Lógica → Saídas</strong>.</p>
-        </section>
-
-        <section class="reveal">
-            <h2>Internet das Coisas (IoT) e IIoT</h2>
-            <hr>
-            <div class="img-container">
-                <img src="../img/diagrama-iot.png" alt="Arquitetura Sensor para Nuvem" class="img-diagrama">
-                <p class="img-caption">Figura 5: Fluxo de dados desde o sensor físico até a análise em nuvem (IoT)</p>
-            </div>
-            <p>IoT conecta objetos físicos para coletar, processar e trocar informações. Na indústria, chamamos de
-                <strong>IIoT</strong> (Industrial Internet of Things).
-            </p>
-            <p><strong>Fluxo típico:</strong> Sensor → Microcontrolador → Rede → Servidor → Aplicação.</p>
-            <p>Permite monitoramento remoto, alertas, análise de dados e manutenção preditiva.</p>
-        </section>
-
-        <section class="reveal">
-            <h2>Indústria 4.0</h2>
-            <hr>
-            <div class="img-container">
-                <img src="../img/arquitetura-iiot.png" alt="Arquitetura de uma fábrica conectada"
-                    class="img-diagrama w-full object-cover max-h-64">
-                <p class="img-caption">Figura 6: Fábrica conectada com IIoT, Cloud Computing e Machine Learning</p>
-            </div>
-            <p>Transformação baseada na integração de tecnologias digitais, automação, comunicação e análise de dados.
-                Sensores fornecem os dados essenciais para que essas tecnologias funcionem.</p>
-            <p><strong>Conceitos associados:</strong> IIoT, Big Data, computação em nuvem, inteligência artificial,
-                robótica.</p>
-        </section>
-
-        <section class="reveal">
-            <h2>Exemplo Completo de Aplicação</h2>
-            <hr>
-            <p>Uma máquina industrial equipada com:</p>
-            <ul class="lista-aplicacoes">
-                <li>Sensor de temperatura</li>
-                <li>Sensor de vibração</li>
-                <li>Sensor de corrente</li>
-                <li>Sensor de presença</li>
-            </ul>
-            <p>Os sensores coletam dados, o CLP processa, um sistema supervisório acompanha e os dados são armazenados.
-                Se a temperatura ou vibração ultrapassar limites, um alerta é emitido.</p>
-            <p><strong>Fluxo:</strong> Sensores → CLP → Rede Industrial → Supervisório → Banco de Dados → Dashboard.</p>
-        </section>
-
-        <section class="reveal">
-            <h2>Prática de Bancada</h2>
-            <hr>
-            <div class="container">
-                <p>Quer ver esses microcontroladores e sensores operando em experimentos reais de laboratório?</p>
-                <div class="destaque">
-                    <p>Confira nossas <strong>demonstrações em vídeo</strong> com montagens de bancada, medições de grandezas físicas e acionamento de atuadores.</p>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
                 </div>
-                <a href="/service/sensors/html/sensor-pratica.html" class="btn-ver">Acessar Desafios Práticos com Sensores →</a>
+            </a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="/service/servicos/html/sensores.html">Módulos <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Introdução</a></li>
+                        <li><a href="/service/sensors/html/sensor-tipos.html">Tipos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Prática &amp; Desafios</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/index.html">Início</a>
+        <a href="/service.html">Serviços</a>
+        <a href="/contato.html">Contato</a>
+    </div>
+    <main>
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb">
+                        <a href="/index.html">Início</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service.html">Serviços</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service/servicos/html/sensores.html">Sensores</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">Plataformas & IoT</span>
+                    </nav>
+                    <span class="section-label">Sensoriamento &amp; Medição</span>
+                    <h1>Plataformas & IoT</h1>
+                    <span class="content-subtitle">Arduino, ESP32, Raspberry Pi, CLP e Indústria 4.0</span>
+                    <div class="divider"></div>
+                    <p class="lead">Compreenda como os dados dos sensores são processados desde pequenos microcontroladores de 8 bits até poderosos controladores industriais conectados à nuvem.</p>
+                </div>
+            </div>
+        </div>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Microcontroladores</span>
+                <h2>Hardware de Processamento e IoT</h2>
+                <div class="divider"></div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:16px"><img src="../img/arduino-uno.png" alt="Arduino UNO" style="height:70px;object-fit:contain"></div>
+                        <h4>Arduino UNO / Nano</h4>
+                        <p>Microcontrolador ATmega328P de 8 bits (16MHz). Padrão didático global para prototipagem rápida, eletrônica básica e laboratórios acadêmicos.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:16px"><img src="../img/esp32-devkit.png" alt="ESP32" style="height:70px;object-fit:contain"></div>
+                        <h4>ESP32 DevKit</h4>
+                        <p>Dual-core Xtensa 32-bit (240MHz) com Wi-Fi 802.11 b/g/n e Bluetooth LE nativos. Plataforma definitiva para dispositivos de Internet das Coisas (IoT).</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:16px"><img src="../img/raspberry-pi.png" alt="Raspberry Pi" style="height:70px;object-fit:contain"></div>
+                        <h4>Raspberry Pi 4 / 5</h4>
+                        <p>Computador de placa única (SBC) com Linux Debian, CPU Quad-core ARM e portas GPIO para processamento de imagem, IA e dashboards locais.</p>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="reveal">
-            <h2>Conclusão</h2>
-            <hr>
-            <p>Os sensores são a base da automação moderna e da IoT. Quando integrados a plataformas como Arduino,
-                ESP32, Raspberry Pi e CLPs, permitem monitorar e controlar processos de forma inteligente. A evolução
-                rumo à Indústria 4.0 depende diretamente do sensoriamento e da comunicação eficiente de dados.</p>
-            <p><em>Compreender sensores é compreender a primeira etapa de um sistema automatizado.</em></p>
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Automação Fabril</span>
+                <h2>CLP (Controlador Lógico Programável)</h2>
+                <div class="divider"></div>
+                <div class="modelagem-grid">
+                    <div class="modelo-card">
+                        <h4>Robustez Industrial</h4>
+                        <p>O CLP é projetado especificamente para suportar poeira, temperatura extrema, ruídos e umidade no ambiente fabril. Executa ciclos determinísticos em tempo real (scan de milissegundos).</p>
+                        <p>Programação padronizada pela norma <strong>IEC 61131-3</strong> (Ladder, Texto Estruturado, Blocos de Função).</p>
+                    </div>
+                    <div class="modelo-card">
+                        <img src="../img/clp-industrial.png" alt="CLP Industrial" class="img-diagrama" style="max-height:200px">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Conectividade</span>
+                <h2>Arquitetura IoT &amp; Indústria 4.0</h2>
+                <div class="divider"></div>
+                <div class="img-container">
+                    <img src="../img/arquitetura-iiot.png" alt="Arquitetura IIoT" class="img-diagrama">
+                    <p class="img-caption">Fluxo ponta a ponta: Sensores Edge &rarr; Gateways &rarr; Protocolos MQTT/HTTP &rarr; Nuvem / Analytics</p>
+                </div>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Edge Computing</strong> Pré-processamento e filtragem de ruídos localmente no dispositivo embarcado</div>
+                    <div class="spec-item"><strong>Protocolo MQTT</strong> Mensageria leve publish/subscribe ideal para conexões instáveis e baixo consumo</div>
+                    <div class="spec-item"><strong>Manutenção Preditiva</strong> Algoritmos de Machine Learning que preveem falhas antes que ocorram</div>
+                    <div class="spec-item"><strong>Dashboards em Nuvem</strong> Visualização em tempo real de KPIs de produção, temperatura e vibração</div>
+                </div>
+            </div>
         </section>
     </main>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
 
-    <footer class="reveal">
-        <div class="footer-content">
-            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-            <div class="footer-links">
-                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener"><span></span>
-                    Instagram</a>
-                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener"><span></span> Whatsapp</a>
-                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener"><span></span> GitHub</a>
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 </body>
-
 </html>

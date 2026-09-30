@@ -1,91 +1,147 @@
+﻿// =============================================
+// DEL COMPANY — home.js
+// Funcionalidades: header scroll, menu mobile,
+// reveal animations, counter, carrossel
+// =============================================
+
 document.addEventListener('DOMContentLoaded', () => {
+
+    // ---- HEADER SCROLL ----
+    const header = document.getElementById('header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 20) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        }, { passive: true });
+    }
+
     // ---- MENU MOBILE ----
     const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
+    const mobileMenu = document.getElementById('mobile-menu');
 
-    if (menuToggle && menu) {
+    if (menuToggle && mobileMenu) {
         menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-            menu.classList.toggle('flex-col');
+            menuToggle.classList.toggle('open');
+            mobileMenu.classList.toggle('open');
         });
 
-        // Fecha o menu ao clicar em um link (mobile)
-        menu.querySelectorAll('a').forEach(link => {
+        // Fecha ao clicar em um link
+        mobileMenu.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    menu.classList.add('hidden');
-                    menu.classList.remove('flex', 'flex-col');
-                }
+                menuToggle.classList.remove('open');
+                mobileMenu.classList.remove('open');
             });
+        });
+
+        // Fecha ao clicar fora
+        document.addEventListener('click', (e) => {
+            if (!header.contains(e.target) && !mobileMenu.contains(e.target)) {
+                menuToggle.classList.remove('open');
+                mobileMenu.classList.remove('open');
+            }
         });
     }
 
-    // ---- ANIMAÇÃO DE REVELAÇÃO COM INTERSECTION OBSERVER ----
+    // ---- REVEAL ANIMATION ----
     const revealElements = document.querySelectorAll('.reveal');
-
-    const observer = new IntersectionObserver(
+    const revealObserver = new IntersectionObserver(
         (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('active');
-                    // Para elementos com delay
-                    const delay = entry.target.getAttribute('data-delay');
-                    if (delay) {
-                        entry.target.style.transitionDelay = delay;
-                    }
+                    revealObserver.unobserve(entry.target);
                 }
             });
         },
-        {
-            root: null,
-            threshold: 0.15,
-            rootMargin: '0px 0px -50px 0px'
-        }
+        { threshold: 0.10, rootMargin: '0px 0px -40px 0px' }
     );
+    revealElements.forEach(el => revealObserver.observe(el));
 
-    revealElements.forEach(el => observer.observe(el));
-
-    // ---- ANIMAÇÃO DOS NÚMEROS (CONTADOR) ----
+    // ---- CONTADOR DE STATS ----
     const statNumbers = document.querySelectorAll('.stat-number[data-target]');
 
-    const animateNumber = (element) => {
-        const target = parseInt(element.getAttribute('data-target'));
-        const suffix = element.textContent.replace(/[0-9]/g, '').trim();
-        const duration = 2000;
-        const step = target / (duration / 16);
+    const animateCounter = (el) => {
+        const target = parseInt(el.getAttribute('data-target'));
+        const suffixEl = el.querySelector('span');
+        const suffix = suffixEl ? suffixEl.textContent : '';
+        const duration = 1800;
+        const steps = 60;
+        const increment = target / steps;
         let current = 0;
+        let step = 0;
 
-        const updateNumber = () => {
-            current += step;
-            if (current < target) {
-                element.textContent = Math.floor(current) + suffix;
-                requestAnimationFrame(updateNumber);
+        const tick = () => {
+            step++;
+            current = Math.min(Math.round(increment * step), target);
+            // Preservar o sufixo no span
+            if (suffixEl) {
+                el.childNodes[0].nodeValue = current;
             } else {
-                element.textContent = target + suffix;
+                el.textContent = current;
+            }
+            if (step < steps) {
+                requestAnimationFrame(tick);
             }
         };
-
-        updateNumber();
+        requestAnimationFrame(tick);
     };
 
-    const numberObserver = new IntersectionObserver(
+    const counterObserver = new IntersectionObserver(
         (entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    animateNumber(entry.target);
-                    numberObserver.unobserve(entry.target);
+                    animateCounter(entry.target);
+                    counterObserver.unobserve(entry.target);
                 }
             });
         },
-        {
-            threshold: 0.5
-        }
+        { threshold: 0.5 }
     );
+    statNumbers.forEach(n => counterObserver.observe(n));
 
-    statNumbers.forEach(number => numberObserver.observe(number));
+    // ---- CARROSSEL ----
+    const track = document.getElementById('carrosselTrack');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
 
-    // ---- EFEITO SMOOTH NOS LINKS INTERNOS ----
+    if (track && prevBtn && nextBtn) {
+        let currentIndex = 0;
+
+        const getVisibleCount = () => {
+            if (window.innerWidth < 768) return 1;
+            if (window.innerWidth < 1024) return 2;
+            return 3;
+        };
+
+        const updateCarrossel = () => {
+            const items = track.querySelectorAll('.carrossel-item');
+            const visible = getVisibleCount();
+            const maxIndex = Math.max(0, items.length - visible);
+            currentIndex = Math.min(currentIndex, maxIndex);
+            const itemWidth = track.parentElement.offsetWidth / visible;
+            track.style.transform = `translateX(-${currentIndex * itemWidth}px)`;
+        };
+
+        prevBtn.addEventListener('click', () => {
+            currentIndex = Math.max(0, currentIndex - 1);
+            updateCarrossel();
+        });
+
+        nextBtn.addEventListener('click', () => {
+            const items = track.querySelectorAll('.carrossel-item');
+            const visible = getVisibleCount();
+            const maxIndex = Math.max(0, items.length - visible);
+            currentIndex = Math.min(maxIndex, currentIndex + 1);
+            updateCarrossel();
+        });
+
+        window.addEventListener('resize', updateCarrossel, { passive: true });
+    }
+
+    // ---- SMOOTH SCROLL ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         anchor.addEventListener('click', function (e) {
             const target = document.querySelector(this.getAttribute('href'));
@@ -96,22 +152,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- EFEITO DE BRILHO NOS CARDS AO MOVER O MOUSE ----
-    const cards = document.querySelectorAll('.stat-item, .time-card, .servico-link');
-
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-
-            card.style.background = `
-                radial-gradient(circle at ${x}px ${y}px, rgba(214, 40, 40, 0.08), rgba(255, 255, 255, 0.02))
-            `;
-        });
-
-        card.addEventListener('mouseleave', () => {
-            card.style.background = 'rgba(255, 255, 255, 0.02)';
-        });
-    });
 });

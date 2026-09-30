@@ -1,327 +1,261 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/tecnologia_informacao.css">
-   <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-   <script src="../js/tecnologia_informacao.js" defer></script>
-   <script src="https://cdn.tailwindcss.com"></script>
-   <title>Del Company - Tecnologia da Informação</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - TI: componentes, sistemas operacionais, sistemas de arquivos e softwares de escritório.">
+    <title>Del Company | Tecnologia da Informação</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/dell.png" type="image/png">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
+
 </head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo"><div class="logo-mark">D</div><div class="logo-text"><span class="logo-title">Del Company</span><span class="logo-subtitle">Soluções Digitais</span></div></a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu"><a href="/index.html">Início</a><a href="/service.html">Serviços</a><a href="/contato.html">Contato</a></div>    <main>
+        <div class="page-hero reveal">
+            <div class="container"><div class="page-hero-inner">
+                <nav class="breadcrumb"><a href="/index.html">Início</a><span class="breadcrumb-sep">/</span><a href="/service.html">Serviços</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Tecnologia da Informação</span></nav>
+                <span class="section-label">Serviço</span>
+                <h1>Tecnologia da Informação</h1>
+                <div class="divider"></div>
+                <p class="lead">A TI conecta computadores, sistemas e pessoas, garantindo que a informação chegue onde precisa de forma rápida e segura.</p>
+            </div></div>
+        </div>
 
-<body class="bg-[#0a0a0a] text-white">
+        <section id="componentes" class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Hardware</span>
+                <h2>Componentes de um Sistema de TI</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:16px"><img src="../img/placa-mae.png" alt="Placa-Mãe" loading="lazy" style="height:72px;object-fit:contain"></div>
+                        <h4>Placa-Mãe</h4>
+                        <p>Base do computador. Conecta e faz a comunicação entre todos os componentes — CPU, memória, armazenamento, GPU e periféricos.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:16px"><img src="../img/processador.png" alt="Processador" loading="lazy" style="height:72px;object-fit:contain"></div>
+                        <h4>Processador (CPU)</h4>
+                        <p>"Cérebro" da máquina. Realiza cálculos e executa as instruções dos programas.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:16px"><img src="../img/memoria-ram.png" alt="Memória RAM" loading="lazy" style="height:72px;object-fit:contain"></div>
+                        <h4>Memória RAM</h4>
+                        <p>Memória temporária, usada enquanto o computador está ligado. Mais RAM = mais programas ao mesmo tempo.</p>
+                    </div>
+                </div>
+                <div class="conceito-box" style="margin-top:28px">
+                    <div class="conceito-titulo">Outros componentes essenciais</div>
+                    <div class="tags-cloud"><span>Armazenamento</span><span>Fonte de Alimentação</span><span>Placa de Vídeo</span><span>Cooler</span><span>Periféricos</span></div>
+                </div>
+            </div>
+        </section>
 
-   <header
-       class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-       <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-           Company</a>
+        <section id="so" class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Software</span>
+                <h2>Sistemas Operacionais</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <p>Um sistema operacional gerencia tudo: como os aplicativos rodam, uso da memória, arquivos, conexões e periféricos.</p>
+                <div class="info-grid" style="margin-top:32px">
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:12px"><img src="../img/windows_logo-removebg-preview.png" alt="Windows" loading="lazy" style="height:48px;object-fit:contain"></div>
+                        <h4>Windows</h4>
+                        <p>O mais popular no mundo dos PCs. Compatível com praticamente todos os programas. Muito utilizado em empresas, escolas e escritórios.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:12px"><img src="../img/macOS-removebg-preview.png" alt="macOS" loading="lazy" style="height:48px;object-fit:contain"></div>
+                        <h4>macOS</h4>
+                        <p>Sistema exclusivo da Apple. Aposta em desempenho, simplicidade e integração com outros dispositivos da marca.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:12px"><img src="../img/linux_logo-removebg-preview.png" alt="Linux" loading="lazy" style="height:48px;object-fit:contain"></div>
+                        <h4>Linux</h4>
+                        <p>Livre e altamente personalizável. Muito usado por desenvolvedores e servidores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-       <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-           <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-           </svg>
-       </button>
-
-       <nav id="menu"
-           class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#0a0a0a]/95 md:bg-transparent p-4 md:p-0 rounded-b-lg border-b-2 border-[#d62828] md:border-none">
-           <a href="/index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
-           <div class="relative group">
-               <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                   
-                    <li><a href="./robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="./sensores.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sensores</a></li>
-                   <li><a href="./logica_programacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                           Programação</a></li>
-                   <li><a href="./fundamentos_rede.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                   </li>
-                   <li><a href="./logica_computacional.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                           Computacional</a></li>
-                   <li><a href="./fundamentos_eletronica.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                           Eletrônica</a></li>
-                   <li><a href="./tecnologia_informacao.html"
-                           class="block px-4 py-2 text-[#d62828] transition-colors">Tecnologia da Informação</a></li>
-                   <li><a href="./banco_dados.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-               </ul>
-           </div>            
-           <a href="/contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
-       </nav>
-   </header>
-
-   <main class="pt-20">
-       <section class="hero reveal">
-           <h2>Tecnologia da Informação</h2>
-           <h3>Segmentos | Utilidades | Aplicações</h3>
-           <hr>
-           <p>A Tecnologia da Informação, ou simplesmente TI, é a área responsável por estudar, desenvolver e aplicar
-               tecnologias que ajudam no processamento, armazenamento e transmissão de dados.</p>
-           <p>Em outras palavras, ela conecta <strong>computadores, sistemas e pessoas,</strong> garantindo que a
-               informação chegue onde precisa, de forma rápida e segura.</p>
-           <p>Hoje, a TI está presente em praticamente tudo — desde o uso de um celular até os grandes servidores que
-               mantêm a internet funcionando.</p>
-       </section>
-
-       <section class="reveal">
-           <div id="componentes">
-               <h2>Componentes</h2>
-               <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           </div>
-           <hr>
-           <div class="linguagens">
-               <div class="linguagem-card">
-                   <img src="../img/placa-mae.png" alt="Placa-Mãe" loading="lazy">
-                   <span>Placa-Mãe</span>
-               </div>
-               <div class="linguagem-card">
-                   <img src="../img/processador.png" alt="Processador" loading="lazy">
-                   <span>Processador</span>
-               </div>
-               <div class="linguagem-card">
-                   <img src="../img/memoria-ram.png" alt="Memória RAM" loading="lazy">
-                   <span>Memória RAM</span>
-               </div>
-           </div>
-           <div class="bloco-componentes">
-               <div class="destaque">
-                   <p>Os principais componentes de um sistema de Tecnologia da Informação incluem: <strong>Placa Mãe,
-                           Processador, Memória Ram.</strong></p>
-               </div>
-               <p>A placa-mãe é a <strong>base</strong> do computador: conecta e faz a comunicação entre todos os
-                   componentes — CPU, memória, armazenamento, GPU e periféricos.</p>
-               <p>O Processador funciona como o <strong>"cérebro"</strong> da máquina. Ele realiza cálculos e executa
-                   as instruções dos programas.</p>
-               <p>A <strong>Memória Ram</strong> é a <strong>memória temporária</strong>, usada enquanto o computador
-                   está ligado. Quanto mais RAM, mais programas o PC consegue rodar ao mesmo tempo.</p>
-               <p>Entre eles estão outros componentes: <strong>Armazenamento, Fonte de Alimentação, Placa de Vídeo,
-                       Cooler ou Sistema de Refrigeração e outros Periféricos</strong></p>
-           </div>
-       </section>
-
-       <section class="reveal">
-           <div class="sistemas-operacionais">
-               <h2>Sistemas Operacionais</h2>
-               <h3>Exemplificação | Funcionalidade | Utilização</h3>
-               <hr>
-               <div class="linguagens">
-                   <div class="linguagem-card">
-                       <img src="../img/windows_logo-removebg-preview.png" alt="Windows" loading="lazy">
-                       <span>Windows</span>
-                   </div>
-                   <div class="linguagem-card">
-                       <img src="../img/macOS-removebg-preview.png" alt="macOS" loading="lazy">
-                       <span>macOS</span>
-                   </div>
-                   <div class="linguagem-card">
-                       <img src="../img/linux_logo-removebg-preview.png" alt="Linux" loading="lazy">
-                       <span>Linux</span>
-                   </div>
-                   <div class="linguagem-card">
-                       <img src="../img/android_logo-removebg-preview.png" alt="Android" loading="lazy">
-                       <span>Android</span>
-                   </div>
-               </div>
-               <div class="bloco-componentes">
-                   <div class="destaque">
-                       <p>Um sistema operacional (SO) é o "cérebro" que faz o dispositivo funcionar. Ele gerencia tudo:
-                           desde a forma como os aplicativos rodam, até o uso da memória, arquivos, conexões e
-                           periféricos. Sem um SO, o computador ou celular até ligaria, mas não teria como executar
-                           programas nem permitir que o usuário interaja com ele.</p>
-                   </div>
-
-                   <p><strong>Windows:</strong> O mais popular no mundo dos PCs. É conhecido pela facilidade de uso,
-                       compatibilidade com praticamente todos os tipos de programas e muito utilizado em empresas,
-                       escolas e escritórios.</p>
-
-                   <p><strong>MacOS:</strong> Sistema exclusivo dos computadores da Apple. Ele aposta em desempenho,
-                       simplicidade e integração com outros dispositivos da marca.</p>
-
-                   <p><strong>Linux:</strong> Um sistema livre e altamente personalizável. Muito usado por
-                       desenvolvedores, servidores e pessoas que gostam de mais controle sobre o computador.</p>
-
-                   <p><strong>Android:</strong> O sistema do Google para smartphones e tablets. É o mais usado no mundo
-                       e se destaca pela flexibilidade, variedade de aparelhos e personalização.</p>
-               </div>
-           </div>
-       </section>
-
-       <section class="reveal">
-           <div class="sistema-arquivo">
-               <h2>Sistemas De Arquivos (CMD)</h2>
-               <h3>Exemplificação | Funcionalidade | Utilização</h3>
-               <hr>
-
-               <p>Os sistemas de arquivos são estruturas que organizam e armazenam dados em dispositivos de
-                   armazenamento, como discos rígidos, SSDs e pendrives. Eles definem como os arquivos são nomeados,
-                   armazenados e acessados pelo sistema operacional.</p>
-
-               <p>No Windows, <strong>CMD é a sigla para "Command Prompt"</strong> (Prompt de Comando). Como ferramenta
-                   nativa do sistema operacional, ele permite a interação com o computador através de comandos de
-                   texto.</p>
-
-               <div class="tags-sistema">
-                   <span><strong>FAT32</strong> - Compatível, mas limitado a 4GB</span>
-                   <span><strong>NTFS</strong> - Padrão Windows, seguro</span>
-                   <span><strong>exFAT</strong> - Ideal para pendrives</span>
-                   <span><strong>ext4</strong> - Padrão Linux</span>
-               </div>
-           </div>
-
-           <div class="code-block">
-               <div class="code-header"> Modo Texto — Terminal / CMD</div>
-               <p style="text-align: left; margin: 0 0 16px 0;">No modo texto você usa comandos para navegar, criar,
-                   mover e apagar arquivos. É direto, rápido e ideal para automação (scripts) e tarefas avançadas.</p>
-               <pre><code><strong># Windows (CMD)</strong>
+        <section id="cmd" class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Sistema de Arquivos</span>
+                <h2>Sistemas de Arquivos (CMD)</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <p>Estruturas que organizam e armazenam dados em dispositivos de armazenamento. O CMD (Command Prompt) permite interação com o computador através de comandos de texto.</p>
+                <div class="tags-cloud" style="margin:20px 0">
+                    <span><strong>FAT32</strong> — Compatível, limitado a 4GB</span>
+                    <span><strong>NTFS</strong> — Padrão Windows, seguro</span>
+                    <span><strong>exFAT</strong> — Ideal para pendrives</span>
+                    <span><strong>ext4</strong> — Padrão Linux</span>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">Modo Texto — Terminal / CMD</div>
+                    <pre><code><strong># Windows (CMD)</strong>
 cd C:\Users\MeuUsuario\Documentos
 dir
 mkdir Projeto
 copy arquivo.txt C:\Backup\arquivo.txt
-move arquivo.txt ..\outro
-del arquivo.txt
 
 <strong># Linux / macOS (Terminal)</strong>
 cd /home/usuario/Documentos
 ls -la
 mkdir projeto
 cp arquivo.txt /backup/arquivo.txt
-mv arquivo.txt ../outro
 rm arquivo.txt</code></pre>
-           </div>
+                </div>
+                <div class="info-grid" style="margin-top:24px">
+                    <div class="info-card"><h4>Automação</h4><p>Scripts em bash ou PowerShell para tarefas repetitivas.</p></div>
+                    <div class="info-card"><h4>Acesso Remoto</h4><p>Conexão via SSH com total controle do sistema.</p></div>
+                    <div class="info-card"><h4>Modo Gráfico</h4><p>Explorer / Gerenciador de Arquivos para uso intuitivo com ícones e menus.</p></div>
+                </div>
+            </div>
+        </section>
 
-           <div class="beneficios-grid">
-               <div class="beneficio-item">
-                   <span class="beneficio-icon"></span>
-                   <strong>Automação</strong>
-                   <p>Scripts em bash ou PowerShell</p>
-               </div>
-               <div class="beneficio-item">
-                   <span class="beneficio-icon"></span>
-                   <strong>Acesso Remoto</strong>
-                   <p>Conexão via SSH</p>
-               </div>
-               <div class="beneficio-item">
-                   <span class="beneficio-icon"></span>
-                   <strong>Controle Total</strong>
-                   <p>Permissões e atributos</p>
-               </div>
-           </div>
+        <section id="office" class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Ferramentas</span>
+                <h2>Softwares de Escritório</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:12px"><img src="../img/word_logo.png" alt="Word" loading="lazy" style="height:48px;object-fit:contain"></div>
+                        <h4>Microsoft Word</h4>
+                        <p>Processador de texto para criar relatórios, cartas e currículos.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:12px"><img src="../img/excel_logo.png" alt="Excel" loading="lazy" style="height:48px;object-fit:contain"></div>
+                        <h4>Microsoft Excel</h4>
+                        <p>Ferramenta de planilhas para organizar dados, cálculos complexos e gráficos.</p>
+                    </div>
+                    <div class="info-card">
+                        <div style="text-align:center;margin-bottom:12px"><img src="../img/powerpoint_logo.png" alt="PowerPoint" loading="lazy" style="height:48px;object-fit:contain"></div>
+                        <h4>Microsoft PowerPoint</h4>
+                        <p>Software de apresentação para criar slides para reuniões, aulas e conferências.</p>
+                    </div>
+                </div>
+                <div style="margin-top:40px">
+                    <h3 style="font-family:var(--font-serif);font-size:clamp(18px,2.5vw,24px);color:var(--brand-dark);margin-bottom:20px">Documentos em Uso Prático</h3>
+                    <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+                        <div style="border:1px solid var(--brand-border);overflow:hidden">
+                            <div style="background:var(--brand-dark);color:rgba(255,255,255,.6);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px">Word — Textos</div>
+                            <iframe src="../img/editor_de_texto_word.pdf" style="width:100%;height:300px;border:none" loading="lazy"></iframe>
+                        </div>
+                        <div style="border:1px solid var(--brand-border);overflow:hidden">
+                            <div style="background:var(--brand-dark);color:rgba(255,255,255,.6);font-size:10px;letter-spacing:.14em;text-transform:uppercase;padding:10px 16px">Excel — Planilhas</div>
+                            <iframe src="../img/controle_gastos.pdf" style="width:100%;height:300px;border:none" loading="lazy"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
 
-           <div class="code-block">
-               <div class="code-header"> Modo Gráfico — Explorer / Gerenciador de Arquivos</div>
-               <p style="text-align: left; margin: 0 0 16px 0;">No modo gráfico você interage com arquivos por janelas,
-                   ícones e menus. Tudo é visual e intuitivo: arrasta e solta, visualização em miniaturas e organização
-                   por colunas.</p>
-               <ul class="lista-vantagens">
-                   <li>Abrir pastas com duplo-clique</li>
-                   <li>Arrastar arquivos entre pastas</li>
-                   <li>Renomear com clique lento (ou F2)</li>
-                   <li>Usar pesquisa para encontrar arquivos por nome</li>
-                   <li>Ver pré-visualização de fotos e documentos</li>
-               </ul>
-           </div>
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
 
-           <div class="beneficios-grid">
-               <div class="beneficio-item">
-                   <span class="beneficio-icon"></span>
-                   <strong>Intuitivo</strong>
-                   <p>Para a maioria dos usuários</p>
-               </div>
-               <div class="beneficio-item">
-                   <span class="beneficio-icon"></span>
-                   <strong>Visualização</strong>
-                   <p>Miniaturas e previews</p>
-               </div>
-               <div class="beneficio-item">
-                   <span class="beneficio-icon">↩</span>
-                   <strong>Seguro</strong>
-                   <p>Desfazer/recuperar</p>
-               </div>
-           </div>
-       </section>
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
 
-       <section class="reveal">
-           <div class="softwares-escritorio">
-               <h2>Softwares de Escritório</h2>
-               <h3>Exemplificação | Funcionalidade | Utilização</h3>
-               <hr>
-               <div class="linguagens">
-                   <div class="linguagem-card">
-                       <img src="../img/word_logo.png" alt="Microsoft Word" loading="lazy">
-                       <span>Word</span>
-                   </div>
-                   <div class="linguagem-card">
-                       <img src="../img/excel_logo.png" alt="Microsoft Excel" loading="lazy">
-                       <span>Excel</span>
-                   </div>
-                   <div class="linguagem-card">
-                       <img src="../img/powerpoint_logo.png" alt="Microsoft PowerPoint" loading="lazy">
-                       <span>PowerPoint</span>
-                   </div>
-               </div>
-               <div class="bloco-componentes">
-                   <div class="destaque">
-                       <p>Os softwares de escritório são ferramentas essenciais para a criação, edição e gerenciamento
-                           de documentos, planilhas e apresentações.</p>
-                   </div>
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
 
-                   <p><strong>Microsoft Word:</strong> Processador de texto amplamente utilizado para criar documentos
-                       escritos, como relatórios, cartas e currículos.</p>
-
-                   <p><strong>Microsoft Excel:</strong> Poderosa ferramenta de planilhas que permite organizar dados,
-                       realizar cálculos complexos e criar gráficos.</p>
-
-                   <p><strong>Microsoft PowerPoint:</strong> Software de apresentação que facilita a criação de slides
-                       visuais para reuniões, aulas e conferências.</p>
-               </div>
-           </div>
-
-           <h3 class="subtitulo-iframes">Três softwares de escritório em uso prático:</h3>
-
-           <h4 class="categoria-iframes"> Microsoft Word - Textos</h4>
-           <div class="iframe-container">
-               <iframe src="../img/editor_de_texto_word.pdf" loading="lazy"></iframe>
-               <iframe src="../img/direitos_humanos.docx.pdf" loading="lazy"></iframe>
-           </div>
-
-           <h4 class="categoria-iframes"> Microsoft PowerPoint - Apresentações</h4>
-           <div class="iframe-container">
-               <iframe src="../img/Softwares de Escritório.pptx.pdf" loading="lazy"></iframe>
-               <iframe src="../img/Inserindo Elementos no Word - Estatísitic.pptx.pdf" loading="lazy"></iframe>
-           </div>
-
-           <h4 class="categoria-iframes"> Microsoft Excel - Planilhas</h4>
-           <div class="iframe-container">
-               <iframe src="../img/controle_gastos.pdf" loading="lazy"></iframe>
-               <iframe src="../img/controle_vendas.pdf" loading="lazy"></iframe>
-           </div>
-       </section>
-   </main>
-
-   <footer class="reveal">
-       <div class="footer-content">
-           <p>&copy 2025 - Del Company | Todos os direitos reservados</p>
-           <div class="footer-links">
-               <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
-                   <span></span> Instagram
-               </a>
-               <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
-                   <span></span> Whatsapp
-               </a>
-               <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
-                   <span></span> GitHub
-               </a>
-           </div>
-       </div>
-   </footer>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>

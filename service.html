@@ -1,338 +1,412 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/service.css">
+    <meta name="description" content="Del Company - Serviços em desenvolvimento web, eletrônica, redes, lógica de programação e mais. Conheça nosso portfólio.">
+    <title>Del Company | Serviços</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="shortcut icon" href="./img/dell.png" type="image/png">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/service.css">
+
     <script src="./js/service.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Del Company - Serviços</title>
 </head>
 
-<body class="bg-[#0a0a0a] text-white">
-    <header
-        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-        <a href="./index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-            Company</a>
-        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-        <nav id="menu"
-            class="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
-            <div class="relative group">
-                <a href="/service.html" class="block py-2 text-[#d62828] transition-colors">Serviços</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/servicos/html/robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="/service/servicos/html/sensores.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sensores</a></li>
-                    <li><a href="/service/servicos/html/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                            Programação</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                    </li>
-                    <li><a href="/service/servicos/html/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                            Computacional</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                            Eletrônica</a></li>
-                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                            Informação</a></li>
-                    <li><a href="/service/servicos/html/banco_dados.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
- 
-                      <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-        </nav>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="./index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <a href="./index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="./service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="./service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="./service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="./service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="./service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="./service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="./service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="./service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <a href="./contato.html">Contato</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <main class="pt-20">
-        <section class="hero reveal">
-            <h2>Transformando Ideias em Código</h2>
-            <p>Desenvolvimento de sites, sistemas e soluções digitais sob medida para você e sua empresa.</p>
-            <button class="btn-primary">
-                <a href="./contato.html">Entre em contato</a>
-            </button>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="./index.html">Início</a>
+        <a href="./service.html">Serviços</a>
+        <a href="./contato.html">Contato</a>
+    </div>
+
+    <main>
+
+        <!-- PAGE HERO -->
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <span class="section-label">O que fazemos</span>
+                    <h1>Transformando Ideias em Código</h1>
+                    <div class="divider"></div>
+                    <p class="lead">Desenvolvimento de sites, sistemas e soluções digitais sob medida para você e sua empresa. Conheça nossos serviços e projetos.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- LISTA DE SERVIÇOS -->
+        <section class="section reveal">
+            <div class="container">
+                <span class="section-label">Especialidades</span>
+                <h2>Trabalhamos com:</h2>
+                <div class="divider"></div>
+
+                <div class="servicos-lista-grid">
+                    <a href="./service/servicos/html/fundamentos_eletronica.html" class="servico-lista-item">
+                        <div class="servico-lista-num">01</div>
+                        <h4>Fundamentos de Eletrônica</h4>
+                        <p>Conceitos essenciais de eletrônica aplicada para projetos modernos e automação.</p>
+                        <span class="servico-lista-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/fundamentos_rede.html" class="servico-lista-item">
+                        <div class="servico-lista-num">02</div>
+                        <h4>Fundamentos de Rede</h4>
+                        <p>Infraestrutura e segurança de redes para ambientes corporativos.</p>
+                        <span class="servico-lista-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/tecnologia_informacao.html" class="servico-lista-item">
+                        <div class="servico-lista-num">03</div>
+                        <h4>Tecnologia da Informação</h4>
+                        <p>Suporte técnico e consultoria em TI para empresas de todos os portes.</p>
+                        <span class="servico-lista-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/logica_programacao.html" class="servico-lista-item">
+                        <div class="servico-lista-num">04</div>
+                        <h4>Lógica de Programação</h4>
+                        <p>Fundamentos e prática de programação estruturada e orientada a objetos.</p>
+                        <span class="servico-lista-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/logica_computacional.html" class="servico-lista-item">
+                        <div class="servico-lista-num">05</div>
+                        <h4>Lógica Computacional</h4>
+                        <p>Raciocínio lógico e algoritmos aplicados à resolução de problemas.</p>
+                        <span class="servico-lista-arrow">Saiba mais →</span>
+                    </a>
+                    <a href="./service/servicos/html/banco_dados.html" class="servico-lista-item">
+                        <div class="servico-lista-num">06</div>
+                        <h4>Banco de Dados</h4>
+                        <p>Modelagem, administração e otimização de bancos de dados relacionais.</p>
+                        <span class="servico-lista-arrow">Saiba mais →</span>
+                    </a>
+                </div>
+            </div>
         </section>
 
-        <section id="servicos-lista" class="reveal">
-            <h2>Trabalhamos com:</h2>
-            <article>
-                <div class="servicos-links">
-                    <a href="/service/servicos/html/fundamentos_eletronica.html" class="servico-item-link">
-                        <span class="servico-emoji"></span> Fundamentos de Eletrônica
-                    </a>
-                    <a href="/service/servicos/html/fundamentos_rede.html" class="servico-item-link">
-                        <span class="servico-emoji"></span> Fundamentos de Rede
-                    </a>
-                    <a href="/service/servicos/html/tecnologia_informacao.html" class="servico-item-link">
-                        <span class="servico-emoji"></span> Tecnologia da Informação
-                    </a>
-                    <a href="/service/servicos/html/logica_programacao.html" class="servico-item-link">
-                        <span class="servico-emoji"></span> Lógica de Programação
-                    </a>
-                    <a href="/service/servicos/html/logica_computacional.html" class="servico-item-link">
-                        <span class="servico-emoji"></span> Lógica Computacional
-                    </a>
-                    <a href="/service/servicos/html/banco_dados.html" class="servico-item-link">
-                        <span class="servico-emoji"></span> Banco de Dados
-                    </a>
-                </div>
-            </article>
-        </section>
-
-        <section class="meus-sites reveal">
-            <h2>Meus Projetos</h2>
-            <p class="section-subtitle">Conheça alguns dos sites e sistemas que desenvolvi</p>
-
-            <div class="sites-grid">
-                <div class="site-card">
-                    <div class="site-image">
-                        <img src="./img/del_compay.png" alt="Del Company - Site Institucional" loading="lazy" />
-                        <div class="site-overlay">
-                            <a href="https://del-company.vercel.app/" class="site-link" target="_blank" rel="noopener">
-                                <span>🔗</span> Visitar Site
-                            </a>
-                        </div>
+        <!-- PROJETOS / PORTFÓLIO -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <div class="portfolio-header">
+                    <div>
+                        <span class="section-label">Portfólio</span>
+                        <h2>Meus Projetos</h2>
                     </div>
-                    <div class="site-content">
-                        <h3>Del Company</h3>
-                        <p class="site-description">Site institucional desenvolvido para apresentar os serviços de
-                            tecnologia da empresa. Demonstrando nosso potencial.</p>
-                        <div class="site-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
+                    <a href="./contato.html" class="btn btn-outline-red">Solicitar projeto</a>
                 </div>
 
-                <div class="site-card">
-                    <div class="site-image">
-                        <img src="./img/site_switch_case.png" alt="Postos de Gasolina - Sistema Switch Case"
-                            loading="lazy" />
-                        <div class="site-overlay">
-                            <a href="https://gasolina-steel.vercel.app/" class="site-link" target="_blank"
-                                rel="noopener">
-                                <span>🔗</span> Visitar Site
-                            </a>
+                <div class="sites-grid">
+                    <div class="site-card">
+                        <div class="site-image">
+                            <img src="./img/del_compay.png" alt="Del Company - Site Institucional" loading="lazy">
+                            <div class="site-overlay">
+                                <a href="https://del-company.vercel.app/" class="site-link-btn" target="_blank" rel="noopener">Visitar Site</a>
+                            </div>
+                        </div>
+                        <div class="site-content">
+                            <h3>Del Company</h3>
+                            <p class="site-description">Site institucional desenvolvido para apresentar os serviços de tecnologia da empresa.</p>
+                            <div class="site-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="site-content">
-                        <h3>Postos de Gasolina via Switch Case</h3>
-                        <p class="site-description">Sistema web para fazer a multiplicação de valores, utilizando
-                            funções no JS. Também utilizando Switch Case para a escolha do produto com auxílio do
-                            teclado.</p>
-                        <div class="site-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="site-card">
-                    <div class="site-image">
-                        <img src="./img/site_voltaire.png" alt="Estudo sobre Voltaire" loading="lazy" />
-                        <div class="site-overlay">
-                            <a href="https://site-humanas.vercel.app/" class="site-link" target="_blank" rel="noopener">
-                                <span>🔗</span> Visitar Site
-                            </a>
+                    <div class="site-card">
+                        <div class="site-image">
+                            <img src="./img/site_switch_case.png" alt="Postos de Gasolina" loading="lazy">
+                            <div class="site-overlay">
+                                <a href="https://gasolina-steel.vercel.app/" class="site-link-btn" target="_blank" rel="noopener">Visitar Site</a>
+                            </div>
+                        </div>
+                        <div class="site-content">
+                            <h3>Postos de Gasolina — Switch Case</h3>
+                            <p class="site-description">Sistema web para multiplicação de valores com funções JS e escolha via teclado.</p>
+                            <div class="site-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="site-content">
-                        <h3>Estudo sobre o Voltaire</h3>
-                        <p class="site-description">Site desenvolvido para a facilitação nos estudos sobre a vida de
-                            Voltaire, visando conhecimento sobre sua carreira pessoal e profissional.</p>
-                        <div class="site-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="site-card">
-                    <div class="site-image">
-                        <img src="./img/site_enem.png" alt="Site sobre o ENEM" loading="lazy" />
-                        <div class="site-overlay">
-                            <a href="https://site-enem-iota.vercel.app/" class="site-link" target="_blank"
-                                rel="noopener">
-                                <span>🔗</span> Visitar Site
-                            </a>
+                    <div class="site-card">
+                        <div class="site-image">
+                            <img src="./img/site_voltaire.png" alt="Estudo sobre Voltaire" loading="lazy">
+                            <div class="site-overlay">
+                                <a href="https://site-humanas.vercel.app/" class="site-link-btn" target="_blank" rel="noopener">Visitar Site</a>
+                            </div>
+                        </div>
+                        <div class="site-content">
+                            <h3>Estudo sobre o Voltaire</h3>
+                            <p class="site-description">Site desenvolvido para facilitar os estudos sobre a vida e obra de Voltaire.</p>
+                            <div class="site-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="site-content">
-                        <h3>Site sobre o ENEM</h3>
-                        <p class="site-description">Site visando apresentar os principais temas para a redação do ENEM.
-                            Onde apresentamos um pouco de sua estrutura, o que é o ENEM, etc.</p>
-                        <div class="site-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="site-card">
-                    <div class="site-image">
-                        <img src="./img/site_namorados.png" alt="Site para Dia dos Namorados" loading="lazy" />
-                        <div class="site-overlay">
-                            <a href="https://eliel-bia.vercel.app/" class="site-link" target="_blank" rel="noopener">
-                                <span>🔗</span> Visitar Site
-                            </a>
+                    <div class="site-card">
+                        <div class="site-image">
+                            <img src="./img/site_enem.png" alt="Site sobre o ENEM" loading="lazy">
+                            <div class="site-overlay">
+                                <a href="https://site-enem-iota.vercel.app/" class="site-link-btn" target="_blank" rel="noopener">Visitar Site</a>
+                            </div>
+                        </div>
+                        <div class="site-content">
+                            <h3>Site sobre o ENEM</h3>
+                            <p class="site-description">Site apresentando os principais temas para a redação do ENEM e sua estrutura.</p>
+                            <div class="site-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="site-content">
-                        <h3>Site para Dia dos Namorados</h3>
-                        <p class="site-description">Site para declarar o amor, uma proposta de vendas para se declarar a
-                            quem você ama.</p>
-                        <div class="site-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
-                        </div>
-                    </div>
-                </div>
 
-                <div class="site-card">
-                    <div class="site-image">
-                        <img src="./img/producao_semanal.png" alt="Introdução à Gráficos" loading="lazy" />
-                        <div class="site-overlay">
-                            <a href="https://excel-dowload.vercel.app/" class="site-link" target="_blank"
-                                rel="noopener">
-                                <span>🔗</span> Visitar Site
-                            </a>
+                    <div class="site-card">
+                        <div class="site-image">
+                            <img src="./img/site_namorados.png" alt="Dia dos Namorados" loading="lazy">
+                            <div class="site-overlay">
+                                <a href="https://eliel-bia.vercel.app/" class="site-link-btn" target="_blank" rel="noopener">Visitar Site</a>
+                            </div>
+                        </div>
+                        <div class="site-content">
+                            <h3>Dia dos Namorados</h3>
+                            <p class="site-description">Site para declarar amor — uma proposta criativa para se declarar a quem você ama.</p>
+                            <div class="site-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
-                    <div class="site-content">
-                        <h3>Introdução à Gráfico</h3>
-                        <p class="site-description">Programa para inserção de dados por meio do teclado, com opção de
-                            download do gráfico</p>
-                        <div class="site-tech">
-                            <span class="tech-tag">HTML</span>
-                            <span class="tech-tag">CSS</span>
-                            <span class="tech-tag">JavaScript</span>
+
+                    <div class="site-card">
+                        <div class="site-image">
+                            <img src="./img/producao_semanal.png" alt="Introdução à Gráficos" loading="lazy">
+                            <div class="site-overlay">
+                                <a href="https://excel-dowload.vercel.app/" class="site-link-btn" target="_blank" rel="noopener">Visitar Site</a>
+                            </div>
+                        </div>
+                        <div class="site-content">
+                            <h3>Introdução à Gráfico</h3>
+                            <p class="site-description">Inserção de dados por teclado com opção de download do gráfico gerado.</p>
+                            <div class="site-tech">
+                                <span class="tech-tag">HTML</span>
+                                <span class="tech-tag">CSS</span>
+                                <span class="tech-tag">JavaScript</span>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="conteudos" class="reveal">
-            <h2>Nossos Serviços</h2>
-            <div class="carrossel-container">
-                <div class="carrossel">
-                    <div class="carrossel-track" id="carrosselTrack">
-                        <div class="carrossel-item">
-                            <img src="./img/tecnologia_informacao.png" alt="Tecnologia da Informação" loading="lazy" />
-                            <h4>Tecnologia da Informação</h4>
-                            <p>Computadores, softwares e redes para processar informações.</p>
-                        </div>
-                        <div class="carrossel-item">
-                            <img src="./img/fundamento_rede.png" alt="Fundamentos de Rede" loading="lazy" />
-                            <h4>Fundamentos de Rede</h4>
-                            <p>Conceitos básicos de conexão e troca de informações.</p>
-                        </div>
-                        <div class="carrossel-item">
-                            <img src="./img/logica_de_computaria.png" alt="Lógica Computacional" loading="lazy" />
-                            <h4>Lógica Computacional</h4>
-                            <p>Organizando ideias em passos lógicos para algoritmos.</p>
-                        </div>
-                        <div class="carrossel-item">
-                            <img src="./img/logica-programacao.png" alt="Lógica de Programação" loading="lazy" />
-                            <h4>Lógica de Programação</h4>
-                            <p>Transformando ideias em código claro e executável.</p>
-                        </div>
-                        <div class="carrossel-item">
-                            <img src="./img/fundamento-eletronica.png" alt="Fundamentos de Eletrônica" loading="lazy" />
-                            <h4>Fundamentos de Eletrônica</h4>
-                            <p>Entendendo resistores, capacitores e circuitos.</p>
+        <!-- CARROSSEL DE SERVIÇOS -->
+        <section class="section reveal">
+            <div class="container">
+                <span class="section-label">Em destaque</span>
+                <h2>Nossos Serviços</h2>
+                <div class="divider"></div>
+                <div class="carrossel-wrapper">
+                    <div class="carrossel">
+                        <div class="carrossel-track" id="carrosselTrack">
+                            <div class="carrossel-item">
+                                <img src="./img/tecnologia_informacao.png" alt="Tecnologia da Informação" loading="lazy">
+                                <h4>Tecnologia da Informação</h4>
+                                <p>Computadores, softwares e redes para processar informações com eficiência.</p>
+                            </div>
+                            <div class="carrossel-item">
+                                <img src="./img/fundamento_rede.png" alt="Fundamentos de Rede" loading="lazy">
+                                <h4>Fundamentos de Rede</h4>
+                                <p>Conceitos básicos de conexão e troca de informações entre dispositivos.</p>
+                            </div>
+                            <div class="carrossel-item">
+                                <img src="./img/logica_de_computaria.png" alt="Lógica Computacional" loading="lazy">
+                                <h4>Lógica Computacional</h4>
+                                <p>Organizando ideias em passos lógicos para construção de algoritmos eficientes.</p>
+                            </div>
+                            <div class="carrossel-item">
+                                <img src="./img/logica-programacao.png" alt="Lógica de Programação" loading="lazy">
+                                <h4>Lógica de Programação</h4>
+                                <p>Transformando ideias em código claro, executável e bem estruturado.</p>
+                            </div>
+                            <div class="carrossel-item">
+                                <img src="./img/fundamento-eletronica.png" alt="Fundamentos de Eletrônica" loading="lazy">
+                                <h4>Fundamentos de Eletrônica</h4>
+                                <p>Entendendo resistores, capacitores e circuitos para projetos práticos.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <button class="carrossel-btn prev" id="prevBtn" aria-label="Anterior">❮</button>
-                <button class="carrossel-btn next" id="nextBtn" aria-label="Próximo">❯</button>
-            </div>
-        </section>
-
-        <section class="servicos-detalhados reveal">
-            <h2>Serviços Detalhados</h2>
-            <div class="servicos-grid">
-                <div class="servico-card">
-                    <div class="servico-icon">💻</div>
-                    <h4 class="servico-titulo">Lógica de Programação</h4>
-                    <p class="servico-desc">Desenvolvemos sua base em programação com algoritmos, estruturas de dados e
-                        pensamento computacional.</p>
-                    <a href="/service/servicos/html/logica_programacao.html" class="servico-link">Saiba mais →</a>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-icon">🌐</div>
-                    <h4 class="servico-titulo">Sistemas de Rede</h4>
-                    <p class="servico-desc">Infraestrutura de redes, protocolos de comunicação e segurança digital para
-                        sua empresa.</p>
-                    <a href="/service/servicos/html/fundamentos_rede.html" class="servico-link">Saiba mais →</a>
-                </div>
-                <div class="servico-card">
-                    <div class="servico-icon">⚡</div>
-                    <h4 class="servico-titulo">Fundamentos de Eletrônica</h4>
-                    <p class="servico-desc">Conceitos essenciais de eletrônica, Arduino e projetos de automação
-                        residencial.</p>
-                    <a href="/service/servicos/html/fundamentos_eletronica.html" class="servico-link">Saiba mais →</a>
+                    <div class="carrossel-controls">
+                        <button class="carrossel-btn" id="prevBtn" aria-label="Anterior">← Anterior</button>
+                        <button class="carrossel-btn" id="nextBtn" aria-label="Próximo">Próximo →</button>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="beneficios reveal">
-            <h2>Por que escolher nossos serviços?</h2>
-            <div class="beneficios-grid">
-                <div class="beneficio-item">
-                    <div class="beneficio-icon">🚀</div>
-                    <h4>Inovação</h4>
-                    <p>Soluções modernas e tecnologias atualizadas</p>
+        <!-- BENEFÍCIOS -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <div style="text-align:center; margin-bottom: 56px;">
+                    <span class="section-label">Diferenciais</span>
+                    <h2>Por que escolher a Del Company?</h2>
+                    <div class="divider divider-center"></div>
                 </div>
-                <div class="beneficio-item">
-                    <div class="beneficio-icon">⏱️</div>
-                    <h4>Agilidade</h4>
-                    <p>Entrega rápida e eficiente dos projetos</p>
-                </div>
-                <div class="beneficio-item">
-                    <div class="beneficio-icon">💎</div>
-                    <h4>Qualidade</h4>
-                    <p>Padrão elevado em todos os desenvolvimentos</p>
-                </div>
-                <div class="beneficio-item">
-                    <div class="beneficio-icon">🛠️</div>
-                    <h4>Suporte</h4>
-                    <p>Assistência técnica especializada</p>
+                <div class="beneficios-grid">
+                    <div class="beneficio-item">
+                        <div class="beneficio-icon"><i class="fa-solid fa-rocket"></i></div>
+                        <h4>Inovação</h4>
+                        <p>Soluções modernas e tecnologias sempre atualizadas.</p>
+                    </div>
+                    <div class="beneficio-item">
+                        <div class="beneficio-icon"><i class="fa-solid fa-bolt"></i></div>
+                        <h4>Agilidade</h4>
+                        <p>Entrega rápida e eficiente em todos os projetos.</p>
+                    </div>
+                    <div class="beneficio-item">
+                        <div class="beneficio-icon"><i class="fa-solid fa-gem"></i></div>
+                        <h4>Qualidade</h4>
+                        <p>Padrão elevado em cada detalhe do desenvolvimento.</p>
+                    </div>
+                    <div class="beneficio-item">
+                        <div class="beneficio-icon"><i class="fa-solid fa-headset"></i></div>
+                        <h4>Suporte</h4>
+                        <p>Assistência técnica especializada após a entrega.</p>
+                    </div>
                 </div>
             </div>
         </section>
+
     </main>
 
-    <footer class="reveal">
-        <div class="footer-content">
-            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-            <div class="footer-links">
-                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
-                    Instagram
-                </a>
-                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
-                    Whatsapp
-                </a>
-                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
-                    GitHub
-                </a>
+    <!-- FOOTER -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
+
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
         </div>
     </footer>

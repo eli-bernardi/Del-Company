@@ -1,267 +1,337 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/contato.css">
+    <meta name="description" content="Del Company - Página de contato. Entre em contato conosco para soluções em desenvolvimento web, TI e infraestrutura.">
+    <title>Del Company | Contato</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
     <link rel="shortcut icon" href="./img/dell.png" type="image/png">
+
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/contato.css">
+
     <script src="./js/contato.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Del Company - Contato</title>
 </head>
 
-<body class="bg-[#0a0a0a] text-white">
-    <header
-        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-        <a href="./index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-            Company</a>
-        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-        <nav id="menu"
-            class="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
-            <div class="relative group">
-                <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/servicos/html/robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="/service/servicos/html/sensores.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sensores</a></li>
-                    <li><a href="/service/servicos/html/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                            Programação</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                    </li>
-                    <li><a href="/service/servicos/html/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                            Computacional</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                            Eletrônica</a></li>
-                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                            Informação</a></li>
-                    <li><a href="/service/servicos/html/banco_dados.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
-            
-           <a href="/contato.html" class="block py-2 text-[#d62828] transition-colors">Contato</a>
-        </nav>
+<body>
+
+    <!-- HEADER -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="./index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <a href="./index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="./service.html">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="./service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="./service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="./service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="./service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="./service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="./service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="./service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <a href="./contato.html" class="active">Contato</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
     </header>
 
-    <main class="pt-20">
-        <section class="hero reveal">
-            <h2>Entre em Contato</h2>
-            <h3>Soluções Web | Desenvolvimento | Infraestrutura</h3>
-            <hr>
-            <p>Na era digital, sua presença online é fundamental para o sucesso do negócio. Desenvolvemos sites e
-                sistemas web completos que representam sua marca com excelência.</p>
-            <p>Oferecemos soluções integradas desde o planejamento até a manutenção contínua, garantindo performance,
-                segurança e disponibilidade.</p>
-        </section>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="./index.html">Início</a>
+        <a href="./service.html">Serviços</a>
+        <a href="./contato.html">Contato</a>
+    </div>
 
-        <section class="reveal">
-            <h2>Nossa Abordagem</h2>
-            <h3>Planejamento | Desenvolvimento | Manutenção</h3>
-            <hr>
+    <main>
 
+        <!-- PAGE HERO -->
+        <div class="page-hero reveal">
             <div class="container">
-                <p>No mercado atual, as empresas utilizam sites e páginas web como principal meio de divulgação de
-                    marca, apresentação de produtos e serviços, e canal de comunicação com clientes.</p>
+                <div class="page-hero-inner">
+                    <span class="section-label">Fale conosco</span>
+                    <h1>Entre em Contato</h1>
+                    <div class="divider"></div>
+                    <p class="lead">Na era digital, sua presença online é fundamental para o sucesso. Desenvolvemos soluções web completas que representam sua marca com excelência.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- NOSSA ABORDAGEM -->
+        <section class="section reveal">
+            <div class="container">
+                <span class="section-label">Como trabalhamos</span>
+                <h2>Nossa Abordagem</h2>
+                <div class="divider"></div>
+                <p class="lead" style="max-width:640px">No mercado atual, as empresas utilizam sites e sistemas como principal meio de divulgação de marca e canal de comunicação com clientes.</p>
 
                 <div class="abordagem-grid">
                     <div class="abordagem-card">
                         <div class="abordagem-icon"><i class="fa-solid fa-bullseye"></i></div>
                         <h4>Planejamento Estratégico</h4>
-                        <p>Desenvolvemos a identidade digital da sua empresa com foco nos objetivos de negócio</p>
+                        <p>Desenvolvemos a identidade digital da sua empresa com foco nos objetivos de negócio.</p>
                     </div>
-
                     <div class="abordagem-card">
                         <div class="abordagem-icon"><i class="fa-solid fa-computer"></i></div>
                         <h4>Desenvolvimento Técnico</h4>
-                        <p>Utilizamos HTML, CSS e JavaScript para criar interfaces modernas e responsivas</p>
+                        <p>Utilizamos HTML, CSS e JavaScript para criar interfaces modernas e responsivas.</p>
                     </div>
-
                     <div class="abordagem-card">
                         <div class="abordagem-icon"><i class="fa-solid fa-rocket"></i></div>
                         <h4>Infraestrutura Web</h4>
-                        <p>Configuramos servidores e redes para garantir alta disponibilidade e performance</p>
+                        <p>Configuramos servidores e redes para garantir alta disponibilidade e performance.</p>
                     </div>
-
                     <div class="abordagem-card">
                         <div class="abordagem-icon"><i class="fa-solid fa-screwdriver-wrench"></i></div>
                         <h4>Manutenção Contínua</h4>
-                        <p>Oferecemos suporte técnico especializado para manter seu site sempre atualizado</p>
+                        <p>Oferecemos suporte técnico especializado para manter seu site sempre atualizado.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="reveal">
-            <h2>Serviços Completos em TI</h2>
-            <h3>Desenvolvimento | Infraestrutura | Suporte</h3>
-            <hr>
+        <!-- SERVIÇOS TI -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <span class="section-label">Especialidades</span>
+                <h2>Serviços Completos em TI</h2>
+                <div class="divider"></div>
 
-            <div class="servicos-grid">
-                <div class="servico-item">
-                    <div class="servico-header">
-                        <i class="fa-solid fa-globe"></i>
-                        <strong>Desenvolvimento Web</strong>
+                <div class="servicos-ti-grid">
+                    <div class="servico-ti-item">
+                        <div class="servico-ti-header">
+                            <i class="fa-solid fa-globe"></i>
+                            <strong>Desenvolvimento Web</strong>
+                        </div>
+                        <p>Sites institucionais, sistemas web e aplicações responsivas.</p>
                     </div>
-                    <p>Sites institucionais, sistemas web e aplicações responsivas</p>
-                </div>
-                <div class="servico-item">
-                    <div class="servico-header">
-                        <i class="fa-brands fa-figma"></i>
-                        <strong>Design e UX/UI</strong>
+                    <div class="servico-ti-item">
+                        <div class="servico-ti-header">
+                            <i class="fa-brands fa-figma"></i>
+                            <strong>Design e UX/UI</strong>
+                        </div>
+                        <p>Interfaces modernas com foco na experiência do usuário.</p>
                     </div>
-                    <p>Interfaces modernas com foco na experiência do usuário</p>
-                </div>
-                <div class="servico-item">
-                    <div class="servico-header">
-                        <i class="fa-solid fa-cloud-bolt"></i>
-                        <strong>Otimização SEO</strong>
+                    <div class="servico-ti-item">
+                        <div class="servico-ti-header">
+                            <i class="fa-solid fa-cloud-bolt"></i>
+                            <strong>Otimização SEO</strong>
+                        </div>
+                        <p>Posicionamento estratégico nos mecanismos de busca.</p>
                     </div>
-                    <p>Posicionamento estratégico nos mecanismos de busca</p>
-                </div>
-                <div class="servico-item">
-                    <div class="servico-header">
-                        <i class="fa-solid fa-lock"></i>
-                        <strong>Segurança Digital</strong>
+                    <div class="servico-ti-item">
+                        <div class="servico-ti-header">
+                            <i class="fa-solid fa-lock"></i>
+                            <strong>Segurança Digital</strong>
+                        </div>
+                        <p>Proteção de dados e implementação de certificados SSL.</p>
                     </div>
-                    <p>Proteção de dados e implementação de certificados SSL</p>
-                </div>
-                <div class="servico-item">
-                    <div class="servico-header">
-                        <i class="fa-solid fa-chart-line"></i>
-                        <strong>Hospedagem e Domínio</strong>
+                    <div class="servico-ti-item">
+                        <div class="servico-ti-header">
+                            <i class="fa-solid fa-chart-line"></i>
+                            <strong>Hospedagem e Domínio</strong>
+                        </div>
+                        <p>Configuração completa de servidores web e registros DNS.</p>
                     </div>
-                    <p>Configuração completa de servidores web e registros DNS</p>
-                </div>
-                <div class="servico-item">
-                    <div class="servico-header">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <strong>Manutenção Preventiva</strong>
+                    <div class="servico-ti-item">
+                        <div class="servico-ti-header">
+                            <i class="fa-solid fa-screwdriver-wrench"></i>
+                            <strong>Manutenção Preventiva</strong>
+                        </div>
+                        <p>Atualizações regulares e monitoramento 24/7.</p>
                     </div>
-                    <p>Atualizações regulares e monitoramento 24/7</p>
                 </div>
             </div>
         </section>
 
-        <section class="reveal">
-            <h2>Nossos Canais</h2>
-            <h3>Contato | Redes Sociais | Localização</h3>
-            <hr>
+        <!-- CANAIS DE CONTATO -->
+        <section class="section reveal">
+            <div class="container">
+                <span class="section-label">Fale com a gente</span>
+                <h2>Nossos Canais</h2>
+                <div class="divider"></div>
 
-            <div class="contato-grid">
-                <a href="mailto:eliel_bernardi1@ceomtecnologia.com" class="contato-item contato-link">
-                    <div class="contato-icon">
-                        <img src="./img/gmail_logo.png" alt="Logo Gmail">
-                    </div>
-                    <h4>E-mail</h4>
-                    <p>eliel_bernardi1@ceomtecnologia.com</p>
-                    <span>Respondemos em até 24h</span>
-                </a>
-
-                <a href="https://wa.me/5548991004282" target="_blank" rel="noopener" class="contato-item contato-link">
-                    <div class="contato-icon">
-                        <img src="./img/whatsapp_logo.png" alt="WhatsApp Logo">
-                    </div>
-                    <h4>WhatsApp</h4>
-                    <p>(48) 99100-4282</p>
-                    <span>Atendimento direto</span>
-                </a>
-
-                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener"
-                    class="contato-item contato-link">
-                    <div class="contato-icon">
-                        <img src="./img/insta_logo.png" alt="Instagram Logo">
-                    </div>
-                    <h4>Instagram</h4>
-                    <p>@elielbrnrd</p>
-                    <span>Siga nosso trabalho</span>
-                </a>
-
-                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener"
-                    class="contato-item contato-link">
-                    <div class="contato-icon">
-                        <img src="./img/gitHub_logo.png" alt="GitHub Logo">
-                    </div>
-                    <h4>GitHub</h4>
-                    <p>github.com/eli-bernardi</p>
-                    <span>Confira nossos projetos</span>
-                </a>
-            </div>
-        </section>
-
-        <section class="reveal">
-            <h2>Como Trabalhamos</h2>
-            <h3>Metodologia | Etapas | Entregas</h3>
-            <hr>
-
-            <div class="processo-grid">
-                <div class="etapa">
-                    <div class="etapa-numero">1</div>
-                    <h4>Briefing e Análise</h4>
-                    <p>Entendemos suas necessidades e objetivos para elaborar a melhor solução</p>
-                </div>
-
-                <div class="etapa">
-                    <div class="etapa-numero">2</div>
-                    <h4>Prototipação e Design</h4>
-                    <p>Criamos a interface visual e a experiência do usuário</p>
-                </div>
-
-                <div class="etapa">
-                    <div class="etapa-numero">3</div>
-                    <h4>Desenvolvimento</h4>
-                    <p>Implementamos todas as funcionalidades com as melhores tecnologias</p>
-                </div>
-
-                <div class="etapa">
-                    <div class="etapa-numero">4</div>
-                    <h4>Testes e Ajustes</h4>
-                    <p>Garantimos a qualidade e performance em todos os dispositivos</p>
-                </div>
-
-                <div class="etapa">
-                    <div class="etapa-numero">5</div>
-                    <h4>Hospedagem e Lançamento</h4>
-                    <p>Configuramos a infraestrutura e colocamos seu site no ar</p>
-                </div>
-
-                <div class="etapa">
-                    <div class="etapa-numero">6</div>
-                    <h4>Suporte Contínuo</h4>
-                    <p>Acompanhamos o desempenho e realizamos manutenções</p>
+                <div class="contato-canais-grid">
+                    <a href="mailto:eliel_bernardi1@ceomtecnologia.com" class="canal-item">
+                        <div class="canal-icon">
+                            <img src="./img/gmail_logo.png" alt="Gmail">
+                        </div>
+                        <h4>E-mail</h4>
+                        <p>eliel_bernardi1@ceomtecnologia.com</p>
+                        <span>Respondemos em até 24h</span>
+                    </a>
+                    <a href="https://wa.me/5548991004282" target="_blank" rel="noopener" class="canal-item">
+                        <div class="canal-icon">
+                            <img src="./img/whatsapp_logo.png" alt="WhatsApp">
+                        </div>
+                        <h4>WhatsApp</h4>
+                        <p>(48) 99100-4282</p>
+                        <span>Atendimento direto</span>
+                    </a>
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" class="canal-item">
+                        <div class="canal-icon">
+                            <img src="./img/insta_logo.png" alt="Instagram">
+                        </div>
+                        <h4>Instagram</h4>
+                        <p>@elielbrnrd</p>
+                        <span>Siga nosso trabalho</span>
+                    </a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" class="canal-item">
+                        <div class="canal-icon">
+                            <img src="./img/gitHub_logo.png" alt="GitHub">
+                        </div>
+                        <h4>GitHub</h4>
+                        <p>github.com/eli-bernardi</p>
+                        <span>Confira nossos projetos</span>
+                    </a>
                 </div>
             </div>
         </section>
+
+        <!-- PROCESSO -->
+        <section class="section section-alt reveal">
+            <div class="container">
+                <span class="section-label">Metodologia</span>
+                <h2>Como Trabalhamos</h2>
+                <div class="divider"></div>
+
+                <div class="processo-grid">
+                    <div class="etapa">
+                        <div class="etapa-numero">01</div>
+                        <h4>Briefing e Análise</h4>
+                        <p>Entendemos suas necessidades e objetivos para elaborar a melhor solução.</p>
+                    </div>
+                    <div class="etapa">
+                        <div class="etapa-numero">02</div>
+                        <h4>Prototipação e Design</h4>
+                        <p>Criamos a interface visual e a experiência do usuário.</p>
+                    </div>
+                    <div class="etapa">
+                        <div class="etapa-numero">03</div>
+                        <h4>Desenvolvimento</h4>
+                        <p>Implementamos todas as funcionalidades com as melhores tecnologias.</p>
+                    </div>
+                    <div class="etapa">
+                        <div class="etapa-numero">04</div>
+                        <h4>Testes e Ajustes</h4>
+                        <p>Garantimos a qualidade e performance em todos os dispositivos.</p>
+                    </div>
+                    <div class="etapa">
+                        <div class="etapa-numero">05</div>
+                        <h4>Hospedagem e Lançamento</h4>
+                        <p>Configuramos a infraestrutura e colocamos seu site no ar.</p>
+                    </div>
+                    <div class="etapa">
+                        <div class="etapa-numero">06</div>
+                        <h4>Suporte Contínuo</h4>
+                        <p>Acompanhamos o desempenho e realizamos manutenções periódicas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
-    <footer class="reveal">
-        <div class="footer-content">
-            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-            <div class="footer-links">
-                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-instagram"></i> Instagram
-                </a>
-                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-whatsapp"></i> Whatsapp
-                </a>
-                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
+    <!-- FOOTER -->
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
+
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
         </div>
     </footer>

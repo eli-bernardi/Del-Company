@@ -1,242 +1,250 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/robotizacao.css">
-   <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-   <script src="../js/robotizacao.js" defer></script>
-   <script src="https://cdn.tailwindcss.com"></script>
-   <title>Del Company - Robótica</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - Robótica: conceitos, história, componentes básicos e modelos de robôs industriais e colaborativos.">
+    <title>Del Company | Robótica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/dell.png" type="image/png">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
 </head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo"><div class="logo-mark">D</div><div class="logo-text"><span class="logo-title">Del Company</span><span class="logo-subtitle">Soluções Digitais</span></div></a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="/service/servicos/html/robotizacao.html">Modelos <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_cartesiano.html">Robô Cartesiano</a></li>
+                        <li><a href="/service/robots/html/robo_cilindrico.html">Robô Cilíndrico</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/robots/html/robo_polar.html">Robô Polar</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu"><a href="/index.html">Início</a><a href="/service.html">Serviços</a><a href="/contato.html">Contato</a></div>
 
-<body class="bg-[#0a0a0a] text-white">
-   <header
-       class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-       <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-           Company</a>
+    <main>
+        <div class="page-hero reveal">
+            <div class="container"><div class="page-hero-inner">
+                <nav class="breadcrumb"><a href="/index.html">Início</a><span class="breadcrumb-sep">/</span><a href="/service.html">Serviços</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Robótica</span></nav>
+                <span class="section-label">Automação Avançada</span>
+                <h1>Robótica Industrial &amp; Automação</h1>
+                <span class="content-subtitle">Conceitos | Componentes | Aplicações | Modelos</span>
+                <div class="divider"></div>
+                <p class="lead">A robótica une mecânica, eletrônica e ciência da computação para criar máquinas capazes de executar tarefas autônomas com precisão, velocidade e repetibilidade inigualáveis.</p>
+            </div></div>
+        </div>
 
-       <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-           <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-           </svg>
-       </button>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Conceito</span>
+                <h2>O que é Robótica?</h2>
+                <div class="divider"></div>
+                <p>A robótica abrange o desenvolvimento de dispositivos que <strong>percebem</strong> o ambiente por meio de sensores, <strong>processam</strong> variáveis e algoritmos de controle, e <strong>atuam</strong> no mundo real através de servomotores, garras e atuadores pneumáticos/hidráulicos.</p>
+                <div class="conceito-box">
+                    <div class="conceito-titulo">Exemplos no Cotidiano e na Indústria</div>
+                    <p>Braços mecânicos em montadoras automotivas, robôs cirúrgicos de alta precisão, veículos autônomos guiados (AGVs) em centros logísticos e robôs colaborativos trabalhando ao lado de operadores.</p>
+                </div>
+            </div>
+        </section>
 
-       <nav id="menu"
-           class="hidden md:flex items-center space-x-6 text-sm font-medium">
-           <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Evolução</span>
+                <h2>Linha do Tempo da Robótica</h2>
+                <div class="divider"></div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1920</div>
+                        <p>O termo "robô" surge na peça de teatro <em>R.U.R.</em> (Rossum's Universal Robots) do dramaturgo tcheco Karel Čapek.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1954</div>
+                        <p>George Devol patenteia o Unimate, o primeiro robô industrial programável da história moderna.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">1969</div>
+                        <p>O robô Shakey é desenvolvido no Stanford Research Institute, integrando visão computacional pioneira e navegação autônoma.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2005</div>
+                        <p>O advento de plataformas open-hardware como Arduino democratiza o acesso e acelera o desenvolvimento de protótipos robóticos.</p>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">Presente</div>
+                        <p>Robôs colaborativos com inteligência artificial, visão 3D e controle adaptativo transformam a manufatura inteligente e a Indústria 5.0.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-           <div class="relative group">
-               <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                   
-                    <li><a href="./sensores.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sensores</a></li>
-                   <li><a href="/service/servicos/html/logica_programacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                           Programação</a></li>
-                   <li><a href="/service/servicos/html/fundamentos_rede.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                   </li>
-                   <li><a href="/service/servicos/html/logica_computacional.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                           Computacional</a></li>
-                   <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                           Eletrônica</a></li>
-                   <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                           Informação</a></li>
-                   <li><a href="/service/servicos/html/banco_dados.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-               </ul>
-           </div>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Arquitetura</span>
+                <h2>Componentes Fundamentais de um Robô</h2>
+                <div class="divider"></div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Sensores</h4>
+                        <p>Responsáveis por coletar dados do ambiente: encoders angulares, sensores de força/torque, câmeras 3D e sensores ultrassônicos.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Atuadores</h4>
+                        <p>Converte energia elétrica, pneumática ou hidráulica em movimento mecânico: servomotores brushless, atuadores lineares e redutores harmônicos.</p>
+                    </div>
+                    <div class="info-card">
+                        <h4>Controladores</h4>
+                        <p>Calculam trajetórias e cinemática inversa em tempo real: CLPs dedicados, controladores de robô (RC) e microprocessadores.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-           <div class="relative group">
-               <a href="/service/servicos/html/robotizacao.html"
-                   class="block py-2 text-[#d62828] transition-colors">Robótica</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                   <li><a href="/service/robots/html/robo_articulado.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Articulado</a></li>
-                   <li><a href="/service/robots/html/robo_cartesiano.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Cartesiano</a></li>
-                   <li><a href="/service/robots/html/robo_cilindrico.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Cilíndrico</a></li>
-                   <li><a href="/service/robots/html/robo_colaborativo.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Colaborativo</a></li>
-                   <li><a href="/service/robots/html/robo_delta.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Delta</a></li>
-                   <li><a href="/service/robots/html/robo_polar.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô Polar</a></li>
-                   <li><a href="/service/robots/html/robo_scara.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robô SCARA</a></li>
-               </ul>
-           </div>
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Catálogo</span>
+                <h2>Modelos e Tipos de Robôs Industriais</h2>
+                <div class="divider"></div>
+                <div class="classificacao-grid">
+                    <div class="class-card">
+                        <h4>Robô Articulado</h4>
+                        <p>6 graus de liberdade simulando o braço humano com máxima flexibilidade.</p>
+                        <a href="/service/robots/html/robo_articulado.html" class="btn-ver">Ver especificações &rarr;</a>
+                    </div>
+                    <div class="class-card">
+                        <h4>Robô Cartesiano (Gantry)</h4>
+                        <p>Movimento linear em coordenadas X, Y, Z com alta capacidade de carga e rigidez.</p>
+                        <a href="/service/robots/html/robo_cartesiano.html" class="btn-ver">Ver especificações &rarr;</a>
+                    </div>
+                    <div class="class-card">
+                        <h4>Robô SCARA</h4>
+                        <p>Complacência seletiva para montagem e inserção ultrarrápida de placas eletrônicas.</p>
+                        <a href="/service/robots/html/robo_scara.html" class="btn-ver">Ver especificações &rarr;</a>
+                    </div>
+                    <div class="class-card">
+                        <h4>Robô Delta</h4>
+                        <p>Cinemática paralela para ciclos extremos de pick &amp; place e embalagem.</p>
+                        <a href="/service/robots/html/robo_delta.html" class="btn-ver">Ver especificações &rarr;</a>
+                    </div>
+                    <div class="class-card">
+                        <h4>Robô Colaborativo (Cobot)</h4>
+                        <p>Segurança intrínseca para operação lado a lado com seres humanos sem grades.</p>
+                        <a href="/service/robots/html/robo_colaborativo.html" class="btn-ver">Ver especificações &rarr;</a>
+                    </div>
+                    <div class="class-card">
+                        <h4>Robô Polar &amp; Cilíndrico</h4>
+                        <p>Envelopes especializados para alimentação de máquinas e pintura em cavidades.</p>
+                        <a href="/service/robots/html/robo_polar.html" class="btn-ver">Ver especificações &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
 
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
 
-                      <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-       </nav>
-   </header>
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
 
-   <main class="pt-20">
-       <section class="hero reveal">
-           <h2>Robótica</h2>
-           <h3>Conceitos | Componentes | Aplicações | Projetos</h3>
-           <hr>
-           <p>
-               A <strong>robótica</strong> é a área da tecnologia que projeta, constrói e programa robôs para
-               automatizar tarefas,
-               explorar ambientes e interagir com o mundo físico. Combinando mecânica, eletrônica e programação, os
-               robôs estão
-               cada vez mais presentes na indústria, na medicina, na agricultura e até em nossas casas.
-           </p>
-           <p>
-               Nesta seção, você encontrará projetos práticos desenvolvidos com Arduino, ESP32 e outros
-               microcontroladores,
-               abordando desde conceitos básicos de robótica até sistemas autônomos inteligentes.
-           </p>
-       </section>
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
 
-       <section class="reveal">
-           <h2>O que é Robótica?</h2>
-           <hr>
-           <div class="container">
-               <p>
-                   A <strong>robótica</strong> é um ramo multidisciplinar que envolve engenharia mecânica, eletrônica e
-                   ciência da computação.
-                   Seu objetivo é criar máquinas capazes de executar tarefas automaticamente, com ou sem intervenção
-                   humana.
-               </p>
-               <p>
-                   Um robô pode ser definido como um dispositivo que <strong>percebe</strong> o ambiente através de
-                   sensores,
-                   <strong>processa</strong> informações e <strong>atua</strong> no mundo físico por meio de motores,
-                   garras ou outros atuadores.
-               </p>
-               <div class="destaque">
-                   <p><strong>Exemplos do cotidiano:</strong> aspiradores robôs, drones, veículos autônomos e braços
-                       industriais.</p>
-               </div>
-           </div>
-       </section>
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
 
-       <section class="reveal">
-           <h2>História da Robótica</h2>
-           <hr>
-           <div class="timeline">
-               <div class="timeline-item">
-                   <div class="timeline-year">1920</div>
-                   <p>O termo "robô" aparece pela primeira vez na peça R.U.R. (Rossum's Universal Robots), do escritor
-                       Karel Čapek.</p>
-               </div>
-               <div class="timeline-item">
-                   <div class="timeline-year">1954</div>
-                   <p>George Devol inventa o primeiro robô industrial programável, o Unimate.</p>
-               </div>
-               <div class="timeline-item">
-                   <div class="timeline-year">1969</div>
-                   <p>O robô Shakey, do Stanford Research Institute, combina visão computacional e planejamento de
-                       tarefas.</p>
-               </div>
-               <div class="timeline-item">
-                   <div class="timeline-year">2005</div>
-                   <p>O Arduino populariza a robótica educacional, permitindo protótipos de baixo custo.</p>
-               </div>
-               <div class="timeline-item">
-                   <div class="timeline-year">Atualidade</div>
-                   <p>Robôs autônomos, inteligentes e colaborativos atuam em fábricas, hospitais e até em Marte.</p>
-               </div>
-           </div>
-       </section>
-
-       <section class="reveal">
-           <h2>Componentes Básicos de um Robô</h2>
-           <h3>Sensores | Atuadores | Controladores</h3>
-           <hr>
-           <div class="componentes-grid">
-               <div class="componente-card">
-                   <div class="componente-icon"></div>
-                   <h4>Sensores</h4>
-                   <p>Permitem ao robô perceber o ambiente: ultrassônico, infravermelho, câmera, giroscópio, etc.</p>
-               </div>
-               <div class="componente-card">
-                   <div class="componente-icon"></div>
-                   <h4>Atuadores</h4>
-                   <p>Realizam ações físicas: motores DC, servomotores, relés, solenoides e garras robóticas.</p>
-               </div>
-               <div class="componente-card">
-                   <div class="componente-icon"></div>
-                   <h4>Controladores</h4>
-                   <p>Processam os dados e tomam decisões: Arduino Uno, ESP32, Raspberry Pi e microcontroladores.</p>
-               </div>
-               <div class="componente-card">
-                   <div class="componente-icon"></div>
-                   <h4>Fonte de Energia</h4>
-                   <p>Alimenta todo o sistema: baterias, pilhas ou fontes de bancada.</p>
-               </div>
-           </div>
-       </section>
-
-       <section class="reveal">
-           <h2>Classificação dos Robôs</h2>
-           <hr>
-           <div class="classificacao-grid">
-               <div class="class-card">
-                   <h4>Industriais</h4>
-                   <p>Braços robóticos, soldagem, montagem automatizada.</p>
-               </div>
-               <div class="class-card">
-                   <h4>Móveis</h4>
-                   <p>Robôs que se deslocam: seguidores de linha, carrinhos, drones terrestres.</p>
-               </div>
-               <div class="class-card">
-                   <h4>Aquáticos/Submarinos</h4>
-                   <p>Veículos operados remotamente para exploração subaquática.</p>
-               </div>
-               <div class="class-card">
-                   <h4>Colaborativos (Cobots)</h4>
-                   <p>Trabalham lado a lado com humanos em segurança.</p>
-               </div>
-           </div>
-       </section>
-
-       <section class="reveal">
-           <h2>Exemplos Práticos com Arduino</h2>
-           <hr>
-           <p>Veja alguns projetos que demonstram os princípios da robótica na prática:</p>
-           <div class="exemplos-grid">
-               <div class="exemplo-card">
-                   <img src="../img/robo-seguidor-linha.png" alt="Robô Seguidor de Linha" loading="lazy">
-                   <h4>Robô Seguidor de Linha</h4>
-                   <p>Utiliza sensores infravermelhos para seguir um percurso preto no chão.</p>
-               </div>
-               <div class="exemplo-card">
-                   <img src="../img/braço-robotico.png" alt="Braço Robótico" loading="lazy">
-                   <h4>Braço Robótico</h4>
-                   <p>Controlado por servomotores, imita os movimentos de um braço humano.</p>
-               </div>
-               <div class="exemplo-card">
-                   <img src="../img/carrinho-robo.png" alt="Carrinho Bluetooth" loading="lazy">
-                   <h4>Carrinho Bluetooth</h4>
-                   <p>Controlado via aplicativo no celular usando comunicação serial.</p>
-               </div>
-           </div>
-       </section>
-   </main>
-
-   <footer class="reveal">
-       <div class="footer-content">
-           <p>&copy 2025 - Del Company | Todos os direitos reservados</p>
-           <div class="footer-links">
-               <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">Instagram</a>
-               <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">Whatsapp</a>
-               <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">GitHub</a>
-           </div>
-       </div>
-   </footer>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>

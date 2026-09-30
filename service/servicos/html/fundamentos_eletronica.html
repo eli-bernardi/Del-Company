@@ -1,540 +1,341 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/fundamento_eletronica.css">
-   <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-   <script src="../js/fundamento_eletronica.js" defer></script>
-   <script src="https://cdn.tailwindcss.com"></script>
-   <title>Del Company - Fundamentos de Eletrônica</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - Fundamentos de Eletrônica: história, componentes, Arduino, entrada e saída de dados.">
+    <title>Del Company | Fundamentos de Eletrônica</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/dell.png" type="image/png">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
+    <script src="../js/fundamento_eletronica.js" defer></script>
 </head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text"><span class="logo-title">Del Company</span><span class="logo-subtitle">Soluções Digitais</span></div>
+            </a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./robotizacao.html">Robótica</a></li>
+                        <li><a href="./sensores.html">Sensores</a></li>
+                        <li><a href="./logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="./fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="./logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="./fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="./tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="./banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/index.html">Início</a>
+        <a href="/service.html">Serviços</a>
+        <a href="/contato.html">Contato</a>
+    </div>
+    <main>
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb"><a href="/index.html">Início</a><span class="breadcrumb-sep">/</span><a href="/service.html">Serviços</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Eletrônica</span></nav>
+                    <span class="section-label">Serviço</span>
+                    <h1>Fundamentos de Eletrônica</h1>
+                    <div class="divider"></div>
+                    <p class="lead">A eletrônica está presente em tudo que usamos no dia a dia. Aprenda os conceitos essenciais que tornam possível toda essa tecnologia.</p>
+                </div>
+            </div>
+        </div>
 
-<body class="bg-[#0a0a0a] text-white">
-   <header
-       class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-       <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-           Company</a>
+        <section id="intro" class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Visão Geral</span>
+                <h2>Fundamentos de Eletrônica</h2>
+                <span class="content-subtitle">História | Segmentos | Utilidades | Aplicações</span>
+                <div class="divider"></div>
+                <div class="prose">
+                    <p>A eletrônica está presente em praticamente tudo que usamos no dia a dia, desde o celular até sistemas de iluminação, computadores, televisores e carros. Os fundamentos de eletrônica são a base para entender como funcionam os circuitos, componentes e dispositivos que tornam possível toda essa tecnologia.</p>
+                    <p>Esse campo envolve conceitos como corrente elétrica, tensão, resistência, capacitores, transistores e muito mais, servindo de alicerce para estudantes, técnicos e profissionais que desejam compreender e criar soluções tecnológicas.</p>
+                </div>
+            </div>
+        </section>
 
-       <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-           <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-           </svg>
-       </button>
+        <section id="historia" class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Cronologia</span>
+                <h2>Contexto Histórico</h2>
+                <div class="divider"></div>
+                <div class="prose">
+                    <p>A história da eletrônica começa ligada ao estudo da eletricidade no século XVIII. Pesquisadores como Benjamin Franklin e Alessandro Volta deram os primeiros passos ao descobrir as propriedades da eletricidade.</p>
+                </div>
+                <div class="timeline">
+                    <div class="timeline-item"><div class="timeline-year">Séc. XVIII</div><p>Benjamin Franklin e Alessandro Volta dão os primeiros passos no estudo da eletricidade.</p></div>
+                    <div class="timeline-item"><div class="timeline-year">1827</div><p>Georg Ohm estabelece a Lei de Ohm — base de todos os cálculos de circuito.</p></div>
+                    <div class="timeline-item"><div class="timeline-year">1904</div><p>John Ambrose Fleming inventa a válvula termiônica.</p></div>
+                    <div class="timeline-item"><div class="timeline-year">1947</div><p>Invenção do transistor nos Laboratórios Bell — revolução da eletrônica moderna.</p></div>
+                    <div class="timeline-item"><div class="timeline-year">1958</div><p>Jack Kilby cria o primeiro circuito integrado.</p></div>
+                    <div class="timeline-item"><div class="timeline-year">1971</div><p>Intel lança o microprocessador 4004.</p></div>
+                    <div class="timeline-item"><div class="timeline-year">1980s</div><p>Popularização dos computadores pessoais.</p></div>
+                    <div class="timeline-item"><div class="timeline-year">1990s</div><p>Revolução digital e expansão da internet.</p></div>
+                    <div class="timeline-item"><div class="timeline-year">2005</div><p>Lançamento do Arduino — democratização da eletrônica.</p></div>
+                </div>
+            </div>
+        </section>
 
-       <nav id="menu"
-           class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#0a0a0a]/95 md:bg-transparent p-4 md:p-0 rounded-b-lg border-b-2 border-[#d62828] md:border-none">
-           <a href="/index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
+        <section id="componentes" class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Equipamentos</span>
+                <h2>Componentes Eletrônicos</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Nome</th><th>Função</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>LED</strong></td><td>Indica, ilumina ou sinaliza o funcionamento de um circuito.</td></tr>
+                            <tr><td><strong>Resistores</strong></td><td>Controlam o fluxo de corrente elétrica.</td></tr>
+                            <tr><td><strong>Cabos p/ Conexão</strong></td><td>Transmitem corrente e sinais elétricos entre componentes.</td></tr>
+                            <tr><td><strong>Multímetro</strong></td><td>Mede grandezas elétricas e testa circuitos.</td></tr>
+                            <tr><td><strong>Operadores Lógicos</strong></td><td>Processam informações binárias em circuitos digitais.</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="componentes-grid" style="margin-top:40px">
+                    <div class="componente-card">
+                        <div class="componente-icon"><img src="../img/led_arduino.png" alt="LED" loading="lazy"></div>
+                        <div class="componente-nome">LED</div>
+                        <details><summary>Led em cores variáveis</summary><p>Disponível em vermelho, verde, azul, amarelo e RGB.</p></details>
+                        <p class="componente-desc">Diodo emissor de luz com alta eficiência.</p>
+                    </div>
+                    <div class="componente-card">
+                        <div class="componente-icon"><img src="../img/resistor_arduino.png" alt="Resistores" loading="lazy"></div>
+                        <div class="componente-nome">Resistores</div>
+                        <details><summary>Resistores com 220 Ω</summary><p>Valor comum para limitar corrente em LEDs.</p></details>
+                        <p class="componente-desc">Controlam o fluxo de corrente.</p>
+                    </div>
+                    <div class="componente-card">
+                        <div class="componente-icon"><img src="../img/multimetro.png" alt="Multímetro" loading="lazy"></div>
+                        <div class="componente-nome">Multímetro</div>
+                        <details><summary>Multímetro Digital</summary><p>Essencial para medições e diagnóstico de circuitos.</p></details>
+                        <p class="componente-desc">Mede tensão, corrente e resistência.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-           <div class="relative group">
-               <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                   
-                    <li><a href="./robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="./sensores.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sensores</a></li>
-                   <li><a href="./logica_programacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                           Programação</a></li>
-                   <li><a href="./fundamentos_rede.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                   </li>
-                   <li><a href="./logica_computacional.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                           Computacional</a></li>
-                   <li><a href="./fundamentos_eletronica.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                           Eletrônica</a></li>
-                   <li><a href="./tecnologia_informacao.html"
-                           class="block px-4 py-2 text-[#d62828] transition-colors">Tecnologia da Informação</a></li>
-                   <li><a href="./banco_dados.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-               </ul>
-           </div>            
-           <a href="/contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
-       </nav>
-   </header>
+        <section id="calculos" class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Prática</span>
+                <h2>Cálculos de Circuitos Elétricos</h2>
+                <span class="content-subtitle">Calcular Corrente, Tensão e Potência em Circuito Misto</span>
+                <div class="divider"></div>
+                <div class="calculos-container">
+                    <div class="calculos-grid">
+                        <div class="circuito-diagrama">
+                            <h4 style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-dark);margin-bottom:16px;">Diagrama do Circuito</h4>
+                            <div class="diagrama-box">
+                                <div class="diagrama-texto"><p>Voltagem (V)  R1  R2</p><p>  </p><p>  R3</p></div>
+                                <p class="diagrama-descricao">Circuito misto: R1 em série com o paralelo de R2 e R3</p>
+                            </div>
+                        </div>
+                        <div class="parametros-form">
+                            <h4 style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-dark);margin-bottom:16px;">Parâmetros do Circuito</h4>
+                            <form id="form-calculo" class="form-calculo">
+                                <div class="input-group"><label for="voltagem">Voltagem (V)</label><input type="number" id="voltagem" step="0.1" placeholder="Digite a voltagem em Volts"></div>
+                                <div class="input-group"><label for="resistenciaA">Resistor A — R1 (Ω)</label><input type="number" id="resistenciaA" step="0.1" placeholder="Resistência em Ohms"></div>
+                                <div class="input-group"><label for="resistenciaB">Resistor B — R2 (Ω)</label><input type="number" id="resistenciaB" step="0.1" placeholder="Resistência em Ohms"></div>
+                                <div class="input-group"><label for="resistenciaC">Resistor C — R3 (Ω)</label><input type="number" id="resistenciaC" step="0.1" placeholder="Resistência em Ohms"></div>
+                                <button type="button" id="btn-calcular" class="btn-calcular">Calcular Circuito</button>
+                            </form>
+                        </div>
+                    </div>
+                    <div>
+                        <h4 style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-dark);margin-bottom:12px;">Resultados</h4>
+                        <div id="resultado" class="resultados-box"><p class="resultados-placeholder">Os resultados aparecerão aqui após o cálculo...</p></div>
+                    </div>
+                    <div style="margin-top:32px">
+                        <h4 style="font-size:13px;font-weight:700;text-transform:uppercase;letter-spacing:.08em;color:var(--brand-dark);margin-bottom:12px;">Fórmulas Utilizadas</h4>
+                        <ul class="formulas-list">
+                            <li><span class="formula-simbolo">•</span><span>Resistência equivalente em paralelo: R<sub>paralelo</sub> = (R₂ × R₃) ÷ (R₂ + R₃)</span></li>
+                            <li><span class="formula-simbolo">•</span><span>Resistência total: R<sub>total</sub> = R₁ + R<sub>paralelo</sub></span></li>
+                            <li><span class="formula-simbolo">•</span><span>Lei de Ohm: I = V ÷ R</span></li>
+                            <li><span class="formula-simbolo">•</span><span>Potência dissipada: P = R × I²</span></li>
+                            <li><span class="formula-simbolo">•</span><span>Tensão no resistor: V = R × I</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-   <main class="pt-20">
-       <section class="reveal">
-           <h2>Fundamentos de Eletrônica</h2>
-           <h3>História | Segmentos | Utilidades | Aplicações</h3>
-           <hr>
-           <div>
-               <p>A eletrônica está presente em praticamente tudo que usamos no dia a dia, desde o celular que
-                   carregamos no bolso até os sistemas de iluminação, computadores, televisores e até carros. Os
-                   fundamentos de eletrônica são a base para entender como funcionam os circuitos, componentes e
-                   dispositivos que tornam possível toda essa tecnologia.</p>
-               <p>Esse campo do conhecimento envolve conceitos como corrente elétrica, tensão, resistência,
-                   capacitores, transistores e muito mais, servindo de alicerce para estudantes, técnicos e
-                   profissionais que desejam compreender e criar soluções tecnológicas.</p>
-           </div>
-       </section>
-
-       <section class="reveal">
-           <h2>Contexto Histórico</h2>
-           <hr>
-           <p>A história da eletrônica começa ligada ao estudo da eletricidade no século XVIII. Pesquisadores como
-               Benjamin Franklin e Alessandro Volta deram os primeiros passos ao descobrir as propriedades da
-               eletricidade e criar dispositivos como a pilha elétrica, que permitiu produzir corrente de forma
-               contínua.</p>
-           <p>No século XIX, avanços como a Lei de Ohm (1827) e a invenção do telégrafo abriram caminho para aplicações
-               práticas. Mas foi no início do século XX que a eletrônica realmente nasceu, com a invenção da válvula
-               termiônica.</p>
-           <p>A partir da década de 1940, a invenção do transistor revolucionou tudo. Pequeno, barato e eficiente, ele
-               substituiu as válvulas e tornou possível a criação dos computadores modernos.</p>
-           <p>Os anos 80 e 90 testemunharam a popularização dos computadores pessoais e dispositivos móveis, enquanto a
-               revolução digital transformava a sociedade. Em 2005, surge o Arduino, que democratizou o acesso à
-               eletrônica.</p>
-           <p>Hoje, vivemos em um mundo completamente dependente da eletrônica, presente em praticamente todos os
-               dispositivos modernos.</p>
-       </section>
-
-       <section id="historia" class="reveal">
-           <h2>Linha do Tempo da Eletrônica</h2>
-           <hr>
-           <div class="historia-timeline">
-               <div class="timeline-item">
-                   <div class="timeline-year">Século XVIII</div>
-                   <p>Benjamin Franklin e Alessandro Volta dão os primeiros passos no estudo da eletricidade.</p>
-               </div>
-
-               <div class="timeline-item">
-                   <div class="timeline-year">1827</div>
-                   <p>Georg Ohm estabelece a Lei de Ohm.</p>
-               </div>
-
-               <div class="timeline-item">
-                   <div class="timeline-year">1904</div>
-                   <p>John Ambrose Fleming inventa a válvula termiônica.</p>
-               </div>
-
-               <div class="timeline-item">
-                   <div class="timeline-year">1947</div>
-                   <p>Invenção do transistor nos Laboratórios Bell.</p>
-               </div>
-
-               <div class="timeline-item">
-                   <div class="timeline-year">1958</div>
-                   <p>Jack Kilby cria o primeiro circuito integrado.</p>
-               </div>
-
-               <div class="timeline-item">
-                   <div class="timeline-year">1971</div>
-                   <p>Intel lança o microprocessador 4004.</p>
-               </div>
-
-               <div class="timeline-item">
-                   <div class="timeline-year">1980s</div>
-                   <p>Popularização dos computadores pessoais.</p>
-               </div>
-
-               <div class="timeline-item">
-                   <div class="timeline-year">1990s</div>
-                   <p>Revolução digital e internet.</p>
-               </div>
-
-               <div class="timeline-item">
-                   <div class="timeline-year">2005</div>
-                   <p>Lançamento do Arduino.</p>
-               </div>
-           </div>
-       </section>
-
-       <section id="componentes" class="reveal">
-           <h2>Componentes Eletrônicos</h2>
-           <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           <hr>
-           <div class="table-wrapper">
-               <table>
-                   <thead>
-                       <tr>
-                           <th>Nome</th>
-                           <th>Função</th>
-                       </tr>
-                   </thead>
-                   <tbody>
-                       <tr>
-                           <td><strong>LED</strong></td>
-                           <td>Indica, ilumina ou sinaliza o funcionamento de um circuito.</td>
-                       </tr>
-                       <tr>
-                           <td><strong>Resistores</strong></td>
-                           <td>Controlam o fluxo de corrente elétrica.</td>
-                       </tr>
-                       <tr>
-                           <td><strong>Cabos p/ Conexão</strong></td>
-                           <td>Transmitem corrente e sinais elétricos entre componentes.</td>
-                       </tr>
-                       <tr>
-                           <td><strong>Multímetro</strong></td>
-                           <td>Mede grandezas elétricas e testa circuitos.</td>
-                       </tr>
-                       <tr>
-                           <td><strong>Operadores Lógicos</strong></td>
-                           <td>Processam informações binárias em circuitos digitais.</td>
-                       </tr>
-                   </tbody>
-               </table>
-           </div>
-       </section>
-
-       <section class="componentes-visuais reveal">
-           <h2>Componentes em Destaque</h2>
-           <hr>
-           <div class="componentes-grid">
-               <div class="componente-card">
-                   <div class="componente-icon"><img src="../img/led_arduino.png" alt="Led para Arduino"
-                           loading="lazy"></div>
-                   <div class="componente-nome">LED</div>
-                   <div class="explicando-componente">
-                       <details>
-                           <summary>Led em cores variáveis</summary>
-                           <p>Disponível em vermelho, verde, azul, amarelo e RGB.</p>
-                       </details>
-                   </div>
-                   <div class="componente-desc">Diodo emissor de luz com alta eficiência.</div>
-               </div>
-
-               <div class="componente-card">
-                   <div class="componente-icon"><img src="../img/resistor_arduino.png" alt="Resistores" loading="lazy">
-                   </div>
-                   <div class="componente-nome">Resistores</div>
-                   <div class="explicando-componente">
-                       <details>
-                           <summary>Resistores com 220 Ω</summary>
-                           <p>Valor comum para limitar corrente em LEDs.</p>
-                       </details>
-                   </div>
-                   <div class="componente-desc">Controlam o fluxo de corrente.</div>
-               </div>
-
-               <div class="componente-card">
-                   <div class="componente-icon"><img src="../img/multimetro.png" alt="Multímetro" loading="lazy"></div>
-                   <div class="componente-nome">Multímetro</div>
-                   <div class="explicando-componente">
-                       <details>
-                           <summary>Multímetro Digital</summary>
-                           <p>Essencial para medições e diagnóstico de circuitos.</p>
-                       </details>
-                   </div>
-                   <div class="componente-desc">Mede tensão, corrente e resistência.</div>
-               </div>
-           </div>
-       </section>
-
-       <section id="calculos-circuitos" class="calculos-circuitos-section reveal">
-           <h2>Cálculos de Circuitos Elétricos</h2>
-           <h3>Calcular Corrente, Tensão e Potência em Circuitos Misto</h3>
-           <hr>
-
-           <div class="calculos-container">
-               <div class="calculos-grid">
-                   <div class="circuito-diagrama">
-                       <h4>Diagrama do Circuito</h4>
-                       <div class="diagrama-box">
-                           <div class="diagrama-texto">
-                               <p>Voltagem (V)  R1  R2 </p>
-                               <p>  </p>
-                               <p>  R3 </p>
-                           </div>
-                           <p class="diagrama-descricao">
-                               Circuito misto: R1 em série com o paralelo de R2 e R3
-                           </p>
-                       </div>
-                   </div>
-                   <div class="parametros-form">
-                       <h4>Parâmetros do Circuito</h4>
-                       <form id="form-calculo" class="form-calculo">
-                           <div class="input-group">
-                               <label for="voltagem">Voltagem (V)</label>
-                               <input type="number" id="voltagem" step="0.1" placeholder="Digite a voltagem em Volts">
-                           </div>
-
-                           <div class="input-group">
-                               <label for="resistenciaA">Resistor A - R1 (Ω)</label>
-                               <input type="number" id="resistenciaA" step="0.1" placeholder="Resistência em Ohms">
-                           </div>
-
-                           <div class="input-group">
-                               <label for="resistenciaB">Resistor B - R2 (Ω)</label>
-                               <input type="number" id="resistenciaB" step="0.1" placeholder="Resistência em Ohms">
-                           </div>
-
-                           <div class="input-group">
-                               <label for="resistenciaC">Resistor C - R3 (Ω)</label>
-                               <input type="number" id="resistenciaC" step="0.1" placeholder="Resistência em Ohms">
-                           </div>
-
-                           <button type="button" id="btn-calcular" class="btn-calcular">
-                               Calcular Circuito
-                           </button>
-                       </form>
-                   </div>
-               </div>
-               <div class="resultados-container">
-                   <h4>Resultados</h4>
-                   <div id="resultado" class="resultados-box">
-                       <p class="resultados-placeholder">Os resultados aparecerão aqui após o cálculo...</p>
-                   </div>
-               </div>
-
-               <div class="formulas-container">
-                   <h4>Fórmulas Utilizadas</h4>
-                   <ul class="formulas-list">
-                       <li>
-                           <span class="formula-simbolo">•</span>
-                           <span class="formula-texto">Resistência equivalente em paralelo: R<sub>paralelo</sub> = (R₂
-                               × R₃) ÷ (R₂ + R₃)</span>
-                       </li>
-                       <li>
-                           <span class="formula-simbolo">•</span>
-                           <span class="formula-texto">Resistência total: R<sub>total</sub> = R₁ +
-                               R<sub>paralelo</sub></span>
-                       </li>
-                       <li>
-                           <span class="formula-simbolo">•</span>
-                           <span class="formula-texto">Lei de Ohm: I = V ÷ R</span>
-                       </li>
-                       <li>
-                           <span class="formula-simbolo">•</span>
-                           <span class="formula-texto">Potência dissipada: P = R × I²</span>
-                       </li>
-                       <li>
-                           <span class="formula-simbolo">•</span>
-                           <span class="formula-texto">Tensão no resistor: V = R × I</span>
-                       </li>
-                   </ul>
-               </div>
-           </div>
-       </section>
-
-       <section id="arduino" class="reveal">
-           <h2>Arduíno</h2>
-           <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           <hr>
-           <div class="container">
-               <p>O <strong>Arduino</strong> é uma plataforma de prototipagem eletrônica projetada para facilitar o
-                   desenvolvimento de projetos interativos. Ele combina hardware e software simples e intuitivos.</p>
-               <p>Criado em 2005, tornou-se popular por permitir o controle de sensores, motores, LEDs e outros
-                   componentes.</p>
-               <p>O funcionamento básico envolve escrever um código em C/C++ e enviá-lo via USB para o
-                   microcontrolador.</p>
-
-               <div class="exemplo-arduino">
-                   <strong>Exemplo prático:</strong> acender um LED quando um botão é pressionado.
-                   <div class="arduino-images">
-                       <img src="../img/liga_apaga_led_ligado.jpg" alt="LED Ligado" loading="lazy">
-                       <img src="../img/liga_desliga_ligado.jpg" alt="Circuito Montado" loading="lazy">
-                       <img src="../img/liga_desliga_apagado.jpg" alt="LED Apagado" loading="lazy">
-                   </div>
-               </div>
-
-               <p>Exemplo de código para controle via Node.js:</p>
-               <div class="code-block">
-                   <div class="code-header"> server.js - Comunicação Serial com Arduino</div>
-                   <pre><code>const express = require('express')
-const app = express()
-const { SerialPort, ReadlineParser } = require('serialport')
-const Readline = require('readline')
-
-const cors = require('cors')
-const path = require('path')
-
-const PORT = 3000
-const hostname = 'localhost'
-
-const BAUD_RATE = 9600
-const SERIAL_PORT = 'COM3'
-
-app.use(express.urlencoded({ extended: true }))
-app.use(express.json())
-app.use(cors())
-
-const arduino = new SerialPort({
-   path: SERIAL_PORT,
-   baudRate: BAUD_RATE
-})
-
-const parserDados = arduino.pipe(new ReadlineParser({ delimiter: '\r\n' }))
-
-arduino.on("open", () => {
-   console.log(`Conexão com Arduino em ${SERIAL_PORT}`)
-})
-
-arduino.on("error", (err) => {
-   console.error(`Erro na comunicação`, err)
-})
-
-parserDados.on('data', (dados) => {
-   const linha = dados.toString().trim()
-   if (linha) console.log(`Arduino: ${linha}`)
-})
-
-// ... resto do código</code></pre>
-               </div>
-
-               <p>Existem vários modelos, como Arduino Uno, Mega e Nano.</p>
-
-               <div class="exemplo">
-                   <strong>Exemplo de uso:</strong> controlar LEDs, sensores, motores e IoT.
-               </div>
-
-               <p>Por ser uma plataforma colaborativa, milhares de tutoriais e códigos estão disponíveis.</p>
-           </div>
-       </section>
-
-       <section id="entra-sai" class="reveal">
-           <h2>Entrada e Saída de Dados</h2>
-           <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           <hr>
-           <div class="container">
-               <p>Entrada e saída de dados (Input/Output - I/O) são processos essenciais na interação entre
-                   computadores e usuários ou dispositivos.</p>
-
-               <div class="conceito-box">
-                   <div class="conceito-titulo"> Entrada de Dados</div>
-                   <p>A entrada ocorre quando o computador recebe informações para processar.</p>
-                   <div class="entrada-dados">
-                       <strong>Mouse</strong>
-                       <strong>Teclado</strong>
-                       <strong>Câmera</strong>
-                       <strong>Microfone</strong>
-                       <strong>Sensores</strong>
-                   </div>
-               </div>
-
-               <div class="conceito-box">
-                   <div class="conceito-titulo"> Saída de Dados</div>
-                   <p>A saída ocorre quando o computador devolve informações processadas.</p>
-                   <div class="saida-dados">
-                       <strong>Monitor</strong>
-                       <strong>Impressora</strong>
-                       <strong>Caixas de som</strong>
-                       <strong>LEDs</strong>
-                       <strong>Displays</strong>
-                   </div>
-               </div>
-
-               <div class="exemplo">
-                   <strong>Exemplo prático:</strong>
-                   Digitar no teclado (entrada) e ver o texto no monitor (saída).
-               </div>
-
-               <p>Entrada e saída de dados são fundamentais para qualquer sistema computacional.</p>
-           </div>
-       </section>
-
-       <section id="script" class="reveal">
-           <h2>Script para Cálculos</h2>
-           <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           <hr>
-
-           <div class="container">
-               <p>Scripts para cálculos são usados para automatizar operações matemáticas, comuns em TI e eletrônica.
-               </p>
-               <p>Linguagens como JavaScript, Python e C++ podem realizar cálculos simples ou complexos.</p>
-
-               <div class="conceito-box">
-                   <div class="conceito-titulo"> Como funcionam?</div>
-                   <p>Um script lê valores (entrada), processa e exibe o resultado (saída).</p>
-
-                   <div class="code-block">
-                       <div class="code-header"> Exemplo em JavaScript</div>
-                       <pre><code>let n1 = 10
-let n2 = 5
-let soma = n1 + n2
-console.log("A soma é: " + soma)</code></pre>
-                   </div>
-               </div>
-
-               <div class="conceito-box">
-                   <div class="conceito-titulo"> Aplicações comuns</div>
-                   <div class="aplicacoes">
-                       <span>Sistemas escolares</span>
-                       <span>Conversores de moeda</span>
-                       <span>Sensores IoT</span>
-                       <span>Dashboards e planilhas</span>
-                       <span>Simulações físicas</span>
-                   </div>
-               </div>
-
-               <div class="code-block">
-                   <div class="code-header"> Exemplo com entrada do usuário</div>
-                   <pre><code>let num1 = prompt("Digite o primeiro número:")
-let num2 = prompt("Digite o segundo número:")
-let resultado = Number(num1) * Number(num2)
-console.log("Resultado: " + resultado)</code></pre>
-               </div>
-
-               <p>Scripts são essenciais em automação, cálculos e análise de dados.</p>
-           </div>
-       </section>
-
-       <section id="diodo" class="reveal">
-           <h2>Diodo Led & Display</h2>
-           <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           <hr>
-
-           <div class="container">
-               <p>O LED é um diodo emissor de luz muito usado em eletrônica e automação.</p>
-               <p>Em projetos com Arduino, representa uma saída física do sistema.</p>
-
-               <div class="conceito-box">
-                   <div class="conceito-titulo"> Relação com Scripts</div>
-                   <p>Assim como scripts matemáticos, o código controla quando um LED acende ou apaga.</p>
-
-                   <div class="code-block">
-                       <div class="code-header"> Exemplo simples em Arduino</div>
-                       <pre><code>void setup() {
-   pinMode(13, OUTPUT);
+        <section id="arduino" class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Plataforma</span>
+                <h2>Arduino</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <div class="prose">
+                    <p>O <strong>Arduino</strong> é uma plataforma de prototipagem eletrônica projetada para facilitar o desenvolvimento de projetos interativos, combinando hardware e software simples e intuitivos.</p>
+                    <p>Criado em 2005, tornou-se popular por permitir o controle de sensores, motores, LEDs e outros componentes. O funcionamento básico envolve escrever código em C/C++ e enviá-lo via USB ao microcontrolador.</p>
+                </div>
+                <div class="conceito-box">
+                    <div class="conceito-titulo">Exemplo prático: acender um LED</div>
+                    <div class="img-grid">
+                        <img src="../img/liga_apaga_led_ligado.jpg" alt="LED Ligado" loading="lazy">
+                        <img src="../img/liga_desliga_ligado.jpg" alt="Circuito Montado" loading="lazy">
+                        <img src="../img/liga_desliga_apagado.jpg" alt="LED Apagado" loading="lazy">
+                    </div>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">Exemplo simples em Arduino</div>
+                    <pre><code>void setup() {
+    pinMode(13, OUTPUT);
 }
 
 void loop() {
-   digitalWrite(13, HIGH);
-   delay(1000);
-   digitalWrite(13, LOW);
-   delay(1000);
+    digitalWrite(13, HIGH);
+    delay(1000);
+    digitalWrite(13, LOW);
+    delay(1000);
 }</code></pre>
-                   </div>
-               </div>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">server.js — Comunicação Serial com Arduino</div>
+                    <pre><code>const express = require('express')
+const { SerialPort, ReadlineParser } = require('serialport')
 
-               <p>O LED é um indicador visual do funcionamento do código.</p>
+const arduino = new SerialPort({ path: 'COM3', baudRate: 9600 })
+const parserDados = arduino.pipe(new ReadlineParser({ delimiter: '\r\n' }))
 
-               <div class="conceito-box">
-                   <div class="conceito-titulo"> Aplicações e Importância</div>
-                   <div class="aplicacoes">
-                       <span>Sinalização</span>
-                       <span>Testes I/O</span>
-                       <span>Monitoramento de sensores</span>
-                       <span>Ensino de eletrônica</span>
-                       <span>Baixo consumo de energia</span>
-                   </div>
-               </div>
+arduino.on("open", () => console.log("Conectado ao Arduino"))
+parserDados.on('data', (dados) => console.log(`Arduino: ${dados}`))</code></pre>
+                </div>
+            </div>
+        </section>
 
-               <p>O LED é uma forma simples e visual de comunicação entre hardware e programador.</p>
-           </div>
-       </section>
-   </main>
-   <footer class="reveal">
-       <div class="footer-content">
-           <p>&copy 2025 - Del Company | Todos os direitos reservados</p>
-           <div class="footer-links">
-               <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
-                   <span></span> Instagram
-               </a>
-               <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
-                   <span></span> Whatsapp
-               </a>
-               <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
-                   <span></span> GitHub
-               </a>
-           </div>
-       </div>
-   </footer>
+        <section id="io" class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Conceitos</span>
+                <h2>Entrada e Saída de Dados</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <p>Entrada e saída de dados (Input/Output - I/O) são processos essenciais na interação entre computadores e usuários ou dispositivos.</p>
+                <div class="info-grid" style="margin-top:32px">
+                    <div class="info-card">
+                        <h4>Entrada de Dados</h4>
+                        <p>O computador recebe informações para processar.</p>
+                        <div class="card-tags">
+                            <span class="tag-item">Mouse</span><span class="tag-item">Teclado</span><span class="tag-item">Câmera</span><span class="tag-item">Microfone</span><span class="tag-item">Sensores</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h4>Saída de Dados</h4>
+                        <p>O computador devolve informações processadas ao usuário.</p>
+                        <div class="card-tags">
+                            <span class="tag-item">Monitor</span><span class="tag-item">Impressora</span><span class="tag-item">Caixas de som</span><span class="tag-item">LEDs</span><span class="tag-item">Displays</span>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h4>Scripts para Cálculos</h4>
+                        <p>Automatizam operações matemáticas em TI e eletrônica.</p>
+                        <div class="card-tags">
+                            <span class="tag-item">JavaScript</span><span class="tag-item">Python</span><span class="tag-item">C++</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
+
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>

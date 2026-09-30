@@ -1,201 +1,224 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <link rel="stylesheet" href="../css/robo_cartesiano.css">
-      <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-      <script src="../js/robo_cartesiano.js" defer></script>
-      <script src="https://cdn.tailwindcss.com"></script>
-      <title>Del Company - Robô Cartesiano</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - Robô cartesiano: pórtico, eixos lineares, especificações e modelos Festo, Bosch, Yamaha.">
+    <title>Del Company | Robô Cartesiano</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/dell.png" type="image/png">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
 </head>
-
-<body class="bg-[#0a0a0a] text-white">
-      <header
-        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-        <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-            Company</a>
-
-        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-
-        <nav id="menu"
-            class="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="/index.html" class="hover:text-[#d62828] transition-colors">Inicio</a>
-
-            <div class="relative group">
-                <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Servicos</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    
-                    <li><a href="/service/servicos/html/sensores.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sensores</a></li>
-                    <li><a href="/service/servicos/html/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">L&#243;gica de
-                            Programa&#231;&#227;o</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                    </li>
-                    <li><a href="/service/servicos/html/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">L&#243;gica
-                            Computacional</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                            Eletr&#244;nica</a></li>
-                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                            Informa&#231;&#227;o</a></li>
-                    <li><a href="/service/servicos/html/banco_dados.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
-
-            <div class="relative group">
-                <a href="/service/servicos/html/robotizacao.html"
-                    class="block py-2 text-[#d62828] transition-colors">Rob&#243;tica</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/robots/html/robo_articulado.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Rob&#244; Articulado</a></li>
-                    <li><a href="/service/robots/html/robo_cartesiano.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Rob&#244; Cartesiano</a></li>
-                    <li><a href="/service/robots/html/robo_cilindrico.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Rob&#244; Cil&#237;ndrico</a></li>
-                    <li><a href="/service/robots/html/robo_colaborativo.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Rob&#244; Colaborativo</a></li>
-                    <li><a href="/service/robots/html/robo_delta.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Rob&#244; Delta</a></li>
-                    <li><a href="/service/robots/html/robo_polar.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Rob&#244; Polar</a></li>
-                    <li><a href="/service/robots/html/robo_scara.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Rob&#244; SCARA</a></li>
-                </ul>
-            </div>
-
- 
-                      <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-        </nav>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="/service/servicos/html/robotizacao.html">Modelos Robóticos <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_cartesiano.html">Robô Cartesiano</a></li>
+                        <li><a href="/service/robots/html/robo_cilindrico.html">Robô Cilíndrico</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/robots/html/robo_polar.html">Robô Polar</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
-
-      <main class="pt-20">
-
-            <section class="hero reveal">
-                  <h2 class="logo-centro">Robô Cartesiano</h2>
-                  <h3>Robô de Coordenadas Retangulares | Movimento Linear</h3>
-                  <hr>
-                  <p>O <strong>robô cartesiano</strong> (também chamado de gantry ou linear) opera em três eixos
-                        lineares perpendiculares (X, Y, Z), formando um volume de trabalho cúbico ou retangular. É a
-                        configuração mais simples e precisa da robótica industrial.</p>
-            </section>
-
-            <section class="reveal">
-                  <h2>Conceito</h2>
-                  <hr>
-                  <p>Robôs cartesianos são máquinas cujo movimento ocorre exclusivamente ao longo de eixos
-                        lineares ortogonais. A movimentação é realizada por guias lineares e atuadores como fusos
-                        de esferas, correias dentadas ou cilindros pneumáticos. Sua programação ponto a ponto é
-                        extremamente simples, e a rigidez estrutural garante alta precisão.</p>
-                  <p><strong>Limitação:</strong> Ocupam grande espaço físico em relação ao volume útil de
-                        trabalho.</p>
-            </section>
-
-            <!-- PRINCÍPIO DE FUNCIONAMENTO -->
-            <section class="reveal">
-                  <h2>Princípio de Funcionamento</h2>
-                  <hr>
-                  <p>Cada eixo é acionado por um motor independente (servomotor ou motor de passo). Um controlador
-                        CNC ou CLP interpreta as coordenadas cartesianas e movimenta o efetuador final até o ponto
-                        desejado. A trajetória é calculada por interpolação linear entre os pontos, garantindo
-                        movimentos suaves e precisos.</p>
-            </section>
-
-            <!-- CARACTERÍSTICAS TÉCNICAS -->
-            <section class="reveal">
-                  <h2>Características Técnicas</h2>
-                  <hr>
-                  <div class="specs-grid">
-                        <div class="spec-item"><strong>Graus de liberdade</strong> 3 (X, Y, Z)</div>
-                        <div class="spec-item"><strong>Repetibilidade</strong> ±0,01 mm a ±0,1 mm</div>
-                        <div class="spec-item"><strong>Carga útil</strong> Até 500 kg</div>
-                        <div class="spec-item"><strong>Velocidade</strong> Até 2 m/s</div>
-                        <div class="spec-item"><strong>Envelope de trabalho</strong> Retangular, expansível</div>
-                        <div class="spec-item"><strong>Acionamento</strong> Servomotores, motores de passo</div>
-                  </div>
-            </section>
-
-            <!-- APLICAÇÕES INDUSTRIAIS -->
-            <section class="reveal">
-                  <h2>Aplicações Industriais</h2>
-                  <hr>
-                  <ul class="lista-aplicacoes">
-                        <li>Máquinas CNC de carga e descarga</li>
-                        <li>Impressoras 3D de grande porte</li>
-                        <li>Corte a plasma e laser</li>
-                        <li>Montagem de componentes eletrônicos</li>
-                        <li>Dosagem de fluidos (dispenser)</li>
-                  </ul>
-            </section>
-
-            <!-- INTEGRAÇÃO COM AUTOMAÇÃO E IoT -->
-            <section class="reveal">
-                  <h2>Integração com Automação e IoT</h2>
-                  <hr>
-                  <p>Robôs cartesianos conectam-se a <strong>gateways IoT</strong> via protocolos como MQTT ou OPC
-                        UA. Sensores de corrente e vibração nos eixos permitem <strong>manutenção
-                              preditiva</strong>. A integração com sistemas MES/ERP possibilita rastreabilidade
-                        completa da produção.</p>
-            </section>
-
-            <!-- MODELOS COMERCIAIS -->
-            <section class="reveal">
-                  <h2>Modelos Comerciais</h2>
-                  <hr>
-                  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 24px; margin-top: 32px;">
-                        <div class="modelo-card">
-                              <img src="../img/cartesiano_festo.png" alt="Festo EXCM" loading="lazy">
-                              <h4>Festo EXCM</h4>
-                              <p><strong>Fabricante:</strong> Festo (Alemanha)</p>
-                              <p>Sistema compacto de pórtico com controlador integrado e conectividade IO-Link para IoT.
-                              </p>
-                        </div>
-                        <div class="modelo-card">
-                              <img src="../img/cartesiano_bosch.png" alt="Bosch Rexroth MKK" loading="lazy">
-                              <h4>Bosch Rexroth MKK/MKR</h4>
-                              <p><strong>Fabricante:</strong> Bosch Rexroth (Alemanha)</p>
-                              <p>Módulos lineares de alta rigidez para cargas pesadas e aplicações de precisão.</p>
-                        </div>
-                        <div class="modelo-card">
-                              <img src="../img/cartesiano_yamaha.png" alt="Yamaha XY-X" loading="lazy">
-                              <h4>Yamaha XY-X</h4>
-                              <p><strong>Fabricante:</strong> Yamaha Motor (Japão)</p>
-                              <p>Robôs cartesianos de alta velocidade para montagem e manipulação industrial.</p>
-                        </div>
-                  </div>
-            </section>
-
-      </main>
-
-      <footer class="reveal">
-            <div class="footer-content">
-                  <p>&copy 2025 - Del Company | Todos os direitos reservados</p>
-                  <div class="footer-links">
-                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
-                              <span>📷</span> Instagram
-                        </a>
-                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
-                              <span>💬</span> Whatsapp
-                        </a>
-                        <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
-                              <span>🐙</span> GitHub
-                        </a>
-                  </div>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/index.html">Início</a>
+        <a href="/service.html">Serviços</a>
+        <a href="/contato.html">Contato</a>
+    </div>
+    <main>
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb">
+                        <a href="/index.html">Início</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service.html">Serviços</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service/servicos/html/robotizacao.html">Robótica</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">Robô Cartesiano</span>
+                    </nav>
+                    <span class="section-label">Robótica Industrial</span>
+                    <h1>Robô Cartesiano</h1>
+                    <span class="content-subtitle">Coordenadas Retangulares | Movimento Linear</span>
+                    <div class="divider"></div>
+                    <p class="lead">Os robôs cartesianos combinam robustez estrutural, precisão e escalabilidade. Movendo-se estritamente em coordenadas retangulares cartesianas (X, Y, Z), são perfeitos para automação de pórticos, montagens seriadas e corte de precisão.</p>
+                </div>
             </div>
-      </footer>
+        </div>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Arquitetura</span>
+                <h2>Conceito e Cinemática</h2>
+                <div class="divider"></div>
+                <p>O <strong>robô cartesiano</strong> (também conhecido como robô pórtico ou gantry) opera através de três eixos lineares ortogonais (X, Y e Z). Seus movimentos formam um envelope de trabalho prismático retangular, proporcionando rigidez estrutural superior e cálculos de interpolação geométrica simplificados.</p>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Eixos de Movimento</strong> 3 eixos lineares (X, Y, Z) ortogonais</div>
+                    <div class="spec-item"><strong>Repetibilidade</strong> ±0,01 mm a ±0,05 mm</div>
+                    <div class="spec-item"><strong>Carga útil</strong> 1 kg até várias toneladas</div>
+                    <div class="spec-item"><strong>Volume de Trabalho</strong> Modular e escalável em dezenas de metros</div>
+                    <div class="spec-item"><strong>Acionamento</strong> Fusos de esferas, correias dentadas e cremalheiras</div>
+                    <div class="spec-item"><strong>Rigidez</strong> Altíssima rigidez mecânica ao longo do envelope</div>
+                </div>
+            </div>
+        </section>
 
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Aplicações</span>
+                <h2>Principais Usos Industriais</h2>
+                <div class="divider"></div>
+                <ul class="lista-aplicacoes">
+                    <li>Sistemas de pick & place de alta velocidade</li>
+                    <li>Máquinas CNC, corte a laser, plasma e jato de água</li>
+                    <li>Impressão 3D industrial e manufatura aditiva</li>
+                    <li>Paletização de grandes volumes e empilhamento</li>
+                    <li>Dispensação automática de adesivos, vedantes e colas</li>
+                    <li>Inspeção dimensional automatizada e scanners 3D</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Mercado</span>
+                <h2>Modelos Comerciais</h2>
+                <div class="divider"></div>
+                <div class="modelos-grid">
+                    <div class="modelo-robo-card">
+                        <img src="../img/cartesiano_festo.png" alt="Festo EXCM" loading="lazy">
+                        <h4>Festo EXCM / YXCF</h4>
+                        <p><strong>Fabricante:</strong> Festo (Alemanha)</p>
+                    </div>
+                    <div class="modelo-robo-card">
+                        <img src="../img/cartesiano_bosch.png" alt="Bosch Rexroth MKK" loading="lazy">
+                        <h4>Bosch Rexroth MKK</h4>
+                        <p><strong>Fabricante:</strong> Bosch Rexroth (Alemanha)</p>
+                    </div>
+                    <div class="modelo-robo-card">
+                        <img src="../img/cartesiano_yamaha.png" alt="Yamaha XY-X" loading="lazy">
+                        <h4>Yamaha XY-X Series</h4>
+                        <p><strong>Fabricante:</strong> Yamaha Robotics (Japão)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
+
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>

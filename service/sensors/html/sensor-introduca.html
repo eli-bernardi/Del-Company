@@ -1,220 +1,221 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/sensores.css">
-   <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-   <script src="../js/sensores.js" defer></script>
-   <script src="https://cdn.tailwindcss.com"></script>
-   <title>Del Company - Introdução aos Sensores</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - Introdução aos sensores: conceitos, parâmetros metrológicos e conversão analógica/digital.">
+    <title>Del Company | Introdução aos Sensores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/dell.png" type="image/png">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
 </head>
-
-<body class="bg-[#0a0a0a] text-white">
-   <!-- Header padronizado -->
-   <header
-       class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-       <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-           Company</a>
-       <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-           <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-           </svg>
-       </button>
-       <nav id="menu" class="hidden md:flex items-center space-x-6 text-sm font-medium">
-           <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
-           <div class="relative group">
-               <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                   <li><a href="/service/servicos/html/robotizacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                   <li><a href="/service/servicos/html/logica_programacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                           Programação</a></li>
-                   <li><a href="/service/servicos/html/fundamentos_rede.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                   </li>
-                   <li><a href="/service/servicos/html/logica_computacional.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                           Computacional</a></li>
-                   <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                           Eletrônica</a></li>
-                   <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                           Informação</a></li>
-                   <li><a href="/service/servicos/html/banco_dados.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-               </ul>
-           </div>
-
-           <div class="relative group">
-               <a href="/service/servicos/html/sensores.html"
-                   class="block py-2 text-[#d62828] transition-colors">Sensores</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/sensors/html/sensor-introduca.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Introdu&#231;&#227;o a Sensores</a></li>
-                    <li><a href="/service/sensors/html/sensor-tipos.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tipos de Sensores</a></li>
-                    <li><a href="/service/sensors/html/sensor-comunicacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Comunica&#231;&#227;o</a></li>
-                    <li><a href="/service/sensors/html/sensor-plataformas.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Plataformas IoT</a></li>
-                    <li><a href="/service/sensors/html/sensor-pratica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Prática &amp; Desafios</a></li>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="/service/servicos/html/sensores.html">Módulos <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Introdução</a></li>
+                        <li><a href="/service/sensors/html/sensor-tipos.html">Tipos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Prática &amp; Desafios</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/index.html">Início</a>
+        <a href="/service.html">Serviços</a>
+        <a href="/contato.html">Contato</a>
+    </div>
+    <main>
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb">
+                        <a href="/index.html">Início</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service.html">Serviços</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service/servicos/html/sensores.html">Sensores</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">Introdução aos Sensores</span>
+                    </nav>
+                    <span class="section-label">Sensoriamento &amp; Medição</span>
+                    <h1>Introdução aos Sensores</h1>
+                    <span class="content-subtitle">Fundamentos do Sensoriamento & Metrologia</span>
+                    <div class="divider"></div>
+                    <p class="lead">A percepção do mundo físico pelos sistemas automatizados depende inteiramente dos sensores. Compreenda os princípios físicos de medição, transdução e condicionamento de sinais.</p>
+                </div>
+            </div>
+        </div>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Fundamento</span>
+                <h2>Sensoriamento e Transdução</h2>
+                <div class="divider"></div>
+                <div class="img-container">
+                    <img src="../img/diagrama_sensoriamento.png" alt="Diagrama de Sensoriamento" class="img-diagrama">
+                    <p class="img-caption">Princípio básico: Variável Física &rarr; Sensor &rarr; Condicionamento &rarr; Sinal Elétrico Mensurável</p>
+                </div>
+                <p>Sensoriamento é o processo de detectar ou mensurar grandezas físicas, químicas ou ambientais utilizando transdutores especializados. O elemento sensor converte o fenômeno externo em uma variação proporcional de tensão, corrente, resistência ou trem de pulsos.</p>
+                <ul class="lista-aplicacoes">
+                    <li>Temperatura &rarr; Variação de resistência / milivolts</li>
+                    <li>Pressão &rarr; Variação piezorresistiva ou capacitiva</li>
+                    <li>Luminosidade &rarr; Foto-condução em semicondutores</li>
+                    <li>Movimento &rarr; Infravermelho passivo / Doppler micro-ondas</li>
+                    <li>Distância &rarr; Tempo de voo (Time of Flight - ToF)</li>
+                    <li>Concentração de Gás &rarr; Alteração de condutividade térmica / química</li>
                 </ul>
             </div>
-                      <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-       </nav>
-   </header>
+        </section>
 
-   <main class="pt-20">
-       <section class="hero reveal">
-           <h2 class="logo-centro">Introdução aos Sensores</h2>
-           <h3>Fundamentos do Sensoriamento</h3>
-           <hr>
-           <p>A evolução da tecnologia industrial trouxe uma grande quantidade de sistemas capazes de monitorar,
-               analisar e controlar processos automaticamente. Dentro desse contexto, os <strong>sensores</strong>
-               possuem uma função fundamental: obter informações do ambiente físico e transformá-las em sinais
-               interpretáveis por sistemas eletrônicos.</p>
-       </section>
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Parâmetros</span>
+                <h2>Características Metrológicas dos Sensores</h2>
+                <div class="divider"></div>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Faixa de Medição (Range)</strong> Limite inferior e superior de medição confiável</div>
+                    <div class="spec-item"><strong>Precisão &amp; Exatidão</strong> Proximidade em relação ao valor verdadeiro padrão</div>
+                    <div class="spec-item"><strong>Resolução</strong> Menor incremento detectável no sinal de entrada</div>
+                    <div class="spec-item"><strong>Sensibilidade</strong> Razão entre a variação da saída e da entrada (&Delta;Y/&Delta;X)</div>
+                    <div class="spec-item"><strong>Tempo de Resposta</strong> Tempo necessário para atingir 90% do valor estabilizado</div>
+                    <div class="spec-item"><strong>Histerese &amp; Repetibilidade</strong> Variação da medição no avanço vs retorno</div>
+                </div>
+            </div>
+        </section>
 
-       <section class="hero reveal">
-           <h2>Sensoriamento</h2>
-           <hr>
-           <div class="img-container">
-               <img src="../img/diagrama_sensoriamento.png" alt="Diagrama de funcionamento de um sensor" class="img-diagrama">
-               <p class="img-caption">Figura 1: Princípio básico do sensoriamento (Variável Física → Sensor → Sinal Elétrico)</p>
-           </div>
-           <p>Sensoriamento é o processo de detectar ou medir uma determinada grandeza física, química ou ambiental
-               utilizando um sensor. O sensor converte uma característica do ambiente em um sinal mensurável.</p>
-           <p><strong>Exemplos:</strong></p>
-           <ul class="lista-aplicacoes">
-               <li> Temperatura → sinal elétrico</li>
-               <li> Pressão → sinal elétrico</li>
-               <li> Luz → alteração de resistência ou sinal digital</li>
-               <li> Movimento → sinal digital</li>
-               <li> Distância → tempo de propagação de uma onda</li>
-               <li> Corrente → sinal proporcional à corrente</li>
-               <li> Gás → alteração de uma propriedade elétrica do elemento sensor</li>
-           </ul>
-           <p>Esse sinal pode posteriormente ser interpretado por um microcontrolador, computador ou CLP.</p>
-       </section>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Sinais</span>
+                <h2>Classificação dos Sinais: Analógico vs Digital</h2>
+                <div class="divider"></div>
+                <div class="modelagem-grid">
+                    <div class="modelo-card">
+                        <h4>Sinal Analógico</h4>
+                        <p>Varia continuamente no tempo em infinitos valores dentro de uma faixa (ex: 0 a 5V, 4 a 20mA). Exige conversor ADC.</p>
+                        <div class="img-container"><img src="../img/sinal_analogico.png" alt="Sinal Analógico" class="img-diagrama"></div>
+                    </div>
+                    <div class="modelo-card">
+                        <h4>Sinal Digital</h4>
+                        <p>Assume estados discretos (0/1 ou HIGH/LOW) ou protocolares (I2C/SPI) com alta imunidade a ruídos eletromagnéticos.</p>
+                        <div class="img-container"><img src="../img/sinal_digital.png" alt="Sinal Digital" class="img-diagrama"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
 
-       <section class="reveal">
-           <h2>O que é um Sensor?</h2>
-           <hr>
-           <p>Um sensor é um dispositivo capaz de detectar uma determinada grandeza e produzir uma saída relacionada à
-               grandeza medida. A grandeza detectada é chamada de <strong>variável física</strong> ou <strong>variável
-                   de processo</strong>.</p>
-           <div class="specs-grid">
-               <div class="spec-item"><strong>Grandeza</strong> → <strong>Sensor</strong></div>
-               <div class="spec-item">Temperatura → LM35, DS18B20</div>
-               <div class="spec-item">Umidade → DHT11, DHT22</div>
-               <div class="spec-item">Distância → HC-SR04</div>
-               <div class="spec-item">Pressão → BMP280</div>
-               <div class="spec-item">Movimento → PIR</div>
-               <div class="spec-item">Luminosidade → LDR</div>
-               <div class="spec-item">Corrente → ACS712</div>
-               <div class="spec-item">Aceleração → MPU6050</div>
-               <div class="spec-item">Gás → MQ-2, MQ-135</div>
-               <div class="spec-item">Presença metálica → Sensor indutivo</div>
-               <div class="spec-item">Presença de materiais → Sensor capacitivo</div>
-               <div class="spec-item">Objetos → Sensor fotoelétrico</div>
-           </div>
-       </section>
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
 
-       <section class="reveal">
-           <h2>Sensor x Transdutor</h2>
-           <hr>
-           <p>Os termos <strong>sensor</strong> e <strong>transdutor</strong> são relacionados, mas não sinônimos. Um
-               sensor detecta uma grandeza; um transdutor converte uma forma de energia em outra, normalmente
-               produzindo uma saída utilizável. Na prática, aparecem juntos.</p>
-       </section>
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
 
-       <section class="reveal">
-           <h2>Características Importantes</h2>
-           <hr>
-           <div class="specs-grid">
-               <div class="spec-item"><strong>Faixa de medição</strong> Intervalo no qual o sensor mede (ex: 0 °C a
-                   100 °C)</div>
-               <div class="spec-item"><strong>Precisão</strong> Proximidade do valor real (quanto maior, menor o erro)
-               </div>
-               <div class="spec-item"><strong>Resolução</strong> Menor variação distinguível (ex: 25.0 °C vs 25 °C)
-               </div>
-               <div class="spec-item"><strong>Sensibilidade</strong> Relação entre alteração da entrada e saída</div>
-               <div class="spec-item"><strong>Tempo de resposta</strong> Tempo para responder a uma alteração</div>
-               <div class="spec-item"><strong>Repetibilidade</strong> Resultados semelhantes em medições repetidas
-               </div>
-               <div class="spec-item"><strong>Alimentação</strong> Tensão necessária (3,3 V, 5 V, 12 V, 24 V)</div>
-           </div>
-       </section>
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
 
-       <section class="reveal">
-           <h2>Classificação dos Sensores</h2>
-           <hr>
-           <div class="specs-grid">
-               <div class="spec-item"><strong>Analógicos</strong> Saída contínua (ex: 0‑5 V)</div>
-               <div class="spec-item"><strong>Digitais</strong> Informação digital (LOW/HIGH, protocolos)</div>
-               <div class="spec-item"><strong>De contato</strong> Contato físico com o objeto/processo</div>
-               <div class="spec-item"><strong>Sem contato</strong> Detecção sem contato (ultrassônico, fotoelétrico,
-                   indutivo, capacitivo)</div>
-           </div>
-           <div class="grid md:grid-cols-2 gap-8 mt-8">
-               <div class="img-container">
-                   <img src="../img/sinal_analogico.png" alt="Gráfico de Sinal Analógico" class="img-diagrama">
-                   <p class="img-caption">Figura 2: Exemplo de sinal analógico (contínuo)</p>
-               </div>
-               <div class="img-container">
-                   <img src="../img/sinal_digital.png" alt="Gráfico de Sinal Digital" class="img-diagrama">
-                   <p class="img-caption">Figura 3: Exemplo de sinal digital (discreto)</p>
-               </div>
-           </div>
-       </section>
-
-       <section class="reveal">
-           <h2>Vantagens e Limitações</h2>
-           <hr>
-           <div class="img-container">
-               <img src="../img/automacao-linha-producao.png" alt="Linha de produção com sensores" class="img-diagrama w-full object-cover max-h-64">
-               <p class="img-caption">Figura 4: Sensores aplicados em uma linha de produção automatizada</p>
-           </div>
-           <h3>Vantagens</h3>
-           <ul class="lista-aplicacoes">
-               <li> Automação de processos</li>
-               <li> Monitoramento contínuo</li>
-               <li> Redução da intervenção manual</li>
-               <li> Identificação de anormalidades</li>
-               <li> Otimização de processos</li>
-               <li> Possibilidade de controle remoto</li>
-               <li> Apoio à manutenção preditiva</li>
-           </ul>
-           <h3 class="mt-8">Limitações e Desafios</h3>
-           <ul class="lista-aplicacoes">
-               <li> Calibração necessária para manter qualidade</li>
-               <li> Influência do ambiente (temperatura, umidade, interferência)</li>
-               <li> Nenhum sensor é perfeitamente exato</li>
-               <li> Falhas na comunicação podem interromper dados</li>
-               <li> Segurança em sistemas IoT conectados</li>
-               <li> Manutenção e substituição periódica</li>
-           </ul>
-       </section>
-   </main>
-
-   <footer class="reveal">
-       <div class="footer-content">
-           <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-           <div class="footer-links">
-               <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener"><span></span>
-                   Instagram</a>
-               <a href="https://wa.me/5548991013184" target="_blank" rel="noopener"><span></span> Whatsapp</a>
-               <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener"><span></span> GitHub</a>
-           </div>
-       </div>
-   </footer>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>

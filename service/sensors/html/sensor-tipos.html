@@ -1,344 +1,230 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/sensores.css">
+    <meta name="description" content="Del Company - Tipos de sensores: temperatura, pressão, umidade, presença, ópticos, indutivos e capacitivos.">
+    <title>Del Company | Tipos de Sensores</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-    <script src="../js/sensores.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Del Company - Tipos de Sensores</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
 </head>
-
-<body class="bg-[#0a0a0a] text-white">
-    <header
-        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-        <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-            Company</a>
-        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-        <nav id="menu" class="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
-            <div class="relative group">
-                <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/servicos/html/robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="/service/servicos/html/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                            Programação</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                    </li>
-                    <li><a href="/service/servicos/html/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                            Computacional</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                            Eletrônica</a></li>
-                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                            Informação</a></li>
-                    <li><a href="/service/servicos/html/banco_dados.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
-
-            <div class="relative group">
-                <a href="/service/servicos/html/sensores.html"
-                    class="block py-2 text-[#d62828] transition-colors">Sensores</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/sensors/html/sensor-introduca.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Introdu&#231;&#227;o a Sensores</a></li>
-                    <li><a href="/service/sensors/html/sensor-tipos.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tipos de Sensores</a></li>
-                    <li><a href="/service/sensors/html/sensor-comunicacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Comunica&#231;&#227;o</a></li>
-                    <li><a href="/service/sensors/html/sensor-plataformas.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Plataformas IoT</a></li>
-                    <li><a href="/service/sensors/html/sensor-pratica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Prática &amp; Desafios</a></li>
-                </ul>
-            </div>
-            <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-        </nav>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="/service/servicos/html/sensores.html">Módulos <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Introdução</a></li>
+                        <li><a href="/service/sensors/html/sensor-tipos.html">Tipos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Prática &amp; Desafios</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
-
-    <main class="pt-20">
-        <section class="hero reveal">
-            <h2 class="logo-centro">Tipos de Sensores</h2>
-            <h3>Catálogo de Sensores Comuns</h3>
-            <hr>
-            <p>Conheça os principais sensores utilizados em projetos de automação, IoT e prototipagem. Cada um possui
-                características específicas de sinal, comunicação e aplicação.</p>
-        </section>
-
-        <!-- Sensores de Temperatura -->
-        <section class="reveal">
-            <h2>Sensores de Temperatura</h2>
-            <hr>
-            <div class="specs-grid">
-                <div class="spec-item"><strong>LM35</strong> – Analógico, saída 10 mV/°C, alimentação 5 V</div>
-                <div class="spec-item"><strong>DHT11</strong> – Digital, temperatura e umidade, alcance 0‑50°C</div>
-                <div class="spec-item"><strong>DHT22</strong> – Digital, temperatura e umidade, maior precisão</div>
-                <div class="spec-item"><strong>DS18B20</strong> – Digital, 1‑Wire, múltiplos sensores em um barramento
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/index.html">Início</a>
+        <a href="/service.html">Serviços</a>
+        <a href="/contato.html">Contato</a>
+    </div>
+    <main>
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb">
+                        <a href="/index.html">Início</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service.html">Serviços</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service/servicos/html/sensores.html">Sensores</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">Tipos de Sensores</span>
+                    </nav>
+                    <span class="section-label">Sensoriamento &amp; Medição</span>
+                    <h1>Tipos de Sensores</h1>
+                    <span class="content-subtitle">Catálogo Completo: Comerciais e Industriais</span>
+                    <div class="divider"></div>
+                    <p class="lead">Conheça o portfólio completo de sensores para projetos embarcados, IoT e automação industrial pesada, detalhando princípios de operação e aplicações práticas.</p>
                 </div>
-                <div class="spec-item"><strong>Termopares</strong> – Para altas temperaturas</div>
-                <div class="spec-item"><strong>RTDs</strong> – Precisão elevada</div>
             </div>
-            <p><strong>Aplicações:</strong> Climatização, máquinas, motores, processos industriais, IoT.</p>
-        </section>
-
-        <!-- Sensores de Umidade -->
-        <section class="reveal">
-            <h2>Sensores de Umidade</h2>
-            <hr>
-            <p>Os sensores DHT11 e DHT22 também medem umidade relativa. São usados em estações meteorológicas, automação
-                residencial e projetos IoT.</p>
-        </section>
-
-        <!-- Sensores de Distância -->
-        <section class="reveal">
-            <h2>Sensores Ultrassônicos</h2>
-            <hr>
-            <p>Utilizam ondas sonoras de alta frequência. O princípio: <strong>enviar onda → atingir objeto → receber
-                    eco → calcular distância</strong>.</p>
-            <p><strong>HC‑SR04</strong>: módulo com Trigger e Echo, muito usado em robótica e medição de distância.</p>
-            <p><strong>Aplicações:</strong> Medição de distância, robótica, detecção de obstáculos, nível de tanques.
-            </p>
-        </section>
-
-        <!-- LDR -->
-        <section class="reveal">
-            <h2>LDR (Light Dependent Resistor)</h2>
-            <hr>
-            <p>Resistor cuja resistência varia com a intensidade luminosa. Utilizado em circuitos de leitura analógica.
-            </p>
-            <p><strong>Aplicações:</strong> Iluminação automática, monitoramento, automação, IoT.</p>
-        </section>
-
-        <!-- PIR -->
-        <section class="reveal">
-            <h2>Sensor PIR (Passive Infrared)</h2>
-            <hr>
-            <p>Detecta movimento pela variação da radiação infravermelha no ambiente. Saída digital em módulos comuns.
-            </p>
-            <p><strong>Aplicações:</strong> Iluminação automática, segurança, automação, IoT.</p>
-        </section>
-
-        <!-- Sensores de Gás -->
-        <section class="reveal">
-            <h2>Sensores de Gás</h2>
-            <hr>
-            <p>Detectam a presença ou concentração de gases. Exemplos: <strong>MQ‑2</strong> (gases inflamáveis),
-                <strong>MQ‑135</strong> (qualidade do ar).
-            </p>
-            <p>Módulos oferecem saída analógica e digital. <em>Importante: sensores educacionais não substituem
-                    instrumentos industriais certificados.</em></p>
-        </section>
-
-        <!-- BMP280 -->
-        <section class="reveal">
-            <h2>BMP280</h2>
-            <hr>
-            <p>Sensor digital de pressão atmosférica e temperatura. Comunicação I²C ou SPI.</p>
-            <p><strong>Aplicações:</strong> Estações meteorológicas, altimetria, IoT, monitoramento ambiental.</p>
-        </section>
-
-        <!-- MPU6050 -->
-        <section class="reveal">
-            <h2>MPU6050</h2>
-            <hr>
-            <p>Combina acelerômetro e giroscópio, comunicação I²C.</p>
-            <p><strong>Aplicações:</strong> Robótica, controle de movimento, orientação, detecção de inclinação.</p>
-        </section>
-
-        <!-- ACS712 -->
-        <section class="reveal">
-            <h2>ACS712</h2>
-            <hr>
-            <p>Sensor de corrente baseado em efeito Hall. Saída analógica.</p>
-            <p><strong>Aplicações:</strong> Monitoramento elétrico, automação, sistemas embarcados.</p>
-        </section>
-
-        <!-- Sensores Industriais -->
-        <section class="reveal">
-            <h2>Sensores Industriais</h2>
-            <hr>
-            <div class="specs-grid">
-                <div class="spec-item"><strong>Indutivos</strong> – Detectam objetos metálicos sem contato (contagem,
-                    posicionamento)</div>
-                <div class="spec-item"><strong>Capacitivos</strong> – Detectam diversos materiais (nível, contagem)
+        </div>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Catálogo Técnico</span>
+                <h2>Sensores Físicos e Ambientais</h2>
+                <div class="divider"></div>
+                <div class="sensor-tipo-grid">
+                    <div class="sensor-card">
+                        <h4>Temperatura &amp; Umidade</h4>
+                        <p><strong>LM35:</strong> Saída linear analógica (10mV/°C). <strong>DS18B20:</strong> Protocolo 1-Wire digital impermeável. <strong>DHT11 / DHT22:</strong> Temperatura e umidade relativa combinadas com saída serial.</p>
+                    </div>
+                    <div class="sensor-card">
+                        <h4>Distância &amp; Ultrassom</h4>
+                        <p><strong>HC-SR04:</strong> Medição por eco ultrassônico (2cm a 400cm, 40kHz). Sensores ópticos laser ToF (VL53L0X) para alta precisão milimétrica.</p>
+                    </div>
+                    <div class="sensor-card">
+                        <h4>Luminosidade &amp; Movimento</h4>
+                        <p><strong>LDR:</strong> Resistor dependente de luz (sulfeto de cádmio). <strong>PIR (HC-SR501):</strong> Detecção de radiação infravermelha emitida pelo calor de corpos em movimento.</p>
+                    </div>
+                    <div class="sensor-card">
+                        <h4>Gases &amp; Qualidade do Ar</h4>
+                        <p><strong>MQ-2:</strong> GLP, propano, metano, hidrogênio e fumaça. <strong>MQ-135:</strong> Amônia, sulfeto, benzeno e CO2 para qualidade ambiental.</p>
+                    </div>
+                    <div class="sensor-card">
+                        <h4>Pressão Barométrica &amp; IMU</h4>
+                        <p><strong>BMP280 / BME280:</strong> Pressão atmosférica e altitude barométrica via I2C. <strong>MPU6050:</strong> Acelerômetro e giroscópio de 6 graus de liberdade.</p>
+                    </div>
+                    <div class="sensor-card">
+                        <h4>Corrente Elétrica</h4>
+                        <p><strong>ACS712:</strong> Sensor de corrente por efeito Hall isolado galvanicamente (faixas de 5A, 20A e 30A AC/DC).</p>
+                    </div>
                 </div>
-                <div class="spec-item"><strong>Fotoelétricos</strong> – Usam luz (barreira, retro‑reflexivo, difuso)
-                </div>
-                <div class="spec-item"><strong>Pressão</strong> – Medem força de fluidos/gases (hidráulica, pneumática)
-                </div>
-                <div class="spec-item"><strong>Nível</strong> – Determinam altura de material (ultrassônico, capacitivo,
-                    boia, radar)</div>
-                <div class="spec-item"><strong>Vazão</strong> – Medem fluxo de fluidos (L/min, m³/h)</div>
-                <div class="spec-item"><strong>Vibração</strong> – Detectam oscilações (manutenção preditiva)</div>
-            </div>
-            <p><strong>Manutenção Preditiva:</strong> Sensores de vibração, temperatura, corrente e pressão monitoram
-                máquinas para identificar anormalidades antes da falha.</p>
-        </section>
-
-        <!-- Controle de Processos -->
-        <section class="reveal">
-            <h2>Controle de Processos</h2>
-            <hr>
-            <p>Um processo industrial típico: <strong>Entrada → Processo → Saída</strong>. Sensores medem a saída ou o
-                estado do processo; o controlador compara com o valor desejado e ajusta.</p>
-            <p><strong>Exemplo:</strong> Temperatura desejada 80 °C, sensor mede 72 °C → controlador aumenta
-                aquecimento.</p>
-            <p><strong>Sensor → Controlador → Atuador</strong> é a tríade fundamental da automação.</p>
-        </section>
-
-        <!-- Aplicações Setoriais -->
-        <section class="reveal">
-            <h2>Principais Aplicações dos Sensores IoT</h2>
-            <hr>
-            <div class="specs-grid">
-                <div class="spec-item"><strong>Indústria</strong> – Monitoramento de máquinas, controle de produção,
-                    manutenção preditiva</div>
-                <div class="spec-item"><strong>Agricultura</strong> – Umidade do solo, temperatura, irrigação</div>
-                <div class="spec-item"><strong>Logística</strong> – Rastreamento, temperatura, localização</div>
-                <div class="spec-item"><strong>Edificações</strong> – Presença, temperatura, iluminação, consumo
-                    energético</div>
-                <div class="spec-item"><strong>Meio Ambiente</strong> – Qualidade do ar, temperatura, umidade, pressão,
-                    qualidade da água</div>
             </div>
         </section>
-        <section class="reveal">
-            <h2>Exemplos de Sensores</h2>
-            <hr>
-            <p>Confira alguns exemplos visuais dos sensores mais utilizados em projetos de eletrônica e IoT:</p>
-            <div class="exemplos-grid">
-                <!-- Sensores de Temperatura e Umidade -->
-                <div class="exemplo-card">
-                    <img src="../img/sensor-lm35.png" alt="Sensor LM35" loading="lazy">
-                    <h4>LM35</h4>
-                    <p>Sensor analógico de temperatura.</p>
+
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Ambiente Fabril</span>
+                <h2>Sensores Industriais Robustos</h2>
+                <div class="divider"></div>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Sensor Indutivo</strong> Detecção sem contato físico exclusiva para materiais metálicos ferrosos e não ferrosos</div>
+                    <div class="spec-item"><strong>Sensor Capacitivo</strong> Detecção de plásticos, líquidos, grãos, madeira e vidro por variação dielétrica</div>
+                    <div class="spec-item"><strong>Sensor Fotoelétrico</strong> Barreira, retrorreflexivo ou difuso para contagem e detecção em esteiras</div>
+                    <div class="spec-item"><strong>Transmissor de Pressão</strong> Medição de 0-10 bar / 0-100 bar com saída blindada 4-20mA</div>
+                    <div class="spec-item"><strong>Sensor de Vazão</strong> Turbina de efeito Hall ou eletromagnético para fluidos industriais</div>
+                    <div class="spec-item"><strong>Sensor de Vibração</strong> Acelerômetros piezoelétricos para manutenção preditiva de mancais e motores</div>
                 </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-dht11.png" alt="Sensor DHT11" loading="lazy">
-                    <h4>DHT11</h4>
-                    <p>Sensor digital básico de temperatura e umidade.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-dht22.png" alt="Sensor DHT22" loading="lazy">
-                    <h4>DHT22</h4>
-                    <p>Sensor digital preciso de temperatura e umidade.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-ds18b20.png" alt="Sensor DS18B20" loading="lazy">
-                    <h4>DS18B20</h4>
-                    <p>Sensor digital de temperatura (1-Wire).</p>
-                </div>
-                <!-- Distância, Luz e Movimento -->
-                <div class="exemplo-card">
-                    <img src="../img/sensor-ultrassonico.png" alt="Sensor HC-SR04" loading="lazy">
-                    <h4>HC-SR04</h4>
-                    <p>Sensor ultrassônico de distância.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-ldr.png" alt="Sensor LDR" loading="lazy">
-                    <h4>LDR</h4>
-                    <p>Resistor dependente de luz (fotorresistor).</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-pir.png" alt="Sensor PIR" loading="lazy">
-                    <h4>PIR</h4>
-                    <p>Sensor de movimento por infravermelho passivo.</p>
-                </div>
-                <!-- Gás, Pressão e Movimento -->
-                <div class="exemplo-card">
-                    <img src="../img/sensor-mq2.png" alt="Módulo MQ-2" loading="lazy">
-                    <h4>MQ-2</h4>
-                    <p>Sensor de gases inflamáveis e fumaça.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-mq135.png" alt="Módulo MQ-135" loading="lazy">
-                    <h4>MQ-135</h4>
-                    <p>Sensor de qualidade do ar.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-bmp280.png" alt="Sensor BMP280" loading="lazy">
-                    <h4>BMP280</h4>
-                    <p>Sensor de pressão barométrica e temperatura.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-mpu6050.png" alt="Sensor MPU6050" loading="lazy">
-                    <h4>MPU6050</h4>
-                    <p>Módulo acelerômetro e giroscópio (6 eixos).</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-acs712.png" alt="Sensor ACS712" loading="lazy">
-                    <h4>ACS712</h4>
-                    <p>Sensor de corrente por Efeito Hall.</p>
-                </div>
-                <!-- Sensores Industriais -->
-                <div class="exemplo-card">
-                    <img src="../img/sensor-indutivo.png" alt="Sensor Indutivo" loading="lazy">
-                    <h4>Indutivo</h4>
-                    <p>Detecção de peças metálicas sem contato.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-capacitivo.png" alt="Sensor Capacitivo" loading="lazy">
-                    <h4>Capacitivo</h4>
-                    <p>Detecção de líquidos e materiais diversos.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-fotoeletrico.png" alt="Sensor Fotoelétrico" loading="lazy">
-                    <h4>Fotoelétrico</h4>
-                    <p>Detecção de objetos através de feixes de luz.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/transmissor-pressao.png" alt="Transmissor de Pressão" loading="lazy">
-                    <h4>Pressão Industrial</h4>
-                    <p>Transmissor de pressão para processos industriais.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-nivel.png" alt="Sensor de Nível" loading="lazy">
-                    <h4>Nível</h4>
-                    <p>Monitoramento de tanques e reservatórios.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-vazao.png" alt="Medidor de Vazão" loading="lazy">
-                    <h4>Vazão</h4>
-                    <p>Medição de fluxo de líquidos e gases.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/sensor-vibracao.png" alt="Sensor de Vibração" loading="lazy">
-                    <h4>Vibração</h4>
-                    <p>Monitoramento de motores e equipamentos rotativos.</p>
-                </div>
-                <div class="exemplo-card">
-                    <img src="../img/manutencao-preditiva.png" alt="Sensor para Manutenção Preditiva" loading="lazy">
-                    <h4>Manutenção Preditiva</h4>
-                    <p>Sensores inteligentes monitorando a saúde da máquina.</p>
+            </div>
+        </section>
+
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Galeria de Módulos</span>
+                <h2>Principais Sensores do Mercado</h2>
+                <div class="divider"></div>
+                <div class="componentes-grid">
+                    <div class="componente-card"><div class="componente-icon"><img src="../img/sensor-lm35.png" alt="LM35" loading="lazy"></div><div class="componente-nome">LM35</div><p class="componente-desc">Temperatura analógica</p></div>
+                    <div class="componente-card"><div class="componente-icon"><img src="../img/sensor-dht22.png" alt="DHT22" loading="lazy"></div><div class="componente-nome">DHT22</div><p class="componente-desc">Temp e Umidade de precisão</p></div>
+                    <div class="componente-card"><div class="componente-icon"><img src="../img/sensor-ultrassonico.png" alt="HC-SR04" loading="lazy"></div><div class="componente-nome">HC-SR04</div><p class="componente-desc">Ultrassom de distância</p></div>
+                    <div class="componente-card"><div class="componente-icon"><img src="../img/sensor-pir.png" alt="PIR" loading="lazy"></div><div class="componente-nome">PIR HC-SR501</div><p class="componente-desc">Presença infravermelha</p></div>
+                    <div class="componente-card"><div class="componente-icon"><img src="../img/sensor-mq2.png" alt="MQ-2" loading="lazy"></div><div class="componente-nome">MQ-2</div><p class="componente-desc">Gases combustíveis</p></div>
+                    <div class="componente-card"><div class="componente-icon"><img src="../img/sensor-mpu6050.png" alt="MPU6050" loading="lazy"></div><div class="componente-nome">MPU6050</div><p class="componente-desc">Giroscópio + Acelerômetro</p></div>
                 </div>
             </div>
         </section>
     </main>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
 
-    <footer class="reveal">
-        <div class="footer-content">
-            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-            <div class="footer-links">
-                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener"><span></span>
-                    Instagram</a>
-                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener"><span></span> Whatsapp</a>
-                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener"><span></span> GitHub</a>
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 </body>
-
 </html>

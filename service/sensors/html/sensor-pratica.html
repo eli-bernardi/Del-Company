@@ -1,527 +1,268 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Del Company - Laboratório e Desafios Práticos com Sensores: demonstrações reais em bancada com Arduino e microcontroladores.">
-    <link rel="stylesheet" href="../css/sensores.css">
+    <meta name="description" content="Del Company - Laboratório de sensores: desafios práticos, vídeos demonstrativos e códigos para bancada.">
+    <title>Del Company | Prática & Desafios de Bancada</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-    <script src="../js/sensores.js" defer></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Del Company - Desafios Práticos com Sensores</title>
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
 </head>
-
-<body class="bg-[#0a0a0a] text-white">
-    <header
-        class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-        <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-            Company</a>
-        <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-            <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-            </svg>
-        </button>
-        <nav id="menu" class="hidden md:flex items-center space-x-6 text-sm font-medium">
-            <a href="/index.html" class="hover:text-[#d62828] transition-colors">Início</a>
-            <div class="relative group">
-                <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/servicos/html/robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="/service/servicos/html/logica_programacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                            Programação</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_rede.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                    </li>
-                    <li><a href="/service/servicos/html/logica_computacional.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                            Computacional</a></li>
-                    <li><a href="/service/servicos/html/fundamentos_eletronica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                            Eletrônica</a></li>
-                    <li><a href="/service/servicos/html/tecnologia_informacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tecnologia da
-                            Informação</a></li>
-                    <li><a href="/service/servicos/html/banco_dados.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-                </ul>
-            </div>
-
-            <div class="relative group">
-                <a href="/service/servicos/html/sensores.html"
-                    class="block py-2 text-[#d62828] transition-colors">Sensores</a>
-                <ul
-                    class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                    <li><a href="/service/sensors/html/sensor-introduca.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Introdução a
-                            Sensores</a></li>
-                    <li><a href="/service/sensors/html/sensor-tipos.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Tipos de Sensores</a>
-                    </li>
-                    <li><a href="/service/sensors/html/sensor-comunicacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Comunicação</a></li>
-                    <li><a href="/service/sensors/html/sensor-plataformas.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Plataformas IoT</a>
-                    </li>
-                    <li><a href="/service/sensors/html/sensor-pratica.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Prática &amp;
-                            Desafios</a></li>
-                </ul>
-            </div>
-            <a href="/contato.html" class="hover:text-[#d62828] transition-colors">Contato</a>
-        </nav>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="/service/servicos/html/sensores.html">Módulos <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Introdução</a></li>
+                        <li><a href="/service/sensors/html/sensor-tipos.html">Tipos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Prática &amp; Desafios</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
     </header>
-
-    <main class="pt-20">
-        <section class="hero reveal">
-            <h2 class="logo-centro">Laboratório Prático com Sensores</h2>
-            <h3>Desafios de Bancada | Integração Hardware &amp; Software</h3>
-            <hr>
-            <p>
-                A teoria do sensoriamento ganha vida na bancada. Nesta seção prática, apresentamos
-                desafios reais desenvolvidos e testados com microcontroladores, demonstrando
-                a captura de variáveis físicas, o condicionamento de sinais e a resposta automatizada do sistema.
-            </p>
-            <div class="destaque">
-                <p>
-                    <strong>Metodologia Aplicada:</strong> Leitura contínua dos sensores &rarr; Processamento de
-                    limiares no microcontrolador &rarr; Acionamento de indicadores e atuadores em tempo real.
-                </p>
-            </div>
-        </section>
-
-        <section class="reveal">
-            <h2>Demonstrações em Vídeo &amp; Desafios</h2>
-            <h3>Execução dos Desafios na Prática</h3>
-            <hr>
-
-            <div class="desafios-intro">
-                <strong>Metodologia aplicada:</strong> leitura contínua dos sensores &rarr;
-                processamento dos limiares no microcontrolador Arduino &rarr; acionamento de atuadores e sinalizadores
-                em tempo real.
-            </div>
-
-            <div class="desafios-grid">
-                <article class="desafio-card">
-                    <span class="desafio-badge-num">Desafio Prático 01</span>
-                    <h3>💡 Iluminação Inteligente</h3>
-
-                    <div class="tags-list">
-                        <span class="tag-badge">Arduino UNO</span>
-                        <span class="tag-badge">LED</span>
-                        <span class="tag-badge">Sensor de Presença (PIR)</span>
-                        <span class="tag-badge">Sensor de Luminosidade (LDR)</span>
-                    </div>
-
-                    <p>
-                        Circuito que controla automaticamente um LED combinando as informações de dois sensores: a
-                        presença de uma pessoa no ambiente e o nível de luminosidade. A lâmpada só é acionada quando
-                        realmente há necessidade, evitando consumo desnecessário de energia.
-                    </p>
-
-                    <div class="desafio-conteudo">
-                        <div class="desafio-video">
-                            <h4>🎬 Demonstração &amp; Vídeo Explicativo</h4>
-
-                            <div class="video-container">
-                                <video controls preload="metadata" class="demo-video">
-                                    <source src="../img/desafio1.mp4" type="video/mp4">
-                                    Seu navegador não suporta a reprodução de vídeo MP4.
-                                </video>
-                            </div>
-
-                            <p class="video-legenda">
-                                Demonstração do funcionamento e explicação do uso dos sensores na bancada.
-                            </p>
-                        </div>
-
-                        <div class="desafio-regras">
-                            <h4>⚙️ Lógica do Sistema</h4>
-
-                            <ul>
-                                <li>Pessoa presente + ambiente escuro &rarr; LED ligado</li>
-                                <li>Pessoa presente + ambiente claro &rarr; LED desligado</li>
-                                <li>Sem pessoa no local &rarr; LED desligado</li>
-                            </ul>
-
-                            <div class="desafio-bonus">
-                                <strong>Como os sensores atuam:</strong> o sensor PIR fornece um sinal digital
-                                (HIGH/LOW) indicando movimento, enquanto o LDR fornece um valor analógico de 0 a 1023
-                                proporcional à luz. O LED só é ligado quando as duas condições são verdadeiras ao mesmo
-                                tempo.
-                            </div>
-
-                            <a class="desafio-tinkercad" href="#" target="_blank" rel="noopener">
-                                🔗 Circuito no Tinkercad (adicionar link)
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="desafio-codigo">
-                        <h4>💻 Código do Arduino</h4>
-
-                        <div class="code-wrapper">
-                            <button class="btn-copiar" type="button">📋 Copiar</button>
-                            <pre>// Desafio 1 - Iluminação Inteligente
-// Componentes: LED, Sensor de Presença (PIR) e Sensor de Luminosidade (LDR)
-
-const int PINO_PIR = 2;     // Saída digital do sensor de presença
-const int PINO_LDR = A0;    // Saída analógica do sensor de luminosidade
-const int PINO_LED = 8;     // LED controlado pelo sistema
-
-const int LIMIAR_ESCURO = 500; // Abaixo deste valor o ambiente é considerado escuro
-
-void setup() {
-  pinMode(PINO_PIR, INPUT);
-  pinMode(PINO_LED, OUTPUT);
-  Serial.begin(9600);
-}
-
-void loop() {
-  bool presenca = digitalRead(PINO_PIR) == HIGH;   // Há alguém no ambiente?
-  int luminosidade = analogRead(PINO_LDR);         // Nível de luz (0 a 1023)
-  bool ambienteEscuro = luminosidade &lt; LIMIAR_ESCURO;
-
-  // O LED só liga quando as DUAS condições são verdadeiras
-  if (presenca &amp;&amp; ambienteEscuro) {
-    digitalWrite(PINO_LED, HIGH);
-  } else {
-    digitalWrite(PINO_LED, LOW);
-  }
-
-  Serial.print("Presença: ");
-  Serial.print(presenca);
-  Serial.print(" | Luminosidade: ");
-  Serial.println(luminosidade);
-
-  delay(200);
-}</pre>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="desafio-card">
-                    <span class="desafio-badge-num">Desafio Prático 02</span>
-                    <h3>🚗 Estacionamento Inteligente</h3>
-
-                    <div class="tags-list">
-                        <span class="tag-badge">Arduino UNO</span>
-                        <span class="tag-badge">LED</span>
-                        <span class="tag-badge">Sensor Ultrassônico (HC-SR04)</span>
-                        <span class="tag-badge">Potenciômetro</span>
-                    </div>
-
-                    <p>
-                        Sistema de auxílio ao estacionamento que mede a distância de um obstáculo com o sensor
-                        ultrassônico e permite ao usuário ajustar manualmente a distância de segurança através do
-                        potenciômetro.
-                    </p>
-
-                    <div class="desafio-conteudo">
-                        <div class="desafio-video">
-                            <h4>🎬 Demonstração &amp; Vídeo Explicativo</h4>
-
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/MvFgOhmP-0k"
-                                    title="Desafio 2 - Estacionamento Inteligente"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                                </iframe>
-                            </div>
-
-                            <p class="video-legenda">
-                                Testes com diferentes distâncias e posições reguladas no potenciômetro.
-                            </p>
-
-                            <a class="video-link" href="https://youtube.com/shorts/MvFgOhmP-0k" target="_blank"
-                                rel="noopener">
-                                ▶ Assistir no YouTube Shorts
-                            </a>
-                        </div>
-
-                        <div class="desafio-regras">
-                            <h4>⚙️ Lógica do Sistema</h4>
-
-                            <ul>
-                                <li>Objeto distante (&gt; limite) &rarr; LED desligado</li>
-                                <li>Objeto se aproximando &rarr; LED piscando (quanto mais perto, mais rápido)</li>
-                                <li>Objeto dentro da distância mínima (≤ limite / 2) &rarr; LED ligado contínuo</li>
-                            </ul>
-
-                            <div class="desafio-bonus">
-                                <strong>Desafio adicional implementado:</strong> o LED pisca cada vez mais rapidamente
-                                conforme o obstáculo se aproxima, atuando como alerta visual progressivo. O
-                                potenciômetro altera diretamente o comportamento dinâmico do sistema, definindo o valor
-                                da distância limite (5 a 50 cm) usada nas comparações.
-                            </div>
-
-                            <a class="desafio-tinkercad" href="#" target="_blank" rel="noopener">
-                                🔗 Circuito no Tinkercad (adicionar link)
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="desafio-codigo">
-                        <h4>💻 Código do Arduino</h4>
-
-                        <div class="code-wrapper">
-                            <button class="btn-copiar" type="button">📋 Copiar</button>
-                            <pre>// Desafio 2 - Estacionamento Inteligente
-// Componentes: LED, Sensor Ultrassônico HC-SR04 e Potenciômetro
-
-const int PINO_TRIGGER = 9;
-const int PINO_ECHO = 10;
-const int PINO_POT = A0;
-const int PINO_LED = 8;
-
-void setup() {
-  pinMode(PINO_TRIGGER, OUTPUT);
-  pinMode(PINO_ECHO, INPUT);
-  pinMode(PINO_LED, OUTPUT);
-  Serial.begin(9600);
-}
-
-long medirDistanciaCm() {
-  digitalWrite(PINO_TRIGGER, LOW);
-  delayMicroseconds(2);
-  digitalWrite(PINO_TRIGGER, HIGH);
-  delayMicroseconds(10);
-  digitalWrite(PINO_TRIGGER, LOW);
-
-  long duracao = pulseIn(PINO_ECHO, HIGH);
-  return duracao * 0.0343 / 2; // Velocidade do som (~343 m/s)
-}
-
-void loop() {
-  // O potenciômetro define a distância limite de segurança (5 a 50 cm)
-  int leituraPot = analogRead(PINO_POT);
-  int distanciaLimite = map(leituraPot, 0, 1023, 5, 50);
-
-  long distancia = medirDistanciaCm();
-
-  if (distancia &gt; distanciaLimite) {
-    // Objeto distante -> LED desligado
-    digitalWrite(PINO_LED, LOW);
-
-  } else if (distancia &gt; distanciaLimite / 2) {
-    // Objeto se aproximando -> LED piscando (quanto mais perto, mais rápido)
-    int intervalo = map(distancia, distanciaLimite / 2, distanciaLimite, 50, 400);
-    digitalWrite(PINO_LED, HIGH);
-    delay(intervalo);
-    digitalWrite(PINO_LED, LOW);
-    delay(intervalo);
-
-  } else {
-    // Objeto dentro da distância mínima -> LED ligado continuamente
-    digitalWrite(PINO_LED, HIGH);
-  }
-
-  Serial.print("Distância: ");
-  Serial.print(distancia);
-  Serial.print(" cm | Limite definido: ");
-  Serial.print(distanciaLimite);
-  Serial.println(" cm");
-}</pre>
-                        </div>
-                    </div>
-                </article>
-
-                <article class="desafio-card">
-                    <span class="desafio-badge-num">Desafio Prático 03</span>
-                    <h3>🌡️ Ambiente Inteligente</h3>
-
-                    <div class="tags-list">
-                        <span class="tag-badge">Arduino UNO</span>
-                        <span class="tag-badge">LEDs (verde, vermelho, amarelo)</span>
-                        <span class="tag-badge">Sensor de Temperatura</span>
-                        <span class="tag-badge">Sensor de Umidade (DHT11)</span>
-                    </div>
-
-                    <p>
-                        Sistema de monitoramento de uma estufa, capaz de acompanhar a temperatura e a umidade do
-                        ambiente. Os LEDs funcionam como indicadores visuais das condições, sinalizando inclusive quando
-                        duas situações críticas acontecem ao mesmo tempo.
-                    </p>
-
-                    <div class="desafio-conteudo">
-                        <div class="desafio-video">
-                            <h4>🎬 Demonstração &amp; Vídeo Explicativo</h4>
-
-                            <div class="video-container">
-                                <iframe src="https://www.youtube.com/embed/1XGZHVvOQg8"
-                                    title="Desafio 3 - Ambiente Inteligente"
-                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                                    referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
-                                </iframe>
-                            </div>
-
-                            <p class="video-legenda">
-                                Testes simulando diferentes temperaturas e níveis críticos de umidade.
-                            </p>
-
-                            <a class="video-link" href="https://youtube.com/shorts/1XGZHVvOQg8" target="_blank"
-                                rel="noopener">
-                                ▶ Assistir no YouTube Shorts
-                            </a>
-                        </div>
-
-                        <div class="desafio-regras">
-                            <h4>⚙️ Lógica do Sistema</h4>
-
-                            <ul>
-                                <li>Temperatura e umidade adequadas &rarr; LED verde ligado</li>
-                                <li>Temperatura acima do limite (&gt; 30°C) &rarr; LED vermelho ligado</li>
-                                <li>Umidade abaixo do limite (&lt; 40%) &rarr; LED amarelo ligado</li>
-                            </ul>
-
-                            <div class="desafio-bonus">
-                                <strong>Desafio adicional implementado:</strong> cada LED representa uma condição
-                                independente. Quando ocorre temperatura alta e umidade baixa ao mesmo tempo, o vermelho
-                                e o amarelo acendem juntos, indicando visualmente as duas condições críticas
-                                simultâneas. O LED verde só acende quando as variáveis estão dentro do padrão ideal.
-                            </div>
-
-                            <a class="desafio-tinkercad" href="#" target="_blank" rel="noopener">
-                                🔗 Circuito no Tinkercad (adicionar link)
-                            </a>
-                        </div>
-                    </div>
-
-                    <div class="desafio-codigo">
-                        <h4>💻 Código do Arduino</h4>
-
-                        <div class="code-wrapper">
-                            <button class="btn-copiar" type="button">📋 Copiar</button>
-                            <pre>// Desafio 3 - Ambiente Inteligente (Estufa)
-// Componentes: LEDs (verde, vermelho, amarelo) e Sensor DHT (temperatura e umidade)
-
-#include &lt;DHT.h&gt;
-
-#define PINO_DHT 2
-#define TIPO_DHT DHT11
-
-DHT dht(PINO_DHT, TIPO_DHT);
-
-const int PINO_LED_VERDE = 8;
-const int PINO_LED_VERMELHO = 9;
-const int PINO_LED_AMARELO = 10;
-
-const float TEMP_LIMITE = 30.0; // Acima disso -> temperatura elevada
-const float UMID_LIMITE = 40.0; // Abaixo disso -> umidade inadequada
-
-void setup() {
-  dht.begin();
-  pinMode(PINO_LED_VERDE, OUTPUT);
-  pinMode(PINO_LED_VERMELHO, OUTPUT);
-  pinMode(PINO_LED_AMARELO, OUTPUT);
-  Serial.begin(9600);
-}
-
-void loop() {
-  float temperatura = dht.readTemperature();
-  float umidade = dht.readHumidity();
-
-  if (isnan(temperatura) || isnan(umidade)) {
-    Serial.println("Falha na leitura do sensor DHT!");
-    delay(2000);
-    return;
-  }
-
-  bool temperaturaAlta = temperatura &gt; TEMP_LIMITE;
-  bool umidadeBaixa = umidade &lt; UMID_LIMITE;
-
-  // Cada LED indica uma condição; mais de um pode acender ao mesmo tempo
-  digitalWrite(PINO_LED_VERMELHO, temperaturaAlta ? HIGH : LOW);
-  digitalWrite(PINO_LED_AMARELO, umidadeBaixa ? HIGH : LOW);
-
-  // O verde só acende quando as duas variáveis estão dentro do ideal
-  digitalWrite(PINO_LED_VERDE, (!temperaturaAlta &amp;&amp; !umidadeBaixa) ? HIGH : LOW);
-
-  Serial.print("Temp: ");
-  Serial.print(temperatura);
-  Serial.print(" °C | Umidade: ");
-  Serial.print(umidade);
-  Serial.println(" %");
-
-  delay(200);
-}</pre>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </section>
-
-        <section class="reveal">
-            <h2>Boas Práticas no Laboratório</h2>
-            <hr>
-            <div class="specs-grid">
-                <div class="spec-item">
-                    <strong>Filtragem de Ruído</strong>
-                    <span>Utilize capacitores de desacoplamento e médias móveis no código para estabilizar sinais
-                        analógicos.</span>
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="/index.html">Início</a>
+        <a href="/service.html">Serviços</a>
+        <a href="/contato.html">Contato</a>
+    </div>
+    <main>
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb">
+                        <a href="/index.html">Início</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service.html">Serviços</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="/service/servicos/html/sensores.html">Sensores</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">Prática & Desafios de Bancada</span>
+                    </nav>
+                    <span class="section-label">Sensoriamento &amp; Medição</span>
+                    <h1>Prática & Desafios de Bancada</h1>
+                    <span class="content-subtitle">Laboratório Real com Sensores e Microcontroladores</span>
+                    <div class="divider"></div>
+                    <p class="lead">Acompanhe as demonstrações reais e bancadas de testes com sensores, integrando hardware, código-fonte e atuadores em tempo real.</p>
                 </div>
-                <div class="spec-item">
-                    <strong>Resistores de Pull-up/down</strong>
-                    <span>Evite pinos flutuantes em sensores digitais garantindo níveis lógicos bem definidos
-                        (HIGH/LOW).</span>
-                </div>
-                <div class="spec-item">
-                    <strong>Compatibilidade de Tensão</strong>
-                    <span>Respeite as tensões de operação (3.3V vs 5V) usando divisores de tensão ou conversores de
-                        nível lógico.</span>
-                </div>
-                <div class="spec-item">
-                    <strong>Calibração em Bancada</strong>
-                    <span>Compare leituras brutas com grandezas reais conhecidas para ajustar as curvas de calibração do
-                        sensor.</span>
+            </div>
+        </div>
+        <section class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Execução</span>
+                <h2>Projetos Práticos de Sensoriamento</h2>
+                <span class="content-subtitle">Bancada Arduino UNO | Sensores Integrados</span>
+                <div class="divider"></div>
+                
+                <div class="desafios-grid">
+                    <!-- Desafio 01 -->
+                    <article class="desafio-card">
+                        <span class="desafio-badge-num">Desafio 01</span>
+                        <h3>💡 Iluminação Inteligente</h3>
+                        <div class="tags-list">
+                            <span class="tag-badge">Arduino UNO</span><span class="tag-badge">PIR Motion</span><span class="tag-badge">LDR Photo</span><span class="tag-badge">LED Driver</span>
+                        </div>
+                        <p>Automação predial com lógica combinacional: acionamento de iluminação baseado na correlação entre presença humana e luminosidade ambiente.</p>
+                        <div class="desafio-conteudo">
+                            <div class="desafio-video">
+                                <h4>Demonstração em Bancada</h4>
+                                <div class="video-container">
+                                    <video controls preload="metadata"><source src="../img/desafio1.mp4" type="video/mp4"></video>
+                                </div>
+                            </div>
+                            <div class="desafio-regras">
+                                <h4>Regra de Negócio</h4>
+                                <ul>
+                                    <li>Presença detectada + Luminosidade &lt; Limiar &rarr; Iluminação ligada</li>
+                                    <li>Presença detectada + Ambiente claro &rarr; Iluminação desligada</li>
+                                    <li>Ausência de presença &rarr; Iluminação desligada</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Desafio 02 -->
+                    <article class="desafio-card">
+                        <span class="desafio-badge-num">Desafio 02</span>
+                        <h3>🚗 Estacionamento Inteligente</h3>
+                        <div class="tags-list">
+                            <span class="tag-badge">Arduino UNO</span><span class="tag-badge">HC-SR04</span><span class="tag-badge">Potenciômetro</span><span class="tag-badge">Alerta Dinâmico</span>
+                        </div>
+                        <p>Sensor ultrassônico medindo distância de aproximação em tempo real com threshold dinamicamente ajustável via potenciômetro analógico.</p>
+                        <div class="desafio-conteudo">
+                            <div class="desafio-video">
+                                <h4>Demonstração em Vídeo</h4>
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/MvFgOhmP-0k" title="Desafio 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="desafio-regras">
+                                <h4>Comportamento do Sistema</h4>
+                                <ul>
+                                    <li>Distância &gt; Limite &rarr; Alerta desligado</li>
+                                    <li>Distância entre 50% e 100% do limite &rarr; Pulso proporcional de frequência</li>
+                                    <li>Distância &le; 50% do limite &rarr; Alerta contínuo de parada imediata</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Desafio 03 -->
+                    <article class="desafio-card">
+                        <span class="desafio-badge-num">Desafio 03</span>
+                        <h3>🌡️ Ambiente Inteligente (Estufa)</h3>
+                        <div class="tags-list">
+                            <span class="tag-badge">Arduino UNO</span><span class="tag-badge">DHT11</span><span class="tag-badge">LEDs de Estado</span><span class="tag-badge">Alarme Concorrente</span>
+                        </div>
+                        <p>Monitoramento contínuo de temperatura e umidade com sinalização de alarmes independentes e tratamento de falhas simultâneas.</p>
+                        <div class="desafio-conteudo">
+                            <div class="desafio-video">
+                                <h4>Demonstração em Vídeo</h4>
+                                <div class="video-container">
+                                    <iframe src="https://www.youtube.com/embed/1XGZHVvOQg8" title="Desafio 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                </div>
+                            </div>
+                            <div class="desafio-regras">
+                                <h4>Lógica dos Alarmes</h4>
+                                <ul>
+                                    <li>Temperatura normal + Umidade normal &rarr; LED Verde aceso</li>
+                                    <li>Temperatura &gt; 30°C &rarr; LED Vermelho aceso</li>
+                                    <li>Umidade &lt; 40% &rarr; LED Amarelo aceso</li>
+                                    <li>Se ambas estiverem críticas, Vermelho e Amarelo operam juntos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
         </section>
 
-        <section class="reveal">
-            <h2>Continue Explorando</h2>
-            <h3>Aprofunde a teoria por trás dos experimentos</h3>
-            <hr>
-            <div class="classificacao-grid">
-                <div class="class-card">
-                    <h4> Introdução aos Sensores</h4>
-                    <p>Fundamentos físicos, variáveis de processo e terminologias essenciais.</p>
-                    <a href="/service/sensors/html/sensor-introduca.html" class="btn-ver">Ver conteúdo &rarr;</a>
-                </div>
-                <div class="class-card">
-                    <h4> Tipos de Sensores</h4>
-                    <p>Catálogo detalhado: temperatura, presença, ultrassônico, gás e pressão.</p>
-                    <a href="/service/sensors/html/sensor-tipos.html" class="btn-ver">Ver conteúdo &rarr;</a>
-                </div>
-                <div class="class-card">
-                    <h4> Comunicação</h4>
-                    <p>Protocolos de integração: I²C, SPI, UART, 4-20 mA e IO-Link.</p>
-                    <a href="/service/sensors/html/sensor-comunicacao.html" class="btn-ver">Ver conteúdo &rarr;</a>
-                </div>
-                <div class="class-card">
-                    <h4> Plataformas IoT</h4>
-                    <p>Arduino, ESP32, Raspberry Pi, CLPs industriais e Indústria 4.0.</p>
-                    <a href="/service/sensors/html/sensor-plataformas.html" class="btn-ver">Ver conteúdo &rarr;</a>
+        <section class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Boas Práticas</span>
+                <h2>Recomendações no Laboratório</h2>
+                <div class="divider"></div>
+                <div class="specs-grid">
+                    <div class="spec-item"><strong>Divisor de Tensão</strong> Sempre atente para os níveis lógicos (3.3V vs 5V) para não queimar entradas analógicas/digitais</div>
+                    <div class="spec-item"><strong>Filtros de Hardware</strong> Adicione capacitores de desacoplamento (100nF) próximos aos pinos de alimentação dos sensores</div>
+                    <div class="spec-item"><strong>Média Móvel</strong> Implemente médias móveis no código para suavizar ruídos e picos esporádicos</div>
+                    <div class="spec-item"><strong>Debounce</strong> Utilize rotinas de debounce para sensores digitais e chaves mecânicas de fim de curso</div>
                 </div>
             </div>
         </section>
     </main>
+        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
 
-    <footer class="reveal">
-        <div class="footer-content">
-            <p>&copy; 2025 - Del Company | Todos os direitos reservados</p>
-            <div class="footer-links">
-                <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener"><span></span>
-                    Instagram</a>
-                <a href="https://wa.me/5548991013184" target="_blank" rel="noopener"><span></span> Whatsapp</a>
-                <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener"><span></span> GitHub</a>
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
             </div>
         </div>
     </footer>
 </body>
-
 </html>

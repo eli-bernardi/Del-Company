@@ -1,273 +1,239 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/logica_computacional.css">
-   <script src="../js/logica_computacional.js" defer></script>
-   <link rel="shortcut icon" href="/img/dell.png" type="image/png">
-   <script src="https://cdn.tailwindcss.com"></script>
-   <title>Del Company - Lógica Computacional</title>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - Lógica Computacional: fluxogramas, algoritmos, variáveis e Portugol.">
+    <title>Del Company | Lógica Computacional</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="/img/dell.png" type="image/png">
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <script src="../../../js/subpage.js" defer></script>
+
 </head>
+<body>
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="/index.html" class="logo"><div class="logo-mark">D</div><div class="logo-text"><span class="logo-title">Del Company</span><span class="logo-subtitle">Soluções Digitais</span></div></a>
+            <nav class="nav">
+                <a href="/index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="./robotizacao.html">Robótica</a></li><li><a href="./sensores.html">Sensores</a></li>
+                        <li><a href="./logica_programacao.html">Lógica de Programação</a></li><li><a href="./fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="./logica_computacional.html">Lógica Computacional</a></li><li><a href="./fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="./tecnologia_informacao.html">Tecnologia da Informação</a></li><li><a href="./banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
+                <a href="/contato.html">Contato</a>
+            </nav>
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+    <div class="mobile-menu" id="mobile-menu"><a href="/index.html">Início</a><a href="/service.html">Serviços</a><a href="/contato.html">Contato</a></div>    <main>
+        <div class="page-hero reveal">
+            <div class="container"><div class="page-hero-inner">
+                <nav class="breadcrumb"><a href="/index.html">Início</a><span class="breadcrumb-sep">/</span><a href="/service.html">Serviços</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Lógica Computacional</span></nav>
+                <span class="section-label">Serviço</span>
+                <h1>Lógica Computacional</h1>
+                <div class="divider"></div>
+                <p class="lead">Aplicação de princípios lógicos para resolver problemas e desenvolver algoritmos de forma estruturada e eficiente.</p>
+            </div></div>
+        </div>
 
-<body class="bg-[#0a0a0a] text-white">
+        <section id="intro" class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Visão Geral</span>
+                <h2>O que é Lógica Computacional?</h2>
+                <span class="content-subtitle">Segmentos | Utilidades | Aplicações</span>
+                <div class="divider"></div>
+                <div class="prose">
+                    <p>A lógica computacional é um ramo da computação que se concentra na aplicação de princípios lógicos para resolver problemas e desenvolver algoritmos.</p>
+                    <p>Ela envolve a organização de ideias, comandos e ações ao programar, permitindo que sistemas computacionais realizem inferências e tomem decisões baseadas em regras lógicas.</p>
+                    <p>A lógica computacional é fundamental para o pensamento computacional, ajudando programadores e cientistas da computação a resolver problemas de forma estruturada.</p>
+                </div>
+            </div>
+        </section>
 
-   <header
-       class="fixed top-0 left-0 w-full z-50 flex items-center justify-between px-8 py-4 bg-[#0a0a0a]/90 backdrop-blur-sm shadow-md border-b border-white/5">
-       <a href="/index.html" class="logo text-xl font-bold text-[#d62828] hover:opacity-80 transition-opacity">Del
-           Company</a>
+        <section id="fluxograma" class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Ferramenta</span>
+                <h2>Fluxograma</h2>
+                <span class="content-subtitle">Simbologia | Funcionamento</span>
+                <div class="divider"></div>
+                <div class="table-wrapper">
+                    <table>
+                        <thead><tr><th>Símbolo</th><th>Nome</th><th>Função</th></tr></thead>
+                        <tbody>
+                            <tr><td><strong>Oval</strong></td><td>Terminador</td><td>Início ou fim do processo</td></tr>
+                            <tr><td><strong>Retângulo</strong></td><td>Processo</td><td>Etapa de execução ou ação</td></tr>
+                            <tr><td><strong>Losango</strong></td><td>Decisão</td><td>Ponto de verificação / pergunta sim/não</td></tr>
+                            <tr><td><strong>Seta</strong></td><td>Fluxo</td><td>Direção do fluxo do processo</td></tr>
+                            <tr><td><strong>Paralelogramo</strong></td><td>Entrada / Saída</td><td>Dados que entram ou saem do processo</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="margin-top:32px">
+                    <div class="img-grid">
+                        <img src="../img/fluxograma-aprovado.reprovado.png" alt="Fluxograma - Aprovado/Reprovado" loading="lazy">
+                        <img src="../img/fluxograma-lata.png" alt="Fluxograma - Lata" loading="lazy">
+                    </div>
+                    <p style="font-size:13px;color:var(--brand-muted);margin-top:12px">Exemplos de fluxogramas representando etapas de cálculo de média escolar e classificação de embalagens.</p>
+                </div>
+            </div>
+        </section>
 
-       <button id="menu-toggle" class="block md:hidden focus:outline-none" aria-label="Abrir menu">
-           <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-           </svg>
-       </button>
+        <section id="algoritmos" class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Fundamento</span>
+                <h2>Algoritmos</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <div class="prose">
+                    <p>Um algoritmo pode ser entendido como uma receita de bolo: você segue um conjunto de passos em ordem para alcançar um resultado final.</p>
+                    <p>A principal função de um algoritmo é organizar e estruturar a resolução de problemas, transformando ideias em etapas claras interpretáveis por computadores.</p>
+                </div>
+                <div class="table-wrapper" style="margin-top:28px">
+                    <table>
+                        <thead><tr><th>Exemplificação</th><th>Funcionalidade</th><th>Utilização</th></tr></thead>
+                        <tbody><tr><td>Receita de bolo ou cálculo de média escolar.</td><td>Organizar passos lógicos para resolver problemas.</td><td>Base para fluxogramas e códigos de programação.</td></tr></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
 
-       <nav id="menu"
-           class="hidden md:flex flex-col md:flex-row md:items-center md:space-x-6 text-sm font-medium absolute md:static top-[70px] left-0 w-full md:w-auto bg-[#0a0a0a]/95 md:bg-transparent p-4 md:p-0 rounded-b-lg border-b-2 border-[#d62828] md:border-none">
-           <a href="/index.html" class="block py-2 hover:text-[#d62828] transition-colors">Início</a>
-           <div class="relative group">
-               <a href="/service.html" class="block py-2 hover:text-[#d62828] transition-colors">Serviços</a>
-               <ul
-                   class="hidden group-hover:block absolute bg-[#1a1a1a] rounded min-w-[220px] py-2 shadow-xl z-50 border border-white/5">
-                   
-                    <li><a href="./robotizacao.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Robótica</a></li>
-                    <li><a href="./sensores.html"
-                            class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sensores</a></li>
-                   <li><a href="./logica_programacao.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica de
-                           Programação</a></li>
-                   <li><a href="./fundamentos_rede.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Sistemas de Rede</a>
-                   </li>
-                   <li><a href="./logica_computacional.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Lógica
-                           Computacional</a></li>
-                   <li><a href="./fundamentos_eletronica.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Fundamentos de
-                           Eletrônica</a></li>
-                   <li><a href="./tecnologia_informacao.html"
-                           class="block px-4 py-2 text-[#d62828] transition-colors">Tecnologia da Informação</a></li>
-                   <li><a href="./banco_dados.html"
-                           class="block px-4 py-2 hover:bg-[#d62828] rounded transition-colors">Banco de Dados</a></li>
-               </ul>
-           </div>            
-           <a href="/contato.html" class="block py-2 hover:text-[#d62828] transition-colors">Contato</a>
-       </nav>
-   </header>
+        <section id="variaveis" class="content-section content-section-alt reveal">
+            <div class="container">
+                <span class="section-label">Conceitos</span>
+                <h2>Variáveis e Constantes</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <div class="info-grid">
+                    <div class="info-card">
+                        <h4>Constantes</h4>
+                        <p>Valor fixo que <strong>não pode ser alterado</strong> durante a execução do programa.</p>
+                        <div class="conceito-box" style="margin-top:12px"><div class="conceito-titulo">Exemplo</div><p>PI = 3.14</p></div>
+                    </div>
+                    <div class="info-card">
+                        <h4>Variáveis</h4>
+                        <p>Valor que <strong>pode ser alterado</strong> durante a execução do programa.</p>
+                        <div class="conceito-box" style="margin-top:12px"><div class="conceito-titulo">Exemplo</div><p>nota = 8 → nota = 10</p></div>
+                    </div>
+                    <div class="info-card">
+                        <h4>Por que usar?</h4>
+                        <p>Variáveis permitem manipular dados dinamicamente. Constantes garantem estabilidade e evitam alterações acidentais.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-   <main class="pt-20">
-       <section class="hero reveal">
-           <h2>Lógica Computacional</h2>
-           <h3>Segmentos | Utilidades | Aplicações</h3>
-           <hr>
-           <p>A lógica computacional é um ramo da computação que se concentra na aplicação de princípios lógicos para
-               resolver problemas e desenvolver algoritmos.</p>
-           <p>Ela envolve a organização de ideias, comandos e ações ao programar, permitindo que sistemas
-               computacionais realizem inferências e tomem decisões baseadas em regras lógicas.</p>
-           <p>Além disso, a lógica computacional é fundamental para o pensamento computacional, ajudando programadores
-               e cientistas da computação a resolver problemas de forma estruturada.</p>
-       </section>
+        <section id="portugol" class="content-section reveal">
+            <div class="container">
+                <span class="section-label">Ferramenta Didática</span>
+                <h2>Portugol</h2>
+                <span class="content-subtitle">Exemplificação | Funcionalidade | Utilização</span>
+                <div class="divider"></div>
+                <div class="prose">
+                    <p>O Portugol é uma linguagem de programação didática criada para auxiliar no aprendizado da lógica de programação com sintaxe próxima do português. Muito usado em escolas e cursos introdutórios.</p>
+                </div>
+                <div class="img-grid" style="margin-top:28px">
+                    <img src="../img/portugol-inicio.png" alt="Portugol - Início" loading="lazy">
+                    <img src="../img/portugol-exe.png" alt="Portugol - Programa" loading="lazy">
+                </div>
+                <h3 style="margin-top:40px;margin-bottom:20px;font-size:clamp(18px,2.5vw,22px);font-family:var(--font-serif);color:var(--brand-dark)">Funções no Portugol</h3>
+                <div class="img-grid">
+                    <img src="../img/funcao1.png" alt="Funções 1" loading="lazy">
+                    <img src="../img/funcao2.png" alt="Funções 2" loading="lazy">
+                    <img src="../img/funcao3.png" alt="Funções 3" loading="lazy">
+                </div>
+                <h3 style="margin-top:40px;margin-bottom:20px;font-size:clamp(18px,2.5vw,22px);font-family:var(--font-serif);color:var(--brand-dark)">Vetores no Portugol</h3>
+                <div class="img-grid">
+                    <img src="../img/vetor1.png" alt="Vetores 1" loading="lazy">
+                    <img src="../img/vetor2.png" alt="Vetores 2" loading="lazy">
+                    <img src="../img/vetor3.png" alt="Vetores 3" loading="lazy">
+                </div>
+            </div>
+        </section>
+    </main>        <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Marca -->
+                <div class="footer-brand">
+                    <a href="/index.html" class="logo">
+                        <div class="logo-mark">D</div>
+                        <div class="logo-text">
+                            <span class="logo-title">Del Company</span>
+                            <span class="logo-subtitle">Soluções Digitais</span>
+                        </div>
+                    </a>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                </div>
 
-       <!-- Tabela de símbolos de fluxograma -->
-       <section class="reveal">
-           <div id="fluxograma">
-               <h2>Fluxograma</h2>
-               <h3>Simbologia | Funcionamento</h3>
-               <hr>
-               <div class="table-wrapper">
-                   <table>
-                       <thead>
-                           <tr>
-                               <th>Símbolo</th>
-                               <th>Nome</th>
-                               <th>Função</th>
-                           </tr>
-                       </thead>
-                       <tbody>
-                           <tr>
-                               <td>
-                                   <div class="symbol terminador">Fim</div>
-                               </td>
-                               <td>Terminador</td>
-                               <td>Início ou fim do processo</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <div class="symbol processo">Processo</div>
-                               </td>
-                               <td>Processo</td>
-                               <td>Etapa de execução ou ação</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <div class="symbol decisao"><span>Decisão</span></div>
-                               </td>
-                               <td>Decisão</td>
-                               <td>Ponto de verificação / pergunta sim/não</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <div class="symbol fluxo"></div>
-                               </td>
-                               <td>Fluxo</td>
-                               <td>Direção do fluxo do processo</td>
-                           </tr>
-                           <tr>
-                               <td>
-                                   <div class="symbol entrada-saida"><span>Entrada</span></div>
-                               </td>
-                               <td>Entrada / Saída</td>
-                               <td>Dados que entram ou saem do processo</td>
-                           </tr>
-                       </tbody>
-                   </table>
-               </div>
-           </div>
+                <!-- Coluna 2: Serviços -->
+                <div>
+                    <p class="footer-col-title">Serviços</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="/service/servicos/html/sensores.html">Sensores &amp; Medição</a></li>
+                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                    </ul>
+                </div>
 
-           <!-- Exemplos de fluxogramas -->
-           <div class="fluxograma-img">
-               <div class="fluxograma-grid">
-                   <img src="../img/fluxograma-aprovado.reprovado.png" alt="Fluxograma - Aprovado/Reprovado"
-                       loading="lazy">
-                   <img src="../img/fluxograma-lata.png" alt="Fluxograma - Lata" loading="lazy">
-               </div>
-               <p>Exemplo de fluxogramas representando etapas de cálculo de média escolar e classificação de
-                   embalagens.</p>
-               <p>Os fluxogramas facilitam a visualização de processos, organizando etapas e decisões de forma clara, o
-                   que ajuda na compreensão, análise e otimização de tarefas.</p>
-           </div>
-       </section>
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="/service/robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="/service/robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="/service/robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="/service/robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="/service/sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="/service/sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="/service/sensors/html/sensor-plataformas.html">Plataformas IoT &amp; IIoT</a></li>
+                        <li><a href="/service/sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
 
-       <!-- Seção sobre algoritmos -->
-       <section class="reveal">
-           <div id="algoritmos">
-               <h2>Algoritmos</h2>
-               <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           </div>
-           <hr>
-           <div>
-               <p>Um algoritmo pode ser entendido como uma receita de bolo: você segue um conjunto de passos, em ordem,
-                   para alcançar um resultado final. Por exemplo, para calcular a média de três notas, o algoritmo
-                   seria: somar as notas, dividir o resultado por três e, em seguida, verificar se a média é maior ou
-                   igual a 6 para aprovar ou reprovar o aluno.</p>
-               <p>A principal função de um algoritmo é organizar e estruturar a resolução de problemas, transformando
-                   ideias em etapas claras que podem ser interpretadas por humanos e, principalmente, por computadores.
-               </p>
-               <p>Na lógica computacional, os algoritmos são usados para planejar e representar soluções antes da
-                   programação. Eles servem como base para criar fluxogramas, escrever códigos em linguagens de
-                   programação e garantir que o processo siga uma lógica consistente e eficiente.</p>
-           </div>
-           <div class="table-wrapper">
-               <table>
-                   <thead>
-                       <tr>
-                           <th>Exemplificação</th>
-                           <th>Funcionalidade</th>
-                           <th>Utilização</th>
-                       </tr>
-                   </thead>
-                   <tbody>
-                       <tr>
-                           <td>Receita de bolo ou cálculo de média escolar.</td>
-                           <td>Organizar passos lógicos para resolver problemas.</td>
-                           <td>Base para fluxogramas e códigos de programação.</td>
-                       </tr>
-                   </tbody>
-               </table>
-           </div>
-       </section>
+                <!-- Coluna 4: Contato & Navegação -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="/index.html">Início</a></li>
+                        <li><a href="/service.html">Todos os Serviços</a></li>
+                        <li><a href="/contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
 
-       <!-- Seção sobre variáveis e constantes -->
-       <section class="reveal">
-           <div id="variavel-constante">
-               <h2>Variáveis e Constantes</h2>
-               <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           </div>
-           <hr>
-           <div class="blocos">
-               <div class="bloco constante">
-                   <h2>Constantes</h2>
-                   <p>Valor fixo que <strong>não podem ser alterados</strong> durante a execução do programa.</p>
-                   <p><strong>Exemplo:</strong> PI = 3.14</p>
-               </div>
-               <div class="bloco variavel">
-                   <h2>Variáveis</h2>
-                   <p>Valor que <strong>podem ser alterados</strong> durante a execução do programa.</p>
-                   <p><strong>Exemplo:</strong> Nota = 8 → depois nota = 10</p>
-               </div>
-           </div>
-           <p><strong>Variáveis e constantes são elementos fundamentais na programação.</strong></p>
-           <p>Uma <strong>variável</strong> funciona como uma caixinha que armazena valores que podem mudar durante a
-               execução do programa, como a idade de um usuário ou a quantidade de itens em um carrinho de compras.</p>
-           <p>Já uma <strong>constante</strong> cujo valor é fixo, ou seja, não pode ser alterado depois de definido,
-               como o valor de π (pi) em cálculos matemáticos ou a taxa de imposto que permanece a mesma.</p>
-           <p>A <strong>principal funcionalidade das variáveis</strong> é permitir que os programas manipulem dados de
-               forma dinâmica, adaptando o comportamento de acordo com as informações recebidas ou processadas. Elas
-               possibilitam cálculos, armazenamento temporário e tomada de decisões dentro do sistema.</p>
-           <p>As <strong>constantes</strong>, por outro lado, garantem estabilidade e segurança no código, evitando
-               alterações acidentais de valores que devem permanecer inalterados, tornando o programa mais confiável e
-               fácil de entender.</p>
-       </section>
-
-       <!-- Seção sobre Portugol -->
-       <section class="reveal">
-           <div id="portugol">
-               <h2>Portugol</h2>
-               <h3>Exemplificação | Funcionalidade | Utilização</h3>
-           </div>
-           <hr>
-           <div>
-               <p>O Portugol é uma linguagem de programação didática, criada para auxiliar no aprendizado da lógica de
-                   programação. Ele utiliza uma sintaxe simples e próxima do português, o que facilita a compreensão de
-                   iniciantes. Seu principal objetivo é ensinar conceitos como variáveis, estruturas condicionais e de
-                   repetição. É muito usado em escolas e cursos introdutórios.</p>
-           </div>
-
-           <!-- Imagens do Portugol -->
-           <div class="portugol-gallery">
-               <div class="gallery-row">
-                   <img src="../img/portugol-inicio.png" alt="Portugol - Início" loading="lazy">
-                   <img src="../img/portugol-exe.png" alt="Portugol - Programa" loading="lazy">
-               </div>
-               <p>Com interface simplificada e bem didática, o portugol tem seu principal foco na iniciativa nos
-                   conhecimentos referente à programação.</p>
-           </div>
-
-           <h2>Funções em Portugol</h2>
-           <div class="gallery-row three-col">
-               <img src="../img/funcao1.png" alt="Funções no Portugol 1" loading="lazy">
-               <img src="../img/funcao2.png" alt="Funções no Portugol 2" loading="lazy">
-               <img src="../img/funcao3.png" alt="Funções no Portugol 3" loading="lazy">
-           </div>
-           <br>
-
-           <h2>Vetores no Portugol</h2>
-           <div class="gallery-row three-col">
-               <img src="../img/vetor1.png" alt="Vetores no Portugol 1" loading="lazy">
-               <img src="../img/vetor2.png" alt="Vetores no Portugol 2" loading="lazy">
-               <img src="../img/vetor3.png" alt="Vetores no Portugol 3" loading="lazy">
-           </div>
-       </section>
-   </main>
-   <footer class="reveal">
-       <div class="footer-content">
-           <p>&copy 2025 - Del Company | Todos os direitos reservados</p>
-           <div class="footer-links">
-               <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">
-                   <span></span> Instagram
-               </a>
-               <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">
-                   <span></span> Whatsapp
-               </a>
-               <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">
-                   <span></span> GitHub
-               </a>
-           </div>
-       </div>
-   </footer>
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
 </body>
-
 </html>

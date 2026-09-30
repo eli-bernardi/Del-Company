@@ -1,89 +1,58 @@
-document.addEventListener('DOMContentLoaded', () => {
-    // ---- MENU MOBILE ----
-    const menuToggle = document.getElementById('menu-toggle');
-    const menu = document.getElementById('menu');
-    if (menuToggle && menu) {
-        menuToggle.addEventListener('click', () => {
-            menu.classList.toggle('hidden');
-            menu.classList.toggle('flex');
-            menu.classList.toggle('flex-col');
+﻿// =============================================
+// DEL COMPANY — service.js
+// =============================================
+document.addEventListener("DOMContentLoaded", () => {
+    // Header scroll
+    const header = document.getElementById("header");
+    if (header) {
+        window.addEventListener("scroll", () => {
+            header.classList.toggle("scrolled", window.scrollY > 20);
+        }, { passive: true });
+    }
+
+    // Mobile menu
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+    if (menuToggle && mobileMenu) {
+        menuToggle.addEventListener("click", () => {
+            menuToggle.classList.toggle("open");
+            mobileMenu.classList.toggle("open");
         });
-        menu.querySelectorAll('a').forEach(link => {
-            link.addEventListener('click', () => {
-                if (window.innerWidth < 768) {
-                    menu.classList.add('hidden');
-                    menu.classList.remove('flex', 'flex-col');
-                }
+        mobileMenu.querySelectorAll("a").forEach(a => {
+            a.addEventListener("click", () => {
+                menuToggle.classList.remove("open");
+                mobileMenu.classList.remove("open");
             });
         });
     }
 
-    // ---- ANIMAÇÃO DE REVELAÇÃO ----
-    const revealElements = document.querySelectorAll('.reveal');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) entry.target.classList.add('active');
-        });
-    }, { root: null, threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
-    revealElements.forEach(el => observer.observe(el));
+    // Reveal
+    const revealObserver = new IntersectionObserver(
+        entries => entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add("active"); revealObserver.unobserve(e.target); } }),
+        { threshold: 0.10 }
+    );
+    document.querySelectorAll(".reveal").forEach(el => revealObserver.observe(el));
 
-    // ---- CARROSSEL ----
-    const track = document.getElementById('carrosselTrack');
-    const prevBtn = document.getElementById('prevBtn');
-    const nextBtn = document.getElementById('nextBtn');
+    // Carrossel
+    const track = document.getElementById("carrosselTrack");
+    const prevBtn = document.getElementById("prevBtn");
+    const nextBtn = document.getElementById("nextBtn");
     if (track && prevBtn && nextBtn) {
-        let currentIndex = 0;
-        let itemsPerView = 3;
-        const updateItemsPerView = () => {
-            if (window.innerWidth <= 768) itemsPerView = 1;
-            else if (window.innerWidth <= 1024) itemsPerView = 2;
-            else itemsPerView = 3;
+        let idx = 0;
+        const getVisible = () => window.innerWidth < 768 ? 1 : window.innerWidth < 1024 ? 2 : 3;
+        const update = () => {
+            const items = track.querySelectorAll(".carrossel-item");
+            const v = getVisible();
+            idx = Math.min(idx, Math.max(0, items.length - v));
+            const w = track.parentElement.offsetWidth / v;
+            track.style.transform = "translateX(-" + (idx * w) + "px)";
         };
-        const updateCarrossel = () => {
-            const itemWidth = track.querySelector('.carrossel-item').offsetWidth;
-            const gap = 32;
-            track.style.transform = `translateX(-${currentIndex * (itemWidth + gap)}px)`;
-        };
-        const moveNext = () => {
-            const maxIndex = track.children.length - itemsPerView;
-            currentIndex = currentIndex < maxIndex ? currentIndex + 1 : 0;
-            updateCarrossel();
-        };
-        const movePrev = () => {
-            currentIndex = currentIndex > 0 ? currentIndex - 1 : track.children.length - itemsPerView;
-            updateCarrossel();
-        };
-        nextBtn.addEventListener('click', moveNext);
-        prevBtn.addEventListener('click', movePrev);
-        window.addEventListener('resize', () => {
-            updateItemsPerView();
-            updateCarrossel();
+        prevBtn.addEventListener("click", () => { idx = Math.max(0, idx - 1); update(); });
+        nextBtn.addEventListener("click", () => {
+            const items = track.querySelectorAll(".carrossel-item");
+            idx = Math.min(Math.max(0, items.length - getVisible()), idx + 1);
+            update();
         });
-        updateItemsPerView();
+        window.addEventListener("resize", update, { passive: true });
     }
-
-    // ---- EFEITO DE BRILHO DO MOUSE (VERMELHO) ----
-    const cards = document.querySelectorAll('.site-card, .servico-card, .beneficio-item, .carrossel-item, .servico-item-link');
-    cards.forEach(card => {
-        card.addEventListener('mousemove', (e) => {
-            const rect = card.getBoundingClientRect();
-            const x = e.clientX - rect.left;
-            const y = e.clientY - rect.top;
-            card.style.background = `radial-gradient(circle at ${x}px ${y}px, rgba(214, 40, 40, 0.08), rgba(255, 255, 255, 0.02))`;
-        });
-        card.addEventListener('mouseleave', () => {
-            card.style.background = 'rgba(255, 255, 255, 0.02)';
-        });
-    });
-
-    // ---- SMOOTH SCROLL ----
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const target = document.querySelector(this.getAttribute('href'));
-            if (target) {
-                e.preventDefault();
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
 });
