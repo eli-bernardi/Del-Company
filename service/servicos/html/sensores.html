@@ -1,34 +1,47 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Del Company - Sensores: aprenda sobre sensoriamento, tipos de sensores, protocolos de comunicação e plataformas IoT como Arduino, ESP32 e Raspberry Pi.">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Del Company - Sensores: aprenda sobre sensoriamento, tipos de sensores, protocolos de comunicação e plataformas IoT como Arduino, ESP32 e Raspberry Pi.">
     <title>Del Company | Sensores</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="shortcut icon" href="/img/dell.png" type="image/png">
     <link rel="stylesheet" href="../../../css/styles.css">
     <link rel="stylesheet" href="../../../css/subpage.css">
     <script src="../../../js/subpage.js" defer></script>
 </head>
+
 <body>
     <header class="header" id="header">
         <div class="container header-inner">
-            <a href="/index.html" class="logo"><div class="logo-mark">D</div><div class="logo-text"><span class="logo-title">Del Company</span><span class="logo-subtitle">Soluções Digitais</span></div></a>
+            <a href="/index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text"><span class="logo-title">Del Company</span><span class="logo-subtitle">Soluções
+                        Digitais</span></div>
+            </a>
             <nav class="nav">
                 <a href="/index.html">Início</a>
                 <div class="nav-dropdown">
                     <a href="/service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
                     <ul class="dropdown-menu">
-                        <li><a href="/service/servicos/html/robotizacao.html">Robótica</a></li>
-                        <li><a href="/service/servicos/html/sensores.html">Sensores</a></li>
-                        <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
-                        <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
-                        <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
-                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
-                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
-                        <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
+                        <li><a href="./robotizacao.html">Robótica</a></li>
+                        <li><a href="./sensores.html">Sensores</a></li>
+                        <li><a href="./logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="./fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="./logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="./fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="./tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="./banco_dados.html">Banco de Dados</a></li>
+                        <li><a href="../../quiz/html/quiz.html">Quiz</a></li>
                     </ul>
                 </div>
                 <div class="nav-dropdown">
@@ -43,18 +56,27 @@
                 </div>
                 <a href="/contato.html">Contato</a>
             </nav>
-            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu"><span></span><span></span><span></span></button>
+            <button class="menu-toggle" id="menu-toggle"
+                aria-label="Abrir menu"><span></span><span></span><span></span></button>
         </div>
     </header>
-    <div class="mobile-menu" id="mobile-menu"><a href="/index.html">Início</a><a href="/service.html">Serviços</a><a href="/contato.html">Contato</a></div>    <main>
+    <div class="mobile-menu" id="mobile-menu"><a href="/index.html">Início</a><a href="/service.html">Serviços</a><a
+            href="/contato.html">Contato</a></div>
+    <main>
         <div class="page-hero reveal">
-            <div class="container"><div class="page-hero-inner">
-                <nav class="breadcrumb"><a href="/index.html">Início</a><span class="breadcrumb-sep">/</span><a href="/service.html">Serviços</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Sensores</span></nav>
-                <span class="section-label">Sensoriamento &amp; Automação</span>
-                <h1>Sensores</h1>
-                <div class="divider"></div>
-                <p class="lead">Os sensores são os olhos e ouvidos dos sistemas automatizados. Dispositivos capazes de detectar grandezas físicas, químicas ou ambientais e convertê-las em sinais elétricos interpretáveis.</p>
-            </div></div>
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb"><a href="/index.html">Início</a><span class="breadcrumb-sep">/</span><a
+                            href="/service.html">Serviços</a><span class="breadcrumb-sep">/</span><span
+                            class="breadcrumb-current">Sensores</span></nav>
+                    <span class="section-label">Sensoriamento &amp; Automação</span>
+                    <h1>Sensores</h1>
+                    <div class="divider"></div>
+                    <p class="lead">Os sensores são os olhos e ouvidos dos sistemas automatizados. Dispositivos capazes
+                        de detectar grandezas físicas, químicas ou ambientais e convertê-las em sinais elétricos
+                        interpretáveis.</p>
+                </div>
+            </div>
         </div>
 
         <section class="content-section reveal">
@@ -62,11 +84,15 @@
                 <span class="section-label">Conceito</span>
                 <h2>O que é um Sensor?</h2>
                 <div class="divider"></div>
-                <p>Um <strong>sensor</strong> é um dispositivo que detecta uma grandeza física e produz uma saída mensurável relacionada a ela. A grandeza detectada é chamada de <strong>variável de processo</strong>.</p>
-                <p>Sensores são a base de qualquer sistema automatizado: sem eles, não há percepção do ambiente e, consequentemente, nenhuma ação inteligente é possível.</p>
+                <p>Um <strong>sensor</strong> é um dispositivo que detecta uma grandeza física e produz uma saída
+                    mensurável relacionada a ela. A grandeza detectada é chamada de <strong>variável de
+                        processo</strong>.</p>
+                <p>Sensores são a base de qualquer sistema automatizado: sem eles, não há percepção do ambiente e,
+                    consequentemente, nenhuma ação inteligente é possível.</p>
                 <div class="conceito-box">
                     <div class="conceito-titulo">Exemplos do Cotidiano</div>
-                    <p>Sensores de temperatura em climatizadores, sensores de movimento em iluminação automática, sensores de presença em portas automáticas e sensores de gás em detectores de fumaça.</p>
+                    <p>Sensores de temperatura em climatizadores, sensores de movimento em iluminação automática,
+                        sensores de presença em portas automáticas e sensores de gás em detectores de fumaça.</p>
                 </div>
             </div>
         </section>
@@ -130,10 +156,12 @@
                 <h2>Laboratório &amp; Desafios Práticos</h2>
                 <span class="content-subtitle">Demonstrações Reais em Bancada &amp; Projetos Arduino</span>
                 <div class="divider"></div>
-                <p>Confira a aplicação prática dos conceitos de sensoriamento. Abaixo estão os 3 projetos desenvolvidos com Arduino, integrando sensores para transformar sinais do ambiente em decisões automatizadas.</p>
+                <p>Confira a aplicação prática dos conceitos de sensoriamento. Abaixo estão os 3 projetos desenvolvidos
+                    com Arduino, integrando sensores para transformar sinais do ambiente em decisões automatizadas.</p>
 
                 <div class="desafios-intro">
-                    <strong>Metodologia aplicada:</strong> leitura contínua dos sensores &rarr; processamento dos limiares no microcontrolador Arduino &rarr; acionamento de atuadores e sinalizadores em tempo real.
+                    <strong>Metodologia aplicada:</strong> leitura contínua dos sensores &rarr; processamento dos
+                    limiares no microcontrolador Arduino &rarr; acionamento de atuadores e sinalizadores em tempo real.
                 </div>
 
                 <div class="desafios-grid">
@@ -147,8 +175,10 @@
                             <span class="tag-badge">Sensor de Presença (PIR)</span>
                             <span class="tag-badge">Sensor de Luminosidade (LDR)</span>
                         </div>
-                        <p>Circuito que controla automaticamente um LED combinando as informações de dois sensores: a presença de uma pessoa no ambiente e o nível de luminosidade. A lâmpada só é acionada quando realmente há necessidade.</p>
-                        
+                        <p>Circuito que controla automaticamente um LED combinando as informações de dois sensores: a
+                            presença de uma pessoa no ambiente e o nível de luminosidade. A lâmpada só é acionada quando
+                            realmente há necessidade.</p>
+
                         <div class="desafio-conteudo">
                             <div class="desafio-video">
                                 <h4>Demonstração &amp; Vídeo Explicativo</h4>
@@ -158,7 +188,8 @@
                                         <source src="/service/sensors/img/desafio1.mp4" type="video/mp4">
                                     </video>
                                 </div>
-                                <p class="video-legenda">Demonstração do funcionamento e explicação dos sensores na bancada.</p>
+                                <p class="video-legenda">Demonstração do funcionamento e explicação dos sensores na
+                                    bancada.</p>
                             </div>
                             <div class="desafio-regras">
                                 <h4>Lógica do Sistema</h4>
@@ -168,7 +199,8 @@
                                     <li>Sem pessoa no local &rarr; LED desligado</li>
                                 </ul>
                                 <div class="desafio-bonus">
-                                    <strong>Como os sensores atuam:</strong> o PIR fornece sinal digital (HIGH/LOW) indicando movimento, e o LDR fornece valor analógico (0 a 1023) proporcional à luz.
+                                    <strong>Como os sensores atuam:</strong> o PIR fornece sinal digital (HIGH/LOW)
+                                    indicando movimento, e o LDR fornece valor analógico (0 a 1023) proporcional à luz.
                                 </div>
                             </div>
                         </div>
@@ -215,16 +247,22 @@ void loop() {
                             <span class="tag-badge">Sensor Ultrassônico (HC-SR04)</span>
                             <span class="tag-badge">Potenciômetro</span>
                         </div>
-                        <p>Sistema de auxílio ao estacionamento que mede a distância de um obstáculo com o sensor ultrassônico e permite ao usuário ajustar manualmente a distância de segurança através do potenciômetro.</p>
-                        
+                        <p>Sistema de auxílio ao estacionamento que mede a distância de um obstáculo com o sensor
+                            ultrassônico e permite ao usuário ajustar manualmente a distância de segurança através do
+                            potenciômetro.</p>
+
                         <div class="desafio-conteudo">
                             <div class="desafio-video">
                                 <h4>Demonstração &amp; Vídeo Explicativo</h4>
                                 <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/MvFgOhmP-0k" title="Desafio 2" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/MvFgOhmP-0k" title="Desafio 2"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
                                 </div>
-                                <p class="video-legenda">Testes com diferentes distâncias e posições reguladas no potenciômetro.</p>
-                                <a class="video-link" href="https://youtube.com/shorts/MvFgOhmP-0k" target="_blank" rel="noopener">▶ Assistir no YouTube Shorts</a>
+                                <p class="video-legenda">Testes com diferentes distâncias e posições reguladas no
+                                    potenciômetro.</p>
+                                <a class="video-link" href="https://youtube.com/shorts/MvFgOhmP-0k" target="_blank"
+                                    rel="noopener">▶ Assistir no YouTube Shorts</a>
                             </div>
                             <div class="desafio-regras">
                                 <h4>Lógica do Sistema</h4>
@@ -234,7 +272,9 @@ void loop() {
                                     <li>Distância mínima (&le; limite / 2) &rarr; LED ligado contínuo</li>
                                 </ul>
                                 <div class="desafio-bonus">
-                                    <strong>Desafio dinâmico:</strong> O LED pisca proporcionalmente à distância, oferecendo alerta sonoro e visual progressivo ajustado em tempo real pelo potenciômetro.
+                                    <strong>Desafio dinâmico:</strong> O LED pisca proporcionalmente à distância,
+                                    oferecendo alerta sonoro e visual progressivo ajustado em tempo real pelo
+                                    potenciômetro.
                                 </div>
                             </div>
                         </div>
@@ -296,16 +336,21 @@ void loop() {
                             <span class="tag-badge">Sensor de Temperatura</span>
                             <span class="tag-badge">Sensor de Umidade (DHT11)</span>
                         </div>
-                        <p>Sistema de monitoramento de estufa capaz de acompanhar temperatura e umidade com alerta simultâneo em condições críticas.</p>
-                        
+                        <p>Sistema de monitoramento de estufa capaz de acompanhar temperatura e umidade com alerta
+                            simultâneo em condições críticas.</p>
+
                         <div class="desafio-conteudo">
                             <div class="desafio-video">
                                 <h4>Demonstração &amp; Vídeo Explicativo</h4>
                                 <div class="video-container">
-                                    <iframe src="https://www.youtube.com/embed/1XGZHVvOQg8" title="Desafio 3" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    <iframe src="https://www.youtube.com/embed/1XGZHVvOQg8" title="Desafio 3"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
                                 </div>
-                                <p class="video-legenda">Testes simulando diferentes temperaturas e níveis críticos de umidade.</p>
-                                <a class="video-link" href="https://youtube.com/shorts/1XGZHVvOQg8" target="_blank" rel="noopener">▶ Assistir no YouTube Shorts</a>
+                                <p class="video-legenda">Testes simulando diferentes temperaturas e níveis críticos de
+                                    umidade.</p>
+                                <a class="video-link" href="https://youtube.com/shorts/1XGZHVvOQg8" target="_blank"
+                                    rel="noopener">▶ Assistir no YouTube Shorts</a>
                             </div>
                             <div class="desafio-regras">
                                 <h4>Lógica do Sistema</h4>
@@ -315,7 +360,8 @@ void loop() {
                                     <li>Umidade baixa (&lt; 40%) &rarr; LED amarelo ligado</li>
                                 </ul>
                                 <div class="desafio-bonus">
-                                    <strong>Condições simultâneas:</strong> Se ambas as anomalias ocorrerem, vermelho e amarelo acendem juntos para alertar o operador imediatamente.
+                                    <strong>Condições simultâneas:</strong> Se ambas as anomalias ocorrerem, vermelho e
+                                    amarelo acendem juntos para alertar o operador imediatamente.
                                 </div>
                             </div>
                         </div>
@@ -389,7 +435,8 @@ void loop() {
                 </div>
             </div>
         </section>
-    </main>        <footer class="footer">
+    </main>
+    <footer class="footer">
         <div class="container">
             <div class="footer-inner">
                 <!-- Coluna 1: Marca -->
@@ -401,7 +448,8 @@ void loop() {
                             <span class="logo-subtitle">Soluções Digitais</span>
                         </div>
                     </a>
-                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação, robótica e engenharia de software de alta performance.</p>
+                    <p class="footer-tagline">Transformamos ideias em realidade digital com soluções de automação,
+                        robótica e engenharia de software de alta performance.</p>
                 </div>
 
                 <!-- Coluna 2: Serviços -->
@@ -413,8 +461,10 @@ void loop() {
                         <li><a href="/service/servicos/html/logica_programacao.html">Lógica de Programação</a></li>
                         <li><a href="/service/servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
                         <li><a href="/service/servicos/html/logica_computacional.html">Lógica Computacional</a></li>
-                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
-                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="/service/servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a>
+                        </li>
+                        <li><a href="/service/servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a>
+                        </li>
                         <li><a href="/service/servicos/html/banco_dados.html">Banco de Dados</a></li>
                     </ul>
                 </div>
@@ -449,7 +499,8 @@ void loop() {
                         <i class="fa-brands fa-instagram"></i>
                         <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
                     </div>
-                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                    <ul class="footer-links-list"
+                        style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
                         <li><a href="/index.html">Início</a></li>
                         <li><a href="/service.html">Todos os Serviços</a></li>
                         <li><a href="/contato.html">Página de Contato</a></li>
@@ -460,12 +511,16 @@ void loop() {
             <div class="footer-bottom">
                 <p class="footer-copyright">&copy; 2025 Del Company. Todos os direitos reservados.</p>
                 <div class="footer-social">
-                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
-                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener"
+                        aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i
+                            class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i
+                            class="fa-brands fa-github"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 </body>
+
 </html>

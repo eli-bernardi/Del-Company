@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 452" width="560" height="452" role="img" aria-label="leitura_tensao.ino">
+<rect width="560" height="452" rx="12" fill="#1e1f26"/>
+<rect width="560" height="40" rx="12" fill="#2a2c36"/><rect y="28" width="560" height="12" fill="#2a2c36"/>
+<circle cx="24" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="44" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="64" cy="20" r="6" fill="#27c93f"/>
+<text x="280.0" y="25" fill="#b0b3c0" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">leitura_tensao.ino</text>
+<line x1="56" y1="40" x2="56" y2="452" stroke="#2f313c"/>
+<text x="42" y="72" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">1</text>
+<text x="70" y="72" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"><tspan fill="#ef9a9a">const</tspan> <tspan fill="#ef9a9a">int</tspan> SENSOR = <tspan fill="#ffcc80">A1</tspan>;</text>
+<text x="42" y="98" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">2</text>
+<text x="70" y="98" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"></text>
+<text x="42" y="124" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">3</text>
+<text x="70" y="124" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"><tspan fill="#ef9a9a">void</tspan> <tspan fill="#90caf9">setup</tspan>() {</text>
+<text x="42" y="150" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">4</text>
+<text x="70" y="150" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">Serial</tspan>.<tspan fill="#90caf9">begin</tspan>(<tspan fill="#ce93d8">9600</tspan>);</text>
+<text x="42" y="176" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">5</text>
+<text x="70" y="176" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">}</text>
+<text x="42" y="202" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">6</text>
+<text x="70" y="202" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"></text>
+<text x="42" y="228" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">7</text>
+<text x="70" y="228" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"><tspan fill="#ef9a9a">void</tspan> <tspan fill="#90caf9">loop</tspan>() {</text>
+<text x="42" y="254" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">8</text>
+<text x="70" y="254" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#ef9a9a">int</tspan> leitura = <tspan fill="#90caf9">analogRead</tspan>(SENSOR);</text>
+<text x="42" y="280" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">9</text>
+<text x="70" y="280" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#ef9a9a">float</tspan> tensao = leitura * (<tspan fill="#ce93d8">5</tspan> / <tspan fill="#ce93d8">1023</tspan>);</text>
+<text x="42" y="306" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">10</text>
+<text x="70" y="306" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"></text>
+<text x="42" y="332" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">11</text>
+<text x="70" y="332" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">Serial</tspan>.<tspan fill="#90caf9">print</tspan>(<tspan fill="#a5d6a7">&quot;Tensao: &quot;</tspan>);</text>
+<text x="42" y="358" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">12</text>
+<text x="70" y="358" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">Serial</tspan>.<tspan fill="#90caf9">println</tspan>(tensao);</text>
+<text x="42" y="384" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">13</text>
+<text x="70" y="384" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">delay</tspan>(<tspan fill="#ce93d8">1000</tspan>);</text>
+<text x="42" y="410" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">14</text>
+<text x="70" y="410" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">}</text>
+</svg>

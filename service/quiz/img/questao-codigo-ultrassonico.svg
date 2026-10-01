@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 660" width="560" height="660" role="img" aria-label="medidor_distancia.ino">
+<rect width="560" height="660" rx="12" fill="#1e1f26"/>
+<rect width="560" height="40" rx="12" fill="#2a2c36"/><rect y="28" width="560" height="12" fill="#2a2c36"/>
+<circle cx="24" cy="20" r="6" fill="#ff5f56"/>
+<circle cx="44" cy="20" r="6" fill="#ffbd2e"/>
+<circle cx="64" cy="20" r="6" fill="#27c93f"/>
+<text x="280.0" y="25" fill="#b0b3c0" font-family="Arial, sans-serif" font-size="13" text-anchor="middle">medidor_distancia.ino</text>
+<line x1="56" y1="40" x2="56" y2="660" stroke="#2f313c"/>
+<text x="42" y="72" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">1</text>
+<text x="70" y="72" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"><tspan fill="#ef9a9a">const</tspan> <tspan fill="#ef9a9a">int</tspan> TRIG = <tspan fill="#ce93d8">9</tspan>;</text>
+<text x="42" y="98" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">2</text>
+<text x="70" y="98" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"><tspan fill="#ef9a9a">const</tspan> <tspan fill="#ef9a9a">int</tspan> ECHO = <tspan fill="#ce93d8">10</tspan>;</text>
+<text x="42" y="124" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">3</text>
+<text x="70" y="124" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"></text>
+<text x="42" y="150" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">4</text>
+<text x="70" y="150" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"><tspan fill="#ef9a9a">void</tspan> <tspan fill="#90caf9">setup</tspan>() {</text>
+<text x="42" y="176" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">5</text>
+<text x="70" y="176" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">Serial</tspan>.<tspan fill="#90caf9">begin</tspan>(<tspan fill="#ce93d8">9600</tspan>);</text>
+<text x="42" y="202" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">6</text>
+<text x="70" y="202" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">pinMode</tspan>(TRIG, <tspan fill="#ffcc80">OUTPUT</tspan>);</text>
+<text x="42" y="228" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">7</text>
+<text x="70" y="228" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">pinMode</tspan>(ECHO, <tspan fill="#ffcc80">INPUT</tspan>);</text>
+<text x="42" y="254" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">8</text>
+<text x="70" y="254" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">}</text>
+<text x="42" y="280" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">9</text>
+<text x="70" y="280" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"></text>
+<text x="42" y="306" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">10</text>
+<text x="70" y="306" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"><tspan fill="#ef9a9a">void</tspan> <tspan fill="#90caf9">loop</tspan>() {</text>
+<text x="42" y="332" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">11</text>
+<text x="70" y="332" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">digitalWrite</tspan>(TRIG, <tspan fill="#ffcc80">LOW</tspan>);</text>
+<text x="42" y="358" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">12</text>
+<text x="70" y="358" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">delayMicroseconds</tspan>(<tspan fill="#ce93d8">2</tspan>);</text>
+<text x="42" y="384" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">13</text>
+<text x="70" y="384" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">digitalWrite</tspan>(TRIG, <tspan fill="#ffcc80">HIGH</tspan>);</text>
+<text x="42" y="410" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">14</text>
+<text x="70" y="410" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">delayMicroseconds</tspan>(<tspan fill="#ce93d8">10</tspan>);</text>
+<text x="42" y="436" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">15</text>
+<text x="70" y="436" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">digitalWrite</tspan>(TRIG, <tspan fill="#ffcc80">LOW</tspan>);</text>
+<text x="42" y="462" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">16</text>
+<text x="70" y="462" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"></text>
+<text x="42" y="488" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">17</text>
+<text x="70" y="488" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#ef9a9a">long</tspan> duracao = <tspan fill="#90caf9">pulseIn</tspan>(ECHO, <tspan fill="#ffcc80">HIGH</tspan>);</text>
+<text x="42" y="514" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">18</text>
+<text x="70" y="514" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#ef9a9a">int</tspan> distancia = duracao * <tspan fill="#ce93d8">0.034</tspan> / <tspan fill="#ce93d8">2</tspan>;</text>
+<text x="42" y="540" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">19</text>
+<text x="70" y="540" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve"></text>
+<text x="42" y="566" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">20</text>
+<text x="70" y="566" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">Serial</tspan>.<tspan fill="#90caf9">println</tspan>(distancia);</text>
+<text x="42" y="592" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">21</text>
+<text x="70" y="592" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">  <tspan fill="#90caf9">delay</tspan>(<tspan fill="#ce93d8">500</tspan>);</text>
+<text x="42" y="618" fill="#5c6070" font-family="Consolas, Menlo, monospace" font-size="14" text-anchor="end">22</text>
+<text x="70" y="618" fill="#e6e6ea" font-family="Consolas, Menlo, 'Courier New', monospace" font-size="17" xml:space="preserve">}</text>
+</svg>
