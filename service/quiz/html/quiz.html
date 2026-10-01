@@ -1,153 +1,240 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Del Company - Quiz de Robótica e Eletrônica</title>
-  <link rel="icon" href="../../../img/dell.png" type="image/png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <link rel="stylesheet" href="../css/quiz.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Del Company - Quiz interativo de robótica e eletrônica no estilo SAEP. Teste seus conhecimentos em automação, sensores e programação.">
+    <title>Del Company | Quiz de Robótica e Eletrônica</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../../../img/dell.png" type="image/png">
+    
+    <link rel="stylesheet" href="../../../css/styles.css">
+    <link rel="stylesheet" href="../../../css/subpage.css">
+    <link rel="stylesheet" href="../css/quiz.css">
+    
+    <script src="../../../js/subpage.js" defer></script>
 </head>
 <body>
 
-  <!-- ===== CABEÇALHO =====
-       Se o seu site já tem um header padrão, substitua este bloco
-       pelo header de uma das outras páginas (ajustando os caminhos). -->
-  <header class="site-header">
-    <nav>
-      <div class="container nav-container">
-        <div class="logo">
-          <a href="../../../index.html"><img src="../../../img/dell.png" alt="Del Company"></a>
+    <!-- HEADER PADRÃO DEL COMPANY -->
+    <header class="header" id="header">
+        <div class="container header-inner">
+            <a href="../../../index.html" class="logo">
+                <div class="logo-mark">D</div>
+                <div class="logo-text">
+                    <span class="logo-title">Del Company</span>
+                    <span class="logo-subtitle">Soluções Digitais</span>
+                </div>
+            </a>
+
+            <nav class="nav">
+                <a href="../../../index.html">Início</a>
+                <div class="nav-dropdown">
+                    <a href="../../../service.html" class="active">Serviços <span class="dropdown-arrow"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="../../servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="../../servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="../../servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="../../servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="../../servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="../../servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="../../servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="../../servicos/html/banco_dados.html">Banco de Dados</a></li>
+                        <li><a href="./quiz.html" class="active">Quiz</a></li>
+                    </ul>
+                </div>
+                <a href="../../../contato.html">Contato</a>
+            </nav>
+
+            <button class="menu-toggle" id="menu-toggle" aria-label="Abrir menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
         </div>
-        <ul class="nav-menu">
-          <li><a href="../../../index.html">Início</a></li>
-          <li><a href="../../../service.html">Serviços</a></li>
-          <li class="dropdown">
-            <a href="../../servicos/html/robotizacao.html">Robótica <i class="fas fa-caret-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../robots/html/robo_cartesiano.html">Robô Cartesiano</a></li>
-              <li><a href="../../robots/html/robo_scara.html">Robô SCARA</a></li>
-              <li><a href="../../robots/html/robo_articulado.html">Robô Articulado</a></li>
-              <li><a href="../../robots/html/robo_cilindrico.html">Robô Cilíndrico</a></li>
-              <li><a href="../../robots/html/robo_delta.html">Robô Delta</a></li>
-              <li><a href="../../robots/html/robo_polar.html">Robô Polar</a></li>
-              <li><a href="../../robots/html/robo_colaborativo.html">Robô Colaborativo</a></li>
-            </ul>
-          </li>
-          <li class="dropdown">
-            <a href="../../sensors/html/sensores.html">Sensores <i class="fas fa-caret-down"></i></a>
-            <ul class="dropdown-menu">
-              <li><a href="../../sensors/html/sensor-introduca.html">Introdução aos Sensores</a></li>
-              <li><a href="../../sensors/html/sensor-tipos.html">Tipos de Sensores</a></li>
-              <li><a href="../../sensors/html/sensor-comunicacao.html">Comunicação</a></li>
-              <li><a href="../../sensors/html/sensor-plataformas.html">Plataformas &amp; IoT</a></li>
-            </ul>
-          </li>
-          <li><a href="./quiz.html" class="ativo">Quiz</a></li>
-          <li><a href="../../../contato.html">Contato</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
+    </header>
 
-  <main>
-    <section class="quiz-section">
-      <div class="container">
-        <h1>QUIZ DE <span>ROBÓTICA</span> E ELETRÔNICA</h1>
-        <p class="subtitulo">
-          Responda às 10 questões no estilo SAEP. Escolha uma alternativa, clique em
-          <strong>Confirmar resposta</strong> para conferir o gabarito e, no final,
-          veja o seu desempenho por tema.
-        </p>
-
-        <!-- ================= QUIZ ================= -->
-        <div class="quiz-container" id="quiz-container">
-          <div class="progresso-topo">
-            <span id="contador">Questão 1 de 10</span>
-            <span id="pontuacao">Acertos: 0</span>
-          </div>
-          <div class="barra-progresso"><div id="barra-preenchimento"></div></div>
-
-          <span class="questao-categoria" id="categoria"></span>
-          <p class="questao-contexto" id="contexto"></p>
-          <h2 class="questao-comando" id="comando"></h2>
-
-          <!-- A imagem só aparece nas questões que possuem "imagem" -->
-          <figure class="questao-figura" id="questao-figura" hidden>
-            <img id="imagem" src="" alt="">
-          </figure>
-
-          <div class="opcoes" id="opcoes"></div>
-
-          <p class="quiz-feedback" id="feedback" aria-live="polite"></p>
-          <p class="quiz-explicacao" id="explicacao" hidden></p>
-
-          <div class="quiz-acoes">
-            <button type="button" class="btn-quiz" id="btn-proxima" disabled>Confirmar resposta</button>
-          </div>
-        </div>
-
-        <!-- ================= RESULTADO ================= -->
-        <div class="resultado-quiz" id="resultado" hidden>
-          <i id="resultado-icone" class="fas fa-trophy"></i>
-          <h2 id="resultado-titulo">Quiz concluído!</h2>
-          <div class="score-circle" id="score-circle">
-            <div class="score-inner">
-              <span id="score-texto">0/10</span>
-              <small id="score-porcento">0%</small>
-            </div>
-          </div>
-          <p id="resultado-mensagem"></p>
-          <p id="resultado-recorde"></p>
-          <ul class="resultado-categorias" id="resultado-categorias"></ul>
-          <div class="resultado-acoes">
-            <button type="button" class="btn-quiz" id="btn-refazer">Refazer Quiz</button>
-            <a href="../../../index.html" class="btn-quiz btn-secundario">Voltar ao Início</a>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-coluna">
-          <h3>Del Company</h3>
-          <ul>
-            <li><a href="../../../index.html">Início</a></li>
-            <li><a href="../../../service.html">Serviços</a></li>
-            <li><a href="../../../contato.html">Contato</a></li>
-          </ul>
-        </div>
-        <div class="footer-coluna">
-          <h3>Conteúdos</h3>
-          <ul>
-            <li><a href="../../servicos/html/robotizacao.html">Robótica Industrial</a></li>
-            <li><a href="../../sensors/html/sensores.html">Sensoriamento &amp; IoT</a></li>
-            <li><a href="../../servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
-          </ul>
-        </div>
-        <div class="footer-coluna">
-          <h3>Contato</h3>
-          <ul>
-            <li><a href="https://github.com/eli-bernardi" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">Instagram</a></li>
-            <li><a href="mailto:elielbernardi0012@gmail.com">E-mail</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <p>&copy; 2026 Del Company. Todos os direitos reservados.</p>
-      </div>
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+        <a href="../../../index.html">Início</a>
+        <a href="../../../service.html">Serviços</a>
+        <a href="./quiz.html" class="active">Quiz</a>
+        <a href="../../../contato.html">Contato</a>
     </div>
-  </footer>
 
-  <!-- Ordem importa: primeiro os dados, depois a lógica -->
-  <script src="../js/questoes.js"></script>
-  <script src="../js/quiz.js"></script>
+    <main>
+        <!-- HERO PADRÃO DEL COMPANY -->
+        <div class="page-hero reveal">
+            <div class="container">
+                <div class="page-hero-inner">
+                    <nav class="breadcrumb">
+                        <a href="../../../index.html">Início</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <a href="../../../service.html">Serviços</a>
+                        <span class="breadcrumb-sep">/</span>
+                        <span class="breadcrumb-current">Quiz</span>
+                    </nav>
+                    <span class="section-label">Avaliação Interativa</span>
+                    <h1>Quiz de <em>Robótica</em> e Eletrônica</h1>
+                    <div class="divider"></div>
+                    <p class="lead">
+                        Responda às 10 questões práticas e conceituais elaboradas no formato SAEP. Selecione sua alternativa, clique em <strong>Confirmar resposta</strong> para conferir o gabarito comentado e verifique seu aproveitamento por área técnica.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SEÇÃO DO QUIZ -->
+        <section class="content-section quiz-section reveal">
+            <div class="container">
+
+                <!-- ================= CARD DO QUIZ ================= -->
+                <div class="quiz-container" id="quiz-container">
+                    <div class="progresso-topo">
+                        <span id="contador">Questão 1 de 10</span>
+                        <span id="pontuacao">Acertos: 0</span>
+                    </div>
+                    <div class="barra-progresso">
+                        <div id="barra-preenchimento"></div>
+                    </div>
+
+                    <span class="questao-categoria" id="categoria"></span>
+                    <p class="questao-contexto" id="contexto"></p>
+                    <h2 class="questao-comando" id="comando"></h2>
+
+                    <!-- Imagem para questões com figura técnica -->
+                    <figure class="questao-figura" id="questao-figura" hidden>
+                        <img id="imagem" src="" alt="Ilustração da questão">
+                    </figure>
+
+                    <!-- Lista de alternativas dinâmicas -->
+                    <div class="opcoes" id="opcoes"></div>
+
+                    <!-- Mensagens de validação e explicação técnica -->
+                    <p class="quiz-feedback" id="feedback" aria-live="polite"></p>
+                    <p class="quiz-explicacao" id="explicacao" hidden></p>
+
+                    <!-- Botão de ação -->
+                    <div class="quiz-acoes">
+                        <button type="button" class="btn-quiz" id="btn-proxima" disabled>Confirmar resposta</button>
+                    </div>
+                </div>
+
+                <!-- ================= CARD DO RESULTADO ================= -->
+                <div class="resultado-quiz" id="resultado" hidden>
+                    <i id="resultado-icone" class="fas fa-trophy"></i>
+                    <h2 id="resultado-titulo">Quiz concluído!</h2>
+                    
+                    <div class="score-circle" id="score-circle">
+                        <div class="score-inner">
+                            <span id="score-texto">0/10</span>
+                            <small id="score-porcento">0%</small>
+                        </div>
+                    </div>
+
+                    <p id="resultado-mensagem"></p>
+                    <p id="resultado-recorde"></p>
+                    
+                    <ul class="resultado-categorias" id="resultado-categorias"></ul>
+
+                    <div class="resultado-acoes">
+                        <button type="button" class="btn-quiz" id="btn-refazer">Refazer Quiz</button>
+                        <a href="../../../service.html" class="btn-quiz btn-secundario">Ver Todos os Serviços</a>
+                        <a href="../../../index.html" class="btn-quiz btn-secundario">Voltar ao Início</a>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER PADRÃO DEL COMPANY -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-inner">
+                <!-- Coluna 1: Sobre -->
+                <div>
+                    <div class="footer-brand">
+                        <div class="logo-mark">D</div>
+                        <span class="logo-title" style="color:white; font-size:18px;">Del Company</span>
+                    </div>
+                    <p class="footer-desc">
+                        Soluções digitais inovadoras em desenvolvimento web, infraestrutura e tecnologia para empresas e pessoas.
+                    </p>
+                </div>
+
+                <!-- Coluna 2: Serviços Digitais -->
+                <div>
+                    <p class="footer-col-title">Serviços Digitais</p>
+                    <ul class="footer-links-list">
+                        <li><a href="../../servicos/html/robotizacao.html">Robótica</a></li>
+                        <li><a href="../../servicos/html/sensores.html">Sensores</a></li>
+                        <li><a href="../../servicos/html/logica_programacao.html">Lógica de Programação</a></li>
+                        <li><a href="../../servicos/html/fundamentos_rede.html">Sistemas de Rede</a></li>
+                        <li><a href="../../servicos/html/logica_computacional.html">Lógica Computacional</a></li>
+                        <li><a href="../../servicos/html/fundamentos_eletronica.html">Fundamentos de Eletrônica</a></li>
+                        <li><a href="../../servicos/html/tecnologia_informacao.html">Tecnologia da Informação</a></li>
+                        <li><a href="../../servicos/html/banco_dados.html">Banco de Dados</a></li>
+                        <li><a href="./quiz.html">Quiz</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 3: Robôs & IoT -->
+                <div>
+                    <p class="footer-col-title">Robôs &amp; IoT</p>
+                    <ul class="footer-links-list">
+                        <li><a href="../../robots/html/robo_articulado.html">Robô Articulado</a></li>
+                        <li><a href="../../robots/html/robo_colaborativo.html">Robô Colaborativo (Cobot)</a></li>
+                        <li><a href="../../robots/html/robo_scara.html">Robô SCARA</a></li>
+                        <li><a href="../../robots/html/robo_delta.html">Robô Delta</a></li>
+                        <li><a href="../../sensors/html/sensor-introduca.html">Fundamentos de Sensores</a></li>
+                        <li><a href="../../sensors/html/sensor-comunicacao.html">Protocolos de Comunicação</a></li>
+                        <li><a href="../../sensors/html/sensor-plataformas.html">Plataformas IoT</a></li>
+                        <li><a href="../../sensors/html/sensor-pratica.html">Laboratório Prático</a></li>
+                    </ul>
+                </div>
+
+                <!-- Coluna 4: Contato & Acesso -->
+                <div>
+                    <p class="footer-col-title">Contato &amp; Acesso</p>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <a href="mailto:elielbernardi0012@gmail.com">elielbernardi0012@gmail.com</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-whatsapp"></i>
+                        <a href="https://wa.me/5548991013184" target="_blank" rel="noopener">(48) 99101-3184</a>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-brands fa-instagram"></i>
+                        <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener">@elielbrnrd</a>
+                    </div>
+                    <ul class="footer-links-list" style="margin-top: 18px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,0.08);">
+                        <li><a href="../../../index.html">Início</a></li>
+                        <li><a href="../../../service.html">Todos os Serviços</a></li>
+                        <li><a href="../../../contato.html">Página de Contato</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p class="footer-copyright">&copy; 2026 Del Company. Todos os direitos reservados.</p>
+                <div class="footer-social">
+                    <a href="https://www.instagram.com/elielbrnrd/" target="_blank" rel="noopener" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5548991013184" target="_blank" rel="noopener" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://github.com/eli-bernardi" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- SCRIPTS DO QUIZ: primeiro os dados, depois a lógica -->
+    <script src="../js/questoes.js"></script>
+    <script src="../js/quiz.js"></script>
 </body>
 </html>
